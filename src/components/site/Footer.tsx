@@ -71,7 +71,6 @@ export function Footer() {
               "Self Assessment Tax Return",
               "Annual Accounts Filing",
               "Confirmation Statement Filing",
-              "PAYE & Payroll Management",
               "Registered Office Address",
             ].map((s) => (
               <li key={s}>
