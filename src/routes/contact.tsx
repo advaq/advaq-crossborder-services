@@ -111,7 +111,7 @@ function Contact() {
               { Icon: MessageCircle, t: "WhatsApp", v: "+92 3000 925335", a: "https://wa.me/923000925335", cta: "Chat on WhatsApp" },
               { Icon: Clock, t: "Hours", v: "Mon–Sat, 9am–6pm PKT" },
               { Icon: Languages, t: "Language Support", v: "English & Urdu | Global Reach" },
-              { Icon: MapPin, t: "Based In", v: "Lahore, Pakistan", sub: "Serving clients in UK, USA & UAE" },
+              { Icon: MapPin, t: "Based In", v: "Lahore, Pakistan", sub: "Serving clients across UK, USA & UAE" },
             ] as Array<{ Icon: typeof Mail; t: string; v: string; a?: string; cta?: string; sub?: string }>).map((c) => (
               <div key={c.t} className="bg-navy-900 text-white rounded-2xl p-7 border border-white/5 hover:border-gold-500/40 transition-colors">
                 <div className="flex items-start gap-4">
