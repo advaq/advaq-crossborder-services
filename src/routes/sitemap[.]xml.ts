@@ -153,6 +153,8 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/calculators/pakistan-fbr-salary-tax", changefreq: "monthly", priority: "0.8" },
           { path: "/calculators/pakistan-sales-tax", changefreq: "monthly", priority: "0.8" },
           { path: "/calculators/pakistan-secp-penalty", changefreq: "monthly", priority: "0.8" },
+          { path: "/privacy", changefreq: "monthly", priority: "0.5" },
+          { path: "/terms", changefreq: "monthly", priority: "0.5" },
           { path: "/contact", changefreq: "monthly", priority: "0.7" },
         ];
 
