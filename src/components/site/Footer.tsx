@@ -164,7 +164,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="label-eyebrow !text-white/90 mb-5">Legal Contract Drafting</h4>
+          <h4 className="label-eyebrow !text-white/90 mb-5">Leg. Drafting</h4>
           <ul className="space-y-3 text-sm">
             {[
               "Freelance Service Agreement",
