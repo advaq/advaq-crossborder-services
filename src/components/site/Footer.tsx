@@ -191,7 +191,7 @@ export function Footer() {
 
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-navy-200/60">
-          <p>© 2025 ADVAQ. All rights reserved.</p>
+          <p>© 2026 ADVAQ. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-gold-500">Privacy Policy</a>
             <a href="#" className="hover:text-gold-500">Terms of Service</a>
