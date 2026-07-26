@@ -168,11 +168,11 @@ export function Footer() {
           <ul className="space-y-3 text-sm">
             {[
               "Freelance Service Agreement",
-              "NDA / Non-Disclosure Agreement",
               "IP Assignment Agreement",
               "Master Service Agreement",
               "IT Outsourcing Agreement",
               "Privacy Policy Drafting",
+              "NDA",
             ].map((s) => (
               <li key={s}>
                 <Link to="/legal-contract-drafting" className="hover:text-gold-500 transition-colors">
