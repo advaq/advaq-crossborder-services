@@ -147,7 +147,7 @@ export function Footer() {
               "PSEB Registration",
               "Income Tax Return Filing",
               "FBR Notice Response",
-              "Legal Consultation",
+              "Sales Tax Registration",
             ].map((s) => (
               <li key={s}>
                 <Link to="/pakistan-services" className="hover:text-gold-500 transition-colors">
