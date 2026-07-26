@@ -172,7 +172,7 @@ export function Footer() {
               "Master Service Agreement",
               "IT Outsourcing Agreement",
               "Privacy Policy Drafting",
-              "Independent Contractor Agreement",
+              "Employment Contract",
             ].map((s) => (
               <li key={s}>
                 <Link to="/legal-contract-drafting" className="hover:text-gold-500 transition-colors">
