@@ -139,7 +139,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="label-eyebrow !text-white/90 mb-5">Pakistan Services</h4>
+          <h4 className="label-eyebrow !text-white/90 mb-5">Pak Services</h4>
           <ul className="space-y-3 text-sm">
             {[
               "SECP Company Registration",
