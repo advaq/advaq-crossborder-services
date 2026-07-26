@@ -144,7 +144,7 @@ export function Footer() {
             {[
               "SECP Company Registration",
               "NTN & FBR Registration",
-              "PSEB Registration",
+              "PSEB Registration (IT Company)",
               "Income Tax Return Filing",
               "FBR Notice Response",
               "Sales Tax Registration",
