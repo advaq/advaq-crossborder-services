@@ -1,0 +1,49 @@
+# ----------------------------------------------------------------------
+# Rewrite Rules for Client-Side Routing Fallback
+# ----------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # If the requested path is an actual file or directory, serve it directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  
+  # Otherwise, rewrite all requests to the main index.html for client-side routing
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Security Headers
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "no-referrer-when-downgrade"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Cache Control
+# ----------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # HTML files (no-cache to ensure immediate updates)
+  ExpiresByType text/html "access plus 0 seconds"
+  
+  # CSS and JS (Vite hashes these, so safe to cache for 1 year)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  
+  # Images and media
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType image/icon "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+</IfModule>
