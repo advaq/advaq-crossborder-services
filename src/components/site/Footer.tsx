@@ -94,11 +94,11 @@ export function Footer() {
               "USA LLC Incorporation",
               "C-Corp / S-Corp Formation",
               "EIN Application (No SSN)",
-              "ITIN Application",
               "Federal & State Tax Returns",
               "Sales Tax Registration",
               "BOI / FinCEN Report Filing",
               "Registered Agent Service",
+              "ITIN Application",
             ].map((s) => (
               <li key={s}>
                 <Link to="/us-services" className="hover:text-gold-500 transition-colors">
