@@ -1,11 +1,18 @@
 # ----------------------------------------------------------------------
-# ADVAQ Root Rewrite to dist Directory
+# ADVAQ Root Rewrite to dist/client Directory for Hostinger
 # ----------------------------------------------------------------------
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # Serve requests from the dist directory
-  RewriteCond %{REQUEST_URI} !^/dist/
-  RewriteRule ^(.*)$ dist/$1 [L]
+  # Serve directly if requested file or directory exists in root
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Don't loop if already prefixed with dist/client
+  RewriteCond %{REQUEST_URI} !^/dist/client/
+
+  # Rewrite everything to dist/client/
+  RewriteRule ^(.*)$ dist/client/$1 [L]
 </IfModule>
