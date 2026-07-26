@@ -66,7 +66,7 @@ export function Footer() {
           <ul className="space-y-3 text-sm">
             {[
               "UK LTD Company Incorporation",
-              "HMRC & Corporation Tax Registration",
+              "Corporation Tax Registration",
               "VAT Registration & Returns",
               "Self Assessment Tax Return",
               "Annual Accounts Filing",
