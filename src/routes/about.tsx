@@ -119,7 +119,7 @@ function AboutPage() {
           <Reveal>
             <p className="label-eyebrow">About ADVAQ</p>
             <h1 className="font-serif text-white text-3xl sm:text-4xl md:text-6xl mt-5 leading-[1.15]">
-              We Help Pakistani Entrepreneurs Build Legitimate, Legally Protected Businesses in the UK, USA, UAE & Pakistan.
+              We Help Entrepreneurs Build Legitimate, Legally Protected Businesses in the UK, USA, UAE & Pakistan.
             </h1>
             <p className="mt-6 text-navy-200 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
               ADVAQ is not a generic online formation service. We are led by a Punjab Bar Council licensed advocate who personally handles your company formation, tax compliance, and legal contracts — with full legal accountability across four jurisdictions.
