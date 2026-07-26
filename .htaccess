@@ -1,0 +1,11 @@
+# ----------------------------------------------------------------------
+# ADVAQ Root Rewrite to dist Directory
+# ----------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Serve requests from the dist directory
+  RewriteCond %{REQUEST_URI} !^/dist/
+  RewriteRule ^(.*)$ dist/$1 [L]
+</IfModule>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://advaq.com/sitemap.xml
+Sitemap: https://advaq.com/sitemap_index.xml
