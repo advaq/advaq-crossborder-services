@@ -1,5 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Eye,
   Heart,
@@ -15,6 +14,10 @@ import {
   Mail,
   Phone,
   ArrowRight,
+  ClipboardCheck,
+  Calendar,
+  Sparkles,
+  CheckCircle2,
 } from "lucide-react";
 import { SectionLabel } from "@/components/site/SectionLabel";
 import { Reveal } from "@/lib/reveal";
@@ -22,21 +25,21 @@ import { Reveal } from "@/lib/reveal";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About ADVAQ — Muhammad Abdullah | Punjab Bar Council Advocate" },
+      { title: "About ADVAQ — Muhammad Abdullah | Licensed Advocate & IRS PTIN Tax Preparer" },
       {
         name: "description",
         content:
-          "Punjab Bar Council advocate Muhammad Abdullah offers UK, US & Pakistan company formation, tax compliance, and legal contracts for freelancers and IT firms.",
+          "Punjab Bar Council advocate & IRS PTIN tax preparer Muhammad Abdullah provides UK, USA, UAE & Pakistan company formation, tax compliance, and legal contracts.",
       },
       { property: "og:title", content: "About ADVAQ — Muhammad Abdullah" },
       {
         property: "og:description",
         content:
-          "Led by a Punjab Bar Council licensed advocate. UK, US & Pakistan company formation, tax compliance, and legal contracts.",
+          "Led by a Punjab Bar Council licensed advocate & IRS PTIN tax preparer. Full cross-border coverage across UK, USA, UAE & Pakistan.",
       },
       { property: "og:url", content: "/about" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://advaq.com/about" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -44,11 +47,16 @@ export const Route = createFileRoute("/about")({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Muhammad Abdullah",
-          jobTitle: "Advocate, Punjab Bar Council",
+          jobTitle: "Advocate & Corporate Tax Lawyer",
+          alumniOf: "BS Accounting & Finance, LLB",
+          hasCredential: [
+            { "@type": "EducationalOccupationalCredential", name: "Punjab Bar Council Licensed Advocate" },
+            { "@type": "EducationalOccupationalCredential", name: "IRS PTIN Registered Tax Preparer" },
+          ],
           worksFor: { "@type": "Organization", name: "ADVAQ Global Advisory" },
           description:
-            "Punjab Bar Council licensed advocate specialising in UK and US company formation, Pakistan corporate law, FBR tax compliance, and legal contract drafting for IT companies and freelancers.",
-          url: "/about",
+            "Punjab Bar Council licensed advocate & IRS PTIN registered tax preparer specialising in UK, USA, UAE, and Pakistan company formation, tax compliance, and legal contracts.",
+          url: "https://advaq.com/about",
         }),
       },
       {
@@ -57,17 +65,50 @@ export const Route = createFileRoute("/about")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "/" },
-            { "@type": "ListItem", position: 2, name: "About", item: "/about" },
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://advaq.com" },
+            { "@type": "ListItem", position: 2, name: "About", item: "https://advaq.com/about" },
           ],
         }),
       },
     ],
   }),
-  component: About,
+  component: AboutPage,
 });
 
-function About() {
+const timeline = [
+  {
+    year: "2021",
+    title: "ADVAQ Founded",
+    description: "First UK LTD formed for Pakistani IT agency client.",
+  },
+  {
+    year: "2022",
+    title: "US Services Added",
+    description: "Wyoming LLC + EIN service launched for foreign owners.",
+  },
+  {
+    year: "2023",
+    title: "IRS PTIN Obtained",
+    description: "Official US tax preparer authorization & federal filing division.",
+  },
+  {
+    year: "2024",
+    title: "UAE Services Added",
+    description: "Freezone formation, investor visas & Corporate Tax compliance.",
+  },
+  {
+    year: "2025",
+    title: "Legal Contract Division",
+    description: "Dedicated contract drafting service for freelancers & tech firms.",
+  },
+  {
+    year: "2026",
+    title: "200+ Businesses Served",
+    description: "Full cross-border legal coverage across UK, USA, UAE & Pakistan.",
+  },
+];
+
+function AboutPage() {
   return (
     <>
       {/* SECTION 1 — HERO */}
@@ -77,22 +118,18 @@ function About() {
         <div className="relative max-w-5xl mx-auto px-6 text-center">
           <Reveal>
             <p className="label-eyebrow">About ADVAQ</p>
-            <h1 className="font-serif text-white text-4xl md:text-6xl mt-5 leading-[1.1]">
-              We Help Pakistani Entrepreneurs Build Legitimate, Legally Protected
-              Businesses in the UK, US, and Pakistan.
+            <h1 className="font-serif text-white text-3xl sm:text-4xl md:text-6xl mt-5 leading-[1.15]">
+              We Help Pakistani Entrepreneurs Build Legitimate, Legally Protected Businesses in the UK, USA, UAE & Pakistan.
             </h1>
-            <p className="mt-6 text-navy-200 text-lg max-w-2xl mx-auto leading-relaxed">
-              ADVAQ is not a generic online formation service. We are led by a Punjab
-              Bar Council licensed advocate who personally handles your UK company,
-              US LLC, Pakistan registration, and legal contracts — with full legal
-              accountability.
+            <p className="mt-6 text-navy-200 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+              ADVAQ is not a generic online formation service. We are led by a Punjab Bar Council licensed advocate who personally handles your company formation, tax compliance, and legal contracts — with full legal accountability across four jurisdictions.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 text-[13px] text-navy-200">
               {[
                 "Punjab Bar Council Licensed Advocate",
-                "200+ Companies Formed",
-                "UK · US · Pakistan Expertise",
-                "100% Remote Service",
+                "IRS PTIN Registered Tax Preparer",
+                "UK · USA · UAE · Pakistan Expertise",
+                "200+ Businesses Served Globally",
               ].map((b) => (
                 <span key={b} className="inline-flex items-center gap-2">
                   <span className="text-gold-500">✓</span> {b}
@@ -108,33 +145,27 @@ function About() {
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[55%_45%] gap-12 lg:gap-16 items-start">
           <Reveal>
             <SectionLabel>The Founder</SectionLabel>
-            <p className="text-[12px] font-medium tracking-widest uppercase text-gold-500 mt-5">Muhammad Abdullah</p>
-            <h2 className="font-serif text-4xl text-dark-text mt-2 leading-tight">
-              Advocate. Corporate Tax Lawyer. Your UK, US & Pakistan Business Partner.
+            <p className="text-[12px] font-medium tracking-widest uppercase text-gold-500 mt-5">
+              Muhammad Abdullah
+            </p>
+            <h2 className="font-serif text-3xl sm:text-4xl text-dark-text mt-2 leading-tight">
+              Advocate. Corporate Tax Lawyer. Your Cross-Border Business Partner Across UK, USA, UAE & Pakistan.
             </h2>
-            <div className="mt-4 space-y-4 text-gray-700 text-base leading-[1.8]">
+            <div className="mt-5 space-y-4 text-gray-700 text-base leading-[1.8]">
               <p>
-                I am Muhammad Abdullah, a practicing advocate licensed by the Punjab
-                Bar Council and a corporate tax lawyer with a focused specialisation
-                in UK and US company formation, Pakistan SECP and FBR compliance,
-                and international legal contract drafting for Pakistani freelancers
-                and IT companies.
+                I am Muhammad Abdullah — a practicing advocate licensed by the Punjab Bar Council, an IRS PTIN registered tax preparer, and a corporate tax lawyer specialising in cross-border company formation, tax compliance, and legal contracts across the UK, USA, UAE, and Pakistan.
               </p>
               <p>
-                I founded ADVAQ after seeing too many talented Pakistani developers,
-                designers, and IT agency owners struggle to access global payment
-                processors and international markets — not because of their skills,
-                but because they lacked the right legal and corporate structure. A
-                properly formed UK LTD or US LLC, combined with correct Pakistan tax
-                compliance, removes every barrier.
+                I hold a <strong>BS in Accounting & Finance alongside my LLB</strong> — which means I understand both the legal and financial dimensions of your business, not just one side of it.
               </p>
               <p>
-                What makes ADVAQ different is simple: when you work with us, you are
-                working directly with a licensed advocate who is legally accountable
-                for the advice given — not a virtual assistant or a form-filling
-                service. Every company we form, every tax return we file, and every
-                contract we draft carries the full weight of professional legal
-                responsibility.
+                I founded ADVAQ after seeing too many talented Pakistani developers, designers, and IT agency owners struggle to access global payment processors and international markets — not because of their skills, but because they lacked the right legal and corporate structure. A properly formed UK LTD or US LLC, combined with correct Pakistan tax compliance and UAE structure where needed, removes every barrier standing between you and global business.
+              </p>
+              <p>
+                What makes ADVAQ different is simple: when you work with us, you work directly with a licensed advocate who is legally accountable for every piece of advice given — not a virtual assistant, not a form-filling portal, not a template service.
+              </p>
+              <p className="font-medium text-navy-950">
+                Every company we form, every tax return we file, and every contract we draft carries the full weight of professional legal responsibility. That is the ADVAQ difference.
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-6 text-sm">
@@ -144,7 +175,12 @@ function About() {
               <a href="tel:+923000925335" className="inline-flex items-center gap-2 text-dark-text hover:text-gold-500">
                 <Phone size={16} className="text-gold-500" /> +92 3000 925335
               </a>
-              <a href="https://wa.me/923000925335" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-gold-500 font-semibold">
+              <a
+                href="https://wa.me/923000925335"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-gold-500 font-semibold"
+              >
                 <MessageCircle size={16} className="text-gold-500" /> WhatsApp
               </a>
             </div>
@@ -154,24 +190,31 @@ function About() {
             <div className="relative aspect-[4/5] rounded-2xl bg-navy-900 border border-gold-500/20 overflow-hidden shadow-2xl group">
               <img
                 src="/abdullah.png"
-                alt="Muhammad Abdullah - Advocate Punjab Bar Council"
+                alt="Muhammad Abdullah - Advocate Punjab Bar Council & IRS PTIN Tax Preparer"
                 className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 via-transparent to-transparent pointer-events-none" />
             </div>
-            <div className="mt-4 flex gap-3 flex-wrap">
-              <div className="flex items-center gap-2 bg-white border border-border rounded-xl p-3">
-                <Scale size={18} className="text-gold-500" />
+            <div className="mt-4 flex gap-3 flex-wrap text-xs">
+              <div className="flex items-center gap-2 bg-white border border-border rounded-xl p-3 flex-1">
+                <Scale size={18} className="text-gold-500 shrink-0" />
                 <div>
-                  <div className="text-[13px] font-semibold text-dark-text leading-tight">Punjab Bar Council</div>
-                  <div className="text-[11px] text-gray-500 leading-tight">Licensed Advocate</div>
+                  <div className="font-semibold text-dark-text leading-tight">Punjab Bar Council</div>
+                  <div className="text-gray-500 text-[11px] leading-tight">Licensed Advocate</div>
                 </div>
               </div>
-              <div className="flex items-center gap-2 bg-white border border-border rounded-xl p-3">
-                <Landmark size={18} className="text-gold-500" />
+              <div className="flex items-center gap-2 bg-white border border-border rounded-xl p-3 flex-1">
+                <ClipboardCheck size={18} className="text-gold-500 shrink-0" />
                 <div>
-                  <div className="text-[13px] font-semibold text-dark-text leading-tight">SECP & FBR</div>
-                  <div className="text-[11px] text-gray-500 leading-tight">Registered Practitioner</div>
+                  <div className="font-semibold text-dark-text leading-tight">IRS PTIN Registered</div>
+                  <div className="text-gray-500 text-[11px] leading-tight">US Tax Preparer</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 bg-white border border-border rounded-xl p-3 w-full">
+                <Landmark size={18} className="text-gold-500 shrink-0" />
+                <div>
+                  <div className="font-semibold text-dark-text leading-tight">SECP & FBR Practitioner</div>
+                  <div className="text-gray-500 text-[11px] leading-tight">Pakistan Tax & Corporate Counsel</div>
                 </div>
               </div>
             </div>
@@ -179,36 +222,20 @@ function About() {
         </div>
       </section>
 
-      {/* SECTION 3 — OUR STORY */}
+      {/* SECTION 3 — STATS & JURISDICTIONS */}
       <section className="bg-off-white py-24">
-        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[55%_45%] gap-12 lg:gap-16 items-start">
+        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[50%_50%] gap-12 lg:gap-16 items-start">
           <Reveal>
-            <SectionLabel>Our Story</SectionLabel>
-            <h2 className="font-serif text-4xl text-dark-text mt-5 leading-tight">
-              Built to Solve a Real Problem for Pakistani Entrepreneurs
+            <SectionLabel>Our Reach & Impact</SectionLabel>
+            <h2 className="font-serif text-3xl md:text-4xl text-dark-text mt-5 leading-tight">
+              Built to Solve Real Cross-Border Challenges for Entrepreneurs
             </h2>
             <div className="mt-4 space-y-4 text-gray-700 text-base leading-[1.8]">
               <p>
-                Pakistan is home to some of the world's most talented software
-                developers, designers, and digital entrepreneurs. Yet thousands of
-                them are earning in dollars and pounds through platforms like Upwork,
-                Fiverr, and Toptal without any proper legal structure — no
-                registered company, no tax compliance, no legal protection.
+                Pakistan is home to some of the world's most talented software developers, designers, and digital entrepreneurs. Yet thousands of them earn in dollars, pounds, and dirhams through global platforms without proper corporate structures — leaving them vulnerable to payment blocks, client disputes, and tax audits.
               </p>
               <p>
-                This creates three serious problems. First, they cannot access
-                Stripe, PayPal Business, or Mercury bank accounts without a UK or US
-                company. Second, they are missing the 100% income tax exemption on
-                IT exports that Pakistani law entitles them to. Third, they have no
-                legal protection when clients dispute payments, claim ownership of
-                their work, or simply disappear.
-              </p>
-              <p>
-                ADVAQ was founded to fix all three. As a Punjab Bar Council licensed
-                advocate, I personally handle UK LTD formation, US LLC registration,
-                Pakistan SECP and FBR compliance, and professional contract
-                drafting — so that Pakistani entrepreneurs can build legitimate,
-                legally protected businesses that compete globally.
+                ADVAQ bridges this gap. By structuring legitimate UK LTDs, US LLCs, UAE Freezone companies, and SECP entities alongside tax-free IT export registrations in Pakistan, we remove every obstacle standing between you and global scale.
               </p>
             </div>
           </Reveal>
@@ -216,22 +243,22 @@ function About() {
           <Reveal delay={150}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               {[
-                { v: "200+", l: "Companies Formed", s: "UK, US & Pakistan", gold: false },
-                { v: "3", l: "Jurisdictions Covered", s: "UK · US · Pakistan", gold: false },
-                { v: "100%", l: "IT Export Tax Exempt", s: "For registered clients", gold: false },
-                { v: "5★", l: "Client Rating", s: "From 200+ clients served", gold: true },
+                { v: "200+", l: "Businesses Served", s: "Across UK, USA, UAE & PK", gold: false },
+                { v: "4", l: "Jurisdictions Covered", s: "UK · USA · UAE · Pakistan", gold: false },
+                { v: "100%", l: "IT Export Tax Exempt Rate", s: "For registered clients", gold: false },
+                { v: "5★", l: "Average Client Rating", s: "48hr Average Turnaround", gold: true },
               ].map((s) => (
                 <div
                   key={s.l}
-                  className={`rounded-2xl p-8 ${s.gold ? "bg-gold-500" : "bg-navy-900"}`}
+                  className={`rounded-2xl p-7 ${s.gold ? "bg-gold-500 text-navy-900" : "bg-navy-900 text-white"}`}
                 >
-                  <div className={`font-serif text-[52px] leading-none ${s.gold ? "text-navy-900" : "text-gold-500"}`}>
+                  <div className={`font-serif text-[48px] leading-none ${s.gold ? "text-navy-900" : "text-gold-500"}`}>
                     {s.v}
                   </div>
-                  <div className={`mt-4 text-sm font-semibold ${s.gold ? "text-navy-900" : "text-white"}`}>
+                  <div className={`mt-3 text-sm font-semibold ${s.gold ? "text-navy-900" : "text-white"}`}>
                     {s.l}
                   </div>
-                  <div className={`mt-1 text-[13px] ${s.gold ? "text-navy-700" : "text-navy-200"}`}>
+                  <div className={`mt-1 text-[12px] ${s.gold ? "text-navy-800" : "text-navy-200"}`}>
                     {s.s}
                   </div>
                 </div>
@@ -241,33 +268,39 @@ function About() {
         </div>
       </section>
 
-      {/* SECTION 4 — CREDENTIALS & EXPERTISE BAR */}
+      {/* SECTION 4 — CREDENTIALS & EXPERTISE GRID (8 CARDS) */}
       <section
-        className="bg-navy-900 py-10"
+        className="bg-navy-900 py-16"
         style={{
           borderTop: "1px solid rgba(201,168,76,0.3)",
           borderBottom: "1px solid rgba(255,255,255,0.05)",
         }}
       >
         <div className="max-w-6xl mx-auto px-6">
-          <Reveal className="text-center mb-8">
-            <p className="label-eyebrow">Credentials & Expertise</p>
+          <Reveal className="text-center mb-12">
+            <p className="label-eyebrow">Credentials & Authorizations</p>
+            <h2 className="font-serif text-3xl md:text-4xl text-white mt-3">
+              Full Legal & Regulatory Credentials
+            </h2>
           </Reveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { Icon: Scale, t: "Punjab Bar Council", s: "Licensed Practicing Advocate" },
-              { Icon: Landmark, t: "Corporate Tax Law", s: "UK, US & Pakistan Jurisdiction" },
+              { Icon: ClipboardCheck, t: "IRS PTIN Registered", s: "US Tax Preparer — Official Authorization" },
               { Icon: Building2, t: "SECP Registered", s: "Company Formation Specialist" },
               { Icon: FileText, t: "FBR Registered", s: "Tax Filing & Compliance Expert" },
-              { Icon: Globe, t: "HMRC & IRS", s: "UK & US Tax Compliance" },
-              { Icon: Shield, t: "Legal Contract Drafting", s: "NDA, MSA, IP & More" },
+              { Icon: Globe, t: "HMRC Compliant", s: "UK Corporation Tax & VAT Specialist" },
+              { Icon: Landmark, t: "IRS Compliant", s: "US Federal & State Tax Returns" },
+              { Icon: Sparkles, t: "UAE Tax Advisory", s: "Corporate Tax & VAT Compliance" },
+              { Icon: Shield, t: "Legal Contract Drafting", s: "NDA, MSA, IP Assignment & More" },
             ].map((it, i) => (
-              <Reveal key={it.t} delay={i * 70}>
-                <div className="flex items-center gap-4">
-                  <it.Icon size={28} className="text-gold-500 shrink-0" />
+              <Reveal key={it.t} delay={i * 60}>
+                <div className="bg-navy-950/80 border border-white/10 rounded-2xl p-6 h-full hover:border-gold-500/40 transition-colors flex items-start gap-4">
+                  <it.Icon size={26} className="text-gold-500 shrink-0 mt-0.5" />
                   <div>
-                    <div className="text-white text-[15px] font-semibold">{it.t}</div>
-                    <div className="text-navy-200 text-[13px]">{it.s}</div>
+                    <div className="text-white text-sm font-semibold">{it.t}</div>
+                    <div className="text-navy-200 text-xs mt-1 leading-relaxed">{it.s}</div>
                   </div>
                 </div>
               </Reveal>
@@ -276,38 +309,44 @@ function About() {
         </div>
       </section>
 
-      {/* SECTION 5 — WHAT WE STAND FOR */}
+      {/* SECTION 5 — OUR VALUES (4 CARDS) */}
       <section className="bg-white py-24">
         <div className="max-w-6xl mx-auto px-6">
           <Reveal className="text-center">
-            <SectionLabel center>Our Values</SectionLabel>
+            <SectionLabel center>Our Core Values</SectionLabel>
             <h2 className="font-serif text-4xl md:text-5xl text-dark-text mt-5">What We Stand For</h2>
           </Reveal>
-          <div className="mt-14 grid md:grid-cols-3 gap-6">
+
+          <div className="mt-14 grid md:grid-cols-2 gap-6">
             {[
               {
                 Icon: Eye,
                 t: "Complete Transparency",
-                d: "No hidden fees. No surprise charges. Before we start any work, you receive a clear breakdown of exactly what is included, what it costs, and how long it takes. We believe transparent pricing builds lasting client relationships.",
+                d: "No hidden fees. No surprise charges. Before we start any work, you receive a clear breakdown of exactly what is included, what it costs, and how long it takes. Transparent pricing builds lasting client relationships.",
               },
               {
                 Icon: Scale,
                 t: "Legal Expertise — Not Just Forms",
-                d: "ADVAQ is led by a Punjab Bar Council licensed advocate. This means you receive qualified legal advice and professional accountability — not just a form submission service. Your interests are protected by a real lawyer.",
+                d: "ADVAQ is led by a Punjab Bar Council licensed advocate and IRS PTIN registered tax preparer. You receive qualified legal counsel and professional accountability — not just a automated form submission service.",
               },
               {
                 Icon: Heart,
                 t: "Client Success First",
-                d: "We measure our success by your business outcomes. When your UK company gets Stripe approved, when your FBR compliance is clean, when your legal contract protects your payment — that is when we consider our job done.",
+                d: "We measure our success by your business outcomes. When your UK/US company gets bank approved, when your FBR tax status is active and exempt, when your contract protects your payments — that is when our job is done.",
+              },
+              {
+                Icon: Globe,
+                t: "Global Reach, Personal Service",
+                d: "From Shakargarh to London, from Lahore to Dubai — we serve clients worldwide while maintaining the personal attention of a boutique legal practice. You always know who is handling your matter.",
               },
             ].map((v, i) => (
-              <Reveal key={i} delay={i * 120}>
-                <div className="bg-white border border-border rounded-2xl p-9 h-full hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] transition-all duration-300">
-                  <div className="w-14 h-14 grid place-items-center bg-gold-500/10 border border-gold-500/20 rounded-xl text-gold-500">
-                    <v.Icon size={24} />
+              <Reveal key={i} delay={i * 100}>
+                <div className="bg-white border border-border rounded-2xl p-8 h-full hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                  <div className="w-12 h-12 grid place-items-center bg-gold-500/10 border border-gold-500/20 rounded-xl text-gold-500">
+                    <v.Icon size={22} />
                   </div>
-                  <h3 className="font-serif text-2xl text-dark-text mt-6">{v.t}</h3>
-                  <p className="mt-3 text-gray-600 leading-relaxed">{v.d}</p>
+                  <h3 className="font-serif text-xl text-dark-text font-semibold mt-5">{v.t}</h3>
+                  <p className="mt-3 text-gray-600 text-sm leading-relaxed">{v.d}</p>
                 </div>
               </Reveal>
             ))}
@@ -315,43 +354,44 @@ function About() {
         </div>
       </section>
 
-      {/* SECTION 6 — WHY CLIENTS CHOOSE ADVAQ */}
+      {/* SECTION 6 — WHY CLIENTS CHOOSE ADVAQ (4 UPGRADED CARDS) */}
       <section className="bg-navy-900 py-24">
         <div className="max-w-6xl mx-auto px-6">
           <Reveal className="text-center">
             <p className="label-eyebrow">Why ADVAQ</p>
             <h2 className="font-serif text-4xl md:text-5xl text-white mt-5 leading-tight">
-              Why Hundreds of Pakistani Entrepreneurs Choose ADVAQ
+              Why Hundreds of Entrepreneurs Choose ADVAQ
             </h2>
           </Reveal>
+
           <div className="mt-14 grid md:grid-cols-2 gap-6">
             {[
               {
                 Icon: UserCheck,
-                t: "You Work With a Real Lawyer",
-                d: "Muhammad Abdullah is a Punjab Bar Council licensed advocate. When you work with ADVAQ, you have direct access to qualified legal counsel — not an accountant, not a virtual assistant, not a template service.",
+                t: "You Work Directly With a Licensed Advocate",
+                d: "Muhammad Abdullah is a Punjab Bar Council licensed advocate and IRS PTIN registered tax preparer. When you contact ADVAQ, you reach him directly — not a junior assistant, not a chatbot, not a call centre.",
               },
               {
                 Icon: Globe,
-                t: "Three Jurisdictions, One Firm",
-                d: "Most firms handle either UK or Pakistan or US. ADVAQ covers all three — which means if you need a UK LTD, a Wyoming LLC, and a SECP-registered company, we handle everything without you needing to find three separate service providers.",
+                t: "Four Jurisdictions. One Trusted Firm.",
+                d: "Most firms handle either UK or Pakistan. ADVAQ covers all four — UK, USA, UAE, and Pakistan. One relationship. Complete cross-border coverage.",
               },
               {
                 Icon: Tag,
-                t: "Honest, Affordable Pricing",
-                d: "We serve Pakistani entrepreneurs who are building their businesses from the ground up. Our pricing reflects that. No inflated fees, no retainer traps — just fair, transparent prices for professional legal and corporate services.",
+                t: "Transparent, Affordable Pricing",
+                d: "We publish our prices openly. No hidden fees, no retainer traps, no surprise invoices. What you see is what you pay — with the full protection of a licensed advocate behind every service.",
               },
               {
                 Icon: MessageCircle,
-                t: "WhatsApp-First Communication",
-                d: "We know our clients are busy. Every service we offer is managed via WhatsApp and email — no lengthy onboarding calls, no complicated portals. Just fast, direct communication in English and Urdu.",
+                t: "WhatsApp & Email — No Complicated Portals",
+                d: "We know Pakistani entrepreneurs are busy. Every service is managed via WhatsApp and email in English and Urdu. Fast, direct, personal. No lengthy onboarding calls, no confusing client portals.",
               },
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 100}>
                 <div className="bg-navy-800 border border-white/10 rounded-2xl p-8 h-full hover:-translate-y-1 hover:border-gold-500/40 transition-all duration-300">
-                  <c.Icon size={32} className="text-gold-500" />
-                  <h3 className="font-serif text-xl text-white mt-5">{c.t}</h3>
-                  <p className="mt-3 text-navy-200 text-[15px] leading-[1.7]">{c.d}</p>
+                  <c.Icon size={30} className="text-gold-500" />
+                  <h3 className="font-serif text-xl text-white mt-4 font-medium">{c.t}</h3>
+                  <p className="mt-3 text-navy-200 text-sm leading-relaxed">{c.d}</p>
                 </div>
               </Reveal>
             ))}
@@ -359,26 +399,68 @@ function About() {
         </div>
       </section>
 
-      {/* SECTION 7 — CTA BANNER */}
-      <section className="relative bg-navy-950 overflow-hidden">
-        <div className="absolute inset-0 diagonal-pattern" />
+      {/* SECTION 7 — TIMELINE / OUR JOURNEY */}
+      <section className="bg-white py-24 border-t border-border">
+        <div className="max-w-6xl mx-auto px-6">
+          <Reveal className="text-center mb-16">
+            <SectionLabel center>MILESTONES & HISTORY</SectionLabel>
+            <h2 className="font-serif text-4xl md:text-5xl text-dark-text mt-4">Our Journey</h2>
+            <p className="text-gray-500 text-sm mt-3 max-w-xl mx-auto">
+              How ADVAQ grew from a specialized boutique advisory into a multi-jurisdiction cross-border firm.
+            </p>
+          </Reveal>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {timeline.map((item, idx) => (
+              <Reveal key={item.year} delay={idx * 80}>
+                <div className="border border-border rounded-2xl p-6 bg-off-white hover:border-gold-500/40 transition-all">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-navy-950 text-gold-500 rounded-full text-xs font-bold font-mono">
+                    <Calendar size={12} /> {item.year}
+                  </div>
+                  <h3 className="font-serif text-xl text-dark-text font-semibold mt-4">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-xs leading-relaxed mt-2">{item.description}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 8 — CTA BANNER */}
+      <section className="relative bg-navy-950 overflow-hidden py-24 text-center">
+        <div className="absolute inset-0 diagonal-pattern opacity-100" />
         <div className="absolute inset-0 gold-glow opacity-50" />
-        <div className="relative max-w-4xl mx-auto px-6 py-24 text-center">
+        <div className="relative max-w-4xl mx-auto px-6">
           <Reveal>
-            <p className="label-eyebrow">Work With Us</p>
-            <h2 className="font-serif text-4xl md:text-5xl text-white mt-5 leading-tight">
+            <p className="label-eyebrow">WORK WITH US</p>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mt-4 leading-tight">
               Ready to Build Your Business the Right Way?
             </h2>
-            <p className="mt-5 text-navy-200 text-lg max-w-xl mx-auto">
-              Get in touch today for a free initial consultation. We respond within a few hours.
+            <p className="mt-5 text-navy-200 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+              Book a free initial consultation with Muhammad Abdullah. We respond within 4 business hours — in English or Urdu, whichever you prefer.
             </p>
+
             <div className="mt-9 flex flex-wrap justify-center gap-4">
-              <Link to="/contact" className="btn-gold">
-                Get Started <ArrowRight size={16} />
+              <Link to="/contact" className="btn-gold uppercase text-xs tracking-widest px-8 py-4 font-semibold inline-flex items-center gap-2">
+                GET STARTED <ArrowRight size={16} />
               </Link>
-              <a href="https://wa.me/923000925335" target="_blank" rel="noreferrer" className="btn-outline-light">
-                WhatsApp Muhammad Abdullah
+              <a
+                href="https://wa.me/923000925335"
+                target="_blank"
+                rel="noreferrer"
+                className="btn-outline-light uppercase text-xs tracking-widest px-8 py-4 font-semibold inline-flex items-center gap-2"
+              >
+                <MessageCircle size={16} /> WHATSAPP MUHAMMAD ABDULLAH
               </a>
+            </div>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-gold-500 font-semibold uppercase tracking-wider">
+              <span>✓ Free consultation</span>
+              <span>✓ No commitment</span>
+              <span>✓ Punjab Bar Council Licensed</span>
+              <span>✓ 4-hour response</span>
             </div>
           </Reveal>
         </div>
