@@ -168,27 +168,18 @@ function AboutPage() {
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[55%_45%] gap-12 lg:gap-16 items-start">
           <Reveal>
             <SectionLabel>The Founder</SectionLabel>
-            <p className="text-[12px] font-medium tracking-widest uppercase text-gold-500 mt-5">
-              Muhammad Abdullah
-            </p>
-            <h2 className="font-serif text-3xl sm:text-4xl text-dark-text mt-2 leading-tight">
-              Advocate. Corporate Tax Lawyer. Your Cross-Border Business Partner Across UK, USA, UAE & Pakistan.
+            <h2 className="font-serif text-3xl sm:text-4xl text-dark-text mt-5 leading-tight">
+              Advocate. Tax & Corporate Lawyer. Your Cross-Border Business Partner Across UK, USA, UAE & Pakistan.
             </h2>
             <div className="mt-5 space-y-4 text-gray-700 text-base leading-[1.8]">
               <p>
-                I am Muhammad Abdullah — a practicing advocate licensed by the Punjab Bar Council, an IRS PTIN registered tax preparer, and a corporate tax lawyer specialising in cross-border company formation, tax compliance, and legal contracts across the UK, USA, UAE, and Pakistan.
+                I am Muhammad Abdullah, a practicing advocate licensed by the Punjab Bar Council, an IRS PTIN registered tax preparer. As a tax & corporate lawyer, I am specialising in cross-border company formation, tax compliance, and legal contracts across the UK, USA, UAE, and Pakistan.
               </p>
               <p>
-                I hold a <strong>BS in Accounting & Finance alongside my LLB</strong> — which means I understand both the legal and financial dimensions of your business, not just one side of it.
+                I founded ADVAQ after seeing too many talented Pakistani developers, designers, and IT agency owners struggle to access global payment processors and international markets. It is not because of their skills, but because they lacked the right legal and corporate structure. A properly formed UK LTD or US LLC, combined with correct Pakistan tax compliance and UAE structure where needed, removes every barrier standing between you and global business.
               </p>
               <p>
-                I founded ADVAQ after seeing too many talented Pakistani developers, designers, and IT agency owners struggle to access global payment processors and international markets — not because of their skills, but because they lacked the right legal and corporate structure. A properly formed UK LTD or US LLC, combined with correct Pakistan tax compliance and UAE structure where needed, removes every barrier standing between you and global business.
-              </p>
-              <p>
-                What makes ADVAQ different is simple: when you work with us, you work directly with a licensed advocate who is legally accountable for every piece of advice given — not a virtual assistant, not a form-filling portal, not a template service.
-              </p>
-              <p className="font-medium text-navy-950">
-                Every company we form, every tax return we file, and every contract we draft carries the full weight of professional legal responsibility. That is the ADVAQ difference.
+                What makes ADVAQ different is simple: when you work with us, you work directly with a licensed advocate who is legally accountable for every piece of advice given, not a virtual assistant, not a form-filling portal, not a template service.
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-6 text-sm">
