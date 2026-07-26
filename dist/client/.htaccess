@@ -1,16 +1,26 @@
 # ----------------------------------------------------------------------
-# Rewrite Rules for Client-Side Routing Fallback
+# ADVAQ dist/client Rewrite Rules & Security Headers
 # ----------------------------------------------------------------------
+
+# Disable DirectorySlash inside dist/client as well
+DirectorySlash Off
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  
-  # If the requested path is an actual file or directory, serve it directly
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
+
+  # Serve actual static files directly
+  RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
-  
-  # Otherwise, rewrite all requests to the main index.html for client-side routing
+
+  # Serve pre-rendered index.html inside directories if it exists
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.*)$ $1/index.html [L]
+
+  # Fallback for client-side routing to main index.html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.html [L]
 </IfModule>
 
