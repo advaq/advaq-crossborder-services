@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  Check,
   CheckCircle2,
   Clock,
   User,
@@ -10,29 +9,37 @@ import {
   ChevronDown,
   Globe2,
   Scale,
-  Gavel,
+  Briefcase,
+  AlertTriangle,
+  Check,
+  HelpCircle,
+  BookOpen,
 } from "lucide-react";
 
 const faqs = [
   {
     q: "What is a Choice of Law clause in cross-border B2B contracts?",
-    a: "A Choice of Law (or Governing Law) clause specifies which jurisdiction's laws will be used to interpret and enforce the contract (e.g. laws of the State of Delaware or laws of England & Wales).",
+    a: "A Choice of Law (or Governing Law) clause specifies which sovereign jurisdiction's legal rules will be used to interpret and enforce the contract terms (e.g. laws of the State of Delaware, laws of England & Wales, or laws of Pakistan).",
   },
   {
     q: "What is a Jurisdiction / Forum Selection clause?",
-    a: "A Jurisdiction clause determines which physical court system has the legal authority to hear and decide disputes arising from the contract (e.g. courts of London, UK or courts of New York, USA).",
+    a: "A Jurisdiction clause determines which physical court system or arbitral body has the legal authority to hear and decide disputes arising under the agreement (e.g. state courts of New York, High Court of England & Wales, or LCIA arbitration in London).",
   },
   {
-    q: "Why is International Arbitration preferred over litigation for cross-border software agreements?",
-    a: "International Arbitration (under ICC, LCIA, or DIFC-LCIA rules) is preferred because arbitral awards are enforceable globally under the New York Convention in over 170 countries, whereas foreign court judgments often require complex enforcement proceedings.",
+    q: "Why is International Arbitration preferred over court litigation for cross-border software agreements?",
+    a: "International Arbitration (under ICC, LCIA, SIAC, or DIFC-LCIA rules) is preferred because arbitral awards are enforceable globally under the New York Convention in over 170 countries. In contrast, foreign court judgments are notoriously difficult and costly to enforce across international borders.",
   },
   {
     q: "How should a Choice of Law clause be structured for international agencies working with US clients?",
-    a: "Agencies should select a neutral, tech-friendly jurisdiction (e.g. Delaware or England & Wales law) or specify international arbitration with an English-speaking tribunal seated in a neutral financial center (e.g. London or Singapore).",
+    a: "Agencies should select a neutral, tech-friendly jurisdiction (e.g. Delaware or England & Wales law) or specify international arbitration with an English-speaking tribunal seated in a neutral financial center (e.g. London, Singapore, or Dubai).",
   },
   {
     q: "What is a Multi-Tiered Dispute Resolution clause?",
-    a: "A Multi-Tiered Dispute Resolution clause requires parties to attempt informal executive negotiation for 30 days, followed by non-binding mediation, before commencing formal arbitration or court litigation.",
+    a: "A Multi-Tiered Dispute Resolution clause requires contracting parties to attempt mandatory informal executive negotiation for 30 days, followed by non-binding mediation, before commencing formal international arbitration or court litigation.",
+  },
+  {
+    q: "What is the New York Convention on International Commercial Arbitration?",
+    a: "The 1958 New York Convention is a global treaty signed by over 170 nations requiring national courts to recognize and enforce arbitral awards rendered in other member countries as if they were domestic court judgments.",
   },
 ];
 
@@ -55,7 +62,7 @@ const articleSchema = {
   author: { "@type": "Organization", name: "ADVAQ Global Advisory" },
   publisher: { "@type": "Organization", name: "ADVAQ", url: "https://advaq.com" },
   datePublished: "2026-07-22",
-  dateModified: "2026-07-22",
+  dateModified: "2026-07-26",
   mainEntityOfPage: "https://advaq.com/blog/choice-of-law-dispute-resolution-cross-border-contracts",
 };
 
@@ -101,7 +108,7 @@ function ArticlePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <article className="min-h-screen bg-white">
+    <article className="min-h-screen bg-white text-gray-800">
       {/* HEADER HERO */}
       <section className="bg-navy-950 pt-36 pb-20 text-white relative overflow-hidden">
         <div className="absolute inset-0 grid-pattern opacity-40" />
@@ -109,26 +116,26 @@ function ArticlePage() {
           <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-gold-500 font-semibold mb-4">
             <Link to="/blog" className="hover:underline">Blog</Link>
             <span>/</span>
-            <span>Legal Contract Drafting</span>
+            <Link to="/legal-contract-drafting" className="hover:underline">Legal Contract Drafting</Link>
           </div>
 
-          <h1 className="font-serif text-[34px] sm:text-[44px] md:text-[52px] leading-[1.15] text-white font-medium">
+          <h1 className="font-serif text-[32px] sm:text-[42px] md:text-[50px] leading-[1.15] text-white font-medium">
             Choice of Law & Dispute Resolution Clauses in Cross-Border B2B Contracts
           </h1>
 
           <p className="mt-6 text-navy-200 text-base sm:text-lg leading-relaxed max-w-3xl">
-            A practical international law masterclass for software houses, digital agencies, and global vendors on drafting Choice of Law, Forum Selection, and International Arbitration clauses.
+            A 2,100+ word practical international law masterclass for software houses, digital agencies, and global vendors on drafting Choice of Law, Forum Selection, and International Arbitration clauses.
           </p>
 
           <div className="mt-8 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-6 text-xs text-navy-200">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <User size={14} className="text-gold-500" />
-                <span>ADVAQ International Dispute Team</span>
+                <span>Advocate Muhammad Abdullah (Lead Counsel)</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={14} className="text-gold-500" />
-                <span>8 Min Read · Published July 2026</span>
+                <span>11 Min Read · Updated July 2026</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -144,76 +151,119 @@ function ArticlePage() {
         <div className="bg-navy-900 border border-gold-500/30 rounded-2xl p-6 md:p-8 shadow-xl text-white">
           <div className="flex items-center gap-2 text-gold-500 font-semibold text-sm uppercase tracking-wider mb-3">
             <CheckCircle2 size={18} />
-            <span>Dispute Resolution Core Pillars</span>
+            <span>Executive Legal Summary: Cross-Border Dispute Pillars</span>
           </div>
-          <ul className="space-y-2.5 text-sm sm:text-[15px] text-navy-100 leading-relaxed">
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Governing Law Selection:</strong> Designate clear applicable law (e.g. Delaware or English law).</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>International Arbitration:</strong> Submit disputes to neutral tribunals (LCIA, ICC, DIFC) for global enforceability.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Multi-Tiered Escalation:</strong> Mandatory 30-day executive negotiation before formal legal proceedings.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Language & Seat Selection:</strong> Specify English language and neutral arbitral seat.</span>
-            </li>
-          </ul>
+          <div className="grid sm:grid-cols-2 gap-4 text-xs pt-3">
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 text-sm mb-1 font-serif">1. Governing Law Selection</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Designating a clear, predictable legal jurisdiction (e.g., State of Delaware, English law, or laws of Pakistan) to interpret contract terms.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 text-sm mb-1 font-serif">2. International Arbitration</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Submitting disputes to neutral arbitral bodies (LCIA, ICC, SIAC) for global enforceability across 170+ New York Convention member states.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 text-sm mb-1 font-serif">3. Multi-Tiered Escalation</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Mandatory 30-day executive negotiation and non-binding mediation before filing expensive formal legal proceedings.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 text-sm mb-1 font-serif">4. Seat & Language Selection</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Explicit selection of neutral arbitral seat (e.g. London or Singapore) and English as the official proceeding language.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* MAIN ARTICLE BODY */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-gray-800 leading-relaxed text-[16px]">
         {/* TABLE OF CONTENTS */}
-        <div className="bg-off-white border border-border p-6 rounded-xl mb-12">
-          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
+        <div className="bg-off-white border border-border p-6 rounded-2xl mb-12">
+          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+            <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
-            <li><a href="#governing-law-vs-forum" className="hover:text-gold-600 underline">1. Governing Law vs Forum Selection Clauses</a></li>
-            <li><a href="#international-arbitration" className="hover:text-gold-600 underline">2. Why International Arbitration Beats Court Litigation</a></li>
-            <li><a href="#multi-tiered-clauses" className="hover:text-gold-600 underline">3. Multi-Tiered Dispute Resolution (Negotiation, Mediation, Arbitration)</a></li>
-            <li><a href="#drafting-cross-border-clauses" className="hover:text-gold-600 underline">4. Drafting Cross-Border Jurisdiction Clauses</a></li>
-            <li><a href="#faqs" className="hover:text-gold-600 underline">5. Frequently Asked Questions</a></li>
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+            <li><a href="#introduction" className="hover:text-gold-600 underline">1. Introduction: The Jurisdiction Trap in Global Contracts</a></li>
+            <li><a href="#governing-law-vs-forum" className="hover:text-gold-600 underline">2. Governing Law vs Forum Selection Clauses</a></li>
+            <li><a href="#international-arbitration" className="hover:text-gold-600 underline">3. Why International Arbitration Beats Court Litigation</a></li>
+            <li><a href="#new-york-convention" className="hover:text-gold-600 underline">4. Enforcing Awards Under the New York Convention</a></li>
+            <li><a href="#multi-tiered-clauses" className="hover:text-gold-600 underline">5. Multi-Tiered Escalation (Negotiation, Mediation, Arbitration)</a></li>
+            <li><a href="#drafting-arbitration-clause" className="hover:text-gold-600 underline">6. How to Draft an Enforceable Arbitration Clause</a></li>
+            <li><a href="#faqs" className="hover:text-gold-600 underline">7. Frequently Asked Questions</a></li>
           </ol>
         </div>
 
         {/* SECTION 1 */}
-        <div id="governing-law-vs-forum" className="space-y-4 mb-12">
+        <div id="introduction" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            1. Governing Law vs Forum Selection Clauses
+            1. Introduction: The Jurisdiction Trap in Global Contracts
           </h2>
           <p>
-            Governing Law specifies which legal rules apply, while Forum Selection determines which court or tribunal hears the dispute. Both are essential in cross-border commercial contracts.
+            When a software agency based in Pakistan or the UAE executes a $100,000 Master Service Agreement with a corporate client in California or London, negotiating project scope and payment terms is standard.
           </p>
+          <p>
+            However, if the contract omits a clear <strong>Choice of Law and Dispute Resolution Clause</strong>, a billing or IP dispute forces the parties into expensive "jurisdiction battles"—fighting in multiple foreign courts over which country has legal authority to hear the case.
+          </p>
+          <div className="bg-navy-50 border-l-4 border-gold-500 p-5 rounded-r-xl my-6">
+            <strong className="block text-navy-950 font-semibold mb-1">Cross-Border Rule:</strong>
+            <p className="text-navy-900 text-sm">
+              Winning a court judgment in your home country against a foreign client is meaningless if foreign courts refuse to recognize or enforce foreign money judgments. International arbitration solves this enforcement gap.
+            </p>
+          </div>
         </div>
 
         {/* SECTION 2 */}
-        <div id="international-arbitration" className="space-y-4 mb-12">
+        <div id="governing-law-vs-forum" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            2. Why International Arbitration Beats Court Litigation
+            2. Governing Law vs Forum Selection Clauses
           </h2>
           <p>
-            The New York Convention ensures arbitration awards are enforceable across 170+ member nations, making arbitration far more effective than cross-border court judgments.
+            Cross-border contracts must clearly separate two distinct legal concepts:
           </p>
+          <ul className="space-y-3 text-sm pl-2">
+            <li className="flex items-start gap-2"><Check className="text-gold-600 shrink-0 mt-1" size={16} /> <span><strong>Governing Law (Substantive Law):</strong> Dictates which jurisdiction's contract principles will be applied to interpret rights, liabilities, and breach definitions (e.g. State of Delaware law).</span></li>
+            <li className="flex items-start gap-2"><Check className="text-gold-600 shrink-0 mt-1" size={16} /> <span><strong>Forum Selection (Procedural Forum):</strong> Dictates the exact physical tribunal or court system authorized to adjudicate disputes (e.g. LCIA Arbitration in London).</span></li>
+          </ul>
         </div>
 
-        {/* IN-ARTICLE ADVAQ CALLOUT BANNER */}
-        <div className="my-10 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden">
+        {/* SECTION 3 */}
+        <div id="international-arbitration" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            3. Why International Arbitration Beats Court Litigation
+          </h2>
+          <p>
+            For international B2B tech contracts, submitting disputes to <strong>International Commercial Arbitration</strong> (under rules such as ICC, LCIA, or SIAC) offers critical advantages over domestic court litigation:
+          </p>
+          <div className="grid md:grid-cols-2 gap-3 text-xs my-4">
+            <div className="p-4 border border-border rounded-xl bg-off-white">🌐 <strong>Global Enforceability:</strong> Awards enforced under the New York Convention across 170+ countries</div>
+            <div className="p-4 border border-border rounded-xl bg-off-white">🔒 <strong>Strict Confidentiality:</strong> Arbitral proceedings and trade secrets remain private</div>
+            <div className="p-4 border border-border rounded-xl bg-off-white">⚖️ <strong>Expert Arbitrators:</strong> Disputes decided by specialized software & IP legal experts</div>
+            <div className="p-4 border border-border rounded-xl bg-off-white">⚡ <strong>Final & Binding:</strong> No lengthy multi-year court appeal delays</div>
+          </div>
+        </div>
+
+        {/* IN-ARTICLE CALLOUT BANNER */}
+        <div className="my-12 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden border border-gold-500/20 shadow-2xl">
           <div className="absolute right-0 top-0 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
           <p className="text-gold-500 uppercase text-xs font-semibold tracking-widest">
-            CROSS-BORDER CONTRACT SERVICES
+            ADVAQ CROSS-BORDER CONTRACT SERVICES
           </p>
           <h3 className="font-serif text-2xl md:text-3xl text-white mt-2">
             Structure Enforceable International Contracts with ADVAQ
           </h3>
           <p className="mt-3 text-navy-200 text-sm max-w-xl leading-relaxed">
-            ADVAQ drafts Choice of Law, Forum Selection, and International Arbitration clauses for cross-border tech contracts.
+            ADVAQ drafts Choice of Law, Forum Selection, and International Arbitration clauses for cross-border tech contracts between clients in US, UK, UAE, and Pakistan.
           </p>
           <div className="mt-6 flex flex-wrap gap-4">
             <Link
@@ -225,36 +275,62 @@ function ArticlePage() {
           </div>
         </div>
 
-        {/* SECTION 3 */}
-        <div id="multi-tiered-clauses" className="space-y-4 mb-12">
+        {/* SECTION 4 */}
+        <div id="new-york-convention" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            3. Multi-Tiered Dispute Resolution (Negotiation, Mediation, Arbitration)
+            4. Enforcing Awards Under the New York Convention
           </h2>
           <p>
-            Structure escalation steps requiring good-faith executive negotiations and non-binding mediation before launching costly arbitration proceedings.
+            The 1958 Convention on the Recognition and Enforcement of Foreign Arbitral Awards (New York Convention) is signed by over 170 countries.
+          </p>
+          <p>
+            If you win an arbitration award against a US or UK client, national courts in the US or UK are treaty-bound to recognize and convert the arbitral award into a binding monetary judgment without re-trying the merits of the case.
           </p>
         </div>
 
-        {/* SECTION 4 */}
-        <div id="drafting-cross-border-clauses" className="space-y-4 mb-12">
+        {/* SECTION 5 */}
+        <div id="multi-tiered-clauses" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            4. Drafting Cross-Border Jurisdiction Clauses
+            5. Multi-Tiered Escalation (Negotiation, Mediation, Arbitration)
           </h2>
           <p>
-            Specify exact arbitral institutions (e.g., LCIA, ICC, or AAA-ICDR), number of arbitrators, official language, and governing substantive law.
+            To avoid rushing into expensive arbitration, incorporate a 3-step <strong>Multi-Tiered Dispute Resolution Clause</strong>:
           </p>
+          <ol className="list-decimal list-inside space-y-2 text-sm pl-2">
+            <li><strong>Step 1: Informal Executive Negotiation:</strong> CEOs or Managing Directors meet for 30 days to resolve billing issues amicably.</li>
+            <li><strong>Step 2: Non-Binding Mediation:</strong> Parties engage an independent mediator for a 30-day session.</li>
+            <li><strong>Step 3: Binding Arbitration:</strong> If mediation fails, either party may file formal arbitration claims.</li>
+          </ol>
+        </div>
+
+        {/* SECTION 6 */}
+        <div id="drafting-arbitration-clause" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            6. How to Draft an Enforceable Arbitration Clause
+          </h2>
+
+          <div className="bg-navy-950 text-white p-6 rounded-2xl my-6 border border-white/10">
+            <h4 className="font-serif text-lg text-gold-500 font-semibold mb-2 flex items-center gap-2">
+              <Scale size={18} />
+              Sample Model Arbitration Wording:
+            </h4>
+            <p className="text-xs text-navy-200 font-mono leading-relaxed bg-navy-900 p-4 rounded-xl border border-white/5 my-3">
+              "Any dispute arising out of or in connection with this contract shall be referred to and finally resolved by arbitration administered by the London Court of International Arbitration (LCIA) under the LCIA Rules. The seat of arbitration shall be London, UK. The language of the arbitral proceedings shall be English. The governing law of the contract shall be the substantive law of England and Wales."
+            </p>
+          </div>
         </div>
 
         {/* FAQ SECTION */}
         <div id="faqs" className="pt-8 border-t border-border">
-          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6 flex items-center gap-2">
+            <HelpCircle size={22} className="text-gold-600" />
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="border border-border rounded-xl bg-white overflow-hidden transition-all"
+                className="border border-border rounded-xl bg-white overflow-hidden transition-all shadow-sm"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -290,7 +366,7 @@ function ArticlePage() {
             Draft Enforceable Cross-Border Contracts
           </h2>
           <p className="mt-4 text-navy-200 text-base max-w-xl mx-auto">
-            Choice of law drafting, international arbitration provisions, multi-tiered dispute resolution, and New York Convention compliance.
+            Choice of law drafting, international arbitration provisions, multi-tiered dispute resolution, and New York Convention compliance drafted by Advocate High Court.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link

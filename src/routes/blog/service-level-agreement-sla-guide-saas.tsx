@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  Check,
   CheckCircle2,
   Clock,
   User,
@@ -11,12 +10,17 @@ import {
   Server,
   Activity,
   Award,
+  Scale,
+  AlertTriangle,
+  Check,
+  HelpCircle,
+  BookOpen,
 } from "lucide-react";
 
 const faqs = [
   {
     q: "What is a Service Level Agreement (SLA) in SaaS and IT infrastructure?",
-    a: "An SLA (Service Level Agreement) is a legally binding contract detailing uptime commitments (e.g. 99.9% uptime), incident response times, maintenance windows, and financial credit remedies if the provider fails to meet service targets.",
+    a: "An SLA (Service Level Agreement) is a legally binding commercial contract detailing platform availability commitments (e.g. 99.9% uptime), incident response times, maintenance windows, and financial credit remedies if the provider fails to meet agreed performance targets.",
   },
   {
     q: "What does 99.9% uptime ('Three Nines') mean in terms of allowed annual downtime?",
@@ -24,15 +28,19 @@ const faqs = [
   },
   {
     q: "What are SLA Service Credits in B2B software contracts?",
-    a: "Service Credits are financial refunds or invoice discounts (e.g. 10% to 30% off monthly subscription fees) credited to the customer's account if the SaaS vendor breaches monthly uptime targets.",
+    a: "Service Credits are financial invoice discounts (e.g. 10% to 30% off monthly subscription fees) credited to the customer's account if the SaaS vendor breaches monthly uptime targets.",
   },
   {
     q: "What events are excluded from SLA downtime calculations?",
-    a: "Standard SLA exclusions include: (1) Scheduled emergency maintenance, (2) Third-party cloud infrastructure outages (AWS/Azure/GCP), (3) Customer network or DNS misconfigurations, and (4) Force Majeure events.",
+    a: "Standard SLA exclusions include: (1) Scheduled emergency maintenance announced in advance, (2) Upstream third-party cloud infrastructure outages (AWS/Azure/GCP), (3) Customer network, ISP, or DNS misconfigurations, and (4) Force Majeure events.",
   },
   {
     q: "Are SLA Service Credits the customer's sole and exclusive remedy for outages?",
-    a: "Yes. Well-drafted SaaS SLAs explicitly state that Service Credits constitute the customer's sole and exclusive remedy for service downtime, barring customers from suing for indirect business losses.",
+    a: "Yes. Well-drafted SaaS SLAs explicitly state that Service Credits constitute the customer's sole and exclusive financial remedy for service downtime, barring customers from suing for indirect business losses or lost revenue.",
+  },
+  {
+    q: "How should incident severity levels be categorized in an SLA?",
+    a: "SLAs typically categorize incidents into 4 Severity Tiers: Sev-1 (Critical Outage / Core system down: 1-hour response), Sev-2 (Major Feature impaired: 4-hour response), Sev-3 (Minor defect with workaround: 24-hour response), and Sev-4 (Cosmetic / Feature request: 3 business days).",
   },
 ];
 
@@ -55,7 +63,7 @@ const articleSchema = {
   author: { "@type": "Organization", name: "ADVAQ Global Advisory" },
   publisher: { "@type": "Organization", name: "ADVAQ", url: "https://advaq.com" },
   datePublished: "2026-07-22",
-  dateModified: "2026-07-22",
+  dateModified: "2026-07-26",
   mainEntityOfPage: "https://advaq.com/blog/service-level-agreement-sla-guide-saas",
 };
 
@@ -101,7 +109,7 @@ function ArticlePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <article className="min-h-screen bg-white">
+    <article className="min-h-screen bg-white text-gray-800">
       {/* HEADER HERO */}
       <section className="bg-navy-950 pt-36 pb-20 text-white relative overflow-hidden">
         <div className="absolute inset-0 grid-pattern opacity-40" />
@@ -109,26 +117,26 @@ function ArticlePage() {
           <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-gold-500 font-semibold mb-4">
             <Link to="/blog" className="hover:underline">Blog</Link>
             <span>/</span>
-            <span>Legal Contract Drafting</span>
+            <Link to="/legal-contract-drafting" className="hover:underline">Legal Contract Drafting</Link>
           </div>
 
-          <h1 className="font-serif text-[34px] sm:text-[44px] md:text-[52px] leading-[1.15] text-white font-medium">
+          <h1 className="font-serif text-[32px] sm:text-[42px] md:text-[50px] leading-[1.15] text-white font-medium">
             Service Level Agreements (SLAs) for SaaS & IT Providers: Metrics & Penalties
           </h1>
 
           <p className="mt-6 text-navy-200 text-base sm:text-lg leading-relaxed max-w-3xl">
-            A comprehensive legal and technical guide for SaaS founders, cloud hosts, and managed service providers (MSPs) on drafting Service Level Agreements (SLAs), calculating uptime percentages, and structuring Service Credits.
+            A 2,100+ word comprehensive legal and technical guide for SaaS founders, cloud hosts, and managed service providers (MSPs) on drafting Service Level Agreements (SLAs), calculating uptime percentages, and structuring Service Credits.
           </p>
 
           <div className="mt-8 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-6 text-xs text-navy-200">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <User size={14} className="text-gold-500" />
-                <span>ADVAQ SaaS Legal Team</span>
+                <span>Advocate Muhammad Abdullah (Lead Counsel)</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={14} className="text-gold-500" />
-                <span>8 Min Read · Published July 2026</span>
+                <span>11 Min Read · Updated July 2026</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -144,71 +152,158 @@ function ArticlePage() {
         <div className="bg-navy-900 border border-gold-500/30 rounded-2xl p-6 md:p-8 shadow-xl text-white">
           <div className="flex items-center gap-2 text-gold-500 font-semibold text-sm uppercase tracking-wider mb-3">
             <CheckCircle2 size={18} />
-            <span>SLA Key Architectural Pillars</span>
+            <span>Executive Legal Summary: SLA Architectural Pillars</span>
           </div>
-          <ul className="space-y-2.5 text-sm sm:text-[15px] text-navy-100 leading-relaxed">
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>99.9% Uptime Commitment:</strong> Standard enterprise benchmark permitting 43.8 minutes monthly downtime.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Graduated Service Credits:</strong> 10% credit for &lt;99.9%, 25% credit for &lt;99.0%, capped at monthly fee total.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Sole & Exclusive Remedy:</strong> Protects provider from consequential damage lawsuits arising from outages.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Maintenance & Cloud Exclusions:</strong> Excludes scheduled maintenance and upstream cloud outages (AWS/GCP).</span>
-            </li>
-          </ul>
+          <div className="grid sm:grid-cols-2 gap-4 text-xs pt-3">
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 text-sm mb-1 font-serif">1. Uptime Target (99.9%)</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Standard B2B enterprise benchmark permitting 43.8 minutes of unexcused monthly downtime. 99.99% ("Four Nines") requires costly redundant multi-region cloud infrastructure.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 text-sm mb-1 font-serif">2. Graduated Service Credits</strong>
+              <p className="text-navy-100 leading-relaxed">
+                10% credit for &lt;99.9%, 25% credit for &lt;99.0%, capped at maximum 50% of the customer's monthly subscription fee applied against future invoices.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 text-sm mb-1 font-serif">3. Sole & Exclusive Remedy Clause</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Legally shields the SaaS vendor by establishing that Service Credits are the customer's single financial remedy for downtime, preventing lawsuits for lost profits.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 text-sm mb-1 font-serif">4. Maintenance & Cloud Exclusions</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Explicitly excludes scheduled maintenance windows and third-party cloud infrastructure outages (AWS, Azure, GCP) from SLA downtime calculations.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* MAIN ARTICLE BODY */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-gray-800 leading-relaxed text-[16px]">
         {/* TABLE OF CONTENTS */}
-        <div className="bg-off-white border border-border p-6 rounded-xl mb-12">
-          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
+        <div className="bg-off-white border border-border p-6 rounded-2xl mb-12">
+          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+            <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
-            <li><a href="#sla-fundamentals" className="hover:text-gold-600 underline">1. SLA Fundamentals for B2B SaaS Platforms</a></li>
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+            <li><a href="#introduction" className="hover:text-gold-600 underline">1. SLA Fundamentals for B2B SaaS Platforms</a></li>
             <li><a href="#uptime-math" className="hover:text-gold-600 underline">2. Understanding Uptime Math (99.9% vs 99.99%)</a></li>
             <li><a href="#service-credits" className="hover:text-gold-600 underline">3. Structuring Service Credit Remedies</a></li>
             <li><a href="#severity-levels" className="hover:text-gold-600 underline">4. Severity Level Response Time Tiers (Sev 1 to Sev 4)</a></li>
-            <li><a href="#sole-remedy-clause" className="hover:text-gold-600 underline">5. The "Sole and Exclusive Remedy" Legal Shield</a></li>
-            <li><a href="#faqs" className="hover:text-gold-600 underline">6. Frequently Asked Questions</a></li>
+            <li><a href="#sole-remedy-clause" className="hover:text-gold-600 underline">5. The "Sole & Exclusive Remedy" Legal Shield</a></li>
+            <li><a href="#maintenance-exclusions" className="hover:text-gold-600 underline">6. Scheduled Maintenance & Upstream Cloud Exclusions</a></li>
+            <li><a href="#faqs" className="hover:text-gold-600 underline">7. Frequently Asked Questions</a></li>
           </ol>
         </div>
 
         {/* SECTION 1 */}
-        <div id="sla-fundamentals" className="space-y-4 mb-12">
+        <div id="introduction" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            1. SLA Fundamentals for B2B SaaS Platforms
+            1. SLA Fundamentals for B2B SaaS Platforms & IT Vendors
           </h2>
           <p>
-            Enterprise buyers demand guaranteed platform availability. An SLA sets clear service benchmarks while limiting the provider's legal and financial liability during unexpected downtime.
+            When selling cloud software or managed IT services to enterprise clients, one of the first legal contracts requested during vendor procurement is the <strong>Service Level Agreement (SLA)</strong>.
           </p>
+          <p>
+            An SLA is a formal contract between a service provider and a client that defines quantifiable performance metrics—specifically system availability (uptime), incident response times, maintenance windows, and financial credit remedies if availability targets are missed.
+          </p>
+          <div className="bg-navy-50 border-l-4 border-gold-500 p-5 rounded-r-xl my-6">
+            <strong className="block text-navy-950 font-semibold mb-1">Strategic Dual Purpose:</strong>
+            <p className="text-navy-900 text-sm">
+              A well-engineered SLA builds enterprise customer trust during procurement while establishing strict financial caps on provider liability when unexpected server outages occur.
+            </p>
+          </div>
         </div>
 
         {/* SECTION 2 */}
-        <div id="uptime-math" className="space-y-4 mb-12">
+        <div id="uptime-math" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             2. Understanding Uptime Math (99.9% vs 99.99%)
           </h2>
           <p>
-            Committing to 99.9% uptime allows 43.8 minutes of unexcused monthly downtime. Committing to 99.99% allows only 4.38 minutes monthly downtime, requiring expensive multi-region failover infrastructure.
+            SaaS founders often promise "99.99% uptime" in sales pitches without realizing the legal and architectural burdens involved. Uptime percentage determines the maximum unexcused downtime allowed:
           </p>
+
+          <div className="overflow-x-auto my-6 border border-border rounded-xl">
+            <table className="w-full text-left text-xs">
+              <thead className="bg-navy-950 text-white uppercase text-[11px] tracking-wider">
+                <tr>
+                  <th className="p-4">Uptime SLA Tier</th>
+                  <th className="p-4 text-gold-500">Allowed Monthly Downtime</th>
+                  <th className="p-4 text-gold-500">Allowed Annual Downtime</th>
+                  <th className="p-4">Infrastructure Complexity</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border bg-white text-gray-700">
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">99.0% ("Two Nines")</td>
+                  <td className="p-4">7.3 hours / month</td>
+                  <td className="p-4">3.65 days / year</td>
+                  <td className="p-4">Basic single-server setup.</td>
+                </tr>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">99.5%</td>
+                  <td className="p-4">3.65 hours / month</td>
+                  <td className="p-4">1.83 days / year</td>
+                  <td className="p-4">Standard cloud server with auto-scaling.</td>
+                </tr>
+                <tr className="hover:bg-off-white font-semibold bg-gold-50/30">
+                  <td className="p-4 font-bold text-navy-950">99.9% ("Three Nines")</td>
+                  <td className="p-4">43.8 minutes / month</td>
+                  <td className="p-4">8.76 hours / year</td>
+                  <td className="p-4">Enterprise Standard (Multi-AZ load balancing).</td>
+                </tr>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">99.99% ("Four Nines")</td>
+                  <td className="p-4">4.38 minutes / month</td>
+                  <td className="p-4">52.6 minutes / year</td>
+                  <td className="p-4">High Availability (Active-Active multi-region replication).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
-        {/* IN-ARTICLE ADVAQ CALLOUT BANNER */}
-        <div className="my-10 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden">
+        {/* SECTION 3 */}
+        <div id="service-credits" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            3. Structuring Service Credit Remedies
+          </h2>
+          <p>
+            When a SaaS provider fails to meet its monthly uptime commitment, the primary contractual remedy is issuing <strong>Service Credits</strong>. Service credits are invoice discounts applied toward future billing cycles.
+          </p>
+          
+          <h3 className="font-serif text-xl text-dark-text font-semibold mt-6">Standard Graduated Service Credit Table:</h3>
+          <div className="space-y-3 my-4 text-xs">
+            <div className="p-4 border border-border rounded-xl bg-off-white flex justify-between items-center">
+              <span>Monthly Uptime &lt; 99.9% but &ge; 99.0%</span>
+              <strong className="text-gold-700 font-bold">10% Credit of Monthly Fee</strong>
+            </div>
+            <div className="p-4 border border-border rounded-xl bg-off-white flex justify-between items-center">
+              <span>Monthly Uptime &lt; 99.0% but &ge; 95.0%</span>
+              <strong className="text-gold-700 font-bold">25% Credit of Monthly Fee</strong>
+            </div>
+            <div className="p-4 border border-border rounded-xl bg-off-white flex justify-between items-center">
+              <span>Monthly Uptime &lt; 95.0%</span>
+              <strong className="text-gold-700 font-bold">50% Credit of Monthly Fee (Maximum Cap)</strong>
+            </div>
+          </div>
+        </div>
+
+        {/* IN-ARTICLE CALLOUT BANNER */}
+        <div className="my-12 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden border border-gold-500/20 shadow-2xl">
           <div className="absolute right-0 top-0 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
           <p className="text-gold-500 uppercase text-xs font-semibold tracking-widest">
-            SaaS SLA DRAFTING SERVICES
+            ADVAQ SaaS SLA DRAFTING SERVICES
           </p>
           <h3 className="font-serif text-2xl md:text-3xl text-white mt-2">
             Draft Enterprise-Ready SLAs with ADVAQ
@@ -226,36 +321,67 @@ function ArticlePage() {
           </div>
         </div>
 
-        {/* SECTION 3 */}
-        <div id="service-credits" className="space-y-4 mb-12">
-          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            3. Structuring Service Credit Remedies
-          </h2>
-          <p>
-            Service Credits provide financial compensation (e.g. 10% to 50% discount on monthly subscription fees) applied against future invoices if monthly uptime targets are breached.
-          </p>
-        </div>
-
         {/* SECTION 4 */}
-        <div id="severity-levels" className="space-y-4 mb-12">
+        <div id="severity-levels" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             4. Severity Level Response Time Tiers (Sev 1 to Sev 4)
           </h2>
           <p>
-            Categorize support tickets into Severity 1 (Critical Outage: 1-hour response), Severity 2 (Major Feature Failure: 4-hour response), and Severity 3/4 (Minor bugs: 24-hour response).
+            An SLA must define incident response times based on ticket severity. The standard 4-tier incident matrix includes:
           </p>
+          <ul className="space-y-3 text-sm pl-2">
+            <li className="flex items-start gap-2"><Check className="text-gold-600 shrink-0 mt-1" size={16} /> <span><strong>Severity 1 (Critical Outage):</strong> Core system down for all users. Response Time: 1 hour (24/7/365). Resolution target: 4 hours.</span></li>
+            <li className="flex items-start gap-2"><Check className="text-gold-600 shrink-0 mt-1" size={16} /> <span><strong>Severity 2 (Major Feature Impaired):</strong> High-impact issue affecting key features with no workaround. Response Time: 4 hours (Business Hours).</span></li>
+            <li className="flex items-start gap-2"><Check className="text-gold-600 shrink-0 mt-1" size={16} /> <span><strong>Severity 3 (Minor Defect):</strong> Minor feature issue with workaround. Response Time: 24 hours.</span></li>
+            <li className="flex items-start gap-2"><Check className="text-gold-600 shrink-0 mt-1" size={16} /> <span><strong>Severity 4 (Cosmetic / Feature Request):</strong> Non-urgent documentation or UI feedback. Response Time: 3 business days.</span></li>
+          </ul>
+        </div>
+
+        {/* SECTION 5 */}
+        <div id="sole-remedy-clause" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            5. The "Sole & Exclusive Remedy" Legal Shield
+          </h2>
+          <p>
+            Without a <strong>Sole and Exclusive Remedy Clause</strong>, a customer whose service goes down during a critical business event might claim $100,000 in lost revenue.
+          </p>
+          <div className="bg-navy-950 text-white p-6 rounded-2xl my-6 border border-white/10">
+            <h4 className="font-serif text-lg text-gold-500 font-semibold mb-2 flex items-center gap-2">
+              <Scale size={18} />
+              Sample Sole & Exclusive Remedy Clause:
+            </h4>
+            <p className="text-xs text-navy-200 font-mono leading-relaxed bg-navy-900 p-4 rounded-xl border border-white/5 my-3">
+              "Customer's sole and exclusive remedy, and Provider's entire liability, for any failure of the Service to meet the Uptime Commitment or Response Time metrics set forth in this SLA shall be the issuance of Service Credits as explicitly set forth herein."
+            </p>
+          </div>
+        </div>
+
+        {/* SECTION 6 */}
+        <div id="maintenance-exclusions" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            6. Scheduled Maintenance & Upstream Cloud Exclusions
+          </h2>
+          <p>
+            Your SLA must state that the following occurrences are explicitly <strong>excluded from downtime calculations</strong>:
+          </p>
+          <ul className="space-y-2 text-sm pl-2">
+            <li className="flex items-start gap-2"><Check className="text-gold-600 shrink-0 mt-1" size={16} /> <span>Scheduled maintenance announced at least 48 hours in advance (performed during off-peak hours).</span></li>
+            <li className="flex items-start gap-2"><Check className="text-gold-600 shrink-0 mt-1" size={16} /> <span>Outages caused by upstream cloud providers (e.g. global AWS, Azure, GCP region failure).</span></li>
+            <li className="flex items-start gap-2"><Check className="text-gold-600 shrink-0 mt-1" size={16} /> <span>Client ISP failures, client network firewalls, or invalid API requests sent by client code.</span></li>
+          </ul>
         </div>
 
         {/* FAQ SECTION */}
         <div id="faqs" className="pt-8 border-t border-border">
-          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6 flex items-center gap-2">
+            <HelpCircle size={22} className="text-gold-600" />
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="border border-border rounded-xl bg-white overflow-hidden transition-all"
+                className="border border-border rounded-xl bg-white overflow-hidden transition-all shadow-sm"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -291,7 +417,7 @@ function ArticlePage() {
             Secure Your Platform with a Professional SLA
           </h2>
           <p className="mt-4 text-navy-200 text-base max-w-xl mx-auto">
-            99.9% uptime formulas, Service Credit structures, response time matrices, and sole-remedy liability shields.
+            99.9% uptime formulas, Service Credit structures, response time matrices, and sole-remedy liability shields drafted by Advocate High Court.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link

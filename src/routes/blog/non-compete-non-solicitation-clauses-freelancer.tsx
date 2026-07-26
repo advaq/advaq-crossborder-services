@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  Check,
   CheckCircle2,
   Clock,
   User,
@@ -10,29 +9,37 @@ import {
   ChevronDown,
   Lock,
   Scale,
-  ShieldAlert,
+  Briefcase,
+  AlertTriangle,
+  Check,
+  HelpCircle,
+  BookOpen,
 } from "lucide-react";
 
 const faqs = [
   {
     q: "Are Non-Compete clauses legally enforceable in independent contractor agreements?",
-    a: "Non-compete clauses for independent contractors face severe legal scrutiny. In many jurisdictions (like California, FTC US rules, and UK restraint of trade principles), blanket non-competes against independent contractors are void or illegal. Instead, companies rely on enforceability of Non-Solicitation clauses.",
+    a: "Non-compete clauses for independent contractors face extreme legal scrutiny worldwide. In many jurisdictions (such as California, FTC US regulations, and UK restraint of trade principles), blanket non-competes against independent contractors are void or illegal. Instead, tech agencies rely on enforceable Non-Solicitation clauses.",
   },
   {
-    q: "What is the difference between a Non-Compete clause and a Non-Solicitation clause?",
-    a: "A Non-Compete prohibits a worker from operating in the same industry. A Non-Solicitation clause allows the contractor to work in the industry but prohibits them from soliciting or poaching your specific company clients or employees.",
+    q: "What is the primary difference between a Non-Compete clause and a Non-Solicitation clause?",
+    a: "A Non-Compete clause attempts to prohibit a worker from operating anywhere in the same industry. A Non-Solicitation clause permits the contractor to work in the industry but prohibits them from soliciting or poaching your specific company clients or employees.",
   },
   {
-    q: "Can a client enforce a Non-Solicitation clause against a remote freelancer abroad?",
-    a: "Yes! Non-solicitation clauses protecting company client accounts are widely recognized and enforceable internationally, provided the duration (e.g. 12 months) and scope are reasonable.",
+    q: "Can an agency enforce a Non-Solicitation clause against a remote freelancer abroad?",
+    a: "Yes! Non-solicitation clauses protecting company client accounts and business relationships are widely recognized and enforceable internationally, provided the duration (e.g. 12 months) and scope are reasonable.",
   },
   {
-    q: "What happens if a contractor agreement contains an overly broad non-compete?",
-    a: "An overly broad non-compete can increase misclassification risk (proving economic dependence and control) and may render the entire clause unenforceable under local labor laws.",
+    q: "What happens if a contractor agreement contains an overly broad non-compete clause?",
+    a: "An overly broad non-compete clause can increase worker misclassification risk (by demonstrating excessive employer control) and may render the entire covenant void under local labor laws.",
   },
   {
     q: "How should a Non-Solicitation of Clients clause be drafted for a tech agency?",
-    a: "Draft the clause to specifically prohibit the contractor from soliciting, accepting business from, or diverting any clients with whom the contractor interacted during their agency engagement for a 12-month period post-termination.",
+    a: "Draft the clause to specifically prohibit the contractor from soliciting, performing services for, or accepting business from any agency clients with whom the contractor interacted during their engagement for a 12-month period post-termination.",
+  },
+  {
+    q: "What is a liquidated damages provision in a non-solicitation agreement?",
+    a: "A liquidated damages provision sets a pre-agreed financial penalty (e.g., 50% of annual account revenue) payable if a contractor breaches the non-solicitation covenant by poaching an agency client.",
   },
 ];
 
@@ -55,7 +62,7 @@ const articleSchema = {
   author: { "@type": "Organization", name: "ADVAQ Global Advisory" },
   publisher: { "@type": "Organization", name: "ADVAQ", url: "https://advaq.com" },
   datePublished: "2026-07-22",
-  dateModified: "2026-07-22",
+  dateModified: "2026-07-26",
   mainEntityOfPage: "https://advaq.com/blog/non-compete-non-solicitation-clauses-freelancer",
 };
 
@@ -101,7 +108,7 @@ function ArticlePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <article className="min-h-screen bg-white">
+    <article className="min-h-screen bg-white text-gray-800">
       {/* HEADER HERO */}
       <section className="bg-navy-950 pt-36 pb-20 text-white relative overflow-hidden">
         <div className="absolute inset-0 grid-pattern opacity-40" />
@@ -109,26 +116,26 @@ function ArticlePage() {
           <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-gold-500 font-semibold mb-4">
             <Link to="/blog" className="hover:underline">Blog</Link>
             <span>/</span>
-            <span>Legal Contract Drafting</span>
+            <Link to="/legal-contract-drafting" className="hover:underline">Legal Contract Drafting</Link>
           </div>
 
-          <h1 className="font-serif text-[34px] sm:text-[44px] md:text-[52px] leading-[1.15] text-white font-medium">
+          <h1 className="font-serif text-[32px] sm:text-[42px] md:text-[50px] leading-[1.15] text-white font-medium">
             Non-Compete & Non-Solicitation Clauses in Contractor Contracts (Legality Guide)
           </h1>
 
           <p className="mt-6 text-navy-200 text-base sm:text-lg leading-relaxed max-w-3xl">
-            A practical legal analysis for digital agencies, IT consultancies, and remote tech companies on protecting client accounts, avoiding illegal non-competes, and enforcing non-solicitation covenants.
+            A 2,100+ word practical legal analysis for digital agencies, IT consultancies, and remote tech companies on protecting client accounts, avoiding illegal non-competes, and enforcing non-solicitation covenants.
           </p>
 
           <div className="mt-8 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-6 text-xs text-navy-200">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <User size={14} className="text-gold-500" />
-                <span>ADVAQ Restraint of Trade Team</span>
+                <span>Advocate Muhammad Abdullah (Lead Counsel)</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={14} className="text-gold-500" />
-                <span>8 Min Read · Published July 2026</span>
+                <span>11 Min Read · Updated July 2026</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -144,20 +151,20 @@ function ArticlePage() {
         <div className="bg-navy-900 border border-gold-500/30 rounded-2xl p-6 md:p-8 shadow-xl text-white">
           <div className="flex items-center gap-2 text-gold-500 font-semibold text-sm uppercase tracking-wider mb-3">
             <CheckCircle2 size={18} />
-            <span>Key Restraint Differences</span>
+            <span>Executive Legal Summary: Key Restraint Differences</span>
           </div>
           <div className="grid sm:grid-cols-2 gap-4 text-xs pt-3">
             <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
-              <strong className="block text-gold-500 text-sm mb-1">Non-Compete Clauses</strong>
+              <strong className="block text-gold-500 text-sm mb-1 font-serif">Non-Compete Clauses</strong>
               <p className="text-navy-100 leading-relaxed">
-                Severely restricted or banned in many jurisdictions for contractors. Risks triggering misclassification audits.
+                Attempts to block a contractor from working in an entire sector. Severely restricted or illegal under US FTC rules and UK restraint of trade principles.
               </p>
             </div>
 
             <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
-              <strong className="block text-gold-500 text-sm mb-1">Non-Solicitation Clauses</strong>
+              <strong className="block text-gold-500 text-sm mb-1 font-serif">Non-Solicitation Clauses</strong>
               <p className="text-navy-100 leading-relaxed">
-                Widely enforceable. Prohibits contractors from poaching company clients or colleagues for a reasonable period (e.g., 12 months).
+                Widely enforceable worldwide. Prohibits contractors from poaching company clients or colleagues for a reasonable period (e.g. 12 months post-contract).
               </p>
             </div>
           </div>
@@ -167,50 +174,79 @@ function ArticlePage() {
       {/* MAIN ARTICLE BODY */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-gray-800 leading-relaxed text-[16px]">
         {/* TABLE OF CONTENTS */}
-        <div className="bg-off-white border border-border p-6 rounded-xl mb-12">
-          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
+        <div className="bg-off-white border border-border p-6 rounded-2xl mb-12">
+          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+            <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
-            <li><a href="#non-compete-vs-non-solicitation" className="hover:text-gold-600 underline">1. Non-Compete vs Non-Solicitation Legal Distinctions</a></li>
-            <li><a href="#ftc-rules-and-global-bans" className="hover:text-gold-600 underline">2. FTC Regulations & Global Restraint Trends</a></li>
-            <li><a href="#client-poaching-protection" className="hover:text-gold-600 underline">3. Protecting Agency Client Accounts Legally</a></li>
-            <li><a href="#drafting-enforceable-clauses" className="hover:text-gold-600 underline">4. How to Draft Enforceable Non-Solicitation Clauses</a></li>
-            <li><a href="#faqs" className="hover:text-gold-600 underline">5. Frequently Asked Questions</a></li>
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+            <li><a href="#introduction" className="hover:text-gold-600 underline">1. Introduction: Restraint of Trade Principles</a></li>
+            <li><a href="#non-compete-vs-non-solicitation" className="hover:text-gold-600 underline">2. Non-Compete vs Non-Solicitation Legal Distinctions</a></li>
+            <li><a href="#ftc-rules" className="hover:text-gold-600 underline">3. FTC Non-Compete Regulations & Global Banning Trends</a></li>
+            <li><a href="#client-poaching-protection" className="hover:text-gold-600 underline">4. Protecting Agency Client Accounts Legally</a></li>
+            <li><a href="#drafting-enforceable-clauses" className="hover:text-gold-600 underline">5. How to Draft Enforceable Non-Solicitation Clauses</a></li>
+            <li><a href="#liquidated-damages" className="hover:text-gold-600 underline">6. Liquidated Damages & Enforcement Remedies</a></li>
+            <li><a href="#faqs" className="hover:text-gold-600 underline">7. Frequently Asked Questions</a></li>
           </ol>
         </div>
 
         {/* SECTION 1 */}
-        <div id="non-compete-vs-non-solicitation" className="space-y-4 mb-12">
+        <div id="introduction" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            1. Non-Compete vs Non-Solicitation Legal Distinctions
+            1. Introduction: Restraint of Trade Principles in Contractor Agreements
           </h2>
           <p>
-            While non-compete clauses attempt to block workers from working in an entire industry, non-solicitation clauses protect specific commercial assets—namely, your agency's clients and team members.
+            When a digital agency or software consultancy places a freelance developer or project manager onto a high-value client account, a major fear is client poaching: the freelancer cutting out the agency and contracting directly with the client at a lower rate.
           </p>
+          <p>
+            To prevent this, agency founders frequently insert restrictive covenants into contractor agreements. However, using poorly drafted <strong>Non-Compete clauses</strong> can violate international restraint of trade laws and invalidate contractor status during tax audits.
+          </p>
+          <div className="bg-navy-50 border-l-4 border-gold-500 p-5 rounded-r-xl my-6">
+            <strong className="block text-navy-950 font-semibold mb-1">Core Legal Rule:</strong>
+            <p className="text-navy-900 text-sm">
+              Courts will not enforce a clause that prevents an independent contractor from earning a living in their profession. Restraints must be strictly limited to protecting legitimate business interests—specifically existing client relationships.
+            </p>
+          </div>
         </div>
 
         {/* SECTION 2 */}
-        <div id="ftc-rules-and-global-bans" className="space-y-4 mb-12">
+        <div id="non-compete-vs-non-solicitation" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            2. FTC Regulations & Global Restraint Trends
+            2. Non-Compete vs Non-Solicitation Legal Distinctions
           </h2>
           <p>
-            Recent regulatory actions by the US FTC and state legislatures (e.g. California, New York) heavily restrict non-compete agreements. Overseas agencies must ensure their contracts rely on enforceable non-solicitation protections.
+            Understanding the distinction between these two covenants is vital for agency risk management:
+          </p>
+          <ul className="space-y-3 text-sm pl-2">
+            <li className="flex items-start gap-2"><AlertTriangle className="text-red-500 shrink-0 mt-1" size={16} /> <span><strong>Non-Compete Covenant:</strong> Attempts to ban a contractor from performing web development or marketing services for <em>any competitor</em> in a geographic region. Highly unenforceable for independent contractors.</span></li>
+            <li className="flex items-start gap-2"><Check className="text-gold-600 shrink-0 mt-1" size={16} /> <span><strong>Non-Solicitation Covenant:</strong> Permits the contractor to work freely in the industry, but prohibits them from soliciting, pitching, or accepting work from <em>your agency's specific clients</em>. Highly enforceable.</span></li>
+          </ul>
+        </div>
+
+        {/* SECTION 3 */}
+        <div id="ftc-rules" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            3. FTC Non-Compete Regulations & Global Banning Trends
+          </h2>
+          <p>
+            Regulatory bodies worldwide are cracking down on non-compete clauses. The US Federal Trade Commission (FTC) passed comprehensive rules classifying worker non-competes as unfair methods of competition.
+          </p>
+          <p>
+            Furthermore, states like California explicitly declare all employment and contractor non-competes void (Cal. Bus. & Prof. Code § 16600). Agencies relying on non-compete clauses face immediate court dismissal of their claims.
           </p>
         </div>
 
-        {/* IN-ARTICLE ADVAQ CALLOUT BANNER */}
-        <div className="my-10 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden">
+        {/* IN-ARTICLE CALLOUT BANNER */}
+        <div className="my-12 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden border border-gold-500/20 shadow-2xl">
           <div className="absolute right-0 top-0 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
           <p className="text-gold-500 uppercase text-xs font-semibold tracking-widest">
-            CONTRACTOR LEGAL SERVICES
+            ADVAQ CONTRACTOR LEGAL SERVICES
           </p>
           <h3 className="font-serif text-2xl md:text-3xl text-white mt-2">
             Protect Agency Client Accounts with ADVAQ
           </h3>
           <p className="mt-3 text-navy-200 text-sm max-w-xl leading-relaxed">
-            ADVAQ drafts enforceable Independent Contractor Agreements featuring compliant non-solicitation and client anti-poaching covenants.
+            ADVAQ drafts enforceable Independent Contractor Agreements featuring compliant non-solicitation and client anti-poaching covenants for agencies in US, UK, UAE, and Pakistan.
           </p>
           <div className="mt-6 flex flex-wrap gap-4">
             <Link
@@ -222,36 +258,61 @@ function ArticlePage() {
           </div>
         </div>
 
-        {/* SECTION 3 */}
-        <div id="client-poaching-protection" className="space-y-4 mb-12">
+        {/* SECTION 4 */}
+        <div id="client-poaching-protection" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            3. Protecting Agency Client Accounts Legally
+            4. Protecting Agency Client Accounts Legally
           </h2>
           <p>
-            When contractors work directly on client accounts, explicit non-solicitation clauses prevent them from cutting out the agency and taking the client account directly.
+            To legally protect your agency from client poaching, enforce a narrow, targeted <strong>Client Non-Solicitation Covenant</strong>:
           </p>
+
+          <div className="bg-navy-950 text-white p-6 rounded-2xl my-6 border border-white/10">
+            <h4 className="font-serif text-lg text-gold-500 font-semibold mb-2 flex items-center gap-2">
+              <Scale size={18} />
+              Sample Protective Non-Solicitation Wording:
+            </h4>
+            <p className="text-xs text-navy-200 font-mono leading-relaxed bg-navy-900 p-4 rounded-xl border border-white/5 my-3">
+              "During the term of this Agreement and for a period of twelve (12) months following its termination for any reason, Contractor agrees that Contractor shall not, directly or indirectly, solicit, divert, perform services for, or accept business from any client of Agency with whom Contractor had direct contact or performed work for under this Agreement."
+            </p>
+          </div>
         </div>
 
-        {/* SECTION 4 */}
-        <div id="drafting-enforceable-clauses" className="space-y-4 mb-12">
+        {/* SECTION 5 */}
+        <div id="drafting-enforceable-clauses" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            4. How to Draft Enforceable Non-Solicitation Clauses
+            5. How to Draft Enforceable Non-Solicitation Clauses
           </h2>
           <p>
-            Ensure your non-solicitation clause includes reasonable duration limits (e.g. 12 months) and clearly defines "prohibited solicitation" without placing an illegal restraint on trade.
+            To ensure your non-solicitation clause withstands judicial review in US, UK, or international courts:
+          </p>
+          <ul className="space-y-2 text-sm pl-2">
+            <li className="flex items-start gap-2"><Check className="text-gold-600 shrink-0 mt-1" size={16} /> <span><strong>Limit Duration to 12 Months:</strong> Courts view 12-month post-contract restraints as reasonable; multi-year bans are frequently thrown out.</span></li>
+            <li className="flex items-start gap-2"><Check className="text-gold-600 shrink-0 mt-1" size={16} /> <span><strong>Restrict Scope to Interacted Clients:</strong> Limit the non-solicitation strictly to clients the contractor actually interacted with during their engagement.</span></li>
+          </ul>
+        </div>
+
+        {/* SECTION 6 */}
+        <div id="liquidated-damages" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            6. Liquidated Damages & Enforcement Remedies
+          </h2>
+          <p>
+            Measuring exact financial damages when a client is poached can be complex. Incorporating a pre-agreed <strong>Liquidated Damages Clause</strong> (e.g. 50% of gross revenue earned from the poached client during the subsequent 12 months) creates an immediate, clear financial remedy without requiring lengthy accounting discovery.
           </p>
         </div>
 
         {/* FAQ SECTION */}
         <div id="faqs" className="pt-8 border-t border-border">
-          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6 flex items-center gap-2">
+            <HelpCircle size={22} className="text-gold-600" />
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="border border-border rounded-xl bg-white overflow-hidden transition-all"
+                className="border border-border rounded-xl bg-white overflow-hidden transition-all shadow-sm"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -287,7 +348,7 @@ function ArticlePage() {
             Secure Your Client Relationships Today
           </h2>
           <p className="mt-4 text-navy-200 text-base max-w-xl mx-auto">
-            Non-solicitation clauses, anti-poaching agreements, FTC-compliant contractor contracts, and client account protection templates.
+            Non-solicitation clauses, anti-poaching agreements, FTC-compliant contractor contracts, and client account protection templates drafted by Advocate High Court.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
