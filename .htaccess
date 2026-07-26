@@ -1,18 +1,40 @@
 # ----------------------------------------------------------------------
-# ADVAQ Root Rewrite to dist/client Directory for Hostinger
+# ADVAQ Root Rewrite & Clean URL Configuration for Hostinger
 # ----------------------------------------------------------------------
+
+# Disable DirectorySlash to prevent Apache from exposing /dist/client/ in 301 redirects
+DirectorySlash Off
+
+# Prevent directory indexing
+Options -Indexes
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # Serve directly if requested file or directory exists in root
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
+  # 1. If browser explicitly requests /dist/client/..., 301 redirect to clean public URL
+  RewriteCond %{THE_REQUEST} \s/dist/client/([^\s?]*) [NC]
+  RewriteRule ^ /%1 [R=301,L]
+
+  # 2. If requested path is a physical file in dist/client (e.g. /assets/..., /robots.txt, /sitemap.xml)
+  RewriteCond %{DOCUMENT_ROOT}/dist/client%{REQUEST_URI} -f
+  RewriteRule ^(.*)$ dist/client/$1 [L]
+
+  # 3. If requested path has a pre-rendered index.html in dist/client
+  # Handles both /blog/some-article and /blog/some-article/
+  RewriteCond %{DOCUMENT_ROOT}/dist/client%{REQUEST_URI}/index.html -f
+  RewriteRule ^(.*)$ dist/client%{REQUEST_URI}/index.html [L]
+
+  # 4. If requested path (without trailing slash) has a pre-rendered index.html in dist/client
+  RewriteCond %{DOCUMENT_ROOT}/dist/client/%{REQUEST_URI}/index.html -f
+  RewriteRule ^(.*)$ dist/client/%{REQUEST_URI}/index.html [L]
+
+  # 5. Serve root files directly if they exist (e.g. favicon.ico if in root)
+  RewriteCond %{REQUEST_URI} !^/dist/client
+  RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  # Don't loop if already prefixed with dist/client
+  # 6. Fallback for client-side SPA routing to dist/client/index.html
   RewriteCond %{REQUEST_URI} !^/dist/client/
-
-  # Rewrite everything to dist/client/
-  RewriteRule ^(.*)$ dist/client/$1 [L]
+  RewriteRule ^(.*)$ dist/client/index.html [L]
 </IfModule>
