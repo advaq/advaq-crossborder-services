@@ -246,7 +246,7 @@ function AboutPage() {
             </h2>
             <div className="mt-4 space-y-4 text-gray-700 text-base leading-[1.8]">
               <p>
-                Pakistan is home to some of the world's most talented software developers, designers, and digital entrepreneurs. Yet thousands of them earn in dollars, pounds, and dirhams through global platforms without proper corporate structures — leaving them vulnerable to payment blocks, client disputes, and tax audits.
+                Pakistan is home to some of the world's most talented software developers, designers, and digital entrepreneurs. Yet thousands of them earn in dollars, pounds, and dirhams through global platforms without proper corporate structures, leaving them vulnerable to payment blocks, client disputes, and tax audits.
               </p>
               <p>
                 ADVAQ bridges this gap. By structuring legitimate UK LTDs, US LLCs, UAE Freezone companies, and SECP entities alongside tax-free IT export registrations in Pakistan, we remove every obstacle standing between you and global scale.
