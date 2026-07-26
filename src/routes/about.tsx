@@ -122,7 +122,7 @@ function AboutPage() {
               We Help Entrepreneurs Build Legitimate, Legally Protected Businesses in the UK, USA, UAE & Pakistan.
             </h1>
             <p className="mt-6 text-navy-200 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
-              ADVAQ is not a generic online formation service. We are led by a Punjab Bar Council licensed advocate who personally handles your company formation, tax compliance, and legal contracts — with full legal accountability across four jurisdictions.
+              We are led by a Licensed Advocate who personally handles your company formation, tax compliance, and legal contracts with full legal accountability across four jurisdictions.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 text-[13px] text-navy-200">
               {[
