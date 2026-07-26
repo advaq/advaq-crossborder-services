@@ -98,7 +98,6 @@ export function Footer() {
               "Sales Tax Registration",
               "BOI / FinCEN Report Filing",
               "Registered Agent Service",
-              "ITIN Application",
             ].map((s) => (
               <li key={s}>
                 <Link to="/us-services" className="hover:text-gold-500 transition-colors">
