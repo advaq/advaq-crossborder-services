@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#withholding-agent-role" className="hover:text-gold-600 underline">1. The Role of SECP Companies as Statutory Withholding Agents</a></li>
             <li><a href="#section-153-rates" className="hover:text-gold-600 underline">2. Section 153 WHT Rates (Goods, Services, Contracts)</a></li>
             <li><a href="#section-152-foreign" className="hover:text-gold-600 underline">3. Section 152 WHT on Payments to Foreign Companies</a></li>

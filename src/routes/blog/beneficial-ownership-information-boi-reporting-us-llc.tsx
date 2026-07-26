@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-is-cta" className="hover:text-gold-600 underline">1. What Is the Corporate Transparency Act (CTA)?</a></li>
             <li><a href="#who-must-file" className="hover:text-gold-600 underline">2. Who Is Classified as a Beneficial Owner?</a></li>
             <li><a href="#required-information" className="hover:text-gold-600 underline">3. What Information Must Be Disclosed in the BOI Report?</a></li>

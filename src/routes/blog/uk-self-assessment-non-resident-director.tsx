@@ -177,7 +177,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#filing-criteria" className="hover:text-gold-600 underline">1. HMRC Statutory Criteria: Do You Need to File?</a></li>
             <li><a href="#company-utr-vs-personal-utr" className="hover:text-gold-600 underline">2. Company UTR vs Personal UTR: Understanding the Difference</a></li>
             <li><a href="#sa109-residence-claim" className="hover:text-gold-600 underline">3. Form SA109: Claiming Non-Resident Tax Status</a></li>

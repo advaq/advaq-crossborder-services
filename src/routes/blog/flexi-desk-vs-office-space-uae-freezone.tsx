@@ -171,7 +171,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-is-flexi-desk" className="hover:text-gold-600 underline">1. What Is a Flexi-Desk in a UAE Freezone?</a></li>
             <li><a href="#legal-requirements" className="hover:text-gold-600 underline">2. UAE Statutory Office Space Rules for Company Registration</a></li>
             <li><a href="#visa-quota-impact" className="hover:text-gold-600 underline">3. Residence Visa Quotas: Flexi-Desk vs Physical Lease</a></li>

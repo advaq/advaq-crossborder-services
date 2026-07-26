@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#sponsor-eligibility" className="hover:text-gold-600 underline">1. Sponsor Prerequisites for Dubai Family Visas</a></li>
             <li><a href="#document-attestation" className="hover:text-gold-600 underline">2. MOFA Document Attestation Rules (Marriage & Birth Certificates)</a></li>
             <li><a href="#ejari-housing" className="hover:text-gold-600 underline">3. Ejari Housing Requirement & Deposit Rules</a></li>
@@ -205,7 +205,7 @@ function ArticlePage() {
           <p>
             Before submitting your family visa application to GDRFA Dubai, your legal relationship certificates must undergo a 3-tier attestation process:
           </p>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>Attestation by the Ministry of Foreign Affairs (MOFA) in your home country (e.g. Pakistan, UK, US).</li>
             <li>Attestation by the UAE Embassy in your home country.</li>
             <li>Final attestation by MOFA inside the UAE (or translated into legal Arabic by a certified translator).</li>
@@ -249,7 +249,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             4. Step-by-Step Dependant Application Process
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>Apply for Dependant Entry Permits via GDRFA Dubai portal.</li>
             <li>Perform Status Change for family members inside the UAE.</li>
             <li>Complete medical fitness test for spouse and children over 18.</li>

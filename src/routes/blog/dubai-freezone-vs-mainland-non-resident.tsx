@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#core-differences" className="hover:text-gold-600 underline">1. Core Legal Differences: Freezone vs Mainland</a></li>
             <li><a href="#ownership-rules" className="hover:text-gold-600 underline">2. 100% Foreign Ownership Rules (Commercial Companies Law)</a></li>
             <li><a href="#corporate-tax-rules" className="hover:text-gold-600 underline">3. UAE Corporate Tax Treatment (0% vs 9%)</a></li>

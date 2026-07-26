@@ -177,7 +177,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#definition" className="hover:text-gold-600 underline">Understanding the Fundamental Definitions</a></li>
             <li><a href="#eligibility" className="hover:text-gold-600 underline">Eligibility Rules: Why Sole Trader Fails for Non-Residents</a></li>
             <li><a href="#liability" className="hover:text-gold-600 underline">Personal Liability Protection Comparison</a></li>

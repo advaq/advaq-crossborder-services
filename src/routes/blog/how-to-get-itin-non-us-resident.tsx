@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-is-itin" className="hover:text-gold-600 underline">1. What Is an IRS ITIN Number?</a></li>
             <li><a href="#why-founders-need-itin" className="hover:text-gold-600 underline">2. Why Foreign Non-Resident Founders Need an ITIN</a></li>
             <li><a href="#form-w7-exceptions" className="hover:text-gold-600 underline">3. Understanding Form W-7 Exception 1a & 1b Rules</a></li>
@@ -267,7 +267,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             4. Step-by-Step Form W-7 Application Process
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>Complete Form W-7 with applicant personal details and exception selection.</li>
             <li>Obtain certified passport verification from an IRS Certifying Acceptance Agent (CAA).</li>
             <li>Submit W-7 packet to IRS ITIN Operation unit in Austin, Texas.</li>

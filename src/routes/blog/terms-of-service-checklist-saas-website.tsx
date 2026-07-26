@@ -193,7 +193,7 @@ function ArticlePage() {
             <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#introduction" className="hover:text-gold-600 underline">1. Introduction: Why SaaS Terms of Service Are Essential</a></li>
             <li><a href="#clickwrap-vs-browsewrap" className="hover:text-gold-600 underline">2. Clickwrap vs Browsewrap Enforceability</a></li>
             <li><a href="#liability-disclaimers" className="hover:text-gold-600 underline">3. Liability Limitation & Warranty Disclaimers</a></li>

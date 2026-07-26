@@ -172,7 +172,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#digital-banking-revolution" className="hover:text-gold-600 underline">1. The UAE Business Banking Revolution</a></li>
             <li><a href="#side-by-side-comparison" className="hover:text-gold-600 underline">2. Side-by-Side Comparison Table (Wio vs Emirates NBD vs Mashreq)</a></li>
             <li><a href="#wio-key-features" className="hover:text-gold-600 underline">3. Wio Business Features: Multi-Currency & Stripe Integration</a></li>

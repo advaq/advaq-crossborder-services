@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#ubo-framework" className="hover:text-gold-600 underline">1. Understanding Cabinet Resolution No. 109 of 2023 on UBOs</a></li>
             <li><a href="#who-is-ubo" className="hover:text-gold-600 underline">2. Who Qualifies as an Ultimate Beneficial Owner (25% Rule)</a></li>
             <li><a href="#three-registers" className="hover:text-gold-600 underline">3. The 3 Mandatory Corporate Registers Every Company Must Keep</a></li>

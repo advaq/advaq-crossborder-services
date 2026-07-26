@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#tax-overview" className="hover:text-gold-600 underline">1. UAE Federal Corporate Tax Framework Overview</a></li>
             <li><a href="#freezone-qfzp" className="hover:text-gold-600 underline">2. Qualifying Freezone Person (QFZP) 0% Rules</a></li>
             <li><a href="#small-business-relief" className="hover:text-gold-600 underline">3. Small Business Relief (SBR) for Businesses Under AED 3M</a></li>

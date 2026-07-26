@@ -180,7 +180,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#mercury-review" className="hover:text-gold-600 underline">1. Mercury Bank: The #1 US Bank for Foreign Founders</a></li>
             <li><a href="#relay-review" className="hover:text-gold-600 underline">2. Relay Financial: Multi-Account Management & Virtual Cards</a></li>
             <li><a href="#wise-review" className="hover:text-gold-600 underline">3. Wise Business: Multi-Currency FX Powerhouse</a></li>

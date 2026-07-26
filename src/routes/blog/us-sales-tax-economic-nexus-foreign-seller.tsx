@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#wayfair-ruling" className="hover:text-gold-600 underline">1. The Wayfair Supreme Court Ruling & Economic Nexus</a></li>
             <li><a href="#state-thresholds" className="hover:text-gold-600 underline">2. State-by-State Revenue Threshold Breakdown ($100k Rules)</a></li>
             <li><a href="#marketplace-facilitators" className="hover:text-gold-600 underline">3. Amazon vs Shopify: Marketplace Facilitator Laws</a></li>

@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#why-freezone" className="hover:text-gold-600 underline">1. Why UAE Freezones Are Popular for Tech & Digital Agencies</a></li>
             <li><a href="#top-5-ranking" className="hover:text-gold-600 underline">2. Detailed Breakdown of the Top 5 Low-Cost Freezones</a></li>
             <li><a href="#fee-comparison-table" className="hover:text-gold-600 underline">3. License & Visa Fee Comparison Table</a></li>
@@ -310,7 +310,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             5. Step-by-Step Remote Incorporation Workflow
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>Select business activity (e.g. IT Consultancy, Software Publishing).</li>
             <li>Submit passport copy and passport photo for security pre-approval.</li>
             <li>Receive E-License and Memorandum of Association (MOA) within 3-5 days.</li>

@@ -193,7 +193,7 @@ function ArticlePage() {
             <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#introduction" className="hover:text-gold-600 underline">1. Introduction: The Growth of Global Freelance Talent</a></li>
             <li><a href="#why-work-for-hire-fails-abroad" className="hover:text-gold-600 underline">2. Why US "Work-Made-For-Hire" Fails Overseas Freelancers</a></li>
             <li><a href="#w8ben-tax-rules" className="hover:text-gold-600 underline">3. IRS Form W-8BEN & W-8BEN-E Tax Compliance</a></li>
@@ -244,7 +244,7 @@ function ArticlePage() {
           <p>
             When a US entity pays an overseas contractor, IRS rules mandate that the employer must either:
           </p>
-          <ol className="list-decimal list-inside space-y-2 text-sm pl-2">
+          <ol className="list-none space-y-2 text-sm pl-2">
             <li>Withhold 30% of the payment and remit it to the IRS as backup tax withholding, OR</li>
             <li>Obtain a signed, valid <strong>Form W-8BEN</strong> (for foreign individuals) or <strong>Form W-8BEN-E</strong> (for foreign corporate agencies) certifying non-US tax status.</li>
           </ol>

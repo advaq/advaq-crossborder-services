@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#remote-director-legality" className="hover:text-gold-600 underline">1. Is Operating a UAE Freezone Entity Remotely Legal?</a></li>
             <li><a href="#180-day-rule" className="hover:text-gold-600 underline">2. The 180-Day Travel Rule & Visa Validity</a></li>
             <li><a href="#tax-residency-certificate" className="hover:text-gold-600 underline">3. Qualifying for a UAE Tax Residency Certificate (TRC)</a></li>

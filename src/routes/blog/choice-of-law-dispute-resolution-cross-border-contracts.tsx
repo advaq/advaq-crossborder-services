@@ -193,7 +193,7 @@ function ArticlePage() {
             <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#introduction" className="hover:text-gold-600 underline">1. Introduction: The Jurisdiction Trap in Global Contracts</a></li>
             <li><a href="#governing-law-vs-forum" className="hover:text-gold-600 underline">2. Governing Law vs Forum Selection Clauses</a></li>
             <li><a href="#international-arbitration" className="hover:text-gold-600 underline">3. Why International Arbitration Beats Court Litigation</a></li>
@@ -296,7 +296,7 @@ function ArticlePage() {
           <p>
             To avoid rushing into expensive arbitration, incorporate a 3-step <strong>Multi-Tiered Dispute Resolution Clause</strong>:
           </p>
-          <ol className="list-decimal list-inside space-y-2 text-sm pl-2">
+          <ol className="list-none space-y-2 text-sm pl-2">
             <li><strong>Step 1: Informal Executive Negotiation:</strong> CEOs or Managing Directors meet for 30 days to resolve billing issues amicably.</li>
             <li><strong>Step 2: Non-Binding Mediation:</strong> Parties engage an independent mediator for a 30-day session.</li>
             <li><strong>Step 3: Binding Arbitration:</strong> If mediation fails, either party may file formal arbitration claims.</li>

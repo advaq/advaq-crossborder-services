@@ -174,7 +174,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#fdi-reform" className="hover:text-gold-600 underline">1. The 2021 FDI Reform: End of 51/49 Local Sponsorship</a></li>
             <li><a href="#det-incorporation-steps" className="hover:text-gold-600 underline">2. Step-by-Step DET Mainland Registration Workflow</a></li>
             <li><a href="#ejari-office-rules" className="hover:text-gold-600 underline">3. Ejari Office Contract & Virtual Desk Options</a></li>
@@ -202,7 +202,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             2. Step-by-Step DET Mainland Registration Workflow
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>Reserve a unique business trade name with the Dubai Department of Economy and Tourism (DET).</li>
             <li>Obtain Initial Approval (Pre-approval certificate) from DET.</li>
             <li>Draft and sign the Memorandum of Association (MOA) via public notary or electronic sign.</li>

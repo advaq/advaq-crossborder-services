@@ -176,7 +176,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-are-annual-accounts" className="hover:text-gold-600 underline">1. What Are Statutory Annual Accounts?</a></li>
             <li><a href="#micro-entity-rules" className="hover:text-gold-600 underline">2. Micro-Entity Accounting Regime (FRS 105)</a></li>
             <li><a href="#accounting-period" className="hover:text-gold-600 underline">3. Understanding Your Financial Year-End & Deadlines</a></li>

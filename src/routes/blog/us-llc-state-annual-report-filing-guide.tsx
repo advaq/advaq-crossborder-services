@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-is-annual-report" className="hover:text-gold-600 underline">1. What Is a US LLC State Annual Report?</a></li>
             <li><a href="#state-fee-breakdown" className="hover:text-gold-600 underline">2. State-by-State Fee & Deadline Breakdown</a></li>
             <li><a href="#certificate-good-standing" className="hover:text-gold-600 underline">3. Why Maintaining a Certificate of Good Standing Matters</a></li>

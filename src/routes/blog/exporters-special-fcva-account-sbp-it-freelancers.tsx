@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-is-fcva" className="hover:text-gold-600 underline">1. What Is an SBP Exporters' Special FCVA Account?</a></li>
             <li><a href="#retention-limits" className="hover:text-gold-600 underline">2. Understanding the 50% Dollar Retention Limit</a></li>
             <li><a href="#eligible-expenses" className="hover:text-gold-600 underline">3. What Expenses Can Be Paid from FCVA USD Funds?</a></li>
@@ -244,7 +244,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             4. Step-by-Step FCVA Account Opening Process at Commercial Banks
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>Obtain active PSEB Registration Certificate.</li>
             <li>Submit SECP corporate documents / CNIC copies to commercial bank.</li>
             <li>Sign SBP FCVA Undertaking Form.</li>

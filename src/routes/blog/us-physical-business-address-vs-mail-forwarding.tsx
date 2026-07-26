@@ -179,7 +179,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#po-box-prohibition" className="hover:text-gold-600 underline">1. Why USPS PO Boxes Are Prohibited for US LLCs</a></li>
             <li><a href="#registered-agent-address" className="hover:text-gold-600 underline">2. Using Your Registered Agent Address: Pros and Limits</a></li>
             <li><a href="#virtual-office-solution" className="hover:text-gold-600 underline">3. Commercial Virtual Offices with Mail Forwarding</a></li>

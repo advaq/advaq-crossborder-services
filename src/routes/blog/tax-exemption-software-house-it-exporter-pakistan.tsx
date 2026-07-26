@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#it-tax-framework" className="hover:text-gold-600 underline">1. Pakistan's Section 154A IT Export Tax Framework</a></li>
             <li><a href="#pseb-mandate" className="hover:text-gold-600 underline">2. Why PSEB Registration Is Mandatory for Tax Credits</a></li>
             <li><a href="#eprc-documentation" className="hover:text-gold-600 underline">3. Electronic Proceed Realization Certificates (e-PRC)</a></li>

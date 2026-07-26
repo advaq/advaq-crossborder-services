@@ -176,7 +176,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#eligibility" className="hover:text-gold-600 underline">1. Legal Eligibility Rules for Striking Off (Section 1004)</a></li>
             <li><a href="#pre-dissolution-checklist" className="hover:text-gold-600 underline">2. Pre-Dissolution Checklist & Bank Account Closure</a></li>
             <li><a href="#hmrc-tax-clearance" className="hover:text-gold-600 underline">3. HMRC Final Tax Returns & Closing PAYE/VAT</a></li>
@@ -236,7 +236,7 @@ function ArticlePage() {
               <FileCheck className="text-gold-500" size={20} />
               Pre-Strike Off Action Checklist:
             </h4>
-            <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
+            <ol className="space-y-2 text-sm text-gray-700 list-none">
               <li><strong>Settle All Liabilities:</strong> Pay all outstanding supplier bills, utility invoices, and accountancy fees.</li>
               <li><strong>Distribute Remaining Assets:</strong> Pay remaining cash reserves to shareholders as final capital distributions or dividends.</li>
               <li><strong>Close Corporate Bank Accounts:</strong> Formally close all Wise, Payoneer, or Revolut business accounts once the balance reaches £0.00.</li>

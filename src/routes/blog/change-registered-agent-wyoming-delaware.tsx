@@ -174,7 +174,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#why-change-agent" className="hover:text-gold-600 underline">1. Why Switch Your US Registered Agent Provider?</a></li>
             <li><a href="#wyoming-agent-change" className="hover:text-gold-600 underline">2. Step-by-Step: Changing Registered Agent in Wyoming ($0 Fee)</a></li>
             <li><a href="#delaware-agent-change" className="hover:text-gold-600 underline">3. Step-by-Step: Changing Registered Agent in Delaware ($50 Fee)</a></li>
@@ -201,7 +201,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             2. Step-by-Step: Changing Registered Agent in Wyoming ($0 Fee)
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>Appoint a new licensed Wyoming Registered Agent who signs a <em>Consent to Appointment by Registered Agent</em>.</li>
             <li>File the <strong>Statement of Change by Business Entity</strong> online at the Wyoming Secretary of State portal.</li>
             <li>Wyoming charges <strong>$0 state filing fee</strong> for agent changes. Approval is instant online.</li>
@@ -235,7 +235,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             3. Step-by-Step: Changing Registered Agent in Delaware ($50 Fee)
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>Obtain new Delaware Registered Agent details and formal written consent.</li>
             <li>Draft a <strong>Certificate of Change of Registered Agent</strong> under 6 Del. C. § 18-104.</li>
             <li>Submit the executed form to the Delaware Division of Corporations with the <strong>$50 state filing fee</strong>.</li>

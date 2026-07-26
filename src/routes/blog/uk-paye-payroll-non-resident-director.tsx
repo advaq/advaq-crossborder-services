@@ -177,7 +177,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-is-paye" className="hover:text-gold-600 underline">1. What is HMRC Pay As You Earn (PAYE)?</a></li>
             <li><a href="#salary-tax-efficiency" className="hover:text-gold-600 underline">2. Optimal Tax-Efficient Director Salary Rules (£12,570)</a></li>
             <li><a href="#rti-reporting" className="hover:text-gold-600 underline">3. Real Time Information (RTI) & FPS Submissions</a></li>

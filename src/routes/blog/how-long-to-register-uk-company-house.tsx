@@ -178,7 +178,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#standard-timelines" className="hover:text-gold-600 underline">Standard Digital Incorporation Timelines (3-24 Hours)</a></li>
             <li><a href="#same-day-service" className="hover:text-gold-600 underline">Express Same-Day Priority Incorporation</a></li>
             <li><a href="#paper-vs-online" className="hover:text-gold-600 underline">Paper Registration vs Online Digital Filing</a></li>

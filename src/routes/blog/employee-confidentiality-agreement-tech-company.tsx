@@ -194,7 +194,7 @@ function ArticlePage() {
             <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#introduction" className="hover:text-gold-600 underline">1. Why Employee Confidentiality Is Critical for Agencies</a></li>
             <li><a href="#piipa-inventions" className="hover:text-gold-600 underline">2. Proprietary Information & Inventions Assignment (PIIPA)</a></li>
             <li><a href="#client-data-protection" className="hover:text-gold-600 underline">3. Protecting Client Source Code & Credentials</a></li>

@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#uspto-foreign-rule" className="hover:text-gold-600 underline">1. The Mandatory US Licensed Attorney Rule for Foreign Applicants</a></li>
             <li><a href="#amazon-brand-registry" className="hover:text-gold-600 underline">2. Unlocking Amazon Brand Registry with USPTO Filing</a></li>
             <li><a href="#section-1a-vs-1b" className="hover:text-gold-600 underline">3. Section 1(a) Actual Use vs Section 1(b) Intent-to-Use</a></li>
@@ -266,7 +266,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             4. Step-by-Step Application Steps & 8-12 Month Timeline
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>Conduct a thorough USPTO TESS search for confusingly similar marks.</li>
             <li>Select international NICE classes (e.g. Class 9 for software, Class 35 for retail).</li>
             <li>Submit TEAS Standard application with $350 fee per class via US licensed counsel.</li>

@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#annual-compliance-overview" className="hover:text-gold-600 underline">1. Why SECP Annual Compliance Is Mandatory for Every Company</a></li>
             <li><a href="#form-a-form-b" className="hover:text-gold-600 underline">2. Form A vs Form B Filing Rules & Deadlines</a></li>
             <li><a href="#form-29-directors" className="hover:text-gold-600 underline">3. Form 29: Reporting Changes in Directors & Chief Executive</a></li>

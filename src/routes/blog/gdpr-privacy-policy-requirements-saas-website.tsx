@@ -193,7 +193,7 @@ function ArticlePage() {
             <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#introduction" className="hover:text-gold-600 underline">1. Introduction: Global Extraterritorial Scope of GDPR</a></li>
             <li><a href="#article-13-disclosures" className="hover:text-gold-600 underline">2. Mandatory Article 13 Privacy Disclosures</a></li>
             <li><a href="#legal-bases" className="hover:text-gold-600 underline">3. Identifying Lawful Bases for Data Processing</a></li>

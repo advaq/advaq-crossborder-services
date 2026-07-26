@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#why-us-stripe" className="hover:text-gold-600 underline">1. Why Global Founders Need a US Stripe & PayPal Account</a></li>
             <li><a href="#prerequisites" className="hover:text-gold-600 underline">2. Prerequisites Checklist Before Applying</a></li>
             <li><a href="#stripe-setup-steps" className="hover:text-gold-600 underline">3. Step-by-Step US Stripe Account Activation</a></li>
@@ -238,7 +238,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             3. Step-by-Step US Stripe Account Activation
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>Create a new account on Stripe.com selecting "United States" as business location.</li>
             <li>Select business type: "Company" → "Single-member LLC" or "Multi-member LLC".</li>
             <li>Enter your 9-digit Employer Identification Number (EIN) under Business Tax ID.</li>

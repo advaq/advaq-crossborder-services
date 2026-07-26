@@ -146,7 +146,7 @@ function ArticlePage() {
             <CheckCircle2 size={18} />
             <span>SECP 4-Step Registration Summary</span>
           </div>
-          <ol className="space-y-2.5 text-sm sm:text-[15px] text-navy-100 leading-relaxed list-decimal list-inside">
+          <ol className="space-y-2.5 text-sm sm:text-[15px] text-navy-100 leading-relaxed list-none">
             <li><strong>Step 1 (Name Reservation):</strong> Apply for unique company name reservation on SECP eServices (2-4 hours).</li>
             <li><strong>Step 2 (Digital ID):</strong> Create SECP User IDs and digital signatures for all proposed directors.</li>
             <li><strong>Step 3 (Document Filing):</strong> Submit Memorandum & Articles of Association, Form 1, Form 21, and Form 29.</li>
@@ -162,7 +162,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#name-reservation" className="hover:text-gold-600 underline">1. Name Availability & Search on SECP eServices</a></li>
             <li><a href="#eservices-account" className="hover:text-gold-600 underline">2. Setting Up Directors' SECP User IDs & Digital Signatures</a></li>
             <li><a href="#drafting-moa-aoa" className="hover:text-gold-600 underline">3. Drafting Memorandum & Articles of Association</a></li>

@@ -171,7 +171,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-is-smc" className="hover:text-gold-600 underline">1. What Is an SMC-Pvt Ltd under SECP Law?</a></li>
             <li><a href="#smc-vs-multi-member" className="hover:text-gold-600 underline">2. SMC-Pvt Ltd vs Multi-Member Private Limited Comparison</a></li>
             <li><a href="#nominee-director-rule" className="hover:text-gold-600 underline">3. The Statutory Nominee Director Requirement for SMCs</a></li>

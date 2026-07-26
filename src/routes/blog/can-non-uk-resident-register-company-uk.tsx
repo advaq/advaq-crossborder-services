@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#legal-basis" className="hover:text-gold-600 underline">Legal Basis Under the Companies Act 2006</a></li>
             <li><a href="#core-requirements" className="hover:text-gold-600 underline">Core Legal Requirements for Non-Resident Founders</a></li>
             <li><a href="#step-by-step" className="hover:text-gold-600 underline">Step-by-Step UK LTD Formation Process</a></li>

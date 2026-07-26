@@ -190,7 +190,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-is-atl-status" className="hover:text-gold-600 underline">1. What Is Active Taxpayer List (ATL) Status?</a></li>
             <li><a href="#banking-wht-savings" className="hover:text-gold-600 underline">2. Banking Withholding Tax Savings for Filers</a></li>
             <li><a href="#property-car-tax-rates" className="hover:text-gold-600 underline">3. Real Estate & Vehicle Registration Tax Comparison</a></li>
@@ -267,7 +267,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             5. Step-by-Step Process to Become an Active Filer
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>File annual Tax Return Form 114(1) and Wealth Statement Form 116 on FBR Iris 2.0.</li>
             <li>Generate PKR 1,000 ATL Surcharge CPR challan on eFBR portal.</li>
             <li>Pay challan via online banking app or ATM.</li>

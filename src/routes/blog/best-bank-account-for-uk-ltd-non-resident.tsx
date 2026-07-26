@@ -181,7 +181,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#overview" className="hover:text-gold-600 underline">1. Why Non-Resident UK LTDs Rely on FinTech Banking</a></li>
             <li><a href="#wise-deep-dive" className="hover:text-gold-600 underline">2. Wise Business: Features, Pricing & FX Rates</a></li>
             <li><a href="#payoneer-deep-dive" className="hover:text-gold-600 underline">3. Payoneer: Features, Pricing & E-Commerce Integration</a></li>

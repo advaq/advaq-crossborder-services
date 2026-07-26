@@ -193,7 +193,7 @@ function ArticlePage() {
             <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#introduction" className="hover:text-gold-600 underline">1. Introduction: Commercial Risk Exposure for Tech Agencies</a></li>
             <li><a href="#why-liability-caps-matter" className="hover:text-gold-600 underline">2. Why Liability Caps Are Essential in B2B Contracts</a></li>
             <li><a href="#consequential-damages" className="hover:text-gold-600 underline">3. Waiving Consequential & Indirect Damages</a></li>

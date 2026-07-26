@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-is-investor-visa" className="hover:text-gold-600 underline">1. What Is a UAE Investor / Partner Visa?</a></li>
             <li><a href="#step-by-step-process" className="hover:text-gold-600 underline">2. Step-by-Step Visa & Emirates ID Timeline</a></li>
             <li><a href="#medical-biometrics" className="hover:text-gold-600 underline">3. Medical Fitness Testing & Biometrics Appointment</a></li>
@@ -203,7 +203,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             2. Step-by-Step Visa & Emirates ID Timeline
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li><strong>Company License Issuance:</strong> Obtain your Freezone or Mainland E-License.</li>
             <li><strong>Establishment Card (Immigration Card):</strong> Issued in 24-48 hours.</li>
             <li><strong>Entry Permit Application:</strong> Electronic e-visa issued while outside or inside the UAE.</li>

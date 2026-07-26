@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#owners-draw" className="hover:text-gold-600 underline">1. What Is an Owner's Draw for a Non-Resident US LLC?</a></li>
             <li><a href="#transfer-methods" className="hover:text-gold-600 underline">2. Top 3 Money Transfer Methods (Mercury, Wise, SWIFT)</a></li>
             <li><a href="#us-tax-implications" className="hover:text-gold-600 underline">3. US Tax & Withholding Rules on Profit Distributions</a></li>

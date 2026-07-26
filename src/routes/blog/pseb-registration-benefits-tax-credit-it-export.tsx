@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-is-pseb" className="hover:text-gold-600 underline">1. What Is the Pakistan Software Export Board (PSEB)?</a></li>
             <li><a href="#section-154a-tax" className="hover:text-gold-600 underline">2. Section 154A 0.25% Reduced Final Tax Regime</a></li>
             <li><a href="#pseb-registration-steps" className="hover:text-gold-600 underline">3. Step-by-Step PSEB Portal Registration Workflow</a></li>
@@ -232,7 +232,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             3. Step-by-Step PSEB Portal Registration Workflow
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>Create company account on the official PSEB registration portal.</li>
             <li>Upload SECP Incorporation Certificate / NTN certificate.</li>
             <li>Submit CNIC copies of directors and Bank Maintenance Certificate.</li>

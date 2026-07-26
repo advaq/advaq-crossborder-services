@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#dha-medical-test" className="hover:text-gold-600 underline">1. What Happens During the DHA Medical Fitness Test?</a></li>
             <li><a href="#smart-salem-vip" className="hover:text-gold-600 underline">2. Smart Salem VIP 30-Minute Medical Processing</a></li>
             <li><a href="#icp-biometrics" className="hover:text-gold-600 underline">3. The ICP Biometrics Appointment (Fingerprints & Iris Scan)</a></li>

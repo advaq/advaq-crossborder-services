@@ -174,7 +174,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-is-ntn" className="hover:text-gold-600 underline">1. What Is an FBR NTN and Why Do You Need It?</a></li>
             <li><a href="#personal-ntn-steps" className="hover:text-gold-600 underline">2. Step-by-Step Personal NTN Registration on Iris 2.0</a></li>
             <li><a href="#business-ntn-sole-proprietor" className="hover:text-gold-600 underline">3. Adding a Business Name & Address (Sole Proprietorship NTN)</a></li>
@@ -198,7 +198,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             2. Step-by-Step Personal NTN Registration on Iris 2.0
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>Visit the FBR Iris 2.0 portal and click "Basic Registration".</li>
             <li>Input CNIC number, full name, mobile number (registered in your CNIC), and email.</li>
             <li>Receive SMS & Email verification codes and enter them to generate Iris login credentials.</li>

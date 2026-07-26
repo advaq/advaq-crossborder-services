@@ -176,7 +176,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#legal-rights" className="hover:text-gold-600 underline">1. Legal Rights of Foreign Non-Residents to Own a US LLC</a></li>
             <li><a href="#state-selection" className="hover:text-gold-600 underline">2. Selecting the Right State: Wyoming vs Delaware vs Florida</a></li>
             <li><a href="#ein-without-ssn" className="hover:text-gold-600 underline">3. Getting an IRS EIN (Tax ID) Without an SSN or ITIN</a></li>

@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#aml-landscape" className="hover:text-gold-600 underline">1. Why UAE Banks Are Strict: Central Bank AML Regulations</a></li>
             <li><a href="#top-rejection-reasons" className="hover:text-gold-600 underline">2. Top 5 Reasons Corporate Applications Get Delayed</a></li>
             <li><a href="#business-dossier" className="hover:text-gold-600 underline">3. Assembling a Professional Bank Profile Dossier</a></li>
@@ -203,7 +203,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             2. Top 5 Reasons Corporate Applications Get Delayed
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li><strong>Missing Commercial Website:</strong> Operating without an active professional website.</li>
             <li><strong>Unclear Source of Capital:</strong> Failing to explain how initial business capital was earned.</li>
             <li><strong>Generic Contracts:</strong> Supplying template contracts with no real counterparty signatures.</li>

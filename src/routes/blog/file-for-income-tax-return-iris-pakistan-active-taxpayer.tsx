@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#fbr-iris-overview" className="hover:text-gold-600 underline">1. Overview of FBR Iris 2.0 & Filer Privileges</a></li>
             <li><a href="#step-by-step-filing" className="hover:text-gold-600 underline">2. Step-by-Step Return Filing Workflow on Iris 2.0</a></li>
             <li><a href="#wealth-reconciliation" className="hover:text-gold-600 underline">3. Reconciling Wealth Statements (Form 116)</a></li>
@@ -203,7 +203,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             2. Step-by-Step Return Filing Workflow on Iris 2.0
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>Log into FBR Iris 2.0 portal using CNIC and password.</li>
             <li>Select 114(1) Return of Income Tax form for target tax year.</li>
             <li>Enter gross business receipts, salaries, or export revenues under appropriate heads.</li>

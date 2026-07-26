@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#why-register-trademark" className="hover:text-gold-600 underline">1. Why Register a Trademark in the UAE?</a></li>
             <li><a href="#trademark-search" className="hover:text-gold-600 underline">2. Conducting a Pre-Filing MOEC Trademark Search</a></li>
             <li><a href="#step-by-step-filing" className="hover:text-gold-600 underline">3. Step-by-Step Filing Workflow with the Ministry of Economy</a></li>
@@ -232,7 +232,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             3. Step-by-Step Filing Workflow with the Ministry of Economy
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>Submit electronic application on MOEC portal.</li>
             <li>MOEC legal examiner reviews application (approx. 30 days).</li>
             <li>Publish accepted trademark in Official Trademark Bulletin.</li>

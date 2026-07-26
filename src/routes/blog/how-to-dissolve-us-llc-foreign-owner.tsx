@@ -147,7 +147,7 @@ function ArticlePage() {
             <CheckCircle2 size={18} />
             <span>5-Step Legal Dissolution Roadmap</span>
           </div>
-          <ol className="space-y-2 text-sm sm:text-[15px] text-navy-100 leading-relaxed list-decimal list-inside">
+          <ol className="space-y-2 text-sm sm:text-[15px] text-navy-100 leading-relaxed list-none">
             <li><strong>Member Resolution:</strong> Formal written consent to dissolve approved by LLC owners.</li>
             <li><strong>Settle Business Debts:</strong> Pay off all vendor invoices and tax liabilities.</li>
             <li><strong>Close US Bank Accounts:</strong> Liquidate balances via final Owner's Draw wire.</li>
@@ -164,7 +164,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#why-formal-dissolution" className="hover:text-gold-600 underline">1. Why You Must Dissolve Legally (Risks of Abandonment)</a></li>
             <li><a href="#state-dissolution-filings" className="hover:text-gold-600 underline">2. State Filings: Wyoming ($60) vs Delaware ($200)</a></li>
             <li><a href="#bank-account-liquidation" className="hover:text-gold-600 underline">3. Closing Mercury & Relay Business Bank Accounts</a></li>

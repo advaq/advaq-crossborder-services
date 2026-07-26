@@ -176,7 +176,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-is-ein" className="hover:text-gold-600 underline">1. What is an IRS EIN and Why Do You Need It?</a></li>
             <li><a href="#ss4-form-filling" className="hover:text-gold-600 underline">2. Step-by-Step Guide to Filling IRS Form SS-4</a></li>
             <li><a href="#faxing-to-irs" className="hover:text-gold-600 underline">3. How to Fax Form SS-4 to the IRS International Unit</a></li>

@@ -147,7 +147,7 @@ function ArticlePage() {
             <CheckCircle2 size={18} />
             <span>3-Step Legal Attestation Chain</span>
           </div>
-          <ol className="space-y-2 text-sm text-navy-100 list-decimal list-inside leading-relaxed">
+          <ol className="space-y-2 text-sm text-navy-100 list-none leading-relaxed">
             <li><strong>Step 1 (Home Country):</strong> Notary Public certification and Ministry of Foreign Affairs (MOFA / State Dept) attestation.</li>
             <li><strong>Step 2 (UAE Embassy):</strong> Official legalization by the UAE Embassy in your home country.</li>
             <li><strong>Step 3 (UAE MOFA):</strong> Final digital or physical attestation stamp by the Ministry of Foreign Affairs inside the UAE.</li>
@@ -162,7 +162,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-is-mofa" className="hover:text-gold-600 underline">1. Why Is Document Attestation Required in the UAE?</a></li>
             <li><a href="#attestation-chain" className="hover:text-gold-600 underline">2. The 3-Step International Legalization Chain Explained</a></li>
             <li><a href="#types-of-documents" className="hover:text-gold-600 underline">3. Educational Degrees vs Personal Certificates vs Commercial Papers</a></li>

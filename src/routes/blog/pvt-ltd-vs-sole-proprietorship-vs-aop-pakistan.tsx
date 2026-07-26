@@ -178,7 +178,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#three-structures" className="hover:text-gold-600 underline">1. Overview of the 3 Primary Business Structures in Pakistan</a></li>
             <li><a href="#liability-protection" className="hover:text-gold-600 underline">2. Limited Liability Protection vs Unlimited Personal Exposure</a></li>
             <li><a href="#fbr-taxation" className="hover:text-gold-600 underline">3. FBR Corporate Tax vs Individual / AOP Tax Slabs</a></li>

@@ -177,7 +177,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#section-386-duty" className="hover:text-gold-600 underline">1. Statutory Duty to Keep Accounting Records (Section 386)</a></li>
             <li><a href="#6-year-rule" className="hover:text-gold-600 underline">2. The 6-Year HMRC Record Retention Mandate</a></li>
             <li><a href="#multi-currency-forex" className="hover:text-gold-600 underline">3. Managing Multi-Currency FX Transactions (USD/EUR/PKR)</a></li>

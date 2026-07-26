@@ -147,7 +147,7 @@ function ArticlePage() {
             <CheckCircle2 size={18} />
             <span>Liquidation Roadmap Checklist</span>
           </div>
-          <ol className="space-y-2.5 text-sm sm:text-[15px] text-navy-100 leading-relaxed list-decimal list-inside">
+          <ol className="space-y-2.5 text-sm sm:text-[15px] text-navy-100 leading-relaxed list-none">
             <li><strong>Shareholder Resolution:</strong> Pass formal Board Resolution for dissolution and appoint an approved liquidator.</li>
             <li><strong>Visa Cancellations:</strong> Cancel all employee, partner, and investor residence visas and establishment cards.</li>
             <li><strong>Tax Deregistration:</strong> Submit final VAT & Corporate Tax deregistration applications to the FTA.</li>
@@ -164,7 +164,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#why-formal-liquidation" className="hover:text-gold-600 underline">1. Why You Must Liquidate Legally (Dangers of Abandonment)</a></li>
             <li><a href="#step-by-step-liquidation" className="hover:text-gold-600 underline">2. Step-by-Step Liquidation & Dissolution Workflow</a></li>
             <li><a href="#fta-tax-deregistration" className="hover:text-gold-600 underline">3. FTA Corporate Tax & VAT Deregistration Rules</a></li>
@@ -192,7 +192,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             2. Step-by-Step Liquidation & Dissolution Workflow
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>Draft and notarize Board Resolution declaring intent to dissolve the entity.</li>
             <li>Cancel all active investor, director, and employee residence visas.</li>
             <li>Obtain utility, telecom, and customs clearances.</li>

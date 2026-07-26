@@ -193,7 +193,7 @@ function ArticlePage() {
             <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#introduction" className="hover:text-gold-600 underline">1. Introduction: The Risk of Abrupt Project Cancellation</a></li>
             <li><a href="#convenience-vs-cause" className="hover:text-gold-600 underline">2. Termination for Convenience vs Termination for Cause</a></li>
             <li><a href="#non-refundable-deposits" className="hover:text-gold-600 underline">3. Structuring Non-Refundable Upfront Deposits</a></li>

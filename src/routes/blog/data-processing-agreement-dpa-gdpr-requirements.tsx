@@ -193,7 +193,7 @@ function ArticlePage() {
             <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#introduction" className="hover:text-gold-600 underline">1. Introduction: Why B2B SaaS Deals Require a DPA</a></li>
             <li><a href="#controller-vs-processor" className="hover:text-gold-600 underline">2. Data Controller vs Data Processor Roles</a></li>
             <li><a href="#article-28-requirements" className="hover:text-gold-600 underline">3. Mandatory Provisions Under GDPR Article 28(3)</a></li>

@@ -179,7 +179,7 @@ function ArticlePage() {
             <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#introduction" className="hover:text-gold-600 underline">1. Introduction: The Global Remote Hiring Trap</a></li>
             <li><a href="#irs-hmrc-tests" className="hover:text-gold-600 underline">2. IRS Common Law Test & UK IR35 Standards</a></li>
             <li><a href="#financial-penalties" className="hover:text-gold-600 underline">3. Financial & Regulatory Penalties of Misclassification</a></li>

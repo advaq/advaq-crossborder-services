@@ -181,7 +181,7 @@ function ArticlePage() {
             <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#introduction" className="hover:text-gold-600 underline">1. Introduction: Why Single Contracts Fail Digital Agencies</a></li>
             <li><a href="#what-is-msa" className="hover:text-gold-600 underline">2. Deep Dive: What Is a Master Service Agreement (MSA)?</a></li>
             <li><a href="#what-is-sow" className="hover:text-gold-600 underline">3. Deep Dive: What Is a Statement of Work (SOW)?</a></li>

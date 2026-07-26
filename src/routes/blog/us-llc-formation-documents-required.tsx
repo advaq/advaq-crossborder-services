@@ -176,7 +176,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#articles-of-organization" className="hover:text-gold-600 underline">1. Articles of Organization / Certificate of Formation</a></li>
             <li><a href="#operating-agreement" className="hover:text-gold-600 underline">2. The Operating Agreement (Internal Bylaws)</a></li>
             <li><a href="#cp575-ein-letter" className="hover:text-gold-600 underline">3. IRS CP575 EIN Confirmation Letter</a></li>

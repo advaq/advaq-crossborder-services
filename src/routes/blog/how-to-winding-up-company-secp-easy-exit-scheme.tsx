@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-is-easy-exit" className="hover:text-gold-600 underline">1. What Is the SECP Easy Exit Scheme (EES)?</a></li>
             <li><a href="#eligibility-criteria" className="hover:text-gold-600 underline">2. Eligibility Criteria for SECP Company Strike-Off</a></li>
             <li><a href="#required-documents" className="hover:text-gold-600 underline">3. Document Dossier (Form EES-1, Indemnity Bonds, Auditor Certificate)</a></li>

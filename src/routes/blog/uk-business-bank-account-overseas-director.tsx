@@ -177,7 +177,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#why-rejection" className="hover:text-gold-600 underline">1. Why High Street Banks Automatically Reject Non-Residents</a></li>
             <li><a href="#aml-regulations" className="hover:text-gold-600 underline">2. UK AML & KYC Regulatory Obstacles Explained</a></li>
             <li><a href="#credit-footprint" className="hover:text-gold-600 underline">3. The UK Credit Footprint & Residency Catch-22</a></li>

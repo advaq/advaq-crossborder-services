@@ -176,7 +176,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-is-cs01" className="hover:text-gold-600 underline">1. What is a UK Confirmation Statement (Form CS01)?</a></li>
             <li><a href="#cs01-vs-accounts" className="hover:text-gold-600 underline">2. Confirmation Statement vs Annual Tax Accounts</a></li>
             <li><a href="#what-is-verified" className="hover:text-gold-600 underline">3. What Information Must Be Verified on Form CS01?</a></li>

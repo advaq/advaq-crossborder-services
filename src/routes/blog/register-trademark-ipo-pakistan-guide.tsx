@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#why-register-trademark" className="hover:text-gold-600 underline">1. Why Register Your Trademark with IPO Pakistan?</a></li>
             <li><a href="#nice-classification" className="hover:text-gold-600 underline">2. Selecting Nice Trademark Classes (Class 9 & 42 for Tech)</a></li>
             <li><a href="#trademark-search" className="hover:text-gold-600 underline">3. Conducting an Official IPO Trademark Search</a></li>
@@ -242,7 +242,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             4. Step-by-Step TM-1 Application Filing Workflow
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>Prepare TM-1 form detailing applicant name, address, logo, and class.</li>
             <li>Attach Form TM-48 (Power of Attorney) if represented by a legal advocate.</li>
             <li>Submit to IPO registry and pay statutory application fee.</li>

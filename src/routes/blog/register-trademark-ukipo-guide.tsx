@@ -176,7 +176,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#companies-house-vs-ukipo" className="hover:text-gold-600 underline">1. Companies House vs UKIPO: The Misconception</a></li>
             <li><a href="#benefits" className="hover:text-gold-600 underline">2. Why Non-Resident Founders Need UK Trademark Protection</a></li>
             <li><a href="#nice-classes" className="hover:text-gold-600 underline">3. Understanding NICE Trademark Classes (1 to 45)</a></li>

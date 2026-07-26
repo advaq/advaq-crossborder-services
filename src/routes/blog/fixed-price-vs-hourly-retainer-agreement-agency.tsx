@@ -179,7 +179,7 @@ function ArticlePage() {
             <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#introduction" className="hover:text-gold-600 underline">1. Introduction: The Agency Contract Pricing Dilemma</a></li>
             <li><a href="#fixed-price-dynamics" className="hover:text-gold-600 underline">2. Legal & Financial Dynamics of Fixed Price Contracts</a></li>
             <li><a href="#retainer-dynamics" className="hover:text-gold-600 underline">3. Legal & Financial Dynamics of Hourly Retainers</a></li>
@@ -375,7 +375,7 @@ function ArticlePage() {
           <p>
             The most effective commercial strategy for high-growth tech agencies is the <strong>Hybrid Contract Model</strong>:
           </p>
-          <ol className="list-decimal list-inside space-y-2 text-sm pl-2">
+          <ol className="list-none space-y-2 text-sm pl-2">
             <li><strong>Phase 1 (Fixed Price):</strong> Build the core platform or MVP with clear, static functional requirements under a milestone-based Fixed Price SOW.</li>
             <li><strong>Phase 2 (Hourly Retainer):</strong> Upon launch, transition the client to a Monthly Retainer for continuous maintenance, feature iteration, and DevOps support.</li>
           </ol>

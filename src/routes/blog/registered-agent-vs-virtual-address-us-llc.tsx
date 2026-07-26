@@ -173,7 +173,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#registered-agent-role" className="hover:text-gold-600 underline">1. The Statutory Role of a US Registered Agent</a></li>
             <li><a href="#virtual-address-role" className="hover:text-gold-600 underline">2. What Is a US Commercial Virtual Address?</a></li>
             <li><a href="#comparison-table" className="hover:text-gold-600 underline">3. Side-by-Side Functional Comparison</a></li>

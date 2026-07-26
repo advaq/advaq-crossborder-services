@@ -177,7 +177,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#challenge" className="hover:text-gold-600 underline">1. The Banking Challenge for Non-Resident Directors</a></li>
             <li><a href="#top-digital-banks" className="hover:text-gold-600 underline">2. Top 3 Digital Business Banking Platforms Compared</a></li>
             <li><a href="#required-documents" className="hover:text-gold-600 underline">3. Documents Required for Banking Verification</a></li>

@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-is-golden-visa" className="hover:text-gold-600 underline">1. What Is the UAE 10-Year Golden Visa?</a></li>
             <li><a href="#eligibility-founders" className="hover:text-gold-600 underline">2. Eligibility for Tech Founders & Startup Owners (AED 2M Rules)</a></li>
             <li><a href="#eligibility-executives" className="hover:text-gold-600 underline">3. Eligibility for Software Engineers & IT Executives (AED 30k Salary)</a></li>
@@ -269,7 +269,7 @@ function ArticlePage() {
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             4. Step-by-Step Nomination & ICP Application Process
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 ml-2">
+          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
             <li>Submit initial nomination request to Ministry of Economy or Dubai Culture / ICP portal.</li>
             <li>Receive official Golden Visa approval letter.</li>
             <li>Cancel existing 2-year visa and undergo VIP medical fitness test.</li>

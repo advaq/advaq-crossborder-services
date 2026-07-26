@@ -175,7 +175,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#why-join-chamber" className="hover:text-gold-600 underline">1. Why Join a Chamber of Commerce in Pakistan?</a></li>
             <li><a href="#major-chambers" className="hover:text-gold-600 underline">2. Regional Chambers: LCCI, KCCI, ICCI & Rawalpindi RCCI</a></li>
             <li><a href="#corporate-vs-associate" className="hover:text-gold-600 underline">3. Corporate Class vs Associate Class Membership Rules</a></li>

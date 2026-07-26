@@ -174,7 +174,7 @@ function ArticlePage() {
           <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-decimal list-inside font-medium">
+          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#corp-tax" className="hover:text-gold-600 underline">1. UK Corporation Tax Rates for 2026</a></li>
             <li><a href="#dividend-rules" className="hover:text-gold-600 underline">2. Dividend Taxation for Non-Resident Shareholders</a></li>
             <li><a href="#salary-vs-dividend" className="hover:text-gold-600 underline">3. Salary vs Dividends: Tax-Efficient Profit Extraction</a></li>
