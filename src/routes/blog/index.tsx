@@ -1153,12 +1153,10 @@ function BlogIndexPage() {
     return matchesCategory && matchesSearch;
   });
 
-  const featuredArticle = articles.find((art) => art.featured) || articles[0];
-
   return (
     <div className="min-h-screen bg-white">
       {/* HERO SECTION */}
-      <section className="bg-navy-950 pt-36 pb-24 text-white relative overflow-hidden">
+      <section className="bg-navy-950 pt-36 pb-20 text-white relative overflow-hidden">
         <div className="absolute inset-0 grid-pattern opacity-40" />
         <div className="relative max-w-5xl mx-auto px-6 text-center">
           <Reveal>
@@ -1189,63 +1187,6 @@ function BlogIndexPage() {
           </Reveal>
         </div>
       </section>
-
-      {/* FEATURED ARTICLE HERO CARD */}
-      {featuredArticle && searchQuery === "" && selectedCategory === "All" && (
-        <section className="max-w-6xl mx-auto px-6 -mt-12 relative z-10">
-          <Reveal>
-            <div className="bg-navy-900 border border-gold-500/30 rounded-2xl overflow-hidden shadow-2xl grid lg:grid-cols-12">
-              <div className="lg:col-span-8 p-8 md:p-12 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-gold-500 font-semibold mb-4">
-                    <span className="bg-gold-500/20 px-3 py-1 rounded-full border border-gold-500/30">
-                      FEATURED ARTICLE
-                    </span>
-                    <span>•</span>
-                    <span>{featuredArticle.category}</span>
-                  </div>
-                  <Link to={featuredArticle.slug}>
-                    <h2 className="font-serif text-2xl md:text-4xl text-white font-medium hover:text-gold-400 transition-colors leading-tight">
-                      {featuredArticle.title}
-                    </h2>
-                  </Link>
-                  <p className="mt-4 text-navy-200 text-sm md:text-base leading-relaxed">
-                    {featuredArticle.excerpt}
-                  </p>
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
-                  <div className="flex items-center gap-4 text-xs text-navy-300">
-                    <span>By {featuredArticle.author}</span>
-                    <span>•</span>
-                    <span className="flex items-center gap-1">
-                      <Clock size={13} className="text-gold-500" />
-                      {featuredArticle.readTime}
-                    </span>
-                  </div>
-                  <Link
-                    to={featuredArticle.slug}
-                    className="btn-gold !px-5 !py-2.5 text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2"
-                  >
-                    Read Full Article <ArrowRight size={14} />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="lg:col-span-4 bg-navy-950 p-8 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-white/10 text-white">
-                <ShieldCheck size={36} className="text-gold-500 mb-4" />
-                <h3 className="font-serif text-xl text-white">Legal & Tax Integrity</h3>
-                <p className="text-xs text-navy-200 leading-relaxed mt-2">
-                  All ADVAQ insights are authored by experienced corporate legal consultants and chartered tax advisors.
-                </p>
-                <div className="mt-6 pt-4 border-t border-white/10 text-[11px] text-gold-500 font-semibold uppercase tracking-widest">
-                  100% Up to Date for 2026 Rules
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </section>
-      )}
 
       {/* CATEGORY FILTERS & ARTICLES LISTING */}
       <section className="max-w-6xl mx-auto px-6 py-20">
