@@ -252,21 +252,49 @@ function ServicesOverview() {
         </Reveal>
 
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {cards.map((c, i) => (
+          {cards.slice(0, 3).map((c, i) => (
             <Reveal key={i} delay={i * 120}>
-              <article className="group relative bg-white border border-border rounded-2xl p-9 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(10,15,44,0.18)] overflow-hidden">
-                <div className="absolute top-0 inset-x-0 h-[3px] bg-gold-500" />
-                <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-gold-500">{c.label}</p>
-                <h3 className="font-serif text-2xl text-dark-text mt-3">{c.title}</h3>
-                <p className="text-gray-500 text-sm mt-1.5">{c.sub}</p>
-                <ul className="mt-7 space-y-3">
-                  {c.items.map((it) => (
-                    <li key={it} className="group/item flex items-center gap-3 text-dark-text">
-                      <ChevronRight size={14} className="text-gold-500 shrink-0" />
-                      <span className="text-[14px]">{it}</span>
-                    </li>
-                  ))}
-                </ul>
+              <article className="group relative bg-white border border-border rounded-2xl p-9 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(10,15,44,0.18)] overflow-hidden h-full flex flex-col justify-between">
+                <div>
+                  <div className="absolute top-0 inset-x-0 h-[3px] bg-gold-500" />
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-gold-500">{c.label}</p>
+                  <h3 className="font-serif text-2xl text-dark-text mt-3">{c.title}</h3>
+                  <p className="text-gray-500 text-sm mt-1.5">{c.sub}</p>
+                  <ul className="mt-7 space-y-3">
+                    {c.items.map((it) => (
+                      <li key={it} className="group/item flex items-center gap-3 text-dark-text">
+                        <ChevronRight size={14} className="text-gold-500 shrink-0" />
+                        <span className="text-[14px]">{it}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <Link to={c.link} className="mt-8 inline-flex items-center gap-2 text-gold-500 font-semibold text-sm uppercase tracking-widest border-b border-transparent hover:border-gold-500 transition-colors pb-1">
+                  {c.cta} <ArrowRight size={14} />
+                </Link>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+
+        <div className="mt-8 grid md:grid-cols-2 gap-8">
+          {cards.slice(3, 5).map((c, i) => (
+            <Reveal key={i} delay={(i + 3) * 120}>
+              <article className="group relative bg-white border border-border rounded-2xl p-9 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(10,15,44,0.18)] overflow-hidden h-full flex flex-col justify-between">
+                <div>
+                  <div className="absolute top-0 inset-x-0 h-[3px] bg-gold-500" />
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-gold-500">{c.label}</p>
+                  <h3 className="font-serif text-2xl text-dark-text mt-3">{c.title}</h3>
+                  <p className="text-gray-500 text-sm mt-1.5">{c.sub}</p>
+                  <ul className="mt-7 space-y-3">
+                    {c.items.map((it) => (
+                      <li key={it} className="group/item flex items-center gap-3 text-dark-text">
+                        <ChevronRight size={14} className="text-gold-500 shrink-0" />
+                        <span className="text-[14px]">{it}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <Link to={c.link} className="mt-8 inline-flex items-center gap-2 text-gold-500 font-semibold text-sm uppercase tracking-widest border-b border-transparent hover:border-gold-500 transition-colors pb-1">
                   {c.cta} <ArrowRight size={14} />
                 </Link>
