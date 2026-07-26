@@ -450,10 +450,10 @@ function AboutPage() {
           <Reveal>
             <p className="label-eyebrow">WORK WITH US</p>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mt-4 leading-tight">
-              Ready to Build Your Business the Right Way?
+              Build Your Business the Right Way?
             </h2>
             <p className="mt-5 text-navy-200 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
-              Book a free initial consultation with Muhammad Abdullah. We respond within 4 business hours — in English or Urdu, whichever you prefer.
+              Book a free initial consultation with Muhammad Abdullah. We usually respond within 4 business hours.
             </p>
 
             <div className="mt-9 flex flex-wrap justify-center gap-4">
