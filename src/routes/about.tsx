@@ -18,6 +18,7 @@ import {
   Calendar,
   Sparkles,
   CheckCircle2,
+  Check,
 } from "lucide-react";
 import { SectionLabel } from "@/components/site/SectionLabel";
 import { Reveal } from "@/lib/reveal";
@@ -112,29 +113,51 @@ function AboutPage() {
   return (
     <>
       {/* SECTION 1 — HERO */}
-      <section className="relative bg-navy-950 pt-40 pb-24 overflow-hidden">
-        <div className="absolute inset-0 star-pattern opacity-70" />
-        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] gold-glow opacity-60" />
-        <div className="relative max-w-5xl mx-auto px-6 text-center">
+      <section className="relative bg-navy-950 pt-36 pb-24 overflow-hidden min-h-[80vh] flex items-center">
+        <div className="absolute inset-0 grid-pattern opacity-100" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500/6 blur-[120px] rounded-full pointer-events-none" />
+
+        <div className="relative max-w-6xl mx-auto px-6 text-center">
           <Reveal>
-            <p className="label-eyebrow">About ADVAQ</p>
-            <h1 className="font-serif text-white text-3xl sm:text-4xl md:text-6xl mt-5 leading-[1.15]">
-              We Help Entrepreneurs Build Legitimate, Legally Protected Businesses in the UK, USA, UAE & Pakistan.
+            <p className="text-gold-500 uppercase text-xs font-semibold tracking-[0.15em]">
+              ABOUT ADVAQ
+            </p>
+            <h1 className="font-serif text-white text-[32px] sm:text-[42px] md:text-[50px] lg:text-[56px] mt-5 leading-[1.15] max-w-5xl mx-auto">
+              <span>We Help Entrepreneurs Build Legitimate, </span>
+              <br className="hidden sm:block" />
+              <span>Legally Protected Businesses in the UK, USA, UAE & Pakistan.</span>
             </h1>
-            <p className="mt-6 text-navy-200 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+            <p className="mt-6 text-navy-200 text-[17px] md:text-[18px] max-w-4xl mx-auto leading-[1.7]">
               We are led by a Licensed Advocate who personally handles your company formation, tax compliance, and legal contracts with full legal accountability across four jurisdictions.
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 text-[13px] text-navy-200">
-              {[
-                "Punjab Bar Council Licensed Advocate",
-                "IRS PTIN Registered Tax Preparer",
-                "UK · USA · UAE · Pakistan Expertise",
-                "200+ Businesses Served Globally",
-              ].map((b) => (
-                <span key={b} className="inline-flex items-center gap-2">
-                  <span className="text-gold-500">✓</span> {b}
-                </span>
-              ))}
+
+            <div className="mt-10 flex flex-wrap gap-4 justify-center">
+              <Link to="/contact" className="btn-gold rounded-none uppercase tracking-widest">
+                Book Free Consultation
+              </Link>
+              <a
+                href="https://wa.me/923000925335"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline-light rounded-none uppercase tracking-widest"
+              >
+                Talk to Us on WhatsApp
+              </a>
+            </div>
+
+            <div className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-[13px] text-navy-200">
+              <span className="inline-flex items-center gap-2">
+                <Check size={16} className="text-gold-500" /> Punjab Bar Council Licensed Advocate
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <Check size={16} className="text-gold-500" /> IRS PTIN Registered Tax Preparer
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <Check size={16} className="text-gold-500" /> UK · USA · UAE · Pakistan Expertise
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <Check size={16} className="text-gold-500" /> 200+ Businesses Served Globally
+              </span>
             </div>
           </Reveal>
         </div>
