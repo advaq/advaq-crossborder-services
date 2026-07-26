@@ -76,11 +76,11 @@ function Contact() {
 
               <form onSubmit={onSubmit} className="mt-8 space-y-5">
                 <Field label="Full Name">
-                  <input required name="name" type="text" className="form-input" placeholder="John Smith" />
+                  <input required name="name" type="text" className="form-input" placeholder="Muhammad Abdullah" />
                 </Field>
                 <div className="grid sm:grid-cols-2 gap-5">
                   <Field label="Email Address">
-                    <input required name="email" type="email" className="form-input" placeholder="you@example.com" />
+                    <input required name="email" type="email" className="form-input" placeholder="yourname@domain.com" />
                   </Field>
                   <Field label="WhatsApp Number">
                     <input required name="phone" type="tel" className="form-input" placeholder="+92 300 1234567" />
