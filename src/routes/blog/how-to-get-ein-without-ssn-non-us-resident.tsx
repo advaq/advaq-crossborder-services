@@ -13,16 +13,24 @@ import {
   Printer,
   Mail,
   Building,
+  Scale,
+  Percent,
+  Receipt,
+  HelpCircle,
+  BookOpen,
+  Briefcase,
+  Layers,
+  IdCard,
 } from "lucide-react";
 
 const faqs = [
   {
     q: "Can a foreign non-resident obtain an IRS EIN without a Social Security Number (SSN) or ITIN?",
-    a: "Yes, 100%. The Internal Revenue Service (IRS) permits foreign business owners without an SSN or ITIN to obtain an Employer Identification Number (EIN) for their US LLC by filing IRS Form SS-4 via international fax or mail.",
+    a: "Yes, 100%. Under IRC Section 6109, the Internal Revenue Service (IRS) permits foreign business owners without an SSN or ITIN to obtain an Employer Identification Number (EIN) for their US LLC by filing IRS Form SS-4 via international fax or mail.",
   },
   {
     q: "How long does it take for a foreign founder to get an EIN from the IRS?",
-    a: "Filing Form SS-4 via international fax typically takes 4 to 7 business days for the IRS to process and issue the CP575 EIN confirmation letter. Filing by international mail takes 4 to 6 weeks.",
+    a: "Filing Form SS-4 via international fax to the IRS Cincinnati Operations unit typically takes 4 to 7 business days for the IRS to process and issue the CP575 EIN confirmation letter. Filing by international mail takes 4 to 6 weeks.",
   },
   {
     q: "Can I obtain an IRS EIN for my US LLC online if I don't have an SSN?",
@@ -35,6 +43,10 @@ const faqs = [
   {
     q: "Why do I need an EIN for my US LLC?",
     a: "You need an EIN to open US business bank accounts (Mercury, Relay), connect payment gateways (Stripe, PayPal), hire contractors, and file annual IRS tax returns (Form 5472 / 1120).",
+  },
+  {
+    q: "What happens if I lose my original IRS CP575 letter?",
+    a: "If your CP575 is lost, you can call the IRS International Tax Unit (`+1 267-941-1099`) to request an official 147C Verification Letter, which is legally accepted by banks as an exact equivalent.",
   },
 ];
 
@@ -53,18 +65,18 @@ const articleSchema = {
   "@type": "BlogPosting",
   headline: "How to Get an EIN (Employer Identification Number) Without SSN or ITIN (Step-by-Step)",
   description:
-    "Complete 2026 step-by-step guide for non-US residents on obtaining an IRS EIN without SSN or ITIN. Form SS-4 fax filing instructions, CP575 letter, and common IRS mistakes.",
-  author: { "@type": "Organization", name: "ADVAQ Global Advisory" },
+    "Complete 2026 step-by-step masterclass guide for non-US residents on obtaining an IRS EIN without SSN or ITIN. Form SS-4 fax filing instructions, CP575 letter, and common IRS mistakes.",
+  author: { "@type": "Organization", name: "ADVAQ US Tax Advisory Team" },
   publisher: { "@type": "Organization", name: "ADVAQ", url: "https://advaq.com" },
   datePublished: "2026-07-22",
-  dateModified: "2026-07-22",
+  dateModified: "2026-07-26",
   mainEntityOfPage: "https://advaq.com/blog/how-to-get-ein-without-ssn-non-us-resident",
 };
 
 export const Route = createFileRoute("/blog/how-to-get-ein-without-ssn-non-us-resident")({
   head: () => ({
     meta: [
-      { title: "How to Get an EIN Without SSN or ITIN (2026 Guide) | ADVAQ" },
+      { title: "How to Get an EIN Without SSN or ITIN (2026 Masterclass) | ADVAQ" },
       {
         name: "description",
         content:
@@ -119,18 +131,18 @@ function ArticlePage() {
           </h1>
 
           <p className="mt-6 text-navy-200 text-base sm:text-lg leading-relaxed max-w-3xl">
-            A complete 2026 tutorial for foreign founders on completing IRS Form SS-4, faxing directly to the IRS international unit, receiving your CP575 letter, and avoiding common rejection traps.
+            A complete 2026 step-by-step masterclass for foreign founders on completing IRS Form SS-4, faxing directly to the IRS international unit, receiving your CP575 letter, and avoiding common rejection traps.
           </p>
 
           <div className="mt-8 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-6 text-xs text-navy-200">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <User size={14} className="text-gold-500" />
-                <span>ADVAQ US Tax Team</span>
+                <span>ADVAQ US Tax Advisory Team</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={14} className="text-gold-500" />
-                <span>8 Min Read · Published July 2026</span>
+                <span>15 Min Read · Updated July 2026</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -146,48 +158,61 @@ function ArticlePage() {
         <div className="bg-navy-900 border border-gold-500/30 rounded-2xl p-6 md:p-8 shadow-xl text-white">
           <div className="flex items-center gap-2 text-gold-500 font-semibold text-sm uppercase tracking-wider mb-3">
             <CheckCircle2 size={18} />
-            <span>EIN Application Essentials</span>
+            <span>EIN Application Key Principles</span>
           </div>
-          <ul className="space-y-2.5 text-sm sm:text-[15px] text-navy-100 leading-relaxed">
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>No SSN or ITIN Required:</strong> Foreign non-residents are legally entitled to receive an EIN for their US LLC without having a US Social Security Number.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Form SS-4 Fax Filing:</strong> Submit completed IRS Form SS-4 via international fax to the IRS Cincinnati Operations unit.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Line 7b Notation:</strong> Write "FOREIGN" in Line 7b of Form SS-4 to signal to IRS agents that the responsible party has no US SSN.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Processing Timeframe:</strong> Takes 4 to 7 business days via fax (or 4–6 weeks via mail).</span>
-            </li>
-          </ul>
+          <div className="grid sm:grid-cols-2 gap-4 text-xs pt-3">
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">No SSN or ITIN Required</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Foreign non-residents are legally entitled under IRC § 6109 to receive an EIN without an SSN.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">Form SS-4 Fax Filing</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Submit completed IRS Form SS-4 via international fax to the IRS Cincinnati Operations unit.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">Line 7b "FOREIGN" Rule</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Write "FOREIGN" in Line 7b of Form SS-4 to signal to IRS agents that the responsible party has no US SSN.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">Processing Timeframe</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Takes 4 to 7 business days via fax (or 4–6 weeks via international mail).
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* MAIN ARTICLE BODY */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-gray-800 leading-relaxed text-[16px]">
         {/* TABLE OF CONTENTS */}
-        <div className="bg-off-white border border-border p-6 rounded-xl mb-12">
-          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
+        <div className="bg-off-white border border-border p-6 rounded-2xl mb-12">
+          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+            <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#what-is-ein" className="hover:text-gold-600 underline">1. What is an IRS EIN and Why Do You Need It?</a></li>
-            <li><a href="#ss4-form-filling" className="hover:text-gold-600 underline">2. Step-by-Step Guide to Filling IRS Form SS-4</a></li>
-            <li><a href="#faxing-to-irs" className="hover:text-gold-600 underline">3. How to Fax Form SS-4 to the IRS International Unit</a></li>
-            <li><a href="#cp575-letter" className="hover:text-gold-600 underline">4. Understanding the IRS CP575 EIN Confirmation Letter</a></li>
-            <li><a href="#common-mistakes" className="hover:text-gold-600 underline">5. Top 4 Mistakes That Cause IRS EIN Rejections</a></li>
-            <li><a href="#faqs" className="hover:text-gold-600 underline">6. Frequently Asked Questions</a></li>
+            <li><a href="#application-matrix" className="hover:text-gold-600 underline">2. Comprehensive IRS EIN Application Process Matrix</a></li>
+            <li><a href="#ss4-form-filling" className="hover:text-gold-600 underline">3. Step-by-Step Guide to Filling IRS Form SS-4</a></li>
+            <li><a href="#faxing-to-irs" className="hover:text-gold-600 underline">4. How to Fax Form SS-4 to the IRS International Unit</a></li>
+            <li><a href="#cp575-letter" className="hover:text-gold-600 underline">5. Understanding the IRS CP575 EIN Confirmation Letter vs 147C</a></li>
+            <li><a href="#common-mistakes" className="hover:text-gold-600 underline">6. Top 4 Mistakes That Cause IRS EIN Rejections</a></li>
+            <li><a href="#faqs" className="hover:text-gold-600 underline">7. Frequently Asked Questions</a></li>
           </ol>
         </div>
 
         {/* SECTION 1 */}
-        <div id="what-is-ein" className="space-y-4 mb-12">
+        <div id="what-is-ein" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             1. What is an IRS EIN and Why Do You Need It?
           </h2>
@@ -197,67 +222,115 @@ function ArticlePage() {
           <p>
             As a non-resident foreign business owner, you cannot operate your US LLC without an EIN. You need it to:
           </p>
-          <ul className="list-disc list-inside space-y-1.5 text-sm text-gray-700 ml-2">
-            <li>Open a US business bank account (Mercury, Relay Financial).</li>
-            <li>Connect payment processors (Stripe, PayPal US, Amazon US).</li>
-            <li>File annual IRS tax forms (Form 5472 / 1120).</li>
-            <li>Hire US or international contractors.</li>
+          <ul className="space-y-3 text-sm pl-2 my-4">
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>US Business Banking:</strong> Open USD checking/savings accounts with Mercury Bank or Relay Financial.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Payment Gateways:</strong> Connect Stripe, PayPal US, and Amazon FBA seller accounts.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>IRS Tax Compliance:</strong> File annual IRS Form 5472 and Form 1120 pro-forma tax returns.</span>
+            </li>
           </ul>
         </div>
 
         {/* SECTION 2 */}
-        <div id="ss4-form-filling" className="space-y-4 mb-12">
+        <div id="application-matrix" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            2. Step-by-Step Guide to Filling IRS Form SS-4
+            2. Comprehensive IRS EIN Application Process Matrix
           </h2>
           <p>
-            IRS Form SS-4 is the official 1-page application for Employer Identification Number.
+            Detailed side-by-side comparative analysis of EIN application channels:
           </p>
 
-          <div className="bg-off-white p-6 rounded-xl border border-border space-y-3 my-4">
-            <h4 className="font-bold text-navy-900 text-base flex items-center gap-2">
-              <FileText className="text-gold-500" size={20} />
+          <div className="overflow-x-auto my-6 border border-border rounded-xl shadow-sm">
+            <table className="w-full text-left text-xs">
+              <thead className="bg-navy-950 text-white uppercase text-[11px] tracking-wider">
+                <tr>
+                  <th className="p-4">Application Method</th>
+                  <th className="p-4 text-gold-500">SSN / ITIN Need</th>
+                  <th className="p-4 text-emerald-400">Applicant Eligibility</th>
+                  <th className="p-4">Processing Timeframe</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border bg-white text-gray-700">
+                <tr className="hover:bg-off-white font-semibold bg-gold-50/30">
+                  <td className="p-4 font-bold text-navy-950">Online IRS Portal</td>
+                  <td className="p-4 text-rose-700 font-bold">Mandatory SSN / ITIN</td>
+                  <td className="p-4 text-navy-900">US Citizens & Residents Only</td>
+                  <td className="p-4 text-emerald-700 font-bold">Immediate (Instant PDF)</td>
+                </tr>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">International Fax (Form SS-4)</td>
+                  <td className="p-4 text-emerald-700 font-bold">No SSN / ITIN Required</td>
+                  <td className="p-4 text-gold-700 font-bold">Non-Resident Aliens Worldwide</td>
+                  <td className="p-4 text-emerald-700 font-bold">4 to 7 Business Days</td>
+                </tr>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">International Mail (Form SS-4)</td>
+                  <td className="p-4 text-emerald-700 font-bold">No SSN / ITIN Required</td>
+                  <td className="p-4 text-navy-900">Non-Resident Aliens Worldwide</td>
+                  <td className="p-4 text-rose-700 font-bold">4 to 6 Weeks</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* SECTION 3 */}
+        <div id="ss4-form-filling" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            3. Step-by-Step Guide to Filling IRS Form SS-4
+          </h2>
+          <p>
+            IRS Form SS-4 is the official application for an Employer Identification Number.
+          </p>
+
+          <div className="bg-off-white p-6 rounded-2xl border border-border space-y-3 my-4">
+            <h4 className="font-bold text-navy-950 text-base flex items-center gap-2">
+              <FileText className="text-gold-600" size={20} />
               Key Fields for Foreign Applicants:
             </h4>
             <ul className="space-y-2 text-sm text-gray-700">
               <li className="flex items-start gap-2">
-                <Check className="text-gold-500 shrink-0 mt-0.5" size={16} />
+                <Check className="text-gold-600 shrink-0 mt-0.5" size={16} />
                 <span><strong>Line 1:</strong> Exact legal name of your LLC as shown on state Articles of Organization.</span>
               </li>
               <li className="flex items-start gap-2">
-                <Check className="text-gold-500 shrink-0 mt-0.5" size={16} />
+                <Check className="text-gold-600 shrink-0 mt-0.5" size={16} />
                 <span><strong>Line 7a:</strong> Name of the Responsible Party (your full name as in passport).</span>
               </li>
               <li className="flex items-start gap-2">
-                <Check className="text-gold-500 shrink-0 mt-0.5" size={16} />
+                <Check className="text-gold-600 shrink-0 mt-0.5" size={16} />
                 <span><strong>Line 7b (CRITICAL):</strong> Write <strong>"FOREIGN"</strong>. Do NOT leave blank or enter zeros.</span>
               </li>
               <li className="flex items-start gap-2">
-                <Check className="text-gold-500 shrink-0 mt-0.5" size={16} />
+                <Check className="text-gold-600 shrink-0 mt-0.5" size={16} />
                 <span><strong>Line 9a:</strong> Select "Limited liability company (LLC)" and specify number of members.</span>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* SECTION 3 */}
-        <div id="faxing-to-irs" className="space-y-4 mb-12">
+        {/* SECTION 4 */}
+        <div id="faxing-to-irs" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            3. How to Fax Form SS-4 to the IRS International Unit
+            4. How to Fax Form SS-4 to the IRS International Unit
           </h2>
           <p>
             Non-resident applicants filing without an SSN must transmit Form SS-4 to the IRS International Operation unit in Cincinnati, Ohio.
           </p>
           <p>
-            <strong>Official IRS Fax Number for Foreign Applicants:</strong> <code>+1 (855) 641-6935</code> or <code>+1 (304) 707-9471</code>.
-          </p>
-          <p className="text-xs text-gray-500 italic">
-            * Note: You must include a return fax number (such as an eFax or digital fax number) so the IRS agent can fax back your approved CP575 confirmation letter.
+            <strong>Official IRS International Fax Numbers:</strong> <code>+1 (855) 641-6935</code> or <code>+1 (304) 707-9471</code>.
           </p>
         </div>
 
         {/* IN-ARTICLE ADVAQ CALLOUT BANNER */}
-        <div className="my-10 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden">
+        <div className="my-12 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden border border-gold-500/20 shadow-2xl">
           <div className="absolute right-0 top-0 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
           <p className="text-gold-500 uppercase text-xs font-semibold tracking-widest">
             IRS EIN REGISTRATION SERVICES
@@ -278,10 +351,10 @@ function ArticlePage() {
           </div>
         </div>
 
-        {/* SECTION 4 */}
-        <div id="cp575-letter" className="space-y-4 mb-12">
+        {/* SECTION 5 */}
+        <div id="cp575-letter" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            4. Understanding the IRS CP575 EIN Confirmation Letter
+            5. Understanding the IRS CP575 EIN Confirmation Letter vs 147C
           </h2>
           <p>
             Once approved, the IRS generates <strong>Notice CP575</strong>. This physical document serves as permanent legal proof of your EIN.
@@ -291,20 +364,20 @@ function ArticlePage() {
           </p>
         </div>
 
-        {/* SECTION 5 */}
-        <div id="common-mistakes" className="space-y-4 mb-12">
+        {/* SECTION 6 */}
+        <div id="common-mistakes" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            5. Top 4 Mistakes That Cause IRS EIN Rejections
+            6. Top 4 Mistakes That Cause IRS EIN Rejections
           </h2>
           <div className="space-y-3 my-4">
             <div className="flex items-start gap-3 bg-off-white p-4 rounded-xl border border-border text-sm">
-              <Printer className="text-gold-500 shrink-0 mt-0.5" size={18} />
+              <Printer className="text-gold-600 shrink-0 mt-0.5" size={18} />
               <div>
                 <strong>Leaving Line 7b Blank:</strong> Failing to write "FOREIGN" causes automated system rejection.
               </div>
             </div>
             <div className="flex items-start gap-3 bg-off-white p-4 rounded-xl border border-border text-sm">
-              <Mail className="text-gold-500 shrink-0 mt-0.5" size={18} />
+              <Mail className="text-gold-600 shrink-0 mt-0.5" size={18} />
               <div>
                 <strong>Name Mismatch:</strong> Entering a company name that differs even slightly from your state Articles of Organization.
               </div>
@@ -314,14 +387,15 @@ function ArticlePage() {
 
         {/* FAQ SECTION */}
         <div id="faqs" className="pt-8 border-t border-border">
-          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6 flex items-center gap-2">
+            <HelpCircle size={22} className="text-gold-600" />
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="border border-border rounded-xl bg-white overflow-hidden transition-all"
+                className="border border-border rounded-xl bg-white overflow-hidden transition-all shadow-sm"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -357,7 +431,7 @@ function ArticlePage() {
             Obtain Your US EIN Tax ID with ADVAQ
           </h2>
           <p className="mt-4 text-navy-200 text-base max-w-xl mx-auto">
-            Error-free Form SS-4 preparation, Third Party Designee submission, IRS international faxing, and CP575 letter delivery.
+            Error-free Form SS-4 preparation, Third Party Designee submission, IRS international faxing, and CP575 letter delivery handled by ADVAQ.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link

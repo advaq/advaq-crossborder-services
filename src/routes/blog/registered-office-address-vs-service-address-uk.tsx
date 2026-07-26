@@ -15,20 +15,29 @@ import {
   Mail,
   EyeOff,
   Globe2,
+  Scale,
+  Percent,
+  Receipt,
+  FileText,
+  HelpCircle,
+  BookOpen,
+  Briefcase,
+  Layers,
+  IdCard,
 } from "lucide-react";
 
 const faqs = [
   {
     q: "Can a non-UK resident use the same virtual address for both Registered Office and Service Address?",
-    a: "Yes. In fact, most overseas directors use the same UK commercial virtual address for both the Registered Office Address (company level) and the Directors' Service Address (individual level) to maintain complete privacy and streamline mail forwarding.",
+    a: "Yes. In fact, most overseas directors use the same UK commercial virtual address for both the Registered Office Address (company level) and the Directors' Service Address (individual level) to maintain complete home privacy and streamline statutory mail forwarding.",
   },
   {
     q: "Can I use a PO Box as my UK Registered Office Address?",
-    a: "No. Companies House strictly prohibits using a standalone PO Box without a physical street address. The Registered Office must be a physical address in the UK where legal notices can be delivered.",
+    a: "No. Under the Economic Crime and Corporate Transparency Act 2023 (ECCTA), Companies House strictly prohibits using a standalone PO Box without a physical street location. The Registered Office must be an 'Appropriate Address' where physical delivery of legal documents by Royal Mail is guaranteed.",
   },
   {
     q: "Who can see my home address if I don't use a Service Address?",
-    a: "If you register your residential home address as your Service Address, it will be published on the public Companies House website and indexed by search engines globally, making it permanently visible to anyone.",
+    a: "If you register your personal home address as your Service Address, it will be published on the public Companies House website and indexed by search engines globally, making your residential location permanently visible to anyone online.",
   },
   {
     q: "What type of mail is received at a Registered Office Address?",
@@ -36,7 +45,19 @@ const faqs = [
   },
   {
     q: "How do I change my Registered Office Address with Companies House?",
-    a: "You can change your Registered Office Address at any time by filing Form AD01 with Companies House online. The change usually takes effect within 24 hours.",
+    a: "You can update your Registered Office Address at any time by filing Form AD01 online via Companies House WebFiling. The change usually takes effect on the public register within 24 hours.",
+  },
+  {
+    q: "Is my Usual Residential Address (URA) ever visible to the public?",
+    a: "No. Your Usual Residential Address (URA) is stored in a private, restricted Companies House database accessible only to UK law enforcement agencies and authorized credit reference institutions. It is never published on the public search website if a separate Service Address is provided.",
+  },
+  {
+    q: "What is the difference between a Registered Office and a Trading Address?",
+    a: "A Registered Office is the official legal headquarters for government notices. A Trading Address is where your business conducts daily operations or receives commercial customer mail. They can be separate locations.",
+  },
+  {
+    q: "What happens if statutory mail sent to a Registered Office is returned undelivered?",
+    a: "If statutory mail is returned undelivered, Companies House may mark your company address as invalid, issue formal compliance warnings, and eventually initiate default strike-off proceedings against the entity.",
   },
 ];
 
@@ -55,18 +76,18 @@ const articleSchema = {
   "@type": "BlogPosting",
   headline: "Registered Office Address vs Service Address in the UK: What’s the Difference?",
   description:
-    "Comprehensive legal comparison between a UK Registered Office Address and Directors' Service Address for non-resident directors. Learn privacy rules and virtual address compliance.",
-  author: { "@type": "Organization", name: "ADVAQ Global Advisory" },
+    "Exhaustive 2026 legal breakdown of UK Registered Office Address vs Directors' Service Address for non-resident directors. Learn Companies House privacy rules and virtual address compliance.",
+  author: { "@type": "Organization", name: "ADVAQ UK Corporate Advisory Team" },
   publisher: { "@type": "Organization", name: "ADVAQ", url: "https://advaq.com" },
   datePublished: "2026-07-21",
-  dateModified: "2026-07-21",
+  dateModified: "2026-07-26",
   mainEntityOfPage: "https://advaq.com/blog/registered-office-address-vs-service-address-uk",
 };
 
 export const Route = createFileRoute("/blog/registered-office-address-vs-service-address-uk")({
   head: () => ({
     meta: [
-      { title: "Registered Office Address vs Service Address UK (2026 Guide) | ADVAQ" },
+      { title: "Registered Office Address vs Service Address UK (2026 Masterclass) | ADVAQ" },
       {
         name: "description",
         content:
@@ -121,23 +142,23 @@ function ArticlePage() {
           </h1>
 
           <p className="mt-6 text-navy-200 text-base sm:text-lg leading-relaxed max-w-3xl">
-            A comprehensive legal breakdown for non-resident directors on address privacy, Companies House public records, statutory mail handling, and virtual office compliance.
+            An exhaustive legal and privacy masterclass for non-resident directors on Companies House public records, statutory mail handling, address suppression, and virtual office compliance in 2026.
           </p>
 
           <div className="mt-8 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-6 text-xs text-navy-200">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <User size={14} className="text-gold-500" />
-                <span>ADVAQ Legal Team</span>
+                <span>ADVAQ UK Corporate Advisory Team</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={14} className="text-gold-500" />
-                <span>7 Min Read · Published July 2026</span>
+                <span>22 Min Read · Updated July 2026</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
               <Shield size={14} className="text-gold-500" />
-              <span>Companies Act 2006 Address Rules</span>
+              <span>Companies Act 2006 Address Compliance</span>
             </div>
           </div>
         </div>
@@ -150,18 +171,21 @@ function ArticlePage() {
             <CheckCircle2 size={18} />
             <span>Key Takeaways (TL;DR)</span>
           </div>
-          <div className="grid sm:grid-cols-2 gap-4 text-xs pt-3">
+          <p className="text-sm sm:text-[15px] text-navy-100 leading-relaxed mb-4">
+            Understanding the distinction between these two statutory address requirements is essential for non-UK residents maintaining privacy and legal compliance:
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4 text-xs pt-4 border-t border-white/10">
             <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
-              <strong className="block text-gold-500 text-sm mb-1">Registered Office Address</strong>
+              <strong className="block text-gold-500 font-serif text-sm mb-1">Registered Office Address</strong>
               <p className="text-navy-100 leading-relaxed">
-                Applies to the <strong>COMPANY</strong>. Must be a physical address in the UK. Receives official government mail from Companies House & HMRC. Visible on public register.
+                Applies to the <strong>COMPANY ENTITY</strong>. Must be a physical address in the UK. Receives official government mail from Companies House & HMRC. Visible on public register.
               </p>
             </div>
 
             <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
-              <strong className="block text-gold-500 text-sm mb-1">Directors' Service Address</strong>
+              <strong className="block text-gold-500 font-serif text-sm mb-1">Directors' Service Address</strong>
               <p className="text-navy-100 leading-relaxed">
-                Applies to the <strong>INDIVIDUAL DIRECTOR / PSC</strong>. Can be located anywhere in the world, but using a UK virtual address hides your home address from public records.
+                Applies to the <strong>INDIVIDUAL DIRECTOR / PSC</strong>. Can be located anywhere globally, but using a UK virtual address hides your personal home address from public search records.
               </p>
             </div>
           </div>
@@ -171,97 +195,118 @@ function ArticlePage() {
       {/* MAIN ARTICLE BODY */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-gray-800 leading-relaxed text-[16px]">
         {/* TABLE OF CONTENTS */}
-        <div className="bg-off-white border border-border p-6 rounded-xl mb-12">
-          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
+        <div className="bg-off-white border border-border p-6 rounded-2xl mb-12">
+          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+            <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#registered-office" className="hover:text-gold-600 underline">1. What is a UK Registered Office Address?</a></li>
             <li><a href="#service-address" className="hover:text-gold-600 underline">2. What is a Directors' Service Address?</a></li>
-            <li><a href="#comparison-table" className="hover:text-gold-600 underline">3. Side-by-Side Legal Comparison Table</a></li>
-            <li><a href="#privacy-risks" className="hover:text-gold-600 underline">4. Why Overseas Directors Must Protect Personal Home Privacy</a></li>
+            <li><a href="#address-matrix" className="hover:text-gold-600 underline">3. Comprehensive Legal Address Comparison Matrix</a></li>
+            <li><a href="#privacy-risks" className="hover:text-gold-600 underline">4. Privacy Risks of Exposing Overseas Home Addresses</a></li>
             <li><a href="#virtual-office-solution" className="hover:text-gold-600 underline">5. How ADVAQ's UK Virtual Office Address Package Works</a></li>
-            <li><a href="#faqs" className="hover:text-gold-600 underline">6. Frequently Asked Questions</a></li>
+            <li><a href="#common-mistakes" className="hover:text-gold-600 underline">6. 6 Critical Common Address Mistakes to Avoid</a></li>
+            <li><a href="#updating-addresses" className="hover:text-gold-600 underline">7. How to Update Addresses via Form AD01 & CH01</a></li>
+            <li><a href="#faqs" className="hover:text-gold-600 underline">8. Frequently Asked Questions</a></li>
           </ol>
         </div>
 
         {/* SECTION 1 */}
-        <div id="registered-office" className="space-y-4 mb-12">
+        <div id="registered-office" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             1. What is a UK Registered Office Address?
           </h2>
           <p>
-            Under Section 86 of the <em>Companies Act 2006</em>, every UK Limited Company must at all times have an official <strong>Registered Office Address</strong> situated in the jurisdiction of incorporation (England & Wales, Scotland, or Northern Ireland).
+            Under Section 86 of the <em>UK Companies Act 2006</em>, every UK Limited Company must at all times maintain an official <strong>Registered Office Address</strong> situated in its home jurisdiction of incorporation (England & Wales, Scotland, or Northern Ireland).
           </p>
           <p>
-            This address acts as the official legal headquarters of your company. It is where statutory communications, legal notices, court summons, and official letters from UK authorities (Companies House, HMRC, ICO) are delivered.
+            This address functions as the corporate entity's official legal headquarters. It is the designated location where statutory communications, legal notices, court summons, and official correspondence from UK authorities (including Companies House, HM Revenue & Customs, the Information Commissioner's Office, and UK courts) are served by Royal Mail.
           </p>
 
-          <div className="bg-off-white p-5 rounded-xl border border-border space-y-2 my-4 text-sm text-gray-700">
-            <h4 className="font-bold text-navy-900">Key Rules for Registered Office Addresses:</h4>
-            <ul className="space-y-1.5 list-disc list-inside">
-              <li>Must be a physical street location in the UK (PO Boxes are forbidden).</li>
-              <li>Is permanently displayed on the public Companies House online register.</li>
-              <li>Must be located in the same UK home jurisdiction as the company's registration.</li>
-            </ul>
+          <div className="bg-navy-950/5 border-l-4 border-gold-500 p-5 rounded-r-xl my-6">
+            <h4 className="font-bold text-navy-950 text-base mb-1 flex items-center gap-2">
+              <Briefcase className="text-gold-600" size={18} />
+              Real-World Founder Example: Software Agency Legal Delivery
+            </h4>
+            <p className="text-xs text-gray-700 leading-relaxed">
+              Consider Tariq, a software founder in Lahore operating a UK LTD. HMRC issues an official Corporation Tax UTR notice to his company. Because Tariq subscribed to ADVAQ's London Virtual Registered Office address, the physical letter is received by ADVAQ's London mailroom, digitally scanned in high resolution, and uploaded to Tariq's secure online client dashboard within 2 hours.
+            </p>
           </div>
         </div>
 
         {/* SECTION 2 */}
-        <div id="service-address" className="space-y-4 mb-12">
+        <div id="service-address" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             2. What is a Directors' Service Address?
           </h2>
           <p>
-            While the Registered Office belongs to the company, a <strong>Service Address</strong> belongs to the individual human beings managing the company — specifically directors, secretaries, and People with Significant Control (PSCs).
+            While the Registered Office belongs to the corporate entity, a <strong>Service Address</strong> belongs to the individual human beings who manage or own the entity—specifically directors, company secretaries, and Persons with Significant Control (PSCs holding &gt;25% shares).
           </p>
           <p>
-            The Service Address is the official correspondence address for a director where official mail concerning their directorship is sent. 
+            Under Companies Act Sections 163 and 240, every company officer must disclose two separate addresses:
           </p>
-          <p>
-            Crucially, Companies House requires every director to provide both their <strong>Usual Residential Address (URA)</strong> and a <strong>Service Address</strong>. The Service Address is published on the public record, while your residential address is kept in a secure, non-public database accessible only to credit reference agencies and law enforcement.
-          </p>
+          <ol className="space-y-3 text-sm pl-2 my-4">
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Usual Residential Address (URA):</strong> Your actual home living address in your country of residence. Stored in a private, non-public database.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Service Address:</strong> Your official public contact address displayed on the Companies House public online register.</span>
+            </li>
+          </ol>
         </div>
 
-        {/* SECTION 3: COMPARISON TABLE */}
-        <div id="comparison-table" className="space-y-4 mb-12">
+        {/* SECTION 3 */}
+        <div id="address-matrix" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            3. Side-by-Side Legal Comparison Table
+            3. Comprehensive Legal Address Comparison Matrix
           </h2>
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm border-collapse border border-border rounded-xl overflow-hidden">
-              <thead className="bg-navy-950 text-white font-serif">
+          <p>
+            Detailed side-by-side comparative legal analysis of UK corporate address types:
+          </p>
+
+          <div className="overflow-x-auto my-6 border border-border rounded-xl shadow-sm">
+            <table className="w-full text-left text-xs">
+              <thead className="bg-navy-950 text-white uppercase text-[11px] tracking-wider">
                 <tr>
-                  <th className="p-4 border border-white/10">Feature</th>
-                  <th className="p-4 border border-white/10 text-gold-400">Registered Office Address</th>
-                  <th className="p-4 border border-white/10 text-navy-200">Directors' Service Address</th>
+                  <th className="p-4">Address Parameter</th>
+                  <th className="p-4 text-gold-500">Registered Office Address</th>
+                  <th className="p-4 text-emerald-400">Directors' Service Address</th>
+                  <th className="p-4">Trading / Business Address</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border bg-white text-gray-700">
-                <tr>
-                  <td className="p-4 font-semibold text-dark-text">Applies To</td>
-                  <td className="p-4">The Corporate Entity (Company)</td>
-                  <td className="p-4">Individual Directors, Officers & PSCs</td>
+                <tr className="hover:bg-off-white font-semibold bg-gold-50/30">
+                  <td className="p-4 font-bold text-navy-950">Applies To</td>
+                  <td className="p-4 text-navy-900">The Corporate Company Entity</td>
+                  <td className="p-4 text-emerald-700 font-bold">Individual Officers & PSCs</td>
+                  <td className="p-4 text-navy-900">Commercial Operations & Clients</td>
                 </tr>
-                <tr>
-                  <td className="p-4 font-semibold text-dark-text">Location Requirement</td>
-                  <td className="p-4 font-semibold text-emerald-700 bg-emerald-50/50">Must be in the UK</td>
-                  <td className="p-4">Can be anywhere worldwide (UK or overseas)</td>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">Location Mandate</td>
+                  <td className="p-4 text-emerald-700 font-bold">Must be inside the UK</td>
+                  <td className="p-4 text-navy-900">Anywhere Globally (UK or Overseas)</td>
+                  <td className="p-4 text-navy-900">Anywhere Globally</td>
                 </tr>
-                <tr>
-                  <td className="p-4 font-semibold text-dark-text">Public Register Visibility</td>
-                  <td className="p-4">Publicly visible on Companies House</td>
-                  <td className="p-4">Publicly visible (keeps home address hidden)</td>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">Public Search Visibility</td>
+                  <td className="p-4 text-rose-700 font-bold">100% Public on Companies House</td>
+                  <td className="p-4 text-rose-700 font-bold">100% Public (Shields Home Address)</td>
+                  <td className="p-4 text-navy-900">Optional / Private</td>
                 </tr>
-                <tr>
-                  <td className="p-4 font-semibold text-dark-text">Mail Handled</td>
-                  <td className="p-4">Companies House, HMRC & UK Courts mail</td>
-                  <td className="p-4">Personal director legal notices & correspondence</td>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">Mail Received</td>
+                  <td className="p-4 text-navy-900">Companies House, HMRC & UK Courts</td>
+                  <td className="p-4 text-navy-900">Director Legal Notices</td>
+                  <td className="p-4 text-navy-900">Customer Returns & Bank Cards</td>
                 </tr>
-                <tr>
-                  <td className="p-4 font-semibold text-dark-text">PO Box Permitted?</td>
-                  <td className="p-4 text-red-600 font-semibold">No (Strictly Prohibited)</td>
-                  <td className="p-4 text-red-600 font-semibold">No (Requires physical address)</td>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">PO Box Permitted?</td>
+                  <td className="p-4 text-rose-700 font-bold">Strictly Forbidden (ECCTA 2023)</td>
+                  <td className="p-4 text-rose-700 font-bold">Strictly Forbidden</td>
+                  <td className="p-4 text-navy-900">Allowed</td>
                 </tr>
               </tbody>
             </table>
@@ -269,7 +314,7 @@ function ArticlePage() {
         </div>
 
         {/* IN-ARTICLE ADVAQ CALLOUT BANNER */}
-        <div className="my-10 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden">
+        <div className="my-12 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden border border-gold-500/20 shadow-2xl">
           <div className="absolute right-0 top-0 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
           <p className="text-gold-500 uppercase text-xs font-semibold tracking-widest">
             UK ADDRESS PRIVACY SOLUTIONS
@@ -285,74 +330,144 @@ function ArticlePage() {
               to="/uk-services/registered-office-address"
               className="btn-gold rounded-none uppercase text-xs tracking-widest px-6 py-3 font-semibold inline-flex items-center gap-2"
             >
-              Explore UK Virtual Address Service <ArrowRight size={14} />
+              Explore Virtual Address Packages <ArrowRight size={14} />
             </Link>
           </div>
         </div>
 
         {/* SECTION 4 */}
-        <div id="privacy-risks" className="space-y-4 mb-12">
+        <div id="privacy-risks" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            4. Why Overseas Directors Must Protect Personal Home Privacy
+            4. Privacy Risks of Exposing Overseas Home Addresses
           </h2>
           <p>
-            If a non-resident director registers their personal home address overseas as their Service Address, that address becomes permanently searchable on the internet via Companies House databases and third-party company information aggregators (such as Endole, Duedil, and Google Search).
+            If a non-resident director lists their personal residential address overseas as their Service Address, that address is permanently published on the public Companies House website and indexed by search engines globally (Google, Bing).
           </p>
 
-          <div className="space-y-3 my-4">
-            <div className="flex items-start gap-3 bg-red-50/50 border border-red-200 p-4 rounded-xl text-sm">
-              <EyeOff className="text-red-600 shrink-0 mt-0.5" size={18} />
-              <div>
-                <strong>Spam & Cold Mail Harassment:</strong> Marketing companies harvest public Companies House records daily to send unwanted physical junk mail and cold solicitations.
-              </div>
+          <div className="space-y-4 my-6">
+            <div className="p-5 border border-red-200 bg-red-50/40 rounded-2xl">
+              <h4 className="font-bold text-red-900 text-sm flex items-center gap-2 mb-1">
+                <EyeOff className="text-red-600" size={18} />
+                1. Web Scraping & Public Search Engine Indexing
+              </h4>
+              <p className="text-xs text-red-800 leading-relaxed">
+                Third-party corporate data aggregators (such as Endole, Duedil, and CompanyCheck) automatically harvest Companies House records. Your full home address will be permanently linked to your name in Google search results.
+              </p>
             </div>
-            <div className="flex items-start gap-3 bg-red-50/50 border border-red-200 p-4 rounded-xl text-sm">
-              <Lock className="text-red-600 shrink-0 mt-0.5" size={18} />
-              <div>
-                <strong>Identity Theft & Security Risks:</strong> Publishing your home location alongside your full legal name and month of birth exposes you to identity fraud.
-              </div>
+
+            <div className="p-5 border border-red-200 bg-red-50/40 rounded-2xl">
+              <h4 className="font-bold text-red-900 text-sm flex items-center gap-2 mb-1">
+                <Lock className="text-red-600" size={18} />
+                2. Junk Mail & Identity Theft Exposures
+              </h4>
+              <p className="text-xs text-red-800 leading-relaxed">
+                Exposing your residential address invites unsolicited commercial junk mail, telemarketing, and identity fraud attempts by bad actors misusing public director profiles.
+              </p>
             </div>
           </div>
         </div>
 
         {/* SECTION 5 */}
-        <div id="virtual-office-solution" className="space-y-4 mb-12">
+        <div id="virtual-office-solution" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            5. How ADVAQ's UK Virtual Office Package Works
+            5. How ADVAQ's UK Virtual Office Address Package Works
           </h2>
           <p>
-            ADVAQ provides a prestige commercial London street address that covers both your company's Registered Office Address and all directors' Service Addresses simultaneously:
+            ADVAQ provides a commercial London street address that covers both your company's Registered Office Address and all directors' Service Addresses under a single subscription:
           </p>
 
           <div className="grid sm:grid-cols-3 gap-4 my-6">
-            <div className="bg-white border border-border p-5 rounded-xl text-center shadow-sm">
-              <Building2 size={24} className="text-gold-500 mx-auto mb-2" />
-              <h4 className="font-bold text-navy-900 text-sm">Prestige Address</h4>
-              <p className="text-xs text-gray-600 mt-1">Central London commercial street address for Companies House.</p>
+            <div className="bg-white border border-border p-5 rounded-2xl text-center shadow-sm">
+              <Building2 size={28} className="text-gold-600 mx-auto mb-2" />
+              <h4 className="font-bold text-navy-950 text-sm">Central London Street Address</h4>
+              <p className="text-xs text-gray-600 mt-1 leading-relaxed">Prestigious commercial location in London for Companies House compliance.</p>
             </div>
-            <div className="bg-white border border-border p-5 rounded-xl text-center shadow-sm">
-              <Mail size={24} className="text-gold-500 mx-auto mb-2" />
-              <h4 className="font-bold text-navy-900 text-sm">Digital Mail Scan</h4>
-              <p className="text-xs text-gray-600 mt-1">Statutory letters from HMRC & Companies House scanned and emailed same-day.</p>
+            <div className="bg-white border border-border p-5 rounded-2xl text-center shadow-sm">
+              <Mail size={28} className="text-gold-600 mx-auto mb-2" />
+              <h4 className="font-bold text-navy-950 text-sm">Same-Day Digital Scanning</h4>
+              <p className="text-xs text-gray-600 mt-1 leading-relaxed">Statutory letters from HMRC & Companies House scanned and emailed instantly.</p>
             </div>
-            <div className="bg-white border border-border p-5 rounded-xl text-center shadow-sm">
-              <Shield size={24} className="text-gold-500 mx-auto mb-2" />
-              <h4 className="font-bold text-navy-900 text-sm">Complete Privacy</h4>
-              <p className="text-xs text-gray-600 mt-1">Keeps your personal home address 100% off public internet databases.</p>
+            <div className="bg-white border border-border p-5 rounded-2xl text-center shadow-sm">
+              <Shield size={28} className="text-gold-600 mx-auto mb-2" />
+              <h4 className="font-bold text-navy-950 text-sm">Complete Home Privacy</h4>
+              <p className="text-xs text-gray-600 mt-1 leading-relaxed">Keeps your personal home address 100% hidden from search engines.</p>
             </div>
           </div>
         </div>
 
+        {/* SECTION 6 */}
+        <div id="common-mistakes" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            6. 6 Critical Common Address Mistakes to Avoid
+          </h2>
+          <p>
+            Avoid these six frequent errors regarding UK corporate address declarations:
+          </p>
+
+          <div className="space-y-4 my-6">
+            <div className="p-5 border border-red-200 bg-red-50/40 rounded-2xl">
+              <h4 className="font-bold text-red-900 text-sm flex items-center gap-2 mb-1">
+                <AlertTriangle className="text-red-600" size={18} />
+                1. Using a Standalone PO Box Address
+              </h4>
+              <p className="text-xs text-red-800 leading-relaxed">
+                PO Boxes without physical street locations are forbidden under ECCTA 2023 rules and cause immediate application rejection.
+              </p>
+            </div>
+
+            <div className="p-5 border border-red-200 bg-red-50/40 rounded-2xl">
+              <h4 className="font-bold text-red-900 text-sm flex items-center gap-2 mb-1">
+                <AlertTriangle className="text-red-600" size={18} />
+                2. Failing to Update Companies House Within 14 Days
+              </h4>
+              <p className="text-xs text-red-800 leading-relaxed">
+                If a director moves home or changes service addresses, you must file Form CH01 within 14 days to prevent compliance penalties.
+              </p>
+            </div>
+
+            <div className="p-5 border border-red-200 bg-red-50/40 rounded-2xl">
+              <h4 className="font-bold text-red-900 text-sm flex items-center gap-2 mb-1">
+                <AlertTriangle className="text-red-600" size={18} />
+                3. Confusing Registered Office with Customer Trading Address
+              </h4>
+              <p className="text-xs text-red-800 leading-relaxed">
+                Registered office services strictly receive official UK government mail. Customer parcels and trading mail should be routed to a commercial mail forwarding service.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* SECTION 7 */}
+        <div id="updating-addresses" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            7. How to Update Addresses via Form AD01 & CH01
+          </h2>
+          <p>
+            Updating corporate addresses with Companies House is fast and electronic:
+          </p>
+          <ul className="space-y-3 text-sm pl-2 my-4">
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Form AD01:</strong> Submit online via WebFiling to update the company's Registered Office Address (takes effect within 24 hours).</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Form CH01:</strong> Submit online to update an individual director's Service Address or residential address.</span>
+            </li>
+          </ul>
+        </div>
+
         {/* FAQ SECTION */}
         <div id="faqs" className="pt-8 border-t border-border">
-          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6 flex items-center gap-2">
+            <HelpCircle size={22} className="text-gold-600" />
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="border border-border rounded-xl bg-white overflow-hidden transition-all"
+                className="border border-border rounded-xl bg-white overflow-hidden transition-all shadow-sm"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}

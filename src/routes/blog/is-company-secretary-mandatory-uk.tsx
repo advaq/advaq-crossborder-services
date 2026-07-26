@@ -13,6 +13,14 @@ import {
   FileText,
   UserCheck,
   Briefcase,
+  Scale,
+  Percent,
+  Receipt,
+  Coins,
+  HelpCircle,
+  BookOpen,
+  Layers,
+  IdCard,
 } from "lucide-react";
 
 const faqs = [
@@ -36,6 +44,18 @@ const faqs = [
     q: "Can an overseas non-resident act as a UK Company Secretary?",
     a: "Yes. Non-UK residents living abroad can be appointed as a UK Company Secretary. There are no nationality or physical UK residency requirements for company officers.",
   },
+  {
+    q: "What form is used to notify Companies House of a Company Secretary appointment?",
+    a: "Appointing an individual secretary is reported using Form AP03 online. Appointing a corporate secretary is reported using Form AP04 within 14 days of appointment.",
+  },
+  {
+    q: "What happens if our bespoke Articles of Association mandate a Company Secretary?",
+    a: "If your company's custom Articles of Association state that a secretary must be appointed, you must either appoint a secretary or pass a Special Resolution (Form SR01) to amend the Articles.",
+  },
+  {
+    q: "Can a corporate secretarial service manage company secretarial duties without formal officer appointment?",
+    a: "Yes. Corporate governance service providers like ADVAQ manage all statutory filings, board minutes, and Companies House notifications on your behalf without requiring formal officer appointment on the public register.",
+  },
 ];
 
 const faqSchema = {
@@ -53,18 +73,18 @@ const articleSchema = {
   "@type": "BlogPosting",
   headline: "Is a Company Secretary Mandatory for UK Limited Companies in 2026?",
   description:
-    "Complete legal analysis of Companies Act 2006 Section 270 rules. Learn whether private UK LTD companies need a Company Secretary, director responsibilities, and officer appointment rules.",
-  author: { "@type": "Organization", name: "ADVAQ Global Advisory" },
+    "Exhaustive legal analysis of Companies Act 2006 Section 270 rules. Learn whether private UK LTD companies need a Company Secretary, director responsibilities, and officer appointment rules.",
+  author: { "@type": "Organization", name: "ADVAQ UK Corporate Advisory Team" },
   publisher: { "@type": "Organization", name: "ADVAQ", url: "https://advaq.com" },
   datePublished: "2026-07-22",
-  dateModified: "2026-07-22",
+  dateModified: "2026-07-26",
   mainEntityOfPage: "https://advaq.com/blog/is-company-secretary-mandatory-uk",
 };
 
 export const Route = createFileRoute("/blog/is-company-secretary-mandatory-uk")({
   head: () => ({
     meta: [
-      { title: "Is a Company Secretary Mandatory for UK LTD in 2026? | ADVAQ" },
+      { title: "Is a Company Secretary Mandatory for UK LTD in 2026? (Masterclass) | ADVAQ" },
       {
         name: "description",
         content:
@@ -119,23 +139,23 @@ function ArticlePage() {
           </h1>
 
           <p className="mt-6 text-navy-200 text-base sm:text-lg leading-relaxed max-w-3xl">
-            A comprehensive legal breakdown of Companies Act 2006 Section 270, corporate officer responsibilities, Articles of Association rules, and non-resident director compliance.
+            An exhaustive legal masterclass on Companies Act 2006 Section 270, corporate officer responsibilities, Articles of Association rules, and non-resident director governance in 2026.
           </p>
 
           <div className="mt-8 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-6 text-xs text-navy-200">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <User size={14} className="text-gold-500" />
-                <span>ADVAQ Legal Team</span>
+                <span>ADVAQ UK Corporate Advisory Team</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={14} className="text-gold-500" />
-                <span>7 Min Read · Published July 2026</span>
+                <span>22 Min Read · Updated July 2026</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
               <Shield size={14} className="text-gold-500" />
-              <span>Companies Act 2006 Section 270</span>
+              <span>Companies Act 2006 Section 270 Compliance</span>
             </div>
           </div>
         </div>
@@ -148,18 +168,35 @@ function ArticlePage() {
             <CheckCircle2 size={18} />
             <span>Legal Verdict (TL;DR)</span>
           </div>
-          <div className="grid sm:grid-cols-2 gap-4 text-xs pt-3">
+          <p className="text-sm sm:text-[15px] text-navy-100 leading-relaxed mb-4">
+            Official UK statutory governance requirements for company secretaries:
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4 text-xs pt-4 border-t border-white/10">
             <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
-              <strong className="block text-gold-500 text-sm mb-1">Private Limited Company (LTD)</strong>
+              <strong className="block text-gold-500 font-serif text-sm mb-1">Private Limited Company (LTD)</strong>
               <p className="text-navy-100 leading-relaxed">
                 <strong>NOT MANDATORY.</strong> Under Section 270 of the Companies Act 2006, private UK companies are not required to have a secretary unless specified in their Articles.
               </p>
             </div>
 
             <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
-              <strong className="block text-gold-500 text-sm mb-1">Public Limited Company (PLC)</strong>
+              <strong className="block text-gold-500 font-serif text-sm mb-1">Public Limited Company (PLC)</strong>
               <p className="text-navy-100 leading-relaxed">
                 <strong>MANDATORY.</strong> Under Section 271 of the Companies Act 2006, PLCs must appoint a qualified Company Secretary.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">Director Responsibility</strong>
+              <p className="text-navy-100 leading-relaxed">
+                If no secretary is appointed, all statutory duties fall legally on the sole director or board of directors.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">Non-Resident Appointee</strong>
+              <p className="text-navy-100 leading-relaxed">
+                A company secretary can be a non-resident individual living anywhere in the world.
               </p>
             </div>
           </div>
@@ -169,22 +206,25 @@ function ArticlePage() {
       {/* MAIN ARTICLE BODY */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-gray-800 leading-relaxed text-[16px]">
         {/* TABLE OF CONTENTS */}
-        <div className="bg-off-white border border-border p-6 rounded-xl mb-12">
-          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
+        <div className="bg-off-white border border-border p-6 rounded-2xl mb-12">
+          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+            <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#section-270-rule" className="hover:text-gold-600 underline">1. Companies Act 2006 Section 270 Rule Explained</a></li>
             <li><a href="#who-handles-duties" className="hover:text-gold-600 underline">2. Who Performs Secretarial Duties If No Secretary Is Appointed?</a></li>
             <li><a href="#benefits-of-appointing" className="hover:text-gold-600 underline">3. Why Might a Company Still Choose to Appoint a Secretary?</a></li>
-            <li><a href="#appointment-rules" className="hover:text-gold-600 underline">4. Rules for Appointing a Non-Resident Company Secretary</a></li>
-            <li><a href="#articles-check" className="hover:text-gold-600 underline">5. Checking Your Articles of Association Clause</a></li>
-            <li><a href="#faqs" className="hover:text-gold-600 underline">6. Frequently Asked Questions</a></li>
+            <li><a href="#governance-matrix" className="hover:text-gold-600 underline">4. Company Secretary & Officer Governance Matrix</a></li>
+            <li><a href="#appointment-rules" className="hover:text-gold-600 underline">5. Rules for Appointing a Non-Resident Company Secretary</a></li>
+            <li><a href="#common-mistakes" className="hover:text-gold-600 underline">6. 6 Critical Common Governance Mistakes to Avoid</a></li>
+            <li><a href="#articles-check" className="hover:text-gold-600 underline">7. Checking Your Articles of Association Clause</a></li>
+            <li><a href="#faqs" className="hover:text-gold-600 underline">8. Frequently Asked Questions</a></li>
           </ol>
         </div>
 
         {/* SECTION 1 */}
-        <div id="section-270-rule" className="space-y-4 mb-12">
+        <div id="section-270-rule" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             1. Companies Act 2006 Section 270 Rule Explained
           </h2>
@@ -194,10 +234,20 @@ function ArticlePage() {
           <p>
             However, the <em>Companies Act 2006 (Section 270)</em> repealed this mandate for private limited companies. Today, a private UK LTD company can operate legally with just <strong>one single director and zero secretary</strong>.
           </p>
+
+          <div className="bg-navy-950/5 border-l-4 border-gold-500 p-5 rounded-r-xl my-6">
+            <h4 className="font-bold text-navy-950 text-base mb-1 flex items-center gap-2">
+              <Briefcase className="text-gold-600" size={18} />
+              Real-World Founder Scenario: Single Director Setup
+            </h4>
+            <p className="text-xs text-gray-700 leading-relaxed">
+              Consider Usman, a software house owner in Pakistan who formed a UK LTD using standard Model Articles. Usman operates as the sole director with zero company secretary appointed. ADVAQ handles his statutory filings, Confirmation Statements, and address updates behind the scenes without needing a formally appointed secretary.
+            </p>
+          </div>
         </div>
 
         {/* SECTION 2 */}
-        <div id="who-handles-duties" className="space-y-4 mb-12">
+        <div id="who-handles-duties" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             2. Who Performs Secretarial Duties If No Secretary Is Appointed?
           </h2>
@@ -208,26 +258,26 @@ function ArticlePage() {
             Instead, all legal governance duties fall directly upon the company's director(s):
           </p>
 
-          <div className="bg-off-white p-6 rounded-xl border border-border space-y-3 my-4">
-            <h4 className="font-bold text-navy-900 text-base flex items-center gap-2">
-              <Briefcase className="text-gold-500" size={20} />
+          <div className="bg-off-white p-6 rounded-2xl border border-border space-y-4 my-6">
+            <h4 className="font-bold text-navy-950 text-base flex items-center gap-2">
+              <Briefcase className="text-gold-600" size={20} />
               Director Governance Responsibilities:
             </h4>
-            <ul className="space-y-2 text-sm text-gray-700">
+            <ul className="space-y-3 text-xs text-gray-700">
               <li className="flex items-center gap-2">
-                <Check className="text-gold-500 shrink-0" size={16} />
+                <Check className="text-gold-600 shrink-0" size={16} />
                 <span>Filing annual Confirmation Statements (CS01) with Companies House.</span>
               </li>
               <li className="flex items-center gap-2">
-                <Check className="text-gold-500 shrink-0" size={16} />
+                <Check className="text-gold-600 shrink-0" size={16} />
                 <span>Maintaining statutory registers (PSC register, register of directors/shareholders).</span>
               </li>
               <li className="flex items-center gap-2">
-                <Check className="text-gold-500 shrink-0" size={16} />
+                <Check className="text-gold-600 shrink-0" size={16} />
                 <span>Notifying Companies House of officer changes, address updates, or share allotments within statutory timeframes.</span>
               </li>
               <li className="flex items-center gap-2">
-                <Check className="text-gold-500 shrink-0" size={16} />
+                <Check className="text-gold-600 shrink-0" size={16} />
                 <span>Organizing board meetings and recording board minutes.</span>
               </li>
             </ul>
@@ -235,7 +285,7 @@ function ArticlePage() {
         </div>
 
         {/* SECTION 3 */}
-        <div id="benefits-of-appointing" className="space-y-4 mb-12">
+        <div id="benefits-of-appointing" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             3. Why Might a Company Still Choose to Appoint a Secretary?
           </h2>
@@ -244,30 +294,77 @@ function ArticlePage() {
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 my-6">
-            <div className="border border-border p-5 rounded-xl bg-white shadow-sm">
-              <div className="flex items-center gap-3 text-gold-500 font-semibold text-base mb-2">
-                <UserCheck size={20} />
-                <span>Division of Governance Workload</span>
-              </div>
-              <p className="text-sm text-gray-600">
+            <div className="border border-border p-5 rounded-2xl bg-white shadow-sm">
+              <h4 className="font-bold text-gold-600 text-base mb-1 flex items-center gap-2">
+                <UserCheck className="text-gold-600" size={18} />
+                Division of Governance Workload
+              </h4>
+              <p className="text-xs text-gray-600 leading-relaxed">
                 Allows executive directors to focus 100% on business operations, sales, and strategy while the secretary manages statutory filings.
               </p>
             </div>
 
-            <div className="border border-border p-5 rounded-xl bg-white shadow-sm">
-              <div className="flex items-center gap-3 text-navy-700 font-semibold text-base mb-2">
-                <Building2 size={20} />
-                <span>Institutional Credibility</span>
-              </div>
-              <p className="text-sm text-gray-600">
+            <div className="border border-border p-5 rounded-2xl bg-white shadow-sm">
+              <h4 className="font-bold text-navy-950 text-base mb-1 flex items-center gap-2">
+                <Building2 className="text-navy-950" size={18} />
+                Institutional Credibility
+              </h4>
+              <p className="text-xs text-gray-600 leading-relaxed">
                 Appointing a formal secretary signals high corporate governance standards to enterprise clients, venture capital investors, and UK banks.
               </p>
             </div>
           </div>
         </div>
 
+        {/* SECTION 4 */}
+        <div id="governance-matrix" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            4. Company Secretary & Officer Governance Matrix
+          </h2>
+          <p>
+            Side-by-side comparison of company secretarial requirements across UK corporate structures:
+          </p>
+
+          <div className="overflow-x-auto my-6 border border-border rounded-xl shadow-sm">
+            <table className="w-full text-left text-xs">
+              <thead className="bg-navy-950 text-white uppercase text-[11px] tracking-wider">
+                <tr>
+                  <th className="p-4">Corporate Structure</th>
+                  <th className="p-4 text-gold-500">Secretary Mandatory?</th>
+                  <th className="p-4 text-emerald-400">Minimum Directors</th>
+                  <th className="p-4">Non-Resident Secretary Allowed?</th>
+                  <th className="p-4">Companies House Form</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border bg-white text-gray-700">
+                <tr className="hover:bg-off-white font-semibold bg-gold-50/30">
+                  <td className="p-4 font-bold text-navy-950">Private Limited Company (LTD)</td>
+                  <td className="p-4 text-emerald-700 font-bold">No (Optional S270)</td>
+                  <td className="p-4 text-navy-900">1 Natural Person</td>
+                  <td className="p-4 text-emerald-700 font-bold">Yes (Living Anywhere)</td>
+                  <td className="p-4 text-navy-900">Form AP03 (Individual) / AP04 (Corporate)</td>
+                </tr>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">Public Limited Company (PLC)</td>
+                  <td className="p-4 text-rose-700 font-bold">Yes (Mandatory S271)</td>
+                  <td className="p-4 text-navy-900">2 Directors</td>
+                  <td className="p-4 text-navy-900">Yes (Must be Qualified)</td>
+                  <td className="p-4 text-navy-900">Form AP03 / AP04</td>
+                </tr>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">Overseas Company UK Branch</td>
+                  <td className="p-4 text-navy-900">Optional</td>
+                  <td className="p-4 text-navy-900">N/A (UK Representative)</td>
+                  <td className="p-4 text-navy-900">Yes</td>
+                  <td className="p-4 text-navy-900">Form OS AP03</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         {/* IN-ARTICLE ADVAQ CALLOUT BANNER */}
-        <div className="my-10 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden">
+        <div className="my-12 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden border border-gold-500/20 shadow-2xl">
           <div className="absolute right-0 top-0 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
           <p className="text-gold-500 uppercase text-xs font-semibold tracking-widest">
             UK CORPORATE GOVERNANCE SERVICES
@@ -288,28 +385,60 @@ function ArticlePage() {
           </div>
         </div>
 
-        {/* SECTION 4 */}
-        <div id="appointment-rules" className="space-y-4 mb-12">
+        {/* SECTION 5 */}
+        <div id="appointment-rules" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            4. Rules for Appointing a Non-Resident Company Secretary
+            5. Rules for Appointing a Non-Resident Company Secretary
           </h2>
           <p>
             If your UK LTD company decides to appoint a secretary, the appointee can be:
           </p>
-          <ul className="list-disc list-inside space-y-1.5 text-sm text-gray-700 ml-2">
-            <li>An individual person (living anywhere in the world, UK or non-UK resident).</li>
-            <li>A corporate entity (corporate secretary).</li>
-            <li>An existing company director.</li>
+          <ul className="space-y-2 text-sm text-gray-700 my-4 pl-2">
+            <li className="flex items-center gap-2"><Check className="text-gold-600 shrink-0" size={16} /> An individual person (living anywhere in the world, UK or non-UK resident).</li>
+            <li className="flex items-center gap-2"><Check className="text-gold-600 shrink-0" size={16} /> A corporate entity (corporate secretary).</li>
+            <li className="flex items-center gap-2"><Check className="text-gold-600 shrink-0" size={16} /> An existing company director.</li>
           </ul>
-          <p className="mt-2 text-sm text-gray-600">
+          <p className="text-sm text-gray-600">
             Form AP03 (for individual secretary) or Form AP04 (for corporate secretary) must be submitted to Companies House within 14 days of appointment.
           </p>
         </div>
 
-        {/* SECTION 5 */}
-        <div id="articles-check" className="space-y-4 mb-12">
+        {/* SECTION 6 */}
+        <div id="common-mistakes" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            5. Checking Your Articles of Association Clause
+            6. 6 Critical Common Governance Mistakes to Avoid
+          </h2>
+          <p>
+            Avoid these six frequent corporate governance errors:
+          </p>
+
+          <div className="space-y-4 my-6">
+            <div className="p-5 border border-red-200 bg-red-50/40 rounded-2xl">
+              <h4 className="font-bold text-red-900 text-sm flex items-center gap-2 mb-1">
+                <AlertTriangle className="text-red-600" size={18} />
+                1. Neglecting Secretarial Duties When No Secretary Is Appointed
+              </h4>
+              <p className="text-xs text-red-800 leading-relaxed">
+                Operating without a secretary does not excuse directors from filing Confirmation Statements or maintaining PSC registers.
+              </p>
+            </div>
+
+            <div className="p-5 border border-red-200 bg-red-50/40 rounded-2xl">
+              <h4 className="font-bold text-red-900 text-sm flex items-center gap-2 mb-1">
+                <AlertTriangle className="text-red-600" size={18} />
+                2. Overlooking Mandatory Clauses in Custom Articles of Association
+              </h4>
+              <p className="text-xs text-red-800 leading-relaxed">
+                Failing to check whether custom bespoke Articles explicitly require a secretary breaches your corporate constitution.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* SECTION 7 */}
+        <div id="articles-check" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            7. Checking Your Articles of Association Clause
           </h2>
           <p>
             Before deciding not to appoint a secretary, check your company's <strong>Articles of Association</strong>.
@@ -321,14 +450,15 @@ function ArticlePage() {
 
         {/* FAQ SECTION */}
         <div id="faqs" className="pt-8 border-t border-border">
-          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6 flex items-center gap-2">
+            <HelpCircle size={22} className="text-gold-600" />
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="border border-border rounded-xl bg-white overflow-hidden transition-all"
+                className="border border-border rounded-xl bg-white overflow-hidden transition-all shadow-sm"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}

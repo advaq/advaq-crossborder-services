@@ -12,28 +12,40 @@ import {
   FileText,
   AlertTriangle,
   Scale,
+  Globe2,
+  Percent,
+  Receipt,
+  HelpCircle,
+  BookOpen,
+  Briefcase,
+  Layers,
+  IdCard,
 } from "lucide-react";
 
 const faqs = [
   {
     q: "What are UAE Economic Substance Regulations (ESR)?",
-    a: "UAE Economic Substance Regulations (Cabinet Resolution No. 57 of 2020) require UAE entities (Freezone & Mainland) that carry out 'Relevant Activities' to demonstrate genuine economic presence, physical management, and operational substance inside the UAE.",
+    a: "UAE Economic Substance Regulations (enacted under Cabinet Resolution No. 57 of 2020) require UAE entities (Freezone and Mainland) that conduct 'Relevant Activities' to demonstrate genuine physical presence, local operational management, and economic substance inside the United Arab Emirates.",
   },
   {
     q: "What business activities are classified as 'Relevant Activities' under ESR?",
-    a: "The 9 Relevant Activities under ESR are: (1) Headquarter Business, (2) Distribution & Service Center, (3) Holding Company, (4) Lease-Finance, (5) Fund Management, (6) Banking, (7) Insurance, (8) Intellectual Property (IP) Business, and (9) Shipping Business.",
+    a: "The 9 Relevant Activities defined under ESR are: (1) Distribution and Service Center Business, (2) Headquarter Business, (3) Holding Company Business, (4) Intellectual Property (IP) Business, (5) Lease-Finance Business, (6) Fund Management Business, (7) Banking Business, (8) Insurance Business, and (9) Shipping Business.",
   },
   {
-    q: "What filing obligations does ESR impose on UAE companies?",
-    a: "Entities conducting Relevant Activities must submit: (1) An annual ESR Notification within 6 months of financial year-end, and (2) An annual Economic Substance Report within 12 months of financial year-end via the Ministry of Finance portal.",
+    q: "What annual filing obligations does ESR impose on UAE companies?",
+    a: "Entities carrying out Relevant Activities must fulfill two annual digital filings via the Ministry of Finance (MoF) portal: (1) An annual ESR Notification submitted within 6 months of financial year-end, and (2) An annual Economic Substance Report submitted within 12 months of financial year-end.",
   },
   {
     q: "What are the penalties for non-compliance with UAE ESR regulations?",
-    a: "Failing to submit an ESR notification carries a fine of AED 20,000. Failing to satisfy the Economic Substance Test or submit an ESR report carries fines of AED 50,000 (first year) and AED 400,000 (subsequent years), plus potential license suspension.",
+    a: "Failing to submit an ESR notification carries an administrative fine of AED 20,000. Failing to satisfy the Economic Substance Test or submit an ESR report carries administrative fines of AED 50,000 for the first year of non-compliance, increasing to AED 400,000 for subsequent years, alongside potential trade license revocation.",
   },
   {
     q: "How does ESR impact Qualifying Freezone Persons (QFZP) claiming 0% Corporate Tax?",
-    a: "Maintaining adequate economic substance under ESR is a strict prerequisite for Freezone entities seeking to qualify for the 0% Corporate Tax rate on Qualifying Income under Cabinet Decision No. 55 of 2023.",
+    a: "Maintaining adequate economic substance under ESR is a mandatory statutory prerequisite for Freezone entities seeking to qualify for the 0% Corporate Tax rate on Qualifying Income under Cabinet Decision No. 55 of 2023.",
+  },
+  {
+    q: "Does ESR apply to a 100% foreign-owned IT consulting company with a Flexi-Desk?",
+    a: "If an IT consulting company only provides pure IT services to third parties without providing headquarter management or intra-group service center activities, it is generally outside the scope of ESR. However, an annual assessment is recommended to confirm exemption status.",
   },
 ];
 
@@ -52,18 +64,18 @@ const articleSchema = {
   "@type": "BlogPosting",
   headline: "Ultimate Guide to UAE Economic Substance Regulations (ESR) for Freezones",
   description:
-    "Complete 2026 ESR compliance guide for UAE Freezone & Mainland companies. Learn 9 relevant activities, Core Income Generating Activities (CIGA), Ministry of Finance notification deadlines, and penalty rules.",
-  author: { "@type": "Organization", name: "ADVAQ Global Advisory" },
+    "Complete 2026 ESR compliance masterclass guide for UAE Freezone & Mainland companies. Learn 9 relevant activities, Core Income Generating Activities (CIGA), Ministry of Finance notification deadlines, and penalty rules.",
+  author: { "@type": "Organization", name: "ADVAQ UAE Tax & Compliance Advisory Team" },
   publisher: { "@type": "Organization", name: "ADVAQ", url: "https://advaq.com" },
   datePublished: "2026-07-22",
-  dateModified: "2026-07-22",
+  dateModified: "2026-07-26",
   mainEntityOfPage: "https://advaq.com/blog/uae-economic-substance-regulations-esr-guide",
 };
 
 export const Route = createFileRoute("/blog/uae-economic-substance-regulations-esr-guide")({
   head: () => ({
     meta: [
-      { title: "UAE Economic Substance Regulations (ESR) Guide (2026) | ADVAQ" },
+      { title: "UAE Economic Substance Regulations (ESR) Guide (2026 Masterclass) | ADVAQ" },
       {
         name: "description",
         content:
@@ -118,18 +130,18 @@ function ArticlePage() {
           </h1>
 
           <p className="mt-6 text-navy-200 text-base sm:text-lg leading-relaxed max-w-3xl">
-            An in-depth regulatory guide for business owners on UAE Economic Substance Regulations (ESR), Core Income Generating Activities (CIGA), Ministry of Finance reporting portals, and non-compliance penalty prevention.
+            An in-depth regulatory masterclass for business owners on UAE Economic Substance Regulations (ESR), Core Income Generating Activities (CIGA), Ministry of Finance reporting portals, and non-compliance penalty prevention under Cabinet Resolution No. 57 of 2020.
           </p>
 
           <div className="mt-8 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-6 text-xs text-navy-200">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <User size={14} className="text-gold-500" />
-                <span>ADVAQ UAE Tax & Compliance Team</span>
+                <span>ADVAQ UAE Tax & Compliance Advisory Team</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={14} className="text-gold-500" />
-                <span>9 Min Read · Published July 2026</span>
+                <span>15 Min Read · Updated July 2026</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -145,77 +157,103 @@ function ArticlePage() {
         <div className="bg-navy-900 border border-gold-500/30 rounded-2xl p-6 md:p-8 shadow-xl text-white">
           <div className="flex items-center gap-2 text-gold-500 font-semibold text-sm uppercase tracking-wider mb-3">
             <CheckCircle2 size={18} />
-            <span>ESR Compliance Requirements</span>
+            <span>ESR Framework Essentials</span>
           </div>
-          <ul className="space-y-2.5 text-sm sm:text-[15px] text-navy-100 leading-relaxed">
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Relevant Activities (9 Sectors):</strong> Distribution/Service Centers, Headquarters, Holding Companies, IP Business, etc.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>ESR Notification (6 Months):</strong> Mandatory annual filing within 6 months of financial year-end.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>ESR Report (12 Months):</strong> Report detailing local employees, operating expenditures, and physical office space.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Severe Penalties:</strong> AED 20,000 for notification failures; AED 50,000 to AED 400,000 for substance test failures.</span>
-            </li>
-          </ul>
+          <div className="grid sm:grid-cols-2 gap-4 text-xs pt-3">
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">9 Relevant Activities</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Distribution/Service Centers, Headquarters, Holding Companies, IP Business, Lease-Finance, Fund Management, Shipping, Banking, Insurance.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">ESR Notification (6 Months)</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Mandatory annual digital filing submitted on the MoF portal within 6 months of financial year-end.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">ESR Report (12 Months)</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Mandatory annual report detailing local employees, operating expenses, and office space within 12 months.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">Non-Compliance Fines</strong>
+              <p className="text-navy-100 leading-relaxed">
+                AED 20,000 fine for notification failures; AED 50,000 to AED 400,000 for failing substance tests.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* MAIN ARTICLE BODY */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-gray-800 leading-relaxed text-[16px]">
         {/* TABLE OF CONTENTS */}
-        <div className="bg-off-white border border-border p-6 rounded-xl mb-12">
-          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
+        <div className="bg-off-white border border-border p-6 rounded-2xl mb-12">
+          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+            <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#esr-overview" className="hover:text-gold-600 underline">1. Understanding Cabinet Resolution No. 57 of 2020 (ESR)</a></li>
             <li><a href="#relevant-activities" className="hover:text-gold-600 underline">2. The 9 Relevant Business Activities Specified under ESR</a></li>
-            <li><a href="#ciga-test" className="hover:text-gold-600 underline">3. Passing the Economic Substance & CIGA Test</a></li>
-            <li><a href="#mof-filing-deadlines" className="hover:text-gold-600 underline">4. Ministry of Finance Filing Deadlines & Portal Rules</a></li>
-            <li><a href="#corporate-tax-link" className="hover:text-gold-600 underline">5. The Crucial Link Between ESR & 0% Corporate Tax (QFZP)</a></li>
-            <li><a href="#faqs" className="hover:text-gold-600 underline">6. Frequently Asked Questions</a></li>
+            <li><a href="#esr-matrix" className="hover:text-gold-600 underline">3. Comprehensive ESR Relevant Activity & CIGA Test Matrix</a></li>
+            <li><a href="#ciga-test" className="hover:text-gold-600 underline">4. Passing the Economic Substance & CIGA Test</a></li>
+            <li><a href="#mof-deadlines" className="hover:text-gold-600 underline">5. Ministry of Finance Filing Deadlines & Portal Rules</a></li>
+            <li><a href="#corporate-tax-link" className="hover:text-gold-600 underline">6. The Crucial Link Between ESR & 0% Corporate Tax (QFZP)</a></li>
+            <li><a href="#faqs" className="hover:text-gold-600 underline">7. Frequently Asked Questions</a></li>
           </ol>
         </div>
 
         {/* SECTION 1 */}
-        <div id="esr-overview" className="space-y-4 mb-12">
+        <div id="esr-overview" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             1. Understanding Cabinet Resolution No. 57 of 2020 (ESR)
           </h2>
           <p>
-            Introduced by the UAE Ministry of Finance in alignment with OECD BEPS Action 5, <strong>Economic Substance Regulations (ESR)</strong> prevent artificial profit shifting by requiring companies operating in specific sectors to demonstrate real economic activity within the UAE.
+            Introduced by the UAE Ministry of Finance under <strong>Cabinet Resolution No. 57 of 2020</strong> and <strong>Ministerial Decision No. 100 of 2020</strong> in alignment with OECD BEPS Action 5 international standards, <strong>Economic Substance Regulations (ESR)</strong> prevent artificial profit shifting by requiring companies operating in specific sectors to demonstrate real operational presence within the UAE.
+          </p>
+          <p>
+            ESR applies to all corporate entities (both Freezone and Mainland LLCs) that derive revenue from any of 9 defined "Relevant Activities."
           </p>
         </div>
 
         {/* SECTION 2 */}
-        <div id="relevant-activities" className="space-y-4 mb-12">
+        <div id="relevant-activities" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             2. The 9 Relevant Business Activities Specified under ESR
           </h2>
           <p>
-            ESR applies to UAE entities carrying out any of the following 9 Relevant Activities:
+            ESR compliance applies strictly to licensees conducting one or more of the following 9 Relevant Activities:
           </p>
-          <ul className="list-disc list-inside space-y-1.5 text-sm text-gray-700 ml-2">
-            <li>Distribution and Service Center Business</li>
-            <li>Headquarter Business</li>
-            <li>Holding Company Business</li>
-            <li>Intellectual Property (IP) Business</li>
-            <li>Lease-Finance Business</li>
-            <li>Fund Management Business</li>
-            <li>Banking, Insurance, and Shipping Businesses</li>
-          </ul>
+
+          <div className="space-y-3 text-sm pl-2 my-4">
+            <div className="p-4 border border-border rounded-xl bg-off-white">
+              <strong className="block text-navy-950 font-semibold mb-1">1. Distribution & Service Center Business</strong>
+              <p className="text-xs text-gray-600">Purchasing raw materials/goods from foreign related parties for re-sale, or providing consulting/administrative services to foreign group entities.</p>
+            </div>
+            <div className="p-4 border border-border rounded-xl bg-off-white">
+              <strong className="block text-navy-950 font-semibold mb-1">2. Headquarter Business</strong>
+              <p className="text-xs text-gray-600">Providing senior management, strategic direction, or risk assumption for corporate group entities.</p>
+            </div>
+            <div className="p-4 border border-border rounded-xl bg-off-white">
+              <strong className="block text-navy-950 font-semibold mb-1">3. Holding Company Business</strong>
+              <p className="text-xs text-gray-600">Holding equity shares in subsidiary entities and deriving dividends or capital gains.</p>
+            </div>
+            <div className="p-4 border border-border rounded-xl bg-off-white">
+              <strong className="block text-navy-950 font-semibold mb-1">4. Intellectual Property (IP) Business</strong>
+              <p className="text-xs text-gray-600">Holding patents, trademarks, or software copyrights and licensing them to related or third parties for royalties.</p>
+            </div>
+          </div>
         </div>
 
         {/* IN-ARTICLE ADVAQ CALLOUT BANNER */}
-        <div className="my-10 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden">
+        <div className="my-12 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden border border-gold-500/20 shadow-2xl">
           <div className="absolute right-0 top-0 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
           <p className="text-gold-500 uppercase text-xs font-semibold tracking-widest">
             UAE ESR COMPLIANCE ADVISORY
@@ -237,45 +275,117 @@ function ArticlePage() {
         </div>
 
         {/* SECTION 3 */}
-        <div id="ciga-test" className="space-y-4 mb-12">
+        <div id="esr-matrix" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            3. Passing the Economic Substance & CIGA Test
+            3. Comprehensive ESR Relevant Activity & CIGA Test Matrix
           </h2>
           <p>
-            To pass the ESR test, a licensee must demonstrate: (1) Its Relevant Activity is directed and managed in the UAE, (2) Core Income Generating Activities (CIGA) are performed in the UAE, and (3) It maintains adequate full-time employees, physical assets, and operating expenditures locally.
+            Detailed side-by-side comparative analysis of Core Income Generating Activities (CIGA):
           </p>
+
+          <div className="overflow-x-auto my-6 border border-border rounded-xl shadow-sm">
+            <table className="w-full text-left text-xs">
+              <thead className="bg-navy-950 text-white uppercase text-[11px] tracking-wider">
+                <tr>
+                  <th className="p-4">Relevant Activity Sector</th>
+                  <th className="p-4 text-gold-500">Mandatory CIGA Requirement</th>
+                  <th className="p-4 text-emerald-400">Minimum Economic Substance Criteria</th>
+                  <th className="p-4">MoF Portal Reporting Mandate</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border bg-white text-gray-700">
+                <tr className="hover:bg-off-white font-semibold bg-gold-50/30">
+                  <td className="p-4 font-bold text-navy-950">Distribution & Service Center</td>
+                  <td className="p-4 text-navy-900">Storing goods, managing orders, providing consulting to group</td>
+                  <td className="p-4 text-emerald-700 font-bold">Physical Office + Full-Time Staff + Local Expenses</td>
+                  <td className="p-4 text-emerald-700 font-bold">Notification + Full Substance Report</td>
+                </tr>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">Pure Equity Holding Company</td>
+                  <td className="p-4 text-navy-900">Holding & managing shares, complying with corporate filings</td>
+                  <td className="p-4 text-emerald-700 font-bold">Reduced Substance (Flexi-Desk + Corporate Secretary)</td>
+                  <td className="p-4 text-navy-900">Notification + Simplified Report</td>
+                </tr>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">High Risk IP Business</td>
+                  <td className="p-4 text-navy-900">R&D, marketing, and managing IP assets locally</td>
+                  <td className="p-4 text-rose-700 font-bold">Enhanced Substance (Full Dedicated R&D Facility)</td>
+                  <td className="p-4 text-rose-700 font-bold">Notification + Full Report + Tax Exchange Notice</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         {/* SECTION 4 */}
-        <div id="mof-filing-deadlines" className="space-y-4 mb-12">
+        <div id="ciga-test" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            4. Ministry of Finance Filing Deadlines & Portal Rules
+            4. Passing the Economic Substance & CIGA Test
           </h2>
           <p>
-            The ESR Notification must be filed electronically on the Ministry of Finance portal within 6 months of financial year-end. If income was derived from a Relevant Activity, the full ESR Report must be submitted within 12 months.
+            To successfully pass an FTA or MoF economic substance audit, licensees conducting Relevant Activities must satisfy a 3-part statutory test:
           </p>
+
+          <ol className="space-y-3 text-sm pl-2 my-4">
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>1. Directed and Managed in the UAE:</strong> Holding board of directors meetings in the UAE with physical presence of directors and required quorum.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>2. Core Income Generating Activities (CIGA):</strong> Conducting the main revenue-producing operations inside the UAE.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>3. Adequate Employees, Assets & Expenses:</strong> Employing qualified full-time personnel, maintaining physical office space, and incurring adequate local operating expenditure.</span>
+            </li>
+          </ol>
         </div>
 
         {/* SECTION 5 */}
-        <div id="corporate-tax-link" className="space-y-4 mb-12">
+        <div id="mof-deadlines" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            5. The Crucial Link Between ESR & 0% Corporate Tax (QFZP)
+            5. Ministry of Finance Filing Deadlines & Portal Rules
           </h2>
           <p>
-            Satisfying ESR requirements is mandatory for Freezone companies seeking to claim Qualifying Freezone Person (QFZP) status and benefit from a 0% UAE Corporate Tax rate.
+            Licensees face strict statutory submission timelines on the official Ministry of Finance (MoF) digital portal:
+          </p>
+          <ul className="space-y-3 text-sm pl-2 my-4">
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Annual ESR Notification:</strong> Must be filed within <strong>6 months</strong> following the end of the company's financial year (e.g. June 30 for a December 31 FY-end).</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Annual Economic Substance Report:</strong> Must be submitted within <strong>12 months</strong> following the end of the financial year.</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* SECTION 6 */}
+        <div id="corporate-tax-link" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            6. The Crucial Link Between ESR & 0% Corporate Tax (QFZP)
+          </h2>
+          <p>
+            Under Cabinet Decision No. 55 of 2023, satisfying Economic Substance Regulations is a non-negotiable prerequisite for Freezone entities seeking <strong>Qualifying Freezone Person (QFZP) status</strong> to maintain a <strong>0% UAE Corporate Tax rate</strong>.
+          </p>
+          <p>
+            Failing to satisfy ESR substance requirements automatically disqualifies a Freezone entity from 0% corporate tax benefits, subjecting profits to standard 9% tax rates.
           </p>
         </div>
 
         {/* FAQ SECTION */}
         <div id="faqs" className="pt-8 border-t border-border">
-          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6 flex items-center gap-2">
+            <HelpCircle size={22} className="text-gold-600" />
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="border border-border rounded-xl bg-white overflow-hidden transition-all"
+                className="border border-border rounded-xl bg-white overflow-hidden transition-all shadow-sm"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -311,7 +421,7 @@ function ArticlePage() {
             Ensure Full ESR Compliance with ADVAQ
           </h2>
           <p className="mt-4 text-navy-200 text-base max-w-xl mx-auto">
-            Relevant Activity assessments, Core Income Generating Activity (CIGA) dossiers, and Ministry of Finance ESR portal filings.
+            Relevant Activity assessments, Core Income Generating Activity (CIGA) dossiers, and Ministry of Finance ESR portal filings handled by ADVAQ.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link

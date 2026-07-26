@@ -12,28 +12,42 @@ import {
   FileText,
   CreditCard,
   UserCheck,
+  Scale,
+  Percent,
+  Receipt,
+  HelpCircle,
+  BookOpen,
+  Briefcase,
+  Layers,
+  IdCard,
+  Award,
+  Globe2,
 } from "lucide-react";
 
 const faqs = [
   {
     q: "What is an IRS ITIN and how does it differ from an EIN?",
-    a: "An Individual Taxpayer Identification Number (ITIN) is a 9-digit personal tax ID issued by the IRS to individuals who need a US tax ID but are not eligible for a Social Security Number (SSN). An EIN is a business tax ID assigned to your LLC entity.",
+    a: "An Individual Taxpayer Identification Number (ITIN) is a 9-digit personal tax processing number issued by the IRS to foreign individuals who are required to have a US tax ID but are ineligible for a Social Security Number (SSN). An EIN (Employer Identification Number) is a corporate tax ID assigned to your LLC entity. You need an EIN for your business operations and a personal ITIN for individual US tax filings, credit card applications, and payment gateway verifications.",
   },
   {
     q: "Do foreign non-resident US LLC owners need an ITIN?",
-    a: "You need an ITIN if you are required to file an individual US non-resident tax return (Form 1040-NR), claim double taxation treaty benefits, open PayPal US business accounts, or apply for US business credit cards.",
+    a: "While you can form a US LLC and receive an EIN without an ITIN, getting a personal ITIN is highly advantageous. You need an ITIN if you are required to file an individual US non-resident tax return (Form 1040-NR), claim double taxation treaty benefits, open PayPal US business accounts, or build US credit history to acquire American Express and Chase US credit cards.",
   },
   {
-    q: "How do I apply for an ITIN using IRS Form W-7?",
-    a: "You submit IRS Form W-7 along with a certified copy of your valid international passport (certified by a Certifying Acceptance Agent or issuing agency) and proof of US tax filing requirement (or LLC documentation under Exception 1a/1b).",
+    q: "How do I apply for an ITIN using IRS Form W-7 without sending my original passport?",
+    a: "By working with an authorized IRS Certifying Acceptance Agent (CAA), you can have your international passport verified locally or via video audit. The CAA issues an official IRS Certificate of Accuracy (Form W-7 COA), allowing you to retain your physical passport while the IRS processes your ITIN application.",
+  },
+  {
+    q: "What are Form W-7 Exception 1a and 1b rules?",
+    a: "Under IRS Publication 1915, Exception 1(a) (Partnership Interest) and Exception 1(b) (Withholding on Income) allow foreign non-resident LLC owners to apply for an ITIN year-round without attaching a full US tax return. Submitting your LLC Operating Agreement, EIN CP575 letter, and a bank withholding letter satisfies Exception 1 criteria.",
   },
   {
     q: "How long does it take for the IRS to issue an ITIN to a non-resident?",
-    a: "IRS processing for Form W-7 submitted from outside the United States takes approximately 7 to 11 weeks.",
+    a: "IRS processing for Form W-7 applications submitted from outside the United States takes approximately 7 to 11 weeks. Once approved, the IRS mails an official Notice CP565 containing your 9-digit ITIN.",
   },
   {
-    q: "What is an IRS Certifying Acceptance Agent (CAA)?",
-    a: "A CAA is an authorized individual or firm authorized by the IRS to verify foreign applicant passports for Form W-7 applications, eliminating the need to mail your original passport to the IRS in the United States.",
+    q: "Does an IRS ITIN number expire?",
+    a: "An ITIN expires if it is not used on a US federal income tax return at least once in three consecutive tax years. If your ITIN expires, it can be renewed by submitting a new Form W-7 with updated verification documentation.",
   },
 ];
 
@@ -52,18 +66,18 @@ const articleSchema = {
   "@type": "BlogPosting",
   headline: "Why Foreign Business Owners Need an ITIN & How to Apply (W-7 Form Guide)",
   description:
-    "Complete 2026 IRS Form W-7 ITIN guide for non-US resident founders. Learn ITIN vs EIN differences, passport certification, Exceptions 1a/1b, and application steps.",
-  author: { "@type": "Organization", name: "ADVAQ Global Advisory" },
+    "Exhaustive 2026 IRS Form W-7 ITIN masterclass guide for non-US resident founders. Learn ITIN vs EIN differences, passport certification, Exceptions 1a/1b, US credit building, and CAA verification.",
+  author: { "@type": "Organization", name: "ADVAQ US Tax Advisory Team" },
   publisher: { "@type": "Organization", name: "ADVAQ", url: "https://advaq.com" },
   datePublished: "2026-07-22",
-  dateModified: "2026-07-22",
+  dateModified: "2026-07-26",
   mainEntityOfPage: "https://advaq.com/blog/how-to-get-itin-non-us-resident",
 };
 
 export const Route = createFileRoute("/blog/how-to-get-itin-non-us-resident")({
   head: () => ({
     meta: [
-      { title: "Why Foreign Founders Need an ITIN & W-7 Guide (2026) | ADVAQ" },
+      { title: "Why Foreign Founders Need an ITIN & W-7 Guide (2026 Masterclass) | ADVAQ" },
       {
         name: "description",
         content:
@@ -118,23 +132,23 @@ function ArticlePage() {
           </h1>
 
           <p className="mt-6 text-navy-200 text-base sm:text-lg leading-relaxed max-w-3xl">
-            A comprehensive IRS Form W-7 masterclass for non-resident founders on personal ITIN numbers, tax treaty claims, US credit card applications, and Certifying Acceptance Agent (CAA) verification.
+            An exhaustive IRS Form W-7 masterclass for non-resident founders on personal ITIN numbers, tax treaty claims, US credit card applications, and Certifying Acceptance Agent (CAA) passport verification.
           </p>
 
           <div className="mt-8 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-6 text-xs text-navy-200">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <User size={14} className="text-gold-500" />
-                <span>ADVAQ US Tax Advisory</span>
+                <span>ADVAQ US Tax Advisory Team</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={14} className="text-gold-500" />
-                <span>8 Min Read · Published July 2026</span>
+                <span>16 Min Read · Updated July 2026</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
               <Shield size={14} className="text-gold-500" />
-              <span>IRS Form W-7 & Treasury Regulations</span>
+              <span>IRS Form W-7 & Treasury Regulations Review</span>
             </div>
           </div>
         </div>
@@ -147,88 +161,124 @@ function ArticlePage() {
             <CheckCircle2 size={18} />
             <span>ITIN Key Facts at a Glance</span>
           </div>
-          <ul className="space-y-2.5 text-sm sm:text-[15px] text-navy-100 leading-relaxed">
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>ITIN vs EIN:</strong> EIN is for your company (9 digits). ITIN is for you personally as a foreign individual without a US SSN (starts with 9).</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Unlocks US Credit Cards & PayPal:</strong> Having a personal ITIN allows non-residents to build US personal credit history and get American Express US credit cards.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Form W-7 Exception Rules:</strong> Non-residents can apply under Exception 1(a) or Exception 1(b) with LLC partnership documents without attaching a full tax return.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>No Need to Mail Original Passport:</strong> Working with an IRS Certifying Acceptance Agent (CAA) avoids mailing your physical passport to the IRS.</span>
-            </li>
-          </ul>
+          <div className="grid sm:grid-cols-2 gap-4 text-xs pt-3">
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">ITIN vs EIN Distinction</strong>
+              <p className="text-navy-100 leading-relaxed">
+                EIN is for your US company entity (9 digits). ITIN is for you personally as a foreign individual without a US SSN (starts with 9).
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">US Credit Cards & PayPal Unlocking</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Having a personal ITIN allows non-residents to build US personal FICO credit scores and acquire American Express & Chase credit cards.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">Form W-7 Exception Rules</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Non-residents can apply year-round under Exception 1(a) or Exception 1(b) with LLC partnership documents without attaching a tax return.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">CAA Passport Protection</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Working with an IRS Certifying Acceptance Agent (CAA) eliminates the risk of mailing physical passports to the IRS in Texas.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* MAIN ARTICLE BODY */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-gray-800 leading-relaxed text-[16px]">
         {/* TABLE OF CONTENTS */}
-        <div className="bg-off-white border border-border p-6 rounded-xl mb-12">
-          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
+        <div className="bg-off-white border border-border p-6 rounded-2xl mb-12">
+          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+            <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
-            <li><a href="#what-is-itin" className="hover:text-gold-600 underline">1. What Is an IRS ITIN Number?</a></li>
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
+            <li><a href="#what-is-itin" className="hover:text-gold-600 underline">1. What Is an IRS ITIN Number & How Does It Differ From an EIN?</a></li>
             <li><a href="#why-founders-need-itin" className="hover:text-gold-600 underline">2. Why Foreign Non-Resident Founders Need an ITIN</a></li>
             <li><a href="#form-w7-exceptions" className="hover:text-gold-600 underline">3. Understanding Form W-7 Exception 1a & 1b Rules</a></li>
-            <li><a href="#application-process" className="hover:text-gold-600 underline">4. Step-by-Step Form W-7 Application Process</a></li>
-            <li><a href="#caa-benefits" className="hover:text-gold-600 underline">5. Benefits of Using an IRS Certifying Acceptance Agent (CAA)</a></li>
-            <li><a href="#faqs" className="hover:text-gold-600 underline">6. Frequently Asked Questions</a></li>
+            <li><a href="#itin-matrix" className="hover:text-gold-600 underline">4. Comprehensive ITIN Application Process Matrix</a></li>
+            <li><a href="#step-by-step-w7" className="hover:text-gold-600 underline">5. Step-by-Step Guide to Filling IRS Form W-7 Line-by-Line</a></li>
+            <li><a href="#caa-benefits" className="hover:text-gold-600 underline">6. Working with an IRS Certifying Acceptance Agent (CAA)</a></li>
+            <li><a href="#faqs" className="hover:text-gold-600 underline">7. Frequently Asked Questions</a></li>
           </ol>
         </div>
 
         {/* SECTION 1 */}
-        <div id="what-is-itin" className="space-y-4 mb-12">
+        <div id="what-is-itin" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            1. What Is an IRS ITIN Number?
+            1. What Is an IRS ITIN Number & How Does It Differ From an EIN?
           </h2>
           <p>
-            An <strong>Individual Taxpayer Identification Number (ITIN)</strong> is a 9-digit tax processing number issued by the IRS to individuals who are required to have a US taxpayer identification number but who do not have, and are not eligible to obtain, a Social Security Number (SSN).
+            An <strong>Individual Taxpayer Identification Number (ITIN)</strong> is a 9-digit personal tax processing number issued by the Internal Revenue Service (IRS) to individuals who are required to have a US taxpayer identification number but who are ineligible to receive a Social Security Number (SSN).
           </p>
+          <p>
+            It is critical to distinguish between your company's tax ID and your personal tax ID:
+          </p>
+          <ul className="space-y-3 text-sm pl-2 my-4">
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>EIN (Employer Identification Number):</strong> Issued to your US LLC entity to open business bank accounts, hire employees, and process corporate transactions.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>ITIN (Individual Taxpayer ID):</strong> Issued to you personally as an individual foreign national to file US income tax returns, build personal US credit, and verify merchant accounts.</span>
+            </li>
+          </ul>
         </div>
 
         {/* SECTION 2 */}
-        <div id="why-founders-need-itin" className="space-y-4 mb-12">
+        <div id="why-founders-need-itin" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             2. Why Foreign Non-Resident Founders Need an ITIN
           </h2>
           <p>
-            While your LLC uses an EIN for business operations, a personal ITIN unlocks critical financial capabilities:
+            While a non-resident alien can form a US LLC using only an EIN, obtaining a personal ITIN unlocks powerful financial and legal advantages:
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6 my-6">
-            <div className="border border-border p-5 rounded-xl bg-white shadow-sm">
-              <div className="flex items-center gap-3 text-gold-500 font-semibold text-base mb-2">
-                <CreditCard size={20} />
-                <span>US Credit Cards & Credit Score</span>
-              </div>
-              <p className="text-sm text-gray-600">
-                Allows non-residents to apply for US credit cards (Amex, Chase) and build personal FICO credit history remotely.
+          <div className="space-y-4 my-6">
+            <div className="p-5 border border-border rounded-2xl bg-white shadow-sm">
+              <h4 className="font-bold text-navy-950 text-base mb-1 flex items-center gap-2">
+                <CreditCard className="text-gold-600" size={18} />
+                Unlocking US Personal & Business Credit Cards
+              </h4>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Major US banks (such as American Express US, Chase, and Capital One) require a personal US SSN or ITIN to issue premium credit cards. With an ITIN, foreign founders can build a US FICO credit score remotely and earn valuable cash back and travel rewards.
               </p>
             </div>
 
-            <div className="border border-border p-5 rounded-xl bg-white shadow-sm">
-              <div className="flex items-center gap-3 text-navy-700 font-semibold text-base mb-2">
-                <UserCheck size={20} />
-                <span>PayPal & Payment Gateway Verification</span>
-              </div>
-              <p className="text-sm text-gray-600">
-                Satisfies SSN/ITIN identity verification prompts on PayPal US, Stripe, and Amazon Seller Central accounts.
+            <div className="p-5 border border-border rounded-2xl bg-white shadow-sm">
+              <h4 className="font-bold text-navy-950 text-base mb-1 flex items-center gap-2">
+                <UserCheck className="text-gold-600" size={18} />
+                Resolving Payment Gateway & Merchant Holds
+              </h4>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Merchant processors like PayPal US, Stripe, and Amazon Seller Central frequently audit account owners once transaction volume exceeds federal reporting thresholds. Providing a valid personal ITIN satisfies identity verification checks and prevents account freezes.
+              </p>
+            </div>
+
+            <div className="p-5 border border-border rounded-2xl bg-white shadow-sm">
+              <h4 className="font-bold text-navy-950 text-base mb-1 flex items-center gap-2">
+                <Scale className="text-gold-600" size={18} />
+                Filing Individual US Non-Resident Returns (Form 1040-NR)
+              </h4>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                If your US LLC generates effectively connected US trade or business income (ETBUS) or receives US-sourced passive dividends, foreign owners are required to file an annual individual Form 1040-NR return to claim international double-taxation treaty exemptions.
               </p>
             </div>
           </div>
         </div>
 
         {/* IN-ARTICLE ADVAQ CALLOUT BANNER */}
-        <div className="my-10 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden">
+        <div className="my-12 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden border border-gold-500/20 shadow-2xl">
           <div className="absolute right-0 top-0 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
           <p className="text-gold-500 uppercase text-xs font-semibold tracking-widest">
             IRS ITIN APPLICATION SERVICES
@@ -250,41 +300,124 @@ function ArticlePage() {
         </div>
 
         {/* SECTION 3 */}
-        <div id="form-w7-exceptions" className="space-y-4 mb-12">
+        <div id="form-w7-exceptions" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             3. Understanding Form W-7 Exception 1a & 1b Rules
           </h2>
           <p>
-            Normally, Form W-7 must be attached to an annual federal tax return (Form 1040-NR).
+            Standard IRS rules require attaching Form W-7 to an annual federal tax return (Form 1040-NR) during tax season.
           </p>
           <p>
-            However, foreign founders can apply <strong>year-round</strong> without filing a tax return by qualifying under IRS <strong>Exception 1(a) (Partnership Interest)</strong> or <strong>Exception 1(b) (Withholding on Income)</strong> by providing proof of LLC ownership and bank account withholding documentation.
+            However, foreign entrepreneurs can apply for an ITIN <strong>year-round</strong> without waiting for tax season by qualifying under <strong>IRS Publication 1915 Exception Rules</strong>:
           </p>
+          <ul className="space-y-3 text-sm pl-2 my-4">
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Exception 1(a) (Partnership Interest):</strong> Foreign members of a Multi-Member US LLC can apply by submitting a copy of the LLC Operating Agreement, EIN CP575 letter, and a partner certification letter.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Exception 1(b) (Third-Party Withholding):</strong> Foreign owners deriving interest or dividend income subject to US bank withholding can apply with an official bank withholding letter.</span>
+            </li>
+          </ul>
         </div>
 
         {/* SECTION 4 */}
-        <div id="application-process" className="space-y-4 mb-12">
+        <div id="itin-matrix" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            4. Step-by-Step Form W-7 Application Process
+            4. Comprehensive ITIN Application Process Matrix
           </h2>
-          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
-            <li>Complete Form W-7 with applicant personal details and exception selection.</li>
-            <li>Obtain certified passport verification from an IRS Certifying Acceptance Agent (CAA).</li>
-            <li>Submit W-7 packet to IRS ITIN Operation unit in Austin, Texas.</li>
-            <li>Receive IRS Notice CP565 with your official 9-digit ITIN number in 7–11 weeks.</li>
+          <p>
+            Detailed side-by-side comparative analysis of ITIN submission routes:
+          </p>
+
+          <div className="overflow-x-auto my-6 border border-border rounded-xl shadow-sm">
+            <table className="w-full text-left text-xs">
+              <thead className="bg-navy-950 text-white uppercase text-[11px] tracking-wider">
+                <tr>
+                  <th className="p-4">Submission Route</th>
+                  <th className="p-4 text-gold-500">Passport Protection</th>
+                  <th className="p-4 text-emerald-400">Document Verification</th>
+                  <th className="p-4">Processing Timeframe</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border bg-white text-gray-700">
+                <tr className="hover:bg-off-white font-semibold bg-gold-50/30">
+                  <td className="p-4 font-bold text-navy-950">IRS Certifying Acceptance Agent (CAA)</td>
+                  <td className="p-4 text-emerald-700 font-bold">100% Safe (Retain Original Passport)</td>
+                  <td className="p-4 text-emerald-700 font-bold">Certified CAA Form W-7 COA</td>
+                  <td className="p-4 text-emerald-700 font-bold">7 to 11 Weeks</td>
+                </tr>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">Direct Mail to IRS Austin, TX</td>
+                  <td className="p-4 text-rose-700 font-bold">High Risk (Must Mail Original Passport)</td>
+                  <td className="p-4 text-navy-900">Physical Passport Inspection</td>
+                  <td className="p-4 text-navy-900">9 to 14 Weeks</td>
+                </tr>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">US Embassy / Consulate Certification</td>
+                  <td className="p-4 text-emerald-700 font-bold">Retain Original Passport</td>
+                  <td className="p-4 text-navy-900">Consular Certified Passport Copy</td>
+                  <td className="p-4 text-rose-700 font-bold">10 to 16 Weeks (High Appointment Delay)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* SECTION 5 */}
+        <div id="step-by-step-w7" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            5. Step-by-Step Guide to Filling IRS Form W-7 Line-by-Line
+          </h2>
+          <p>
+            Completing IRS Form W-7 requires precision to prevent rejection:
+          </p>
+
+          <ol className="space-y-3 text-sm pl-2 my-4">
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Reason for Applying:</strong> Check Box h (Other) and specify "Exception 1a - Partnership Interest" alongside your LLC name and EIN.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Applicant Identity Details:</strong> Enter your full legal name, foreign residential address, and mailing address exactly as shown on your passport.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Line 6c (Foreign Tax ID):</strong> Enter your home country personal tax identification number (e.g. CNIC / NTN in Pakistan, Emirates ID in UAE).</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Line 6d (Passport Info):</strong> Enter passport number, issuing country, and expiration date.</span>
+            </li>
           </ol>
+        </div>
+
+        {/* SECTION 6 */}
+        <div id="caa-benefits" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            6. Working with an IRS Certifying Acceptance Agent (CAA)
+          </h2>
+          <p>
+            An <strong>IRS Certifying Acceptance Agent (CAA)</strong> is an authorized tax professional trained by the IRS to verify international identity documents.
+          </p>
+          <p>
+            When applying through a CAA, the agent inspects your passport, verifies your identity via video call or in person, issues an official <strong>Form W-7 COA (Certificate of Accuracy)</strong>, and submits your application directly to the IRS. You keep your physical passport safely in your hands throughout the entire process.
+          </p>
         </div>
 
         {/* FAQ SECTION */}
         <div id="faqs" className="pt-8 border-t border-border">
-          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6 flex items-center gap-2">
+            <HelpCircle size={22} className="text-gold-600" />
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="border border-border rounded-xl bg-white overflow-hidden transition-all"
+                className="border border-border rounded-xl bg-white overflow-hidden transition-all shadow-sm"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -320,7 +453,7 @@ function ArticlePage() {
             Obtain Your Personal IRS ITIN with ADVAQ
           </h2>
           <p className="mt-4 text-navy-200 text-base max-w-xl mx-auto">
-            Form W-7 filing, CAA passport certification without mailing originals, Exception 1a/1b documentation, and CP565 letter delivery.
+            Form W-7 filing, CAA passport certification without mailing originals, Exception 1a/1b documentation, and CP565 letter delivery handled by ADVAQ.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link

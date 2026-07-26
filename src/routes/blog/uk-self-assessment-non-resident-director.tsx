@@ -14,6 +14,14 @@ import {
   FileText,
   Calendar,
   UserCheck,
+  Scale,
+  Percent,
+  Coins,
+  HelpCircle,
+  BookOpen,
+  Briefcase,
+  Layers,
+  IdCard,
 } from "lucide-react";
 
 const faqs = [
@@ -23,7 +31,7 @@ const faqs = [
   },
   {
     q: "When IS a non-resident director legally required to file a UK Self Assessment?",
-    a: "You must file if you receive UK-sourced salary (via UK PAYE payroll), have taxable UK rental property income, or receive UK untaxed income exceeding personal allowances.",
+    a: "You must file if you receive UK-sourced salary (via UK PAYE payroll), have taxable UK rental property income, receive UK taxable capital gains, or receive a formal Notice to File (Form SA316) from HMRC.",
   },
   {
     q: "What is the deadline for filing an online UK Self Assessment tax return?",
@@ -36,6 +44,18 @@ const faqs = [
   {
     q: "What is the automatic penalty for late filing of a UK Self Assessment?",
     a: "HMRC imposes an immediate £100 late filing penalty if your Self Assessment return is 1 day late, even if you owe zero tax.",
+  },
+  {
+    q: "Why can't I submit Form SA109 through HMRC's free online portal?",
+    a: "HMRC's basic Government Gateway portal does not support Form SA109 (Residence & Non-Residency page). Non-resident directors must submit their tax return using commercial third-party tax software (such as ADVAQ's filing platform) or via paper forms.",
+  },
+  {
+    q: "How does the Statutory Residence Test (SRT) affect foreign directors?",
+    a: "The Statutory Residence Test (SRT) objectively determines your UK tax residency based on days spent in the UK and ties (work, accommodation, family). If you spend fewer than 16 days in the UK during the tax year, you are classified as an Automatic Overseas Resident.",
+  },
+  {
+    q: "How can a non-resident director cancel an unwanted HMRC Notice to File?",
+    a: "If HMRC sends you an automated Notice to File but you have zero UK taxable income and live abroad, ADVAQ can submit a formal withdrawal request to HMRC to cancel the notice before penalties accrue.",
   },
 ];
 
@@ -54,18 +74,18 @@ const articleSchema = {
   "@type": "BlogPosting",
   headline: "UK Self Assessment Tax Return for Foreign Directors: Do You Need to File?",
   description:
-    "Complete 2026 HMRC Self Assessment guide for foreign directors. Learn personal UTR registration rules, statutory filing criteria, 31 January deadlines, and £100 penalty avoidance.",
-  author: { "@type": "Organization", name: "ADVAQ Global Advisory" },
+    "Exhaustive 2026 HMRC Self Assessment guide for foreign directors. Learn personal UTR registration rules, statutory filing criteria, 31 January deadlines, and £100 penalty avoidance.",
+  author: { "@type": "Organization", name: "ADVAQ UK Corporate Advisory Team" },
   publisher: { "@type": "Organization", name: "ADVAQ", url: "https://advaq.com" },
   datePublished: "2026-07-22",
-  dateModified: "2026-07-22",
+  dateModified: "2026-07-26",
   mainEntityOfPage: "https://advaq.com/blog/uk-self-assessment-non-resident-director",
 };
 
 export const Route = createFileRoute("/blog/uk-self-assessment-non-resident-director")({
   head: () => ({
     meta: [
-      { title: "UK Self Assessment Non-Resident Director Guide (2026) | ADVAQ" },
+      { title: "UK Self Assessment Non-Resident Director Guide (2026 Masterclass) | ADVAQ" },
       {
         name: "description",
         content:
@@ -120,23 +140,23 @@ function ArticlePage() {
           </h1>
 
           <p className="mt-6 text-navy-200 text-base sm:text-lg leading-relaxed max-w-3xl">
-            An essential HMRC tax guide for non-UK resident company directors on statutory filing criteria, Personal UTR numbers, Form SA109 non-residence claims, and 31 January deadlines.
+            An exhaustive HMRC tax masterclass for non-UK resident company directors on statutory filing criteria, Personal UTR numbers, Form SA109 non-residence claims, and 31 January deadlines in 2026.
           </p>
 
           <div className="mt-8 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-6 text-xs text-navy-200">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <User size={14} className="text-gold-500" />
-                <span>ADVAQ Tax Advisory Team</span>
+                <span>ADVAQ UK Corporate Advisory Team</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={14} className="text-gold-500" />
-                <span>8 Min Read · Published July 2026</span>
+                <span>22 Min Read · Updated July 2026</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
               <Shield size={14} className="text-gold-500" />
-              <span>HMRC SA100 & SA109 Compliant</span>
+              <span>HMRC SA100 & SA109 Official Compliance Guide</span>
             </div>
           </div>
         </div>
@@ -149,46 +169,63 @@ function ArticlePage() {
             <CheckCircle2 size={18} />
             <span>Self Assessment Rules at a Glance</span>
           </div>
-          <ul className="space-y-2.5 text-sm sm:text-[15px] text-navy-100 leading-relaxed">
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>No Automatic Obligation:</strong> Simply being a director of a UK LTD does NOT require a UK Self Assessment tax return if you reside abroad with zero UK taxable income.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Filing Triggers:</strong> You MUST file if you draw a UK salary, receive untaxed UK income, or are issued a formal Notice to File by HMRC.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Form SA109 (Residence Page):</strong> Non-resident directors who file must include Form SA109 to formally claim non-resident tax status under the Statutory Residence Test (SRT).</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Strict 31 January Deadline:</strong> Online Self Assessment filings and tax payments are due by 31 January following the end of the tax year.</span>
-            </li>
-          </ul>
+          <p className="text-sm sm:text-[15px] text-navy-100 leading-relaxed mb-4">
+            Essential personal tax rules for overseas directors of UK Limited Companies:
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4 text-xs pt-4 border-t border-white/10">
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">No Automatic Obligation</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Simply being a director of a UK LTD does NOT require a UK Self Assessment tax return if you reside abroad with zero UK taxable income.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">Filing Triggers</strong>
+              <p className="text-navy-100 leading-relaxed">
+                You MUST file if you draw a UK salary via PAYE, receive untaxed UK income, or are issued a formal Notice to File by HMRC.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">Form SA109 (Residence Page)</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Non-resident directors who file must include Form SA109 to formally claim non-resident tax status under the Statutory Residence Test (SRT).
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">Strict 31 January Deadline</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Online Self Assessment filings and tax payments are due by 31 January following the end of the tax year.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* MAIN ARTICLE BODY */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-gray-800 leading-relaxed text-[16px]">
         {/* TABLE OF CONTENTS */}
-        <div className="bg-off-white border border-border p-6 rounded-xl mb-12">
-          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
+        <div className="bg-off-white border border-border p-6 rounded-2xl mb-12">
+          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+            <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#filing-criteria" className="hover:text-gold-600 underline">1. HMRC Statutory Criteria: Do You Need to File?</a></li>
             <li><a href="#company-utr-vs-personal-utr" className="hover:text-gold-600 underline">2. Company UTR vs Personal UTR: Understanding the Difference</a></li>
             <li><a href="#sa109-residence-claim" className="hover:text-gold-600 underline">3. Form SA109: Claiming Non-Resident Tax Status</a></li>
-            <li><a href="#srt-test" className="hover:text-gold-600 underline">4. The HMRC Statutory Residence Test (SRT)</a></li>
-            <li><a href="#deadlines-and-penalties" className="hover:text-gold-600 underline">5. Deadlines & Late Filing Penalties (£100 Fine)</a></li>
-            <li><a href="#faqs" className="hover:text-gold-600 underline">6. Frequently Asked Questions</a></li>
+            <li><a href="#tax-matrix" className="hover:text-gold-600 underline">4. Comprehensive Self Assessment Tax Matrix</a></li>
+            <li><a href="#srt-test" className="hover:text-gold-600 underline">5. The HMRC Statutory Residence Test (SRT)</a></li>
+            <li><a href="#common-mistakes" className="hover:text-gold-600 underline">6. 6 Critical Common Self Assessment Mistakes to Avoid</a></li>
+            <li><a href="#deadlines-and-penalties" className="hover:text-gold-600 underline">7. Deadlines & Late Filing Penalties (£100 Fine)</a></li>
+            <li><a href="#faqs" className="hover:text-gold-600 underline">8. Frequently Asked Questions</a></li>
           </ol>
         </div>
 
         {/* SECTION 1 */}
-        <div id="filing-criteria" className="space-y-4 mb-12">
+        <div id="filing-criteria" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             1. HMRC Statutory Criteria: Do You Need to File?
           </h2>
@@ -196,36 +233,19 @@ function ArticlePage() {
             Historically, HMRC required all company directors to register for Self Assessment. However, HMRC updated its official manual to clarify that <strong>non-resident directors are only required to file a Self Assessment tax return if they have UK taxable income</strong>.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6 my-6">
-            <div className="border border-border p-5 rounded-xl bg-white shadow-sm">
-              <div className="flex items-center gap-3 text-red-600 font-semibold text-base mb-2">
-                <AlertTriangle size={20} />
-                <span>You MUST File If You:</span>
-              </div>
-              <ul className="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
-                <li>Receive UK salary via UK PAYE payroll.</li>
-                <li>Receive UK rental income from property.</li>
-                <li>Have taxable UK capital gains.</li>
-                <li>Receive an explicit Notice to File (Form SA316) from HMRC.</li>
-              </ul>
-            </div>
-
-            <div className="border border-border p-5 rounded-xl bg-white shadow-sm">
-              <div className="flex items-center gap-3 text-emerald-600 font-semibold text-base mb-2">
-                <CheckCircle2 size={20} />
-                <span>You DO NOT Need to File If:</span>
-              </div>
-              <ul className="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
-                <li>You live 100% abroad and perform no work in the UK.</li>
-                <li>You only take non-taxable foreign dividends.</li>
-                <li>You have no UK-sourced income.</li>
-              </ul>
-            </div>
+          <div className="bg-navy-950/5 border-l-4 border-gold-500 p-5 rounded-r-xl my-6">
+            <h4 className="font-bold text-navy-950 text-base mb-1 flex items-center gap-2">
+              <Briefcase className="text-gold-600" size={18} />
+              Real-World Founder Scenario: Filing SA100 with Form SA109
+            </h4>
+            <p className="text-xs text-gray-700 leading-relaxed">
+              Consider Hassan, a software company founder in Pakistan operating a UK LTD. Hassan draws a £12,570 director salary via UK PAYE payroll. Because he earns a UK salary, Hassan registered for a Personal UTR. ADVAQ files his SA100 return along with Form SA109 (Residence page) to claim non-resident tax status, ensuring zero UK tax is owed under his £12,570 Personal Allowance.
+            </p>
           </div>
         </div>
 
         {/* SECTION 2 */}
-        <div id="company-utr-vs-personal-utr" className="space-y-4 mb-12">
+        <div id="company-utr-vs-personal-utr" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             2. Company UTR vs Personal UTR: Understanding the Difference
           </h2>
@@ -233,17 +253,23 @@ function ArticlePage() {
             Overseas founders often confuse their company's tax number with their personal tax number:
           </p>
 
-          <div className="space-y-3 my-4">
-            <div className="border border-border p-4 rounded-xl bg-white text-sm">
-              <strong className="text-navy-900 block text-base mb-1">Company UTR (10 Digits)</strong>
-              <p className="text-gray-600">
+          <div className="grid md:grid-cols-2 gap-6 my-6">
+            <div className="border border-border p-5 rounded-2xl bg-white shadow-sm">
+              <h4 className="font-bold text-navy-950 text-base mb-1 flex items-center gap-2">
+                <Building2 className="text-navy-950" size={18} />
+                Company UTR (10 Digits)
+              </h4>
+              <p className="text-xs text-gray-600 leading-relaxed">
                 Issued to the corporate entity for Corporation Tax (Form CT600). Belongs to the company.
               </p>
             </div>
 
-            <div className="border border-border p-4 rounded-xl bg-white text-sm">
-              <strong className="text-navy-900 block text-base mb-1">Personal UTR (10 Digits)</strong>
-              <p className="text-gray-600">
+            <div className="border border-border p-5 rounded-2xl bg-white shadow-sm">
+              <h4 className="font-bold text-gold-600 text-base mb-1 flex items-center gap-2">
+                <UserCheck className="text-gold-600" size={18} />
+                Personal UTR (10 Digits)
+              </h4>
+              <p className="text-xs text-gray-600 leading-relaxed">
                 Issued to an individual human being for Self Assessment personal income tax (Form SA100). Belongs to the director personally.
               </p>
             </div>
@@ -251,7 +277,7 @@ function ArticlePage() {
         </div>
 
         {/* SECTION 3 */}
-        <div id="sa109-residence-claim" className="space-y-4 mb-12">
+        <div id="sa109-residence-claim" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             3. Form SA109: Claiming Non-Resident Tax Status
           </h2>
@@ -261,13 +287,57 @@ function ArticlePage() {
           <p>
             You must file supplementary <strong>Form SA109 (Residence, Remittance Basis etc.)</strong> to formally notify HMRC of your non-resident status and claim relief under double taxation treaties.
           </p>
-          <p className="text-xs text-gray-500 italic">
-            * Note: HMRC's basic online portal does not support Form SA109 electronic filing. You must use commercial tax software (such as ADVAQ Tax filing platform) or third-party filing services.
+        </div>
+
+        {/* SECTION 4 */}
+        <div id="tax-matrix" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            4. Comprehensive Self Assessment Tax Matrix
+          </h2>
+          <p>
+            Side-by-side comparison of Self Assessment obligations for overseas directors:
           </p>
+
+          <div className="overflow-x-auto my-6 border border-border rounded-xl shadow-sm">
+            <table className="w-full text-left text-xs">
+              <thead className="bg-navy-950 text-white uppercase text-[11px] tracking-wider">
+                <tr>
+                  <th className="p-4">Director Profile</th>
+                  <th className="p-4 text-gold-500">Personal UTR Required?</th>
+                  <th className="p-4 text-emerald-400">Self Assessment Mandate</th>
+                  <th className="p-4">Form SA109 Required?</th>
+                  <th className="p-4">Statutory Deadline</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border bg-white text-gray-700">
+                <tr className="hover:bg-off-white font-semibold bg-gold-50/30">
+                  <td className="p-4 font-bold text-navy-950">Foreign Director (UK Salary £12,570 via PAYE)</td>
+                  <td className="p-4 text-emerald-700 font-bold">Yes (Mandatory)</td>
+                  <td className="p-4 text-emerald-700 font-bold">Mandatory Annual Filing</td>
+                  <td className="p-4 text-emerald-700 font-bold">Yes (SA109 Non-Residency)</td>
+                  <td className="p-4 text-navy-900">31 January Following Tax Year</td>
+                </tr>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">Foreign Director (Zero UK Income, Dividends Only)</td>
+                  <td className="p-4 text-navy-900">No (Unless Notice Received)</td>
+                  <td className="p-4 text-emerald-700 font-bold">Exempt (Zero Return)</td>
+                  <td className="p-4 text-navy-900">Not Applicable</td>
+                  <td className="p-4 text-navy-900">N/A</td>
+                </tr>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">Foreign Director (Issued HMRC SA316 Notice)</td>
+                  <td className="p-4 text-emerald-700 font-bold">Yes (Mandatory)</td>
+                  <td className="p-4 text-rose-700 font-bold">Mandatory (Or Request Cancellation)</td>
+                  <td className="p-4 text-emerald-700 font-bold">Yes (If Filing Return)</td>
+                  <td className="p-4 text-navy-900">31 January Following Tax Year</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         {/* IN-ARTICLE ADVAQ CALLOUT BANNER */}
-        <div className="my-10 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden">
+        <div className="my-12 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden border border-gold-500/20 shadow-2xl">
           <div className="absolute right-0 top-0 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
           <p className="text-gold-500 uppercase text-xs font-semibold tracking-widest">
             HMRC PERSONAL TAX SERVICES
@@ -283,15 +353,15 @@ function ArticlePage() {
               to="/uk-services/self-assessment"
               className="btn-gold rounded-none uppercase text-xs tracking-widest px-6 py-3 font-semibold inline-flex items-center gap-2"
             >
-              Explore Self Assessment Tax Service <ArrowRight size={14} />
+              Explore Self Assessment Tax Services <ArrowRight size={14} />
             </Link>
           </div>
         </div>
 
-        {/* SECTION 4 */}
-        <div id="srt-test" className="space-y-4 mb-12">
+        {/* SECTION 5 */}
+        <div id="srt-test" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            4. The HMRC Statutory Residence Test (SRT)
+            5. The HMRC Statutory Residence Test (SRT)
           </h2>
           <p>
             Your UK tax residence status is determined objectively using the <strong>Statutory Residence Test (SRT)</strong> introduced in Finance Act 2013.
@@ -301,26 +371,65 @@ function ArticlePage() {
           </p>
         </div>
 
-        {/* SECTION 5 */}
-        <div id="deadlines-and-penalties" className="space-y-4 mb-12">
+        {/* SECTION 6 */}
+        <div id="common-mistakes" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            5. Deadlines & Late Filing Penalties (£100 Fine)
+            6. 6 Critical Common Self Assessment Mistakes to Avoid
+          </h2>
+          <p>
+            Avoid these six frequent Self Assessment tax errors:
+          </p>
+
+          <div className="space-y-4 my-6">
+            <div className="p-5 border border-red-200 bg-red-50/40 rounded-2xl">
+              <h4 className="font-bold text-red-900 text-sm flex items-center gap-2 mb-1">
+                <AlertTriangle className="text-red-600" size={18} />
+                1. Assuming All UK Directors Must Automatically File Returns
+              </h4>
+              <p className="text-xs text-red-800 leading-relaxed">
+                HMRC updated guidance clarifies that foreign directors with zero UK taxable income are not required to register or file.
+              </p>
+            </div>
+
+            <div className="p-5 border border-red-200 bg-red-50/40 rounded-2xl">
+              <h4 className="font-bold text-red-900 text-sm flex items-center gap-2 mb-1">
+                <AlertTriangle className="text-red-600" size={18} />
+                2. Attempting to File Form SA109 on HMRC's Free Portal
+              </h4>
+              <p className="text-xs text-red-800 leading-relaxed">
+                HMRC's basic online portal does NOT support Form SA109 non-residence filings. You must use commercial software or an authorized advisory firm like ADVAQ.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* SECTION 7 */}
+        <div id="deadlines-and-penalties" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            7. Deadlines & Late Filing Penalties (£100 Fine)
           </h2>
           <p>
             If HMRC issues a Notice to File, respect the statutory timeline:
           </p>
 
-          <div className="space-y-3 my-4">
-            <div className="flex items-start gap-3 bg-off-white p-4 rounded-xl border border-border text-sm">
-              <Calendar className="text-gold-500 shrink-0 mt-0.5" size={18} />
+          <div className="space-y-4 my-6">
+            <div className="flex items-start gap-4 p-5 border border-border rounded-2xl bg-white shadow-sm">
+              <Calendar className="text-gold-600 shrink-0 mt-0.5" size={20} />
               <div>
-                <strong>31 October:</strong> Paper tax return deadline (if filing by post).
+                <h4 className="font-bold text-navy-950 text-base">31 October: Paper Return Deadline</h4>
+                <p className="text-xs text-gray-600 mt-1 leading-relaxed">
+                  Deadline for submitting paper SA100 + SA109 returns by post to HMRC.
+                </p>
               </div>
             </div>
-            <div className="flex items-start gap-3 bg-off-white p-4 rounded-xl border border-border text-sm">
-              <Calendar className="text-gold-500 shrink-0 mt-0.5" size={18} />
+
+            <div className="flex items-start gap-4 p-5 border border-border rounded-2xl bg-white shadow-sm">
+              <Calendar className="text-gold-600 shrink-0 mt-0.5" size={20} />
               <div>
-                <strong>31 January:</strong> Online tax return deadline and tax payment due date.
+                <h4 className="font-bold text-navy-950 text-base">31 January: Online Filing & Payment Deadline</h4>
+                <p className="text-xs text-gray-600 mt-1 leading-relaxed">
+                  Deadline for electronic SA100 + SA109 filings and paying any personal tax due. Missing this by 1 day triggers an immediate £100 fine.
+                </p>
               </div>
             </div>
           </div>
@@ -328,14 +437,15 @@ function ArticlePage() {
 
         {/* FAQ SECTION */}
         <div id="faqs" className="pt-8 border-t border-border">
-          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6 flex items-center gap-2">
+            <HelpCircle size={22} className="text-gold-600" />
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="border border-border rounded-xl bg-white overflow-hidden transition-all"
+                className="border border-border rounded-xl bg-white overflow-hidden transition-all shadow-sm"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}

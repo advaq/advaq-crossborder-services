@@ -12,28 +12,42 @@ import {
   Users,
   Heart,
   FileCheck,
+  Globe2,
+  Scale,
+  Percent,
+  Receipt,
+  FileText,
+  HelpCircle,
+  BookOpen,
+  Briefcase,
+  Layers,
+  IdCard,
 } from "lucide-react";
 
 const faqs = [
   {
     q: "Can a UAE Investor Visa holder sponsor their wife and children in Dubai?",
-    a: "Yes. Once an investor or business owner receives their valid UAE Residence Visa and Emirates ID, they can legally sponsor their spouse, unmarried daughters (of any age), and sons up to age 25.",
+    a: "Yes! Once an investor or company shareholder receives their active 2-year UAE Residence Visa and physical Emirates ID, they possess full legal rights under GDRFA regulations to sponsor their spouse, unmarried daughters (of any age), and sons up to age 25 for 2-year renewable residence visas.",
   },
   {
     q: "What is the minimum monthly salary or income required to sponsor family in Dubai?",
-    a: "To sponsor a family in Dubai, the sponsor must earn a minimum monthly income of AED 4,000 (or AED 3,000 + accommodation), or hold a valid UAE Investor/Partner company visa with an Ejari lease.",
+    a: "Under standard UAE immigration rules, an employee sponsor requires a minimum basic monthly salary of AED 4,000 (or AED 3,000 plus accommodation). However, for UAE company owners and investors holding a valid investor visa, presenting their active commercial trade license and Ejari residential lease satisfies the income requirement.",
   },
   {
     q: "What document attestations are required for family sponsorship in the UAE?",
-    a: "Your Marriage Certificate and Children's Birth Certificates must be legally attested by: (1) Ministry of Foreign Affairs in your home country, (2) UAE Embassy in your home country, and (3) MOFA in the UAE.",
+    a: "Relationship certificates (Marriage Certificate and Children's Birth Certificates) must undergo a mandatory 3-tier attestation chain: (1) Attestation by the Ministry of Foreign Affairs (MOFA) in your home country, (2) Legalization by the UAE Embassy in your home country, and (3) Final attestation by the UAE Ministry of Foreign Affairs (MOFAIC) inside the UAE with certified Arabic translation.",
   },
   {
     q: "Do family members need to undergo medical fitness testing?",
-    a: "Spouses and children aged 18 and older must undergo a mandatory medical fitness test (blood test & chest X-ray) in Dubai before their residence visa is stamped.",
+    a: "Spouses and children aged 18 and older must undergo a mandatory medical fitness examination (blood screening for HIV and chest X-ray for active TB) at an approved Dubai Health Authority (DHA) center before their residence visa is stamped.",
   },
   {
     q: "Can a female business owner sponsor her husband and children in Dubai?",
-    a: "Yes! Female business owners and investors holding a valid UAE Residence Visa can sponsor their husband and children.",
+    a: "Yes! Under modern UAE immigration guidelines, female business owners and investors holding a valid UAE Residence Visa enjoy equal sponsorship rights to sponsor their husband and children for 2-year residence visas.",
+  },
+  {
+    q: "What are the health insurance requirements for sponsored dependants in Dubai?",
+    a: "Under Dubai Health Authority (DHA) regulations, maintaining a valid health insurance policy for all sponsored dependants is mandatory. Medical insurance coverage must be activated before GDRFA will issue final residence visa approvals and Emirates ID cards.",
   },
 ];
 
@@ -52,18 +66,18 @@ const articleSchema = {
   "@type": "BlogPosting",
   headline: "Sponsoring Family Members in Dubai (Wife & Children) on an Investor Visa",
   description:
-    "Complete 2026 Dubai family sponsorship guide for investor visa holders. Learn document attestation requirements, MOFA rules, medical tests, Ejari lease prerequisites, and step-by-step visa processing.",
-  author: { "@type": "Organization", name: "ADVAQ Global Advisory" },
+    "Complete 2026 Dubai family sponsorship masterclass for investor visa holders. Learn document attestation requirements, MOFA rules, medical tests, Ejari lease prerequisites, health insurance, and step-by-step visa processing.",
+  author: { "@type": "Organization", name: "ADVAQ UAE Family PRO & Immigration Team" },
   publisher: { "@type": "Organization", name: "ADVAQ", url: "https://advaq.com" },
   datePublished: "2026-07-22",
-  dateModified: "2026-07-22",
+  dateModified: "2026-07-26",
   mainEntityOfPage: "https://advaq.com/blog/sponsor-family-in-dubai-investor-visa",
 };
 
 export const Route = createFileRoute("/blog/sponsor-family-in-dubai-investor-visa")({
   head: () => ({
     meta: [
-      { title: "Sponsor Family in Dubai Investor Visa (2026 Guide) | ADVAQ" },
+      { title: "Sponsor Family in Dubai Investor Visa (2026 Masterclass) | ADVAQ" },
       {
         name: "description",
         content:
@@ -118,7 +132,7 @@ function ArticlePage() {
           </h1>
 
           <p className="mt-6 text-navy-200 text-base sm:text-lg leading-relaxed max-w-3xl">
-            A practical step-by-step family relocation guide for UAE investor visa holders on MOFA document attestation, Ejari apartment leases, medical testing, and Emirates ID processing for dependants.
+            A comprehensive, practical family relocation masterclass for UAE investor visa holders detailing MOFA document attestations, Ejari residential leases, DHA medical testing, health insurance activation, and 2-year Emirates ID processing for dependants.
           </p>
 
           <div className="mt-8 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-6 text-xs text-navy-200">
@@ -129,12 +143,12 @@ function ArticlePage() {
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={14} className="text-gold-500" />
-                <span>8 Min Read · Published July 2026</span>
+                <span>15 Min Read · Updated July 2026</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
               <Shield size={14} className="text-gold-500" />
-              <span>GDRFA Dubai Dependant Visa Guidelines</span>
+              <span>GDRFA Dubai Dependant Visa Guidelines Review</span>
             </div>
           </div>
         </div>
@@ -145,75 +159,119 @@ function ArticlePage() {
         <div className="bg-navy-900 border border-gold-500/30 rounded-2xl p-6 md:p-8 shadow-xl text-white">
           <div className="flex items-center gap-2 text-gold-500 font-semibold text-sm uppercase tracking-wider mb-3">
             <Users size={18} />
-            <span>Family Visa Checklist</span>
+            <span>Family Visa Strategic Essentials</span>
           </div>
-          <ul className="space-y-2.5 text-sm sm:text-[15px] text-navy-100 leading-relaxed">
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Sponsor Prerequisites:</strong> Valid 2-year UAE Investor Visa, Emirates ID, and registered Ejari residential lease.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>MOFA Attestation:</strong> Marriage certificate and children's birth certificates must be fully attested by MOFA in home country & UAE.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Son / Daughter Age Limits:</strong> Unmarried daughters can be sponsored regardless of age. Sons can be sponsored up to age 25.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gold-500 font-bold">•</span>
-              <span><strong>Medical Test:</strong> Dependants aged 18+ undergo blood test and chest X-ray in Dubai.</span>
-            </li>
-          </ul>
+          <div className="grid sm:grid-cols-2 gap-4 text-xs pt-3">
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">Sponsor Prerequisites</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Active 2-year UAE Investor Visa, Emirates ID card, and registered Ejari residential lease contract.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">3-Tier MOFA Attestation</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Marriage & birth certificates must be fully attested by home country MOFA, UAE Embassy, and UAE MOFAIC.
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">Son / Daughter Age Rules</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Unmarried daughters sponsored at any age. Sons sponsored up to 25 years of age (or older if studying).
+              </p>
+            </div>
+
+            <div className="bg-navy-950 p-4 rounded-xl border border-white/10">
+              <strong className="block text-gold-500 font-serif text-sm mb-1">Medical & Health Insurance</strong>
+              <p className="text-navy-100 leading-relaxed">
+                Dependants aged 18+ undergo DHA blood screening & X-ray. Mandatory DHA medical insurance coverage.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* MAIN ARTICLE BODY */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-gray-800 leading-relaxed text-[16px]">
         {/* TABLE OF CONTENTS */}
-        <div className="bg-off-white border border-border p-6 rounded-xl mb-12">
-          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4">
+        <div className="bg-off-white border border-border p-6 rounded-2xl mb-12">
+          <h2 className="font-sans font-bold text-dark-text text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+            <BookOpen size={16} className="text-gold-600" />
             Table of Contents
           </h2>
-          <ol className="space-y-2 text-sm text-navy-900 list-none font-medium">
+          <ol className="grid md:grid-cols-2 gap-2 text-sm text-navy-900 list-none font-medium">
             <li><a href="#sponsor-eligibility" className="hover:text-gold-600 underline">1. Sponsor Prerequisites for Dubai Family Visas</a></li>
-            <li><a href="#document-attestation" className="hover:text-gold-600 underline">2. MOFA Document Attestation Rules (Marriage & Birth Certificates)</a></li>
-            <li><a href="#ejari-housing" className="hover:text-gold-600 underline">3. Ejari Housing Requirement & Deposit Rules</a></li>
-            <li><a href="#step-by-step-family" className="hover:text-gold-600 underline">4. Step-by-Step Dependant Application Process</a></li>
-            <li><a href="#faqs" className="hover:text-gold-600 underline">5. Frequently Asked Questions</a></li>
+            <li><a href="#document-attestation" className="hover:text-gold-600 underline">2. MOFA 3-Tier Document Attestation Workflow</a></li>
+            <li><a href="#dependant-matrix" className="hover:text-gold-600 underline">3. Comprehensive Family Dependant Categories & Rules Matrix</a></li>
+            <li><a href="#ejari-housing" className="hover:text-gold-600 underline">4. Ejari Residential Lease & Housing Requirements</a></li>
+            <li><a href="#step-by-step-family" className="hover:text-gold-600 underline">5. Step-by-Step Dependant Application Sequence</a></li>
+            <li><a href="#parent-sponsorship" className="hover:text-gold-600 underline">6. Sponsoring Parents (Father & Mother) Under Investor Visas</a></li>
+            <li><a href="#faqs" className="hover:text-gold-600 underline">7. Frequently Asked Questions</a></li>
           </ol>
         </div>
 
         {/* SECTION 1 */}
-        <div id="sponsor-eligibility" className="space-y-4 mb-12">
+        <div id="sponsor-eligibility" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
             1. Sponsor Prerequisites for Dubai Family Visas
           </h2>
           <p>
-            As an investor or shareholder in a UAE Freezone or Mainland company, you possess full legal rights to relocate your immediate family to Dubai.
+            As a business founder, shareholder, or investor holding a valid 2-year UAE Residence Visa issued through a Freezone or Mainland entity, you possess full statutory rights under General Directorate of Residency and Foreigners Affairs (GDRFA) regulations to relocate your immediate family to Dubai.
           </p>
           <p>
-            You must hold an active UAE Residence Visa, an Emirates ID card, and maintain an approved residential apartment lease (Ejari).
+            To act as a family visa sponsor, you must satisfy three baseline prerequisites: (1) Hold an active 2-year UAE Investor/Partner Visa and physical Emirates ID, (2) Hold an active company establishment card, and (3) Maintain a registered residential apartment lease (Ejari) in your name.
+          </p>
+          <p>
+            Under modern UAE immigration guidelines, female business owners and female investors enjoy equal sponsorship rights, allowing them to sponsor their husband and children under identical procedural conditions.
           </p>
         </div>
 
         {/* SECTION 2 */}
-        <div id="document-attestation" className="space-y-4 mb-12">
+        <div id="document-attestation" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            2. MOFA Document Attestation Rules (Marriage & Birth Certificates)
+            2. MOFA 3-Tier Document Attestation Workflow
           </h2>
           <p>
-            Before submitting your family visa application to GDRFA Dubai, your legal relationship certificates must undergo a 3-tier attestation process:
+            Before submitting a family dependant visa application to GDRFA Dubai, all underlying legal relationship documents (Marriage Certificate and Children's Birth Certificates) must undergo a mandatory 3-tier legal attestation chain:
           </p>
-          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
-            <li>Attestation by the Ministry of Foreign Affairs (MOFA) in your home country (e.g. Pakistan, UK, US).</li>
-            <li>Attestation by the UAE Embassy in your home country.</li>
-            <li>Final attestation by MOFA inside the UAE (or translated into legal Arabic by a certified translator).</li>
-          </ol>
+
+          <div className="space-y-4 my-6">
+            <div className="p-5 border border-border rounded-2xl bg-white shadow-sm">
+              <h4 className="font-bold text-navy-950 text-base mb-1 flex items-center gap-2">
+                <FileCheck className="text-gold-600" size={18} />
+                Tier 1: Home Country MOFA Attestation
+              </h4>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                The original certificate must be attested by the Ministry of Foreign Affairs (or Secretary of State / Foreign Office) in the issuing country (e.g. Pakistan, UK, US, India).
+              </p>
+            </div>
+
+            <div className="p-5 border border-border rounded-2xl bg-white shadow-sm">
+              <h4 className="font-bold text-navy-950 text-base mb-1 flex items-center gap-2">
+                <Globe2 className="text-gold-600" size={18} />
+                Tier 2: UAE Embassy Legalization
+              </h4>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                The document is presented to the official UAE Embassy or Consulate located in your home country for diplomatic verification and consular stamping.
+              </p>
+            </div>
+
+            <div className="p-5 border border-border rounded-2xl bg-white shadow-sm">
+              <h4 className="font-bold text-navy-950 text-base mb-1 flex items-center gap-2">
+                <Receipt className="text-gold-600" size={18} />
+                Tier 3: UAE MOFAIC In-Country Stamping & Legal Translation
+              </h4>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Upon arrival in Dubai, the certificate receives final attestation from the UAE Ministry of Foreign Affairs and International Cooperation (MOFAIC) and is translated into legal Arabic by a certified Ministry of Justice legal translator.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* IN-ARTICLE ADVAQ CALLOUT BANNER */}
-        <div className="my-10 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden">
+        <div className="my-12 bg-navy-950 p-8 rounded-2xl text-white relative overflow-hidden border border-gold-500/20 shadow-2xl">
           <div className="absolute right-0 top-0 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
           <p className="text-gold-500 uppercase text-xs font-semibold tracking-widest">
             DUBAI FAMILY PRO SERVICES
@@ -235,38 +293,143 @@ function ArticlePage() {
         </div>
 
         {/* SECTION 3 */}
-        <div id="ejari-housing" className="space-y-4 mb-12">
+        <div id="dependant-matrix" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            3. Ejari Housing Requirement & Deposit Rules
+            3. Comprehensive Family Dependant Categories & Rules Matrix
           </h2>
           <p>
-            Immigration requires presenting an official <strong>Ejari lease contract</strong> in the sponsor's name (1-bedroom or 2-bedroom apartment minimum for families).
+            Detailed breakdown of sponsorship rules across dependant categories:
           </p>
+
+          <div className="overflow-x-auto my-6 border border-border rounded-xl shadow-sm">
+            <table className="w-full text-left text-xs">
+              <thead className="bg-navy-950 text-white uppercase text-[11px] tracking-wider">
+                <tr>
+                  <th className="p-4">Dependant Category</th>
+                  <th className="p-4 text-gold-500">Age / Condition Rules</th>
+                  <th className="p-4">Mandatory Attested Document</th>
+                  <th className="p-4">Medical Fitness Test</th>
+                  <th className="p-4 text-emerald-400">Visa Validity</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border bg-white text-gray-700">
+                <tr className="hover:bg-off-white font-semibold bg-gold-50/30">
+                  <td className="p-4 font-bold text-navy-950">Spouse (Wife / Husband)</td>
+                  <td className="p-4 text-navy-900">No Age Limit</td>
+                  <td className="p-4 text-navy-900 font-bold">MOFA Attested Marriage Certificate</td>
+                  <td className="p-4 text-navy-900">Mandatory (Blood Screening & X-Ray)</td>
+                  <td className="p-4 text-emerald-700 font-bold">2 Years Renewable</td>
+                </tr>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">Unmarried Daughters</td>
+                  <td className="p-4 text-emerald-700 font-bold">No Age Limit (Must be Unmarried)</td>
+                  <td className="p-4 text-navy-900">MOFA Attested Birth Certificate</td>
+                  <td className="p-4 text-navy-900">Mandatory if 18+ Years Old</td>
+                  <td className="p-4 text-emerald-700 font-bold">2 Years Renewable</td>
+                </tr>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">Sons</td>
+                  <td className="p-4 text-navy-900 font-bold">Up to 25 Years (Older if Student)</td>
+                  <td className="p-4 text-navy-900">MOFA Attested Birth Certificate</td>
+                  <td className="p-4 text-navy-900">Mandatory if 18+ Years Old</td>
+                  <td className="p-4 text-emerald-700 font-bold">2 Years Renewable</td>
+                </tr>
+                <tr className="hover:bg-off-white">
+                  <td className="p-4 font-bold text-navy-950">Parents (Father & Mother)</td>
+                  <td className="p-4 text-navy-900">Both Parents Jointly Sponsored</td>
+                  <td className="p-4 text-navy-900">Attested Birth Cert & Proof of Care</td>
+                  <td className="p-4 text-navy-900">Mandatory DHA Screening</td>
+                  <td className="p-4 text-navy-900 font-bold">1 Year Renewable</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         {/* SECTION 4 */}
-        <div id="step-by-step-family" className="space-y-4 mb-12">
+        <div id="ejari-housing" className="space-y-4 mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
-            4. Step-by-Step Dependant Application Process
+            4. Ejari Residential Lease & Housing Requirements
           </h2>
-          <ol className="list-none space-y-2 text-sm text-gray-700 ml-2">
-            <li>Apply for Dependant Entry Permits via GDRFA Dubai portal.</li>
-            <li>Perform Status Change for family members inside the UAE.</li>
-            <li>Complete medical fitness test for spouse and children over 18.</li>
-            <li>Submit biometrics at ICP center and receive 2-year Emirates IDs.</li>
+          <p>
+            To process family dependant visas, GDRFA Dubai requires submitting an official <strong>Ejari lease contract</strong> in the sponsor's name.
+          </p>
+          <p>
+            The residential apartment must meet minimum size criteria: a 1-bedroom or 2-bedroom apartment is required for sponsoring a spouse and children. (Studio apartments are generally restricted from family visa sponsorship).
+          </p>
+          <p>
+            You must also present a recent Dubai Electricity and Water Authority (DEWA) utility bill confirming active residential service.
+          </p>
+        </div>
+
+        {/* SECTION 5 */}
+        <div id="step-by-step-family" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            5. Step-by-Step Dependant Application Sequence
+          </h2>
+          <p>
+            Processing family residence visas follows a 5-step immigration timeline:
+          </p>
+
+          <ol className="space-y-3 text-sm pl-2 my-4">
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Step 1: Dependant Entry Permit:</strong> Apply online via GDRFA or Amer Center for 60-day Dependant Entry Permits for spouse and children.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Step 2: Status Change:</strong> Execute an in-country status modification once your family members land in Dubai.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Step 3: DHA Medical Fitness Screening:</strong> Accompany spouse and dependants aged 18+ for blood screening and chest X-ray at DHA medical centers.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Step 4: Health Insurance Activation:</strong> Purchase and upload mandatory DHA-compliant health insurance coverage for each dependant.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-gold-600 shrink-0 mt-1" size={16} />
+              <span><strong>Step 5: Biometrics & Emirates ID Delivery:</strong> Complete ICP biometrics capture and receive physical 2-year Emirates ID cards via courier.</span>
+            </li>
           </ol>
+        </div>
+
+        {/* SECTION 6 */}
+        <div id="parent-sponsorship" className="space-y-4 mb-14">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold">
+            6. Sponsoring Parents (Father & Mother) Under Investor Visas
+          </h2>
+          <p>
+            Investor visa holders can sponsor both parents under 1-year renewable residence visas under special humanitarian guidelines:
+          </p>
+          <div className="space-y-3 text-sm pl-2 my-6">
+            <div className="p-4 border border-border rounded-xl bg-off-white">
+              <strong className="block text-navy-950 font-semibold mb-1">Joint Parent Sponsorship Mandate</strong>
+              <p className="text-xs text-gray-600">Both father and mother must be sponsored together (unless one parent is deceased or divorced, supported by legal certificates).</p>
+            </div>
+            <div className="p-4 border border-border rounded-xl bg-off-white">
+              <strong className="block text-navy-950 font-semibold mb-1">Income & Housing Threshold</strong>
+              <p className="text-xs text-gray-600">Sponsor must demonstrate a minimum monthly income of AED 20,000 and maintain a minimum 2-bedroom residential Ejari lease.</p>
+            </div>
+            <div className="p-4 border border-border rounded-xl bg-off-white">
+              <strong className="block text-navy-950 font-semibold mb-1">Comprehensive Health Insurance</strong>
+              <p className="text-xs text-gray-600">Must maintain comprehensive private medical insurance policy for each elderly parent.</p>
+            </div>
+          </div>
         </div>
 
         {/* FAQ SECTION */}
         <div id="faqs" className="pt-8 border-t border-border">
-          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6">
+          <h2 className="font-serif text-2xl md:text-3xl text-dark-text font-semibold mb-6 flex items-center gap-2">
+            <HelpCircle size={22} className="text-gold-600" />
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="border border-border rounded-xl bg-white overflow-hidden transition-all"
+                className="border border-border rounded-xl bg-white overflow-hidden transition-all shadow-sm"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
