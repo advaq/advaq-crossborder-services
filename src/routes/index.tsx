@@ -36,24 +36,8 @@ export const Route = createFileRoute("/")({
       },
     ],
   }),
-  component: Index,
+  component: Home,
 });
-
-function Index() {
-  return (
-    <>
-      <Hero />
-      <CredibilityBar />
-      <Stats />
-      <ServicesOverview />
-      <WhoWeServe />
-      <WhyUs />
-      <Testimonials />
-      <FAQ />
-      <CTABanner />
-    </>
-  );
-}
 
 function Hero() {
   return (
