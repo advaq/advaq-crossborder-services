@@ -64,12 +64,6 @@ function Hero() {
       <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
         {/* LEFT COLUMN — 7 COLS */}
         <div className="lg:col-span-7 space-y-6">
-          <Reveal>
-            <p className="text-gold-500 uppercase text-xs font-semibold tracking-[0.18em] flex items-center gap-2">
-              <span>🇬🇧 UK</span> &bull; <span>🇺🇸 USA</span> &bull; <span>🇦🇪 UAE</span> &bull; <span>🇵🇰 PAKISTAN</span>
-            </p>
-          </Reveal>
-
           <Reveal delay={100}>
             <h1 className="font-serif text-white text-4xl sm:text-5xl md:text-6xl lg:text-[56px] leading-[1.08]">
               Your Cross-Border Business &amp; Tax Partner Across UK, USA, UAE &amp; Pakistan.
