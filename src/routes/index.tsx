@@ -346,7 +346,7 @@ function WhoWeServe() {
 
 function WhyUs() {
   const items = [
-    { Icon: Shield, t: "Expert Professionals", d: "Qualified accountants & formation specialists handling every step." },
+    { Icon: Shield, t: "Expert Professionals", d: "Qualified accountants & company formation specialists." },
     { Icon: Globe2, t: "100% Remote Process", d: "Everything handled online from anywhere in the world." },
     { Icon: Tag, t: "Transparent Pricing", d: "No hidden fees. What you see is what you pay — guaranteed." },
     { Icon: Headphones, t: "Lifetime Support", d: "We're here long after formation — for compliance and growth." },
