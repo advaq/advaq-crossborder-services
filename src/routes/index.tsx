@@ -137,20 +137,6 @@ function Hero() {
             </div>
           </Reveal>
 
-          {/* CHECKMARKS ROW */}
-          <Reveal delay={500}>
-            <div className="pt-1 flex flex-wrap gap-x-6 gap-y-2 text-xs text-navy-200">
-              <span className="inline-flex items-center gap-2">
-                <CheckCircle2 size={15} className="text-gold-500" /> Punjab Bar Council Licensed Advocate
-              </span>
-              <span className="inline-flex items-center gap-2">
-                <CheckCircle2 size={15} className="text-gold-500" /> IRS PTIN Tax Preparer
-              </span>
-              <span className="inline-flex items-center gap-2">
-                <CheckCircle2 size={15} className="text-gold-500" /> 200+ Businesses Served
-              </span>
-            </div>
-          </Reveal>
         </div>
 
         {/* RIGHT COLUMN — 5 COLS (GLASSMORPHIC TRUST SHOWCASE) */}
