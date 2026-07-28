@@ -57,13 +57,13 @@ function Index() {
 
 function Hero() {
   return (
-    <section className="relative min-h-[90vh] bg-navy-950 overflow-hidden flex items-center pt-28 pb-20">
+    <section className="relative min-h-[85vh] bg-navy-950 overflow-hidden flex items-center pt-24 pb-12">
       <div className="absolute inset-0 grid-pattern opacity-100" />
       <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] gold-glow opacity-60 pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
         {/* LEFT COLUMN — 7 COLS */}
-        <div className="lg:col-span-7 space-y-7">
+        <div className="lg:col-span-7 space-y-6">
           <Reveal>
             <p className="text-gold-500 uppercase text-xs font-semibold tracking-[0.18em] flex items-center gap-2">
               <span>🇬🇧 UK</span> &bull; <span>🇺🇸 USA</span> &bull; <span>🇦🇪 UAE</span> &bull; <span>🇵🇰 PAKISTAN</span>
@@ -71,7 +71,7 @@ function Hero() {
           </Reveal>
 
           <Reveal delay={100}>
-            <h1 className="font-serif text-white text-4xl sm:text-5xl md:text-6xl lg:text-[58px] leading-[1.08]">
+            <h1 className="font-serif text-white text-4xl sm:text-5xl md:text-6xl lg:text-[56px] leading-[1.08]">
               Your Cross-Border Business &amp; Tax Partner Across UK, USA, UAE &amp; Pakistan.
             </h1>
           </Reveal>
@@ -87,7 +87,7 @@ function Hero() {
             <div className="flex flex-wrap gap-4 items-center">
               <Link
                 to="/contact"
-                className="btn-gold px-8 py-4 uppercase text-xs tracking-widest font-semibold inline-flex items-center gap-2"
+                className="btn-gold px-8 py-3.5 uppercase text-xs tracking-widest font-semibold inline-flex items-center gap-2"
               >
                 BOOK FREE CONSULTATION <ArrowRight size={16} />
               </Link>
@@ -95,7 +95,7 @@ function Hero() {
                 href="https://wa.me/923000925335"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-outline-light px-8 py-4 uppercase text-xs tracking-widest font-semibold inline-flex items-center gap-2"
+                className="btn-outline-light px-8 py-3.5 uppercase text-xs tracking-widest font-semibold inline-flex items-center gap-2"
               >
                 <MessageCircle size={16} /> TALK ON WHATSAPP
               </a>
@@ -104,8 +104,8 @@ function Hero() {
 
           {/* INTERACTIVE JURISDICTION QUICK PILLS */}
           <Reveal delay={400}>
-            <div className="pt-2">
-              <p className="text-[11px] font-semibold uppercase tracking-widest text-gold-500/80 mb-3">
+            <div className="pt-1">
+              <p className="text-[11px] font-semibold uppercase tracking-widest text-gold-500/80 mb-2.5">
                 EXPLORE BY JURISDICTION
               </p>
               <div className="flex flex-wrap gap-2.5">
@@ -145,7 +145,7 @@ function Hero() {
 
           {/* CHECKMARKS ROW */}
           <Reveal delay={500}>
-            <div className="pt-2 flex flex-wrap gap-x-6 gap-y-2 text-xs md:text-[13px] text-navy-200">
+            <div className="pt-1 flex flex-wrap gap-x-6 gap-y-2 text-xs text-navy-200">
               <span className="inline-flex items-center gap-2">
                 <CheckCircle2 size={15} className="text-gold-500" /> Punjab Bar Council Licensed Advocate
               </span>
@@ -160,9 +160,9 @@ function Hero() {
         </div>
 
         {/* RIGHT COLUMN — 5 COLS (GLASSMORPHIC TRUST SHOWCASE) */}
-        <div className="lg:col-span-5 relative hidden lg:block h-[480px]">
+        <div className="lg:col-span-5 relative hidden lg:block h-[450px]">
           {/* MAIN GLASSMORPHIC STATUS CARD */}
-          <div className="absolute top-6 right-0 w-[420px] bg-navy-900/90 backdrop-blur-xl border border-gold-500/30 rounded-2xl p-7 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7)] animate-float">
+          <div className="absolute top-0 right-0 w-[410px] bg-navy-900/90 backdrop-blur-xl border border-gold-500/30 rounded-2xl p-6 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7)] animate-float">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
@@ -175,13 +175,13 @@ function Hero() {
               </span>
             </div>
 
-            <h3 className="font-serif text-2xl text-white mt-5 leading-snug">
+            <h3 className="font-serif text-2xl text-white mt-4 leading-snug">
               Cross-Border Corporate Setup
             </h3>
 
             {/* LIVE JURISDICTION BADGES */}
-            <div className="mt-5 space-y-3.5 text-xs">
-              <div className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5">
+            <div className="mt-4 space-y-3 text-xs">
+              <div className="flex items-center justify-between p-2.5 rounded-xl bg-white/5 border border-white/5">
                 <span className="text-navy-100 flex items-center gap-2">
                   <span>🇬🇧</span> UK Companies House
                 </span>
@@ -190,7 +190,7 @@ function Hero() {
                 </span>
               </div>
 
-              <div className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5">
+              <div className="flex items-center justify-between p-2.5 rounded-xl bg-white/5 border border-white/5">
                 <span className="text-navy-100 flex items-center gap-2">
                   <span>🇺🇸</span> US State Secretary &amp; IRS
                 </span>
@@ -199,7 +199,7 @@ function Hero() {
                 </span>
               </div>
 
-              <div className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5">
+              <div className="flex items-center justify-between p-2.5 rounded-xl bg-white/5 border border-white/5">
                 <span className="text-navy-100 flex items-center gap-2">
                   <span>🇦🇪</span> UAE Freezone / FTA
                 </span>
@@ -208,7 +208,7 @@ function Hero() {
                 </span>
               </div>
 
-              <div className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5">
+              <div className="flex items-center justify-between p-2.5 rounded-xl bg-white/5 border border-white/5">
                 <span className="text-navy-100 flex items-center gap-2">
                   <span>🇵🇰</span> SECP &amp; FBR Iris
                 </span>
@@ -218,17 +218,17 @@ function Hero() {
               </div>
             </div>
 
-            <div className="mt-5 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-navy-200">
+            <div className="mt-4 pt-3.5 border-t border-white/10 flex items-center justify-between text-xs text-navy-200">
               <span>Full Cross-Border Coverage</span>
               <span className="text-gold-500 font-semibold">100% Remote Onboarding</span>
             </div>
           </div>
 
           {/* FLOATING BADGE 1 — IRS PTIN */}
-          <div className="absolute top-1/2 left-0 w-[230px] bg-navy-800/95 backdrop-blur-lg border border-gold-500/40 rounded-xl p-4 animate-float-delayed shadow-2xl">
+          <div className="absolute top-[36%] -left-3 w-[210px] bg-navy-800/95 backdrop-blur-lg border border-gold-500/40 rounded-xl p-3.5 animate-float-delayed shadow-2xl">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 grid place-items-center bg-gold-500/15 border border-gold-500/30 rounded-lg text-gold-500 shrink-0">
-                <ClipboardCheck size={20} />
+              <div className="w-9 h-9 grid place-items-center bg-gold-500/15 border border-gold-500/30 rounded-lg text-gold-500 shrink-0">
+                <ClipboardCheck size={18} />
               </div>
               <div>
                 <p className="text-[10px] uppercase tracking-wider text-gold-500 font-bold">
@@ -240,13 +240,13 @@ function Hero() {
           </div>
 
           {/* FLOATING BADGE 2 — PUNJAB BAR COUNCIL */}
-          <div className="absolute bottom-4 right-12 w-[240px] bg-gold-500 text-navy-950 rounded-xl p-4 animate-float shadow-2xl rotate-[-2deg]">
+          <div className="absolute -bottom-2 right-6 w-[230px] bg-gold-500 text-navy-950 rounded-xl p-3.5 animate-float shadow-2xl rotate-[-2deg]">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 grid place-items-center bg-navy-950 text-gold-500 rounded-lg shrink-0">
-                <Scale size={18} />
+              <div className="w-8 h-8 grid place-items-center bg-navy-950 text-gold-500 rounded-lg shrink-0">
+                <Scale size={16} />
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-wider font-bold opacity-80">
+                <p className="text-[9px] uppercase tracking-wider font-bold opacity-80">
                   PUNJAB BAR COUNCIL
                 </p>
                 <p className="text-navy-950 font-serif font-bold text-xs">Licensed Advocate</p>
