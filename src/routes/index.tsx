@@ -3,7 +3,7 @@ import {
   ArrowRight, CheckCircle2, Shield, Globe2, Tag, Headphones,
   ListChecks, FileText, Settings, CheckCircle, Star, ChevronRight,
   Scale, Landmark, BadgeCheck, Laptop, Building2, ShoppingBag,
-  Code, Users, Calendar, Clock,
+  Code, Users, Calendar, Clock, MessageCircle, ClipboardCheck, ShieldCheck
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -12,14 +12,14 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "ADVAQ | Cross-Border Tax & Legal Services | UK, USA, UAE & Pakistan" },
-      { name: "description", content: "UK LTD, US LLC, Pakistan SECP & FBR filings, and contract drafting for freelancers and IT companies — by a Punjab Bar Council licensed advocate." },
+      { name: "description", content: "UK LTD, US LLC, UAE Freezone, Pakistan SECP & FBR filings, and contract drafting for freelancers and IT companies — by a Punjab Bar Council licensed advocate & IRS PTIN tax preparer." },
       { name: "keywords", content: "UK company formation Pakistan, US LLC formation for Pakistanis, SECP company registration, FBR tax return Pakistan, Punjab Bar Council advocate, PSEB registration, freelancer legal services Pakistan, IT company registration Pakistan" },
       { property: "og:title", content: "ADVAQ | Cross-Border Tax & Legal Services | UK, USA, UAE & Pakistan" },
-      { property: "og:description", content: "UK LTD, US LLC, Pakistan SECP & FBR, and legal contracts — one trusted advocate for international Pakistani entrepreneurs." },
+      { property: "og:description", content: "UK LTD, US LLC, UAE Freezone, Pakistan SECP & FBR, and legal contracts — one trusted advocate for international Pakistani entrepreneurs." },
       { property: "og:url", content: "/" },
     ],
     links: [
-      { rel: "canonical", href: "/" },
+      { rel: "canonical", href: "https://advaq.com/" },
     ],
     scripts: [
       {
@@ -28,118 +28,230 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "LegalService",
           name: "ADVAQ Global Advisory",
-          description: "UK and US company formation, Pakistan legal and tax services, and contract drafting for Pakistani freelancers and IT companies.",
-          areaServed: ["United Kingdom", "United States", "Pakistan"],
-          founder: { "@type": "Person", name: "Muhammad Abdullah", jobTitle: "Advocate, Punjab Bar Council" },
-          serviceType: ["UK Company Formation", "US LLC Formation", "Pakistan Tax Services", "Legal Contract Drafting"],
+          description: "UK, US, UAE, and Pakistan company formation, tax compliance, and legal contract drafting for freelancers and IT companies.",
+          areaServed: ["United Kingdom", "United States", "United Arab Emirates", "Pakistan"],
+          founder: { "@type": "Person", name: "Muhammad Abdullah", jobTitle: "Advocate & Corporate Tax Lawyer" },
+          serviceType: ["UK Company Formation", "US LLC Formation", "UAE Company Setup", "Pakistan Tax Services", "Legal Contract Drafting"],
         }),
       },
     ],
   }),
-  component: Home,
+  component: Index,
 });
+
+function Index() {
+  return (
+    <>
+      <Hero />
+      <CredibilityBar />
+      <Stats />
+      <Services />
+      <WhoWeServe />
+      <WhyUs />
+      <Testimonials />
+      <FAQ />
+      <CTABanner />
+    </>
+  );
+}
 
 function Hero() {
   return (
-    <section className="relative min-h-screen bg-navy-950 overflow-hidden flex items-center pt-24">
-      <div className="absolute inset-0 grid-pattern" />
-      <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] gold-glow opacity-60 pointer-events-none" />
+    <section className="relative min-h-[90vh] bg-navy-950 overflow-hidden flex items-center pt-28 pb-20">
+      <div className="absolute inset-0 grid-pattern opacity-100" />
+      <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] gold-glow opacity-60 pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center w-full py-20">
-        <div>
+      <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
+        {/* LEFT COLUMN — 7 COLS */}
+        <div className="lg:col-span-7 space-y-7">
           <Reveal>
-            <p className="label-eyebrow">🇬🇧 UK  •  🇺🇸 US  •  🇦🇪 UAE  •  🇵🇰 PAKISTAN</p>
-          </Reveal>
-          <Reveal delay={120}>
-            <h1 className="font-serif text-white text-5xl md:text-6xl lg:text-[64px] leading-[1.05] mt-6">
-              Your UK, USA, UAE <br />
-              <span className="text-gold-500">& Pakistan Business</span> <br />
-              Partner.
-            </h1>
-          </Reveal>
-          <Reveal delay={240}>
-            <p className="mt-7 text-navy-200 text-lg max-w-lg leading-[1.7]">
-              Company formation, tax and ongoing compliance across the UK, USA, UAE and
-              Pakistan — plus international legal contracts, all managed by one trusted
-              advisory team. 100% remote. Expert. Affordable.
+            <p className="text-gold-500 uppercase text-xs font-semibold tracking-[0.18em] flex items-center gap-2">
+              <span>🇬🇧 UK</span> &bull; <span>🇺🇸 USA</span> &bull; <span>🇦🇪 UAE</span> &bull; <span>🇵🇰 PAKISTAN</span>
             </p>
           </Reveal>
-          <Reveal delay={360}>
-            <div className="mt-9 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg">
-              <Link to="/uk-services" className="btn-gold">
-                🇬🇧 UK Services <ArrowRight size={16} />
+
+          <Reveal delay={100}>
+            <h1 className="font-serif text-white text-4xl sm:text-5xl md:text-6xl lg:text-[58px] leading-[1.08]">
+              Your Cross-Border Business &amp; Tax Partner Across UK, USA, UAE &amp; Pakistan.
+            </h1>
+          </Reveal>
+
+          <Reveal delay={200}>
+            <p className="text-navy-200 text-base md:text-lg max-w-xl leading-[1.7]">
+              Company formation, tax compliance, and legal contracts — managed directly by a licensed advocate &amp; IRS PTIN tax preparer. 100% remote. Full legal accountability.
+            </p>
+          </Reveal>
+
+          {/* PRIMARY BUTTONS */}
+          <Reveal delay={300}>
+            <div className="flex flex-wrap gap-4 items-center">
+              <Link
+                to="/contact"
+                className="btn-gold px-8 py-4 uppercase text-xs tracking-widest font-semibold inline-flex items-center gap-2"
+              >
+                BOOK FREE CONSULTATION <ArrowRight size={16} />
               </Link>
-              <Link to="/us-services" className="btn-outline-light">
-                🇺🇸 USA Services <ArrowRight size={16} />
-              </Link>
-              <Link to="/uae-services" className="btn-outline-light border-gold-500/70 text-gold-200 hover:border-gold-500 hover:text-gold-500">
-                🇦🇪 UAE Services <ArrowRight size={16} />
-              </Link>
-              <Link to="/pakistan-services" className="btn-outline-light">
-                🇵🇰 Pakistan Services <ArrowRight size={16} />
-              </Link>
-              <Link to="/legal-contract-drafting" className="sm:col-span-2 inline-flex items-center justify-center gap-2 border border-gold-500 text-gold-500 px-8 py-4 text-sm font-semibold uppercase tracking-widest hover:bg-gold-500/10 transition-colors">
-                Legal Contract Drafting <ArrowRight size={16} />
-              </Link>
+              <a
+                href="https://wa.me/923000925335"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline-light px-8 py-4 uppercase text-xs tracking-widest font-semibold inline-flex items-center gap-2"
+              >
+                <MessageCircle size={16} /> TALK ON WHATSAPP
+              </a>
             </div>
           </Reveal>
-          <Reveal delay={480}>
-            <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-[13px] text-navy-200">
-              {["Punjab Bar Council Licensed", "HMRC & IRS Compliant", "SECP & FBR Registered", "200+ Clients Served"].map((t) => (
-                <span key={t} className="inline-flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-gold-500" /> {t}
-                </span>
-              ))}
+
+          {/* INTERACTIVE JURISDICTION QUICK PILLS */}
+          <Reveal delay={400}>
+            <div className="pt-2">
+              <p className="text-[11px] font-semibold uppercase tracking-widest text-gold-500/80 mb-3">
+                EXPLORE BY JURISDICTION
+              </p>
+              <div className="flex flex-wrap gap-2.5">
+                <Link
+                  to="/uk-services"
+                  className="px-3.5 py-1.5 rounded-lg bg-white/5 border border-white/10 text-white text-xs font-medium hover:border-gold-500/50 hover:bg-gold-500/10 transition-all flex items-center gap-1.5"
+                >
+                  <span>🇬🇧</span> UK LTD &amp; Tax
+                </Link>
+                <Link
+                  to="/us-services"
+                  className="px-3.5 py-1.5 rounded-lg bg-white/5 border border-white/10 text-white text-xs font-medium hover:border-gold-500/50 hover:bg-gold-500/10 transition-all flex items-center gap-1.5"
+                >
+                  <span>🇺🇸</span> US LLC &amp; EIN
+                </Link>
+                <Link
+                  to="/uae-services"
+                  className="px-3.5 py-1.5 rounded-lg bg-white/5 border border-white/10 text-white text-xs font-medium hover:border-gold-500/50 hover:bg-gold-500/10 transition-all flex items-center gap-1.5"
+                >
+                  <span>🇦🇪</span> UAE Freezone
+                </Link>
+                <Link
+                  to="/pakistan-services"
+                  className="px-3.5 py-1.5 rounded-lg bg-white/5 border border-white/10 text-white text-xs font-medium hover:border-gold-500/50 hover:bg-gold-500/10 transition-all flex items-center gap-1.5"
+                >
+                  <span>🇵🇰</span> SECP &amp; FBR
+                </Link>
+                <Link
+                  to="/legal-contract-drafting"
+                  className="px-3.5 py-1.5 rounded-lg bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-medium hover:border-gold-500 transition-all flex items-center gap-1.5"
+                >
+                  <span>⚖️</span> Legal Contracts
+                </Link>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* CHECKMARKS ROW */}
+          <Reveal delay={500}>
+            <div className="pt-2 flex flex-wrap gap-x-6 gap-y-2 text-xs md:text-[13px] text-navy-200">
+              <span className="inline-flex items-center gap-2">
+                <CheckCircle2 size={15} className="text-gold-500" /> Punjab Bar Council Licensed Advocate
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <CheckCircle2 size={15} className="text-gold-500" /> IRS PTIN Tax Preparer
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <CheckCircle2 size={15} className="text-gold-500" /> 200+ Businesses Served
+              </span>
             </div>
           </Reveal>
         </div>
 
-        {/* Decorative cards */}
-        <div className="relative h-[480px] hidden lg:block">
-          <div className="absolute top-8 right-0 w-[420px] bg-navy-800 border border-gold-500/20 rounded-2xl p-7 animate-float shadow-2xl">
+        {/* RIGHT COLUMN — 5 COLS (GLASSMORPHIC TRUST SHOWCASE) */}
+        <div className="lg:col-span-5 relative hidden lg:block h-[480px]">
+          {/* MAIN GLASSMORPHIC STATUS CARD */}
+          <div className="absolute top-6 right-0 w-[420px] bg-navy-900/90 backdrop-blur-xl border border-gold-500/30 rounded-2xl p-7 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7)] animate-float">
             <div className="flex items-center justify-between">
-              <span className="label-eyebrow !text-gold-200/80">Status</span>
-              <span className="px-3 py-1 text-[11px] font-semibold bg-emerald-500/15 text-emerald-300 rounded-full border border-emerald-400/20">
-                Approved
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-xs font-semibold text-emerald-300 uppercase tracking-wider">
+                  ACTIVE &amp; STRIKE-FREE COMPLIANT
+                </span>
+              </div>
+              <span className="text-[10px] uppercase font-bold text-gold-500 bg-gold-500/10 px-2.5 py-1 rounded-full border border-gold-500/20">
+                ADVAQ GUARANTEED
               </span>
             </div>
-            <h3 className="font-serif text-2xl text-white mt-5">
-              Company Successfully Registered <span aria-hidden>🎉</span>
+
+            <h3 className="font-serif text-2xl text-white mt-5 leading-snug">
+              Cross-Border Corporate Setup
             </h3>
-            <div className="mt-6 space-y-3 text-sm">
-              <div className="flex justify-between text-navy-200">
-                <span>Company</span><span className="text-white">Acme Trading Ltd</span>
+
+            {/* LIVE JURISDICTION BADGES */}
+            <div className="mt-5 space-y-3.5 text-xs">
+              <div className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5">
+                <span className="text-navy-100 flex items-center gap-2">
+                  <span>🇬🇧</span> UK Companies House
+                </span>
+                <span className="text-emerald-400 font-semibold flex items-center gap-1">
+                  ✓ Registered &amp; Tax Filed
+                </span>
               </div>
-              <div className="flex justify-between text-navy-200">
-                <span>Jurisdiction</span><span className="text-white">🇬🇧 United Kingdom</span>
+
+              <div className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5">
+                <span className="text-navy-100 flex items-center gap-2">
+                  <span>🇺🇸</span> US State Secretary &amp; IRS
+                </span>
+                <span className="text-emerald-400 font-semibold flex items-center gap-1">
+                  ✓ LLC &amp; EIN Issued
+                </span>
               </div>
-              <div className="flex justify-between text-navy-200">
-                <span>Date</span><span className="text-white">12 Apr 2025</span>
+
+              <div className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5">
+                <span className="text-navy-100 flex items-center gap-2">
+                  <span>🇦🇪</span> UAE Freezone / FTA
+                </span>
+                <span className="text-emerald-400 font-semibold flex items-center gap-1">
+                  ✓ License &amp; TRN Active
+                </span>
+              </div>
+
+              <div className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5">
+                <span className="text-navy-100 flex items-center gap-2">
+                  <span>🇵🇰</span> SECP &amp; FBR Iris
+                </span>
+                <span className="text-emerald-400 font-semibold flex items-center gap-1">
+                  ✓ Active Filer &amp; Exempt
+                </span>
               </div>
             </div>
-            <div className="mt-6">
-              <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                <div className="h-full w-full bg-gradient-to-r from-gold-500 to-gold-200" />
-              </div>
-              <p className="mt-2 text-xs text-navy-200">Onboarding complete · 100%</p>
+
+            <div className="mt-5 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-navy-200">
+              <span>Full Cross-Border Coverage</span>
+              <span className="text-gold-500 font-semibold">100% Remote Onboarding</span>
             </div>
           </div>
 
-          <div className="absolute bottom-8 left-0 w-[300px] bg-navy-700/90 backdrop-blur border border-white/10 rounded-2xl p-5 animate-float-delayed shadow-xl">
+          {/* FLOATING BADGE 1 — IRS PTIN */}
+          <div className="absolute top-1/2 left-0 w-[230px] bg-navy-800/95 backdrop-blur-lg border border-gold-500/40 rounded-xl p-4 animate-float-delayed shadow-2xl">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 grid place-items-center bg-gold-500/15 border border-gold-500/30 rounded-lg text-gold-500 font-bold text-sm">UK</div>
+              <div className="w-10 h-10 grid place-items-center bg-gold-500/15 border border-gold-500/30 rounded-lg text-gold-500 shrink-0">
+                <ClipboardCheck size={20} />
+              </div>
               <div>
-                <p className="text-white text-sm font-semibold">UK LTD #12456789</p>
-                <p className="text-navy-200 text-xs flex items-center gap-1.5 mt-0.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> Active
+                <p className="text-[10px] uppercase tracking-wider text-gold-500 font-bold">
+                  IRS PTIN AUTHORIZED
                 </p>
+                <p className="text-white text-xs font-medium mt-0.5">US Tax Preparer</p>
               </div>
             </div>
           </div>
 
-          <div className="absolute top-1/2 left-12 w-[200px] bg-gold-500 text-navy-900 rounded-2xl p-4 animate-float shadow-2xl rotate-[-4deg]">
-            <p className="text-[11px] uppercase tracking-widest font-semibold opacity-70">EIN Issued</p>
-            <p className="font-serif text-lg mt-1">87-1234567</p>
+          {/* FLOATING BADGE 2 — PUNJAB BAR COUNCIL */}
+          <div className="absolute bottom-4 right-12 w-[240px] bg-gold-500 text-navy-950 rounded-xl p-4 animate-float shadow-2xl rotate-[-2deg]">
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 grid place-items-center bg-navy-950 text-gold-500 rounded-lg shrink-0">
+                <Scale size={18} />
+              </div>
+              <div>
+                <p className="text-[10px] uppercase tracking-wider font-bold opacity-80">
+                  PUNJAB BAR COUNCIL
+                </p>
+                <p className="text-navy-950 font-serif font-bold text-xs">Licensed Advocate</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -150,13 +262,13 @@ function Hero() {
 function CredibilityBar() {
   const items = [
     { Icon: Scale, t: "Punjab Bar Council", s: "Licensed Advocate" },
-    { Icon: Landmark, t: "SECP & FBR", s: "Registered Practitioner" },
-    { Icon: Globe2, t: "UK & US Expert", s: "HMRC & IRS Compliant" },
-    { Icon: FileText, t: "Legal Contracts", s: "NDA, MSA, IP & More" },
+    { Icon: ClipboardCheck, t: "IRS PTIN Registered", s: "US Tax Preparer" },
+    { Icon: Landmark, t: "SECP & FBR Registered", s: "Pakistan Corporate Counsel" },
+    { Icon: Globe2, t: "UK, USA, UAE & PK", s: "Cross-Border Expertise" },
     { Icon: BadgeCheck, t: "200+ Businesses", s: "Formed & Compliant" },
   ];
   return (
-    <section className="bg-navy-800 border-t border-gold-500/30 border-b border-white/5 py-6">
+    <section className="bg-navy-900 border-t border-gold-500/30 border-b border-white/5 py-6">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-6 lg:divide-x lg:divide-white/10">
         {items.map((it, i) => (
           <div key={i} className="flex items-center justify-center gap-3 px-4">
@@ -174,9 +286,9 @@ function CredibilityBar() {
 
 function Stats() {
   const items = [
-    { v: "200+", l: "Companies Formed" },
-    { v: "UK · US · PK", l: "Triple Jurisdiction" },
-    { v: "5★", l: "Client Rating" },
+    { v: "200+", l: "Businesses Served" },
+    { v: "4", l: "Jurisdictions Covered" },
+    { v: "5★", l: "Average Client Rating" },
     { v: "48hr", l: "Average Turnaround" },
     { v: "100%", l: "IT Export Tax Exemption" },
   ];
