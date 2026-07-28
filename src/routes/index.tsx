@@ -57,15 +57,15 @@ function Index() {
 
 function Hero() {
   return (
-    <section className="relative min-h-[85vh] bg-navy-950 overflow-hidden flex items-center pt-24 pb-12">
+    <section className="relative min-h-[85vh] bg-navy-950 overflow-hidden flex items-center pt-32 lg:pt-36 pb-14">
       <div className="absolute inset-0 grid-pattern opacity-100" />
       <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] gold-glow opacity-60 pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
         {/* LEFT COLUMN — 7 COLS */}
-        <div className="lg:col-span-7 space-y-6">
+        <div className="lg:col-span-7 space-y-6 pt-2">
           <Reveal delay={100}>
-            <h1 className="font-serif text-white text-4xl sm:text-5xl md:text-6xl lg:text-[56px] leading-[1.08]">
+            <h1 className="font-serif text-white text-4xl sm:text-5xl md:text-6xl lg:text-[56px] leading-[1.08] mt-2">
               Your Cross-Border Business &amp; Tax Partner Across UK, USA, UAE &amp; Pakistan.
             </h1>
           </Reveal>
