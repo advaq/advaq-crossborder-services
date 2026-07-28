@@ -45,7 +45,7 @@ function Index() {
       <Hero />
       <CredibilityBar />
       <Stats />
-      <Services />
+      <ServicesOverview />
       <WhoWeServe />
       <WhyUs />
       <Testimonials />
