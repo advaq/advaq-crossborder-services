@@ -11,7 +11,6 @@ const services = [
 ] as const;
 
 const calculators = [
-  { to: "/calculators", label: "All Calculators Hub" },
   { to: "/calculators/uk", label: "UK Calculators" },
   { to: "/calculators/usa", label: "USA Calculators" },
   { to: "/calculators/uae", label: "UAE Calculators" },
