@@ -548,18 +548,13 @@ function RelatedServices() {
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((s) => (
             <Reveal key={s.title}>
-              <div className="border border-border p-6 rounded-xl bg-white flex flex-col justify-between h-full">
+              <Link to={s.path as any} className="border border-border p-6 rounded-xl bg-white flex flex-col justify-between h-full hover:border-gold-500/50 hover:shadow-lg transition-all duration-300 group block">
                 <div>
-                  <h3 className="font-sans font-semibold text-lg text-dark-text">{s.title}</h3>
+                  <h3 className="font-sans font-semibold text-lg text-dark-text group-hover:text-gold-600 transition-colors">{s.title}</h3>
                   <p className="mt-2 text-sm text-gray-600 leading-relaxed">{s.desc}</p>
                 </div>
-                <Link
-                  to={s.path}
-                  className="mt-6 inline-flex items-center gap-1.5 text-gold-500 font-semibold text-xs uppercase tracking-widest hover:gap-2.5 transition-all"
-                >
-                  View Service Details <ArrowRight size={12} />
-                </Link>
-              </div>
+                <div className="mt-6 inline-flex items-center gap-1.5 text-gold-500 font-semibold text-xs uppercase tracking-widest group-hover:gap-2.5 transition-all">View Service Details <ArrowRight size={12} /></div>
+              </Link>
             </Reveal>
           ))}
         </div>
