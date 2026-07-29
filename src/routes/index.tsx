@@ -225,24 +225,36 @@ function Hero() {
 
 function CredibilityBar() {
   const items = [
-    { Icon: Scale, t: "Punjab Bar Council", s: "Licensed Advocate" },
-    { Icon: ClipboardCheck, t: "IRS PTIN Registered", s: "US Tax Preparer" },
-    { Icon: Landmark, t: "SECP & FBR Registered", s: "Pakistan Corporate Counsel" },
-    { Icon: Globe2, t: "UK, USA, UAE & PK", s: "Cross-Border Expertise" },
-    { Icon: BadgeCheck, t: "200+ Businesses", s: "Formed & Compliant" },
+    { icon: Scale, tag: "PUNJAB BAR COUNCIL", label: "Licensed Advocate" },
+    { icon: ClipboardCheck, tag: "IRS PTIN (USA)", label: "Registered Tax Preparer" },
+    { icon: Landmark, tag: "SECP & FBR", label: "Pakistan Corporate Counsel" },
+    { icon: Building2, tag: "COMPANIES HOUSE UK", label: "Filing & Annual Compliance" },
   ];
   return (
-    <section className="bg-navy-900 border-t border-gold-500/30 border-b border-white/5 py-6">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-6 lg:divide-x lg:divide-white/10">
-        {items.map((it, i) => (
-          <div key={i} className="flex items-center justify-center gap-3 px-4">
-            <it.Icon size={20} className="text-gold-500 shrink-0" />
-            <div>
-              <p className="text-white text-sm font-semibold leading-tight">{it.t}</p>
-              <p className="text-navy-200 text-xs leading-tight mt-0.5">{it.s}</p>
-            </div>
-          </div>
-        ))}
+    <section className="bg-navy-900 border-t border-gold-500/30 border-b border-white/10 py-7">
+      <div className="max-w-7xl mx-auto px-6">
+        <p className="text-[11px] font-semibold text-center uppercase tracking-widest text-gold-500/80 mb-5">
+          AS SEEN IN / TRUSTED &amp; LICENSED BY REGULATORY AUTHORITIES
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {items.map((it, i) => {
+            const Icon = it.icon;
+            return (
+              <div
+                key={i}
+                className="flex items-center justify-center gap-3 bg-white/5 border border-white/10 rounded-xl px-5 py-3.5 hover:border-gold-500/40 transition-all"
+              >
+                <div className="w-10 h-10 rounded-lg bg-gold-500/10 border border-gold-500/20 grid place-items-center text-gold-500 shrink-0">
+                  <Icon size={20} />
+                </div>
+                <div>
+                  <p className="text-white text-xs font-bold tracking-wide uppercase">{it.tag}</p>
+                  <p className="text-navy-200 text-[11px] mt-0.5">{it.label}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
@@ -623,10 +635,41 @@ function Testimonials() {
 
 function BlogTeaser() {
   const posts = [
-    { cat: "UK Formation", title: "How to Register a UK Limited Company from Pakistan in 2025", excerpt: "A step-by-step walkthrough for non-residents covering Companies House, director ID requirements, and HMRC registration.", date: "May 12, 2026", read: "8 min read" },
-    { cat: "Pakistan Tax", title: "FBR IT Export Exemption: The Complete 2026 Guide", excerpt: "Everything Pakistani freelancers and IT companies need to know about claiming 100% tax exemption under the new rules.", date: "May 03, 2026", read: "12 min read" },
-    { cat: "Legal", title: "Why Every Freelancer Needs a Service Agreement (Not a Template)", excerpt: "The five clauses that separate a real contract from a Google template — and what happens when you skip them.", date: "Apr 21, 2026", read: "6 min read" },
+    {
+      cat: "UK Formation",
+      flag: "🇬🇧",
+      slug: "/blog/uk-company-formation-documents-required",
+      icon: Building2,
+      bgGradient: "from-blue-950 via-navy-900 to-navy-950",
+      title: "How to Register a UK Limited Company from Pakistan in 2026",
+      excerpt: "A step-by-step walkthrough for non-residents covering Companies House, director ID requirements, and HMRC registration.",
+      date: "May 12, 2026",
+      read: "8 min read",
+    },
+    {
+      cat: "Pakistan Tax",
+      flag: "🇵🇰",
+      slug: "/blog/pseb-registration-benefits-tax-credit-it-export",
+      icon: Landmark,
+      bgGradient: "from-emerald-950 via-navy-900 to-navy-950",
+      title: "FBR IT Export Exemption: The Complete 2026 Guide",
+      excerpt: "Everything Pakistani freelancers and IT companies need to know about claiming 100% tax exemption under the new rules.",
+      date: "May 03, 2026",
+      read: "12 min read",
+    },
+    {
+      cat: "Legal",
+      flag: "⚖️",
+      slug: "/blog/software-development-agreement-checklist",
+      icon: ShieldCheck,
+      bgGradient: "from-amber-950 via-navy-900 to-navy-950",
+      title: "Why Every Freelancer Needs a Service Agreement (Not a Template)",
+      excerpt: "The five clauses that separate a real contract from a Google template — and what happens when you skip them.",
+      date: "Apr 21, 2026",
+      read: "6 min read",
+    },
   ];
+
   return (
     <section className="bg-navy-900 py-24 relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-30" />
@@ -636,43 +679,63 @@ function BlogTeaser() {
           <h2 className="font-serif text-4xl md:text-5xl text-white mt-5">
             Expert Guides for Pakistani Entrepreneurs
           </h2>
-          <p className="mt-5 text-navy-200 max-w-2xl mx-auto">
+          <div className="mt-4">
+            <span className="inline-flex items-center gap-2 bg-white/5 border border-gold-500/30 text-gold-400 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide">
+              <Scale size={14} className="text-gold-500" /> Written &amp; Reviewed by Muhammad Abdullah, Advocate
+            </span>
+          </div>
+          <p className="mt-4 text-navy-200 max-w-2xl mx-auto text-sm leading-relaxed">
             Practical articles on UK company formation, US LLC setup, Pakistan tax law, and
-            legal protection — written by a Punjab Bar Council licensed advocate.
+            legal protection — authored directly by a Punjab Bar Council licensed advocate.
           </p>
         </Reveal>
+
         <div className="mt-14 grid md:grid-cols-3 gap-6">
-          {posts.map((p, i) => (
-            <Reveal key={i} delay={i * 100}>
-              <article className="group h-full bg-navy-800 rounded-2xl overflow-hidden border border-white/8 hover:-translate-y-1 hover:border-gold-500/40 transition-all duration-300 flex flex-col">
-                <div className="aspect-[16/9] bg-navy-700 relative overflow-hidden">
-                  <div className="absolute inset-0 grid-pattern opacity-60" />
-                  <div className="absolute inset-0 gold-glow opacity-30" />
-                  <FileText size={40} className="text-gold-500/40 absolute inset-0 m-auto" />
-                </div>
-                <div className="p-6 flex-1 flex flex-col">
-                  <span className="inline-block self-start text-[11px] uppercase tracking-widest bg-gold-500 text-navy-900 px-3 py-1 rounded-full font-semibold">
-                    {p.cat}
-                  </span>
-                  <h3 className="font-serif text-lg text-white mt-4 group-hover:text-gold-500 transition-colors leading-snug">
-                    {p.title}
-                  </h3>
-                  <p className="text-navy-200 text-[13px] mt-2 leading-relaxed line-clamp-2 flex-1">
-                    {p.excerpt}
-                  </p>
-                  <div className="mt-5 flex items-center gap-4 text-navy-200 text-xs">
-                    <span className="inline-flex items-center gap-1.5"><Calendar size={12} /> {p.date}</span>
-                    <span className="inline-flex items-center gap-1.5"><Clock size={12} /> {p.read}</span>
+          {posts.map((p, i) => {
+            const Icon = p.icon;
+            return (
+              <Reveal key={i} delay={i * 100}>
+                <Link
+                  to={p.slug}
+                  className="group h-full bg-navy-800 rounded-2xl overflow-hidden border border-white/10 hover:-translate-y-1 hover:border-gold-500/50 transition-all duration-300 flex flex-col block"
+                >
+                  <div className={`aspect-[16/9] bg-gradient-to-br ${p.bgGradient} relative overflow-hidden border-b border-white/10 flex items-center justify-center`}>
+                    <div className="absolute inset-0 grid-pattern opacity-40" />
+                    <div className="absolute top-3 left-3 bg-navy-950/80 backdrop-blur-sm border border-gold-500/30 text-white text-xs px-2.5 py-1 rounded-full flex items-center gap-1.5 font-medium">
+                      <span>{p.flag}</span>
+                      <span>{p.cat}</span>
+                    </div>
+                    <Icon size={44} className="text-gold-500/70 group-hover:scale-110 group-hover:text-gold-400 transition-all duration-300" />
                   </div>
-                </div>
-              </article>
-            </Reveal>
-          ))}
+                  <div className="p-6 flex-1 flex flex-col">
+                    <h3 className="font-serif text-lg text-white group-hover:text-gold-500 transition-colors leading-snug">
+                      {p.title}
+                    </h3>
+                    <p className="text-navy-200 text-[13px] mt-2.5 leading-relaxed line-clamp-2 flex-1">
+                      {p.excerpt}
+                    </p>
+                    <div className="mt-5 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-navy-200">
+                      <span className="text-gold-400 font-medium inline-flex items-center gap-1.5">
+                        <Scale size={13} /> By Muhammad Abdullah, Advocate
+                      </span>
+                      <span className="inline-flex items-center gap-1 text-navy-300">
+                        <Clock size={12} /> {p.read}
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              </Reveal>
+            );
+          })}
         </div>
+
         <div className="mt-12 text-center">
-          <a href="#" className="inline-flex items-center gap-2 border border-gold-500 text-gold-500 px-8 py-4 text-sm font-semibold uppercase tracking-widest hover:bg-gold-500/10 transition-colors">
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-2 border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-navy-950 px-8 py-4 text-sm font-semibold uppercase tracking-widest rounded-lg transition-all"
+          >
             View All Articles <ArrowRight size={16} />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
@@ -680,32 +743,60 @@ function BlogTeaser() {
 }
 
 function HomeCTA() {
+  const trustChecks = [
+    "Free consultation",
+    "Punjab Bar Council Licensed",
+    "IRS PTIN Registered",
+    "Response within 4 hours",
+  ];
+
   return (
-    <section className="relative bg-navy-950 overflow-hidden">
-      <div className="absolute inset-0 diagonal-pattern" />
-      <div className="absolute inset-0 gold-glow opacity-40" />
-      <div className="relative max-w-4xl mx-auto px-6 py-24 text-center">
+    <section className="relative bg-navy-950 overflow-hidden py-24 border-t border-white/10">
+      <div className="absolute inset-0 diagonal-pattern opacity-60" />
+      <div className="absolute inset-0 gold-glow opacity-30" />
+      <div className="relative max-w-5xl mx-auto px-6 text-center">
         <Reveal>
-          <p className="label-eyebrow">Ready to start?</p>
-          <h2 className="font-serif text-4xl md:text-[52px] text-white mt-5 leading-[1.1]">
-            Launch Your Business Today.
+          <span className="inline-block text-xs uppercase tracking-widest font-semibold text-gold-500 bg-gold-500/10 px-4 py-1.5 rounded-full border border-gold-500/20 mb-4">
+            START YOUR JOURNEY
+          </span>
+          <h2 className="font-serif text-4xl md:text-[52px] text-white mt-2 leading-[1.15]">
+            Ready to Take Your Business Global?
           </h2>
-          <p className="mt-5 text-navy-200 text-lg max-w-2xl mx-auto leading-relaxed">
-            Whether you need a UK LTD, US LLC, Pakistan SECP registration, or a professionally
-            drafted legal contract — we handle everything. One firm. All jurisdictions.
+          <p className="mt-5 text-navy-200 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+            Whether you need a UK LTD, US LLC, UAE Freezone, Pakistan SECP registration, or a professionally drafted legal contract — ADVAQ handles everything.
           </p>
-          <div className="mt-9 flex flex-wrap justify-center gap-4">
-            <Link to="/contact" className="btn-gold">
-              Get Started Now <ArrowRight size={16} />
+          <p className="mt-4 text-gold-400 font-serif italic text-base font-medium">
+            One licensed advocate. Four jurisdictions. 100% remote. Free initial consultation.
+          </p>
+
+          <div className="mt-9 flex flex-wrap justify-center items-center gap-4">
+            <Link to="/contact" className="btn-gold py-4 px-8 text-sm uppercase tracking-wider font-bold shadow-lg">
+              GET STARTED NOW <ArrowRight size={18} />
             </Link>
-            <a href="https://wa.me/[number]" className="btn-outline-light">WhatsApp Us</a>
-            <Link to="/uk-services" className="inline-flex items-center justify-center gap-2 border border-gold-500 text-gold-500 px-8 py-4 text-sm font-semibold uppercase tracking-widest hover:bg-gold-500/10 transition-colors">
-              View All Services
+            <a
+              href="https://wa.me/923000925335"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm uppercase tracking-wider px-8 py-4 rounded-lg inline-flex items-center gap-2 transition-all shadow-md"
+            >
+              <MessageCircle size={18} /> WHATSAPP US
+            </a>
+            <Link
+              to="/uk-services"
+              className="border border-gold-500/80 text-gold-400 hover:bg-gold-500 hover:text-navy-950 px-8 py-4 text-sm font-semibold uppercase tracking-wider rounded-lg transition-all"
+            >
+              VIEW ALL SERVICES
             </Link>
           </div>
-          <p className="mt-6 text-navy-200 text-[13px]">
-            Free initial consultation · Punjab Bar Council Licensed Advocate · UK, US & Pakistan Services
-          </p>
+
+          <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-navy-200">
+            {trustChecks.map((check, idx) => (
+              <span key={idx} className="inline-flex items-center gap-2 text-white/90 font-medium">
+                <CheckCircle2 size={16} className="text-gold-500 shrink-0" />
+                {check}
+              </span>
+            ))}
+          </div>
         </Reveal>
       </div>
     </section>
