@@ -6,10 +6,10 @@ import {
   CheckCircle,
   ChevronDown,
   Shield,
-  BadgeAlert,
   Building,
   Lock,
   Globe,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -210,15 +210,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**No Partners Needed:** Retain 100% control of your business.</span>
+                    <span><strong className="font-semibold">No Partners Needed:</strong> Retain 100% control of your business.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Asset Shielding:** Your personal savings and property are protected from corporate lawsuits.</span>
+                    <span><strong className="font-semibold">Asset Shielding:</strong> Your personal savings and property are protected from corporate lawsuits.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Corporate Image:** Look established and trustworthy to international clients and B2B vendors.</span>
+                    <span><strong className="font-semibold">Corporate Image:</strong> Look established and trustworthy to international clients and B2B vendors.</span>
                   </li>
                 </ul>
               </div>
@@ -247,38 +247,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Unlimited Liability
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                As a sole proprietor, you and your business are one entity. If your business fails or faces a lawsuit from a client, you are personally responsible for the debts.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Unlimited Liability
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  As a sole proprietor, you and your business are one entity. If your business fails or faces a lawsuit from a client, you are personally responsible for the debts.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Lost Enterprise Clients
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Large corporations, government agencies, and international enterprises often require a registered corporate entity (SMC/Pvt Ltd) to sign vendor contracts.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Lost Enterprise Clients
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Large corporations, government agencies, and international enterprises often require a registered corporate entity (SMC/Pvt Ltd) to sign vendor contracts.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Payment Processing Issues
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Payment gateways like Stripe, PayPal (via proxies), or local banks scrutinize large transactions entering non-corporate accounts, frequently freezing funds.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Payment Processing Issues
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Payment gateways like Stripe, PayPal (via proxies), or local banks scrutinize large transactions entering non-corporate accounts, frequently freezing funds.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

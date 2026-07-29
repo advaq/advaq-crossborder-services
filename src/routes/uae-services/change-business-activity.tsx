@@ -6,7 +6,6 @@ import {
   CheckCircle,
   ChevronDown,
   Shield,
-  BadgeAlert,
   Clock,
   FileText,
   Briefcase,
@@ -14,6 +13,7 @@ import {
   Calendar,
   Wallet,
   Settings,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -208,15 +208,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Scaling Operations:** Launching new services not covered by your initial setup.</span>
+                    <span><strong className="font-semibold">Scaling Operations:</strong> Launching new services not covered by your initial setup.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Business Pivots:** Changing direction entirely (e.g., from marketing to real estate).</span>
+                    <span><strong className="font-semibold">Business Pivots:</strong> Changing direction entirely (e.g., from marketing to real estate).</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Removing Constraints:** Dropping unused activities to reduce renewal costs.</span>
+                    <span><strong className="font-semibold">Removing Constraints:</strong> Dropping unused activities to reduce renewal costs.</span>
                   </li>
                 </ul>
               </div>
@@ -245,38 +245,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Compliance Fines
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Government inspectors routinely audit corporate invoices. Billing for activities not explicitly stated on your license can trigger instant fines ranging from AED 5,000 to AED 50,000.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Compliance Fines
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Government inspectors routinely audit corporate invoices. Billing for activities not explicitly stated on your license can trigger instant fines ranging from AED 5,000 to AED 50,000.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Bank Account Freezes
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                When incoming funds do not match your approved business profile (e.g., a software company receiving payments for real estate brokering), banks flag the account for suspected money laundering and will freeze funds.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Bank Account Freezes
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  When incoming funds do not match your approved business profile (e.g., a software company receiving payments for real estate brokering), banks flag the account for suspected money laundering and will freeze funds.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Contract Invalidation
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If you enter into a contract to provide a service you are not licensed for, UAE courts may declare the contract null and void, leaving you with no legal recourse to collect payments.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Contract Invalidation
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If you enter into a contract to provide a service you are not licensed for, UAE courts may declare the contract null and void, leaving you with no legal recourse to collect payments.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

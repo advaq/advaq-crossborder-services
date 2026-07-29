@@ -6,12 +6,12 @@ import {
   CheckCircle,
   ChevronDown,
   Shield,
-  BadgeAlert,
   Building2,
   Globe,
   Landmark,
   FileCheck,
   XOctagon,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -205,15 +205,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Remote Opening:** No US travel or US visa required.</span>
+                    <span><strong className="font-semibold">Remote Opening:</strong> No US travel or US visa required.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Zero Fees:** No monthly minimums, maintenance fees, or overdraft charges.</span>
+                    <span><strong className="font-semibold">Zero Fees:</strong> No monthly minimums, maintenance fees, or overdraft charges.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**API & Cards:** Virtual/physical debit cards and powerful software integrations.</span>
+                    <span><strong className="font-semibold">API & Cards:</strong> Virtual/physical debit cards and powerful software integrations.</span>
                   </li>
                 </ul>
               </div>
@@ -242,38 +242,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Permanent Bans
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Mercury rarely accepts appeals. If you are rejected due to a poorly explained business model, your LLC and personal identity will be blacklisted from their platform indefinitely.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Permanent Bans
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Mercury rarely accepts appeals. If you are rejected due to a poorly explained business model, your LLC and personal identity will be blacklisted from their platform indefinitely.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <XOctagon className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Website Red Flags
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Applying with a template website, missing Terms & Conditions, placeholder text, or an unclear value proposition signals high risk and fraud to compliance officers.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Website Red Flags
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Applying with a template website, missing Terms & Conditions, placeholder text, or an unclear value proposition signals high risk and fraud to compliance officers.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <Shield className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Document Discrepancies
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If the address on your utility bill doesn't exactly match your passport or your application inputs, the automated KYC systems will auto-reject your file.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Document Discrepancies
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If the address on your utility bill doesn't exactly match your passport or your application inputs, the automated KYC systems will auto-reject your file.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

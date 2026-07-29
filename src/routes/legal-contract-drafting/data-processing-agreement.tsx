@@ -11,7 +11,6 @@ import {
   Clock,
   Briefcase,
   FileText,
-  BadgeAlert,
   Building2,
   Lock,
   Globe,
@@ -19,6 +18,7 @@ import {
   Percent,
   Coins,
   Scale,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -125,9 +125,9 @@ function ServiceOverview() {
                 <div className="absolute top-4 right-4 text-gold-500/20"><Shield size={80} /></div>
                 <h3 className="font-serif text-xl text-white mb-4">Key Protections</h3>
                 <ul className="space-y-4 text-sm text-navy-200">
-                  <li className="flex items-start gap-2.5"><CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" /><span>**Legal Compliance:** Meets GDPR Article 28 requirements.</span></li>
-                  <li className="flex items-start gap-2.5"><CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" /><span>**Liability Boundaries:** Limits liability for sub-processor failures.</span></li>
-                  <li className="flex items-start gap-2.5"><CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" /><span>**Enterprise Sales:** Essential for closing deals with B2B clients.</span></li>
+                  <li className="flex items-start gap-2.5"><CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" /><span><strong className="font-semibold">Legal Compliance:</strong> Meets GDPR Article 28 requirements.</span></li>
+                  <li className="flex items-start gap-2.5"><CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" /><span><strong className="font-semibold">Liability Boundaries:</strong> Limits liability for sub-processor failures.</span></li>
+                  <li className="flex items-start gap-2.5"><CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" /><span><strong className="font-semibold">Enterprise Sales:</strong> Essential for closing deals with B2B clients.</span></li>
                 </ul>
               </div>
             </Reveal>
@@ -149,24 +149,48 @@ function TheDanger() {
         </Reveal>
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">Blocked Sales Deals</h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">Enterprise and European clients will refuse to sign contracts with your business if you cannot provide a compliant DPA.</p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Blocked Sales Deals
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Enterprise and European clients will refuse to sign contracts with your business if you cannot provide a compliant DPA.
+                </p>
+              </div>
             </div>
           </Reveal>
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">Regulatory Fines</h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">Processing data without a DPA is a direct GDPR violation, subjecting you to significant administrative fines.</p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Regulatory Fines
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Processing data without a DPA is a direct GDPR violation, subjecting you to significant administrative fines.
+                </p>
+              </div>
             </div>
           </Reveal>
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">Uncapped Liability</h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">If a data breach occurs without a DPA defining liability, your business could be sued for the full extent of the damages.</p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Uncapped Liability
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If a data breach occurs without a DPA defining liability, your business could be sued for the full extent of the damages.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

@@ -203,15 +203,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Maintain Active Status:** Prevents your company from being marked as inactive or dormant.</span>
+                    <span><strong className="font-semibold">Maintain Active Status:</strong> Prevents your company from being marked as inactive or dormant.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Uninterrupted Banking:** Banks regularly check SECP status; inactive status can freeze your accounts.</span>
+                    <span><strong className="font-semibold">Uninterrupted Banking:</strong> Banks regularly check SECP status; inactive status can freeze your accounts.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Avoid Heavy Penalties:** SECP imposes strict daily fines for late submissions of statutory forms.</span>
+                    <span><strong className="font-semibold">Avoid Heavy Penalties:</strong> SECP imposes strict daily fines for late submissions of statutory forms.</span>
                   </li>
                 </ul>
               </div>
@@ -240,38 +240,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Mounting Financial Penalties
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                The SECP system automatically generates late fees that compound over time. What would normally cost a small filing fee can escalate into tens of thousands of rupees in penalties.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Mounting Financial Penalties
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  The SECP system automatically generates late fees that compound over time. What would normally cost a small filing fee can escalate into tens of thousands of rupees in penalties.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <AlertTriangle className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Show-Cause Notices
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Continuous default will trigger legal show-cause notices directed to the directors. You will be required to explain the non-compliance to an SECP registrar, consuming valuable time.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Show-Cause Notices
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Continuous default will trigger legal show-cause notices directed to the directors. You will be required to explain the non-compliance to an SECP registrar, consuming valuable time.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <Shield className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Company Strike-Off
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                In severe cases of prolonged non-compliance, SECP has the authority to strike your company off the register, dissolving your corporate entity and exposing directors to liability.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Company Strike-Off
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  In severe cases of prolonged non-compliance, SECP has the authority to strike your company off the register, dissolving your corporate entity and exposing directors to liability.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

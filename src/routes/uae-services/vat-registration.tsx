@@ -6,11 +6,11 @@ import {
   CheckCircle,
   ChevronDown,
   Shield,
-  BadgeAlert,
   Building2,
   FileText,
   Calculator,
-  Percent
+  Percent,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -202,15 +202,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Mandatory:** When taxable supplies exceed AED 375,000 in 12 months.</span>
+                    <span><strong className="font-semibold">Mandatory:</strong> When taxable supplies exceed AED 375,000 in 12 months.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Voluntary:** When taxable supplies/expenses exceed AED 187,500.</span>
+                    <span><strong className="font-semibold">Voluntary:</strong> When taxable supplies/expenses exceed AED 187,500.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Exemption:** If your supplies are entirely zero-rated, you may apply for an exemption from VAT registration.</span>
+                    <span><strong className="font-semibold">Exemption:</strong> If your supplies are entirely zero-rated, you may apply for an exemption from VAT registration.</span>
                   </li>
                 </ul>
               </div>
@@ -239,38 +239,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                AED 10,000 Late Fine
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If you cross the AED 375,000 threshold and fail to submit your VAT registration application within the designated 20-30 day window, you face an immediate AED 10,000 penalty.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  AED 10,000 Late Fine
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If you cross the AED 375,000 threshold and fail to submit your VAT registration application within the designated 20-30 day window, you face an immediate AED 10,000 penalty.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Inability to Recover Tax
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Without a TRN, you cannot legally issue Tax Invoices, nor can you reclaim the VAT you pay on your own business expenses (Input Tax), eating into your profit margins.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Inability to Recover Tax
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Without a TRN, you cannot legally issue Tax Invoices, nor can you reclaim the VAT you pay on your own business expenses (Input Tax), eating into your profit margins.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Reputational Damage
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Large B2B clients in the UAE will often refuse to do business with suppliers who cannot provide a valid TRN and official Tax Invoices.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Reputational Damage
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Large B2B clients in the UAE will often refuse to do business with suppliers who cannot provide a valid TRN and official Tax Invoices.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

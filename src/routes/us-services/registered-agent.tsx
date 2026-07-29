@@ -7,10 +7,10 @@ import {
   ChevronDown,
   Shield,
   FileText,
-  BadgeAlert,
   MapPin,
   Mail,
   Building2,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -204,15 +204,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Legal Mail Receipt:** Accepting Service of Process during business hours.</span>
+                    <span><strong className="font-semibold">Legal Mail Receipt:</strong> Accepting Service of Process during business hours.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**State Compliance:** Forwarding annual report reminders and tax notices.</span>
+                    <span><strong className="font-semibold">State Compliance:</strong> Forwarding annual report reminders and tax notices.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Privacy Shield:** Using our address on public records instead of yours.</span>
+                    <span><strong className="font-semibold">Privacy Shield:</strong> Using our address on public records instead of yours.</span>
                   </li>
                 </ul>
               </div>
@@ -241,38 +241,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Administrative Dissolution
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If the state cannot reach your business due to an invalid Registered Agent, they will revoke your company's good standing and dissolve the entity, erasing your liability protection.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Administrative Dissolution
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If the state cannot reach your business due to an invalid Registered Agent, they will revoke your company's good standing and dissolve the entity, erasing your liability protection.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Default Judgments
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If your business is sued and there is no agent to receive the summons, you may lose the case by default without even knowing you were being sued.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Default Judgments
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If your business is sued and there is no agent to receive the summons, you may lose the case by default without even knowing you were being sued.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Loss of Privacy
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Attempting to use your own personal or virtual address as your Registered Agent address makes it permanent public record, exposing you to junk mail and direct legal service.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Loss of Privacy
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Attempting to use your own personal or virtual address as your Registered Agent address makes it permanent public record, exposing you to junk mail and direct legal service.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

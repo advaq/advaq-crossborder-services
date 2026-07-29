@@ -8,10 +8,10 @@ import {
   Shield,
   Briefcase,
   FileText,
-  BadgeAlert,
   Scale,
   Clock,
   PenTool,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -209,15 +209,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Enforce Payments:** Built-in late fee clauses and payment schedules.</span>
+                    <span><strong className="font-semibold">Enforce Payments:</strong> Built-in late fee clauses and payment schedules.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Kill Scope Creep:** Strict definitions of project scope and revision rounds.</span>
+                    <span><strong className="font-semibold">Kill Scope Creep:</strong> Strict definitions of project scope and revision rounds.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Professionalism:** Present yourself as a serious business, not a hobbyist.</span>
+                    <span><strong className="font-semibold">Professionalism:</strong> Present yourself as a serious business, not a hobbyist.</span>
                   </li>
                 </ul>
               </div>
@@ -246,38 +246,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Endless Scope Creep
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Without a contract defining the exact deliverables and revision limits, clients will continuously ask for "just one more change" for free, destroying your hourly rate.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Endless Scope Creep
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Without a contract defining the exact deliverables and revision limits, clients will continuously ask for "just one more change" for free, destroying your hourly rate.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Unpaid Invoices
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If a client decides to ghost you or withhold payment after you've delivered the work, you have no legal basis or leverage to demand the funds or take them to arbitration.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Unpaid Invoices
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If a client decides to ghost you or withhold payment after you've delivered the work, you have no legal basis or leverage to demand the funds or take them to arbitration.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                IP Theft & Liability
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Without a clause stating that IP transfers only upon payment, a client can steal your work and use it without paying. Furthermore, you remain liable for damages if things break.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  IP Theft & Liability
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Without a clause stating that IP transfers only upon payment, a client can steal your work and use it without paying. Furthermore, you remain liable for damages if things break.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

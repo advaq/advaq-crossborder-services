@@ -6,13 +6,13 @@ import {
   CheckCircle,
   ChevronDown,
   Shield,
-  BadgeAlert,
   Users,
   Handshake,
   FileText,
   Scale,
   Briefcase,
-  FileSignature
+  FileSignature,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -209,15 +209,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Bank Accounts:** Banks legally require a notarized deed to open a firm account.</span>
+                    <span><strong className="font-semibold">Bank Accounts:</strong> Banks legally require a notarized deed to open a firm account.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Dispute Prevention:** Clearly defines what happens if a partner dies, quits, or underperforms.</span>
+                    <span><strong className="font-semibold">Dispute Prevention:</strong> Clearly defines what happens if a partner dies, quits, or underperforms.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Legal Standing:** Protects your invested capital in a court of law if a partner commits fraud.</span>
+                    <span><strong className="font-semibold">Legal Standing:</strong> Protects your invested capital in a court of law if a partner commits fraud.</span>
                   </li>
                 </ul>
               </div>
@@ -246,38 +246,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Profit & Salary Conflicts
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Without a written deed, the law assumes all partners share profits equally, even if one partner invested 90% of the money and the other only invested 10%. 
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Profit & Salary Conflicts
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Without a written deed, the law assumes all partners share profits equally, even if one partner invested 90% of the money and the other only invested 10%.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                The "Exit" Deadlock
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If a partner wants to leave or sell their share, and there is no exit clause, they can legally force the entire business to liquidate and shut down just to extract their capital.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  The "Exit" Deadlock
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If a partner wants to leave or sell their share, and there is no exit clause, they can legally force the entire business to liquidate and shut down just to extract their capital.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Unlimited Liability Trap
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                In a partnership, you are personally liable for the debts created by your partner. If they take an unauthorized loan in the firm's name, your personal assets can be seized to pay it.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Unlimited Liability Trap
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  In a partnership, you are personally liable for the debts created by your partner. If they take an unauthorized loan in the firm's name, your personal assets can be seized to pay it.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

@@ -11,7 +11,6 @@ import {
   Clock,
   Briefcase,
   FileText,
-  BadgeAlert,
   Building2,
   Lock,
   Globe,
@@ -20,6 +19,7 @@ import {
   Coins,
   Scale,
   Handshake,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -199,7 +199,7 @@ function ServiceOverview() {
                 What is a Mutual NDA?
               </h2>
               <p className="mt-6 text-gray-700 text-[16px] leading-[1.8]">
-                A **Mutual Non-Disclosure Agreement (MNDA)** is a legal contract designed for situations where two parties will be sharing confidential information with each other. It ensures that both sides are legally bound to protect the other's proprietary data.
+                A <strong className="font-semibold">Mutual Non-Disclosure Agreement (MNDA)</strong> is a legal contract designed for situations where two parties will be sharing confidential information with each other. It ensures that both sides are legally bound to protect the other's proprietary data.
               </p>
               <p className="mt-4 text-gray-700 text-[16px] leading-[1.8]">
                 This is the standard agreement used before entering into joint ventures, co-development projects, or deep strategic partnerships. It ensures a level playing field, giving both entities the confidence to discuss sensitive financials, algorithms, and business plans openly.
@@ -216,15 +216,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Joint Ventures:** Evaluating a merger or cooperative business venture.</span>
+                    <span><strong className="font-semibold">Joint Ventures:</strong> Evaluating a merger or cooperative business venture.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Investor Pitches:** Sharing detailed IP and financials with potential investors.</span>
+                    <span><strong className="font-semibold">Investor Pitches:</strong> Sharing detailed IP and financials with potential investors.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Tech Collaborations:** Two companies integrating their proprietary software systems.</span>
+                    <span><strong className="font-semibold">Tech Collaborations:</strong> Two companies integrating their proprietary software systems.</span>
                   </li>
                 </ul>
               </div>
@@ -253,38 +253,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Idea Appropriation
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                The other party could take your shared concepts, strategies, or workflows and implement them independently if the deal collapses.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Idea Appropriation
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  The other party could take your shared concepts, strategies, or workflows and implement them independently if the deal collapses.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Unfair Legal Imbalance
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Signing their one-way NDA while you also disclose information leaves you legally bound while they are completely free to exploit your data.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Unfair Legal Imbalance
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Signing their one-way NDA while you also disclose information leaves you legally bound while they are completely free to exploit your data.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Loss of Trade Secrets
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Without a documented confidentiality timeline, proprietary formulas or algorithms can lose their legal status as protected trade secrets.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Loss of Trade Secrets
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Without a documented confidentiality timeline, proprietary formulas or algorithms can lose their legal status as protected trade secrets.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

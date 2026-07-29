@@ -9,12 +9,12 @@ import {
   Shield,
   Clock,
   FileText,
-  BadgeAlert,
   Building2,
   Lock,
   Globe,
   CreditCard,
   Coins,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -213,15 +213,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**0% Personal Tax:** Pay zero tax on dividends, salaries, or capital gains.</span>
+                    <span><strong className="font-semibold">0% Personal Tax:</strong> Pay zero tax on dividends, salaries, or capital gains.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Qualifying Zone Exemptions:** Qualify for 0% corporate tax under Small Business Relief schemes.</span>
+                    <span><strong className="font-semibold">Qualifying Zone Exemptions:</strong> Qualify for 0% corporate tax under Small Business Relief schemes.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Premium Bank Accounts:** Open corporate bank accounts remotely with Wio Business.</span>
+                    <span><strong className="font-semibold">Premium Bank Accounts:</strong> Open corporate bank accounts remotely with Wio Business.</span>
                   </li>
                 </ul>
               </div>
@@ -250,38 +250,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Heavy Regulatory Fines
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Conducting business in the UAE without a license, or operating outside your licensed business activities, can trigger fines starting from AED 10,000 to AED 50,000 from local authorities.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Heavy Regulatory Fines
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Conducting business in the UAE without a license, or operating outside your licensed business activities, can trigger fines starting from AED 10,000 to AED 50,000 from local authorities.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Corporate Tax Penalties
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                All companies operating in the UAE must register for Corporate Tax. Missing the registration deadline results in an automatic penalty of AED 10,000 from the Federal Tax Authority.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Corporate Tax Penalties
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  All companies operating in the UAE must register for Corporate Tax. Missing the registration deadline results in an automatic penalty of AED 10,000 from the Federal Tax Authority.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Corporate Banking Blocks
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                UAE banks maintain strict compliance frameworks under central bank rules. Running business operations using personal bank accounts leads to instant account closures and asset freezes.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Corporate Banking Blocks
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  UAE banks maintain strict compliance frameworks under central bank rules. Running business operations using personal bank accounts leads to instant account closures and asset freezes.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

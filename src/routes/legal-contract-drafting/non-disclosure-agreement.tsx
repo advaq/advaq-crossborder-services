@@ -11,7 +11,6 @@ import {
   Clock,
   Briefcase,
   FileText,
-  BadgeAlert,
   Building2,
   Lock,
   Globe,
@@ -19,6 +18,7 @@ import {
   Percent,
   Coins,
   Scale,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -198,7 +198,7 @@ function ServiceOverview() {
                 What is a One-Way NDA?
               </h2>
               <p className="mt-6 text-gray-700 text-[16px] leading-[1.8]">
-                A **One-Way Non-Disclosure Agreement (NDA)** is a foundational legal contract used when only one party is disclosing confidential information to another. It ensures that the receiving party is legally bound to keep the information secret and not use it for unauthorized purposes.
+                A <strong className="font-semibold">One-Way Non-Disclosure Agreement (NDA)</strong> is a foundational legal contract used when only one party is disclosing confidential information to another. It ensures that the receiving party is legally bound to keep the information secret and not use it for unauthorized purposes.
               </p>
               <p className="mt-4 text-gray-700 text-[16px] leading-[1.8]">
                 For software houses, digital agencies, and startups in Pakistan, an NDA is crucial when hiring contractors, remote developers, or sharing access to client databases and proprietary source code. It establishes legal boundaries and deters intellectual property theft.
@@ -215,15 +215,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Protect Client Data:** Ensure freelancers don't steal your clients or expose their data.</span>
+                    <span><strong className="font-semibold">Protect Client Data:</strong> Ensure freelancers don't steal your clients or expose their data.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Safeguard Source Code:** Prevent remote developers from copying your proprietary software.</span>
+                    <span><strong className="font-semibold">Safeguard Source Code:</strong> Prevent remote developers from copying your proprietary software.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Deterrent Effect:** A formal legal document strongly discourages unethical behavior.</span>
+                    <span><strong className="font-semibold">Deterrent Effect:</strong> A formal legal document strongly discourages unethical behavior.</span>
                   </li>
                 </ul>
               </div>
@@ -252,38 +252,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Client Poaching
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Without a non-solicitation and non-disclosure clause, freelancers can directly contact your clients and offer services at a lower rate, bypassing your agency entirely.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Client Poaching
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Without a non-solicitation and non-disclosure clause, freelancers can directly contact your clients and offer services at a lower rate, bypassing your agency entirely.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Code & IP Theft
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Developers may reuse the proprietary algorithms, designs, or source code they built for you on other competing projects if not legally restricted.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Code & IP Theft
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Developers may reuse the proprietary algorithms, designs, or source code they built for you on other competing projects if not legally restricted.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                No Legal Recourse
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If someone leaks your business strategies or financial data, you have no solid foundation to sue for damages without a signed confidentiality agreement.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  No Legal Recourse
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If someone leaks your business strategies or financial data, you have no solid foundation to sue for damages without a signed confidentiality agreement.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

@@ -6,11 +6,11 @@ import {
   CheckCircle,
   ChevronDown,
   Shield,
-  BadgeAlert,
   Building2,
   Globe,
   Briefcase,
-  FileText
+  FileText,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -205,15 +205,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Direct Local Market Access:** Sell B2B and B2C directly in the UAE.</span>
+                    <span><strong className="font-semibold">Direct Local Market Access:</strong> Sell B2B and B2C directly in the UAE.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Government Contracts:** High trust level to bid for state and federal tenders.</span>
+                    <span><strong className="font-semibold">Government Contracts:</strong> High trust level to bid for state and federal tenders.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Tier-1 Banking:** Easier approval for facilities and loans from local banks.</span>
+                    <span><strong className="font-semibold">Tier-1 Banking:</strong> Easier approval for facilities and loans from local banks.</span>
                   </li>
                 </ul>
               </div>
@@ -242,38 +242,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Freezone Trade Violations
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Trading physical goods directly into the local UAE market with a Freezone license is illegal. Doing so can result in hefty fines, goods confiscation, and license revocation.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Freezone Trade Violations
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Trading physical goods directly into the local UAE market with a Freezone license is illegal. Doing so can result in hefty fines, goods confiscation, and license revocation.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Missed Tenders
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Government and large corporate entities generally mandate vendors to hold a DET Mainland license. You miss out on the most lucrative contracts without it.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Missed Tenders
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Government and large corporate entities generally mandate vendors to hold a DET Mainland license. You miss out on the most lucrative contracts without it.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Visa Limitations
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Freezone setups cap the number of visas you can issue based on predefined packages. A Mainland setup allows unlimited visas depending on your physical office size.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Visa Limitations
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Freezone setups cap the number of visas you can issue based on predefined packages. A Mainland setup allows unlimited visas depending on your physical office size.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

@@ -208,15 +208,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-red-500 mt-0.5 shrink-0" />
-                    <span>**Section 114 / 116:** Notice to file missing income tax returns and wealth statements.</span>
+                    <span><strong className="font-semibold">Section 114 / 116:</strong> Notice to file missing income tax returns and wealth statements.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-red-500 mt-0.5 shrink-0" />
-                    <span>**Section 176:** Notice demanding specific information, bank records, or evidence of transactions.</span>
+                    <span><strong className="font-semibold">Section 176:</strong> Notice demanding specific information, bank records, or evidence of transactions.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-red-500 mt-0.5 shrink-0" />
-                    <span>**Section 122:** Notice of amendment of assessment (audit findings and additional tax demands).</span>
+                    <span><strong className="font-semibold">Section 122:</strong> Notice of amendment of assessment (audit findings and additional tax demands).</span>
                   </li>
                 </ul>
               </div>
@@ -245,38 +245,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Bank Account Attachment
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                FBR has the statutory power to instruct your bank to freeze your accounts and directly withdraw funds to satisfy ex-parte tax demands.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Bank Account Attachment
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  FBR has the statutory power to instruct your bank to freeze your accounts and directly withdraw funds to satisfy ex-parte tax demands.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Heavy Default Penalties
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Non-compliance with a notice invites additional penalties under Section 182, which compound rapidly for every day the default continues.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Heavy Default Penalties
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Non-compliance with a notice invites additional penalties under Section 182, which compound rapidly for every day the default continues.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Prosecution & Arrest
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                In cases of severe deliberate concealment or persistent non-compliance, FBR can initiate criminal prosecution and issue arrest warrants for directors or individuals.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Prosecution & Arrest
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  In cases of severe deliberate concealment or persistent non-compliance, FBR can initiate criminal prosecution and issue arrest warrants for directors or individuals.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

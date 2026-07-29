@@ -11,7 +11,6 @@ import {
   Clock,
   Briefcase,
   FileText,
-  BadgeAlert,
   Building2,
   Lock,
   Globe,
@@ -19,6 +18,7 @@ import {
   Percent,
   Coins,
   Scale,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -142,9 +142,9 @@ function ServiceOverview() {
                 <div className="absolute top-4 right-4 text-gold-500/20"><Shield size={80} /></div>
                 <h3 className="font-serif text-xl text-white mb-4">Key Protections</h3>
                 <ul className="space-y-4 text-sm text-navy-200">
-                  <li className="flex items-start gap-2.5"><CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" /><span>**IP Ownership:** Automatic transfer of copyrights and project assets.</span></li>
-                  <li className="flex items-start gap-2.5"><CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" /><span>**Liability Control:** Caps and limits on potential business damages.</span></li>
-                  <li className="flex items-start gap-2.5"><CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" /><span>**Clear Status:** Establishes independent status avoiding employment disputes.</span></li>
+                  <li className="flex items-start gap-2.5"><CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" /><span><strong className="font-semibold">IP Ownership:</strong> Automatic transfer of copyrights and project assets.</span></li>
+                  <li className="flex items-start gap-2.5"><CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" /><span><strong className="font-semibold">Liability Control:</strong> Caps and limits on potential business damages.</span></li>
+                  <li className="flex items-start gap-2.5"><CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" /><span><strong className="font-semibold">Clear Status:</strong> Establishes independent status avoiding employment disputes.</span></li>
                 </ul>
               </div>
             </Reveal>
@@ -166,24 +166,48 @@ function TheDanger() {
         </Reveal>
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">Loss of Intellectual Property</h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">Without an explicit IP assignment clause, freelancers may retain the copyright to the code, designs, or content they create for you.</p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Loss of Intellectual Property
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Without an explicit IP assignment clause, freelancers may retain the copyright to the code, designs, or content they create for you.
+                </p>
+              </div>
             </div>
           </Reveal>
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">Scope Creep & Disputes</h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">Ambiguous deliverables often lead to prolonged arguments over revisions, payments, and unmet expectations.</p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Scope Creep & Disputes
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Ambiguous deliverables often lead to prolonged arguments over revisions, payments, and unmet expectations.
+                </p>
+              </div>
             </div>
           </Reveal>
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">Misclassification Claims</h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">Tax authorities may classify your contractors as employees, leading to massive fines and back-taxes for benefits and payroll.</p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Misclassification Claims
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Tax authorities may classify your contractors as employees, leading to massive fines and back-taxes for benefits and payroll.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

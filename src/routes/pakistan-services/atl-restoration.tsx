@@ -203,15 +203,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Lower Bank Taxes:** Avoid exorbitant withholding taxes on cash withdrawals and banking transactions.</span>
+                    <span><strong className="font-semibold">Lower Bank Taxes:</strong> Avoid exorbitant withholding taxes on cash withdrawals and banking transactions.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Cheaper Property Transfers:** Pay exactly half the withholding tax compared to non-filers when buying or selling property.</span>
+                    <span><strong className="font-semibold">Cheaper Property Transfers:</strong> Pay exactly half the withholding tax compared to non-filers when buying or selling property.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Vehicle Registration:** Benefit from significantly lower taxes on new car registrations and transfers.</span>
+                    <span><strong className="font-semibold">Vehicle Registration:</strong> Benefit from significantly lower taxes on new car registrations and transfers.</span>
                   </li>
                 </ul>
               </div>
@@ -240,38 +240,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <ShieldAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                100% Tax Surcharge
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Non-ATL persons face a 100% increase in withholding taxes under the Tenth Schedule of the Income Tax Ordinance. You pay double the tax on dividends, profits, and commercial transactions.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  100% Tax Surcharge
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Non-ATL persons face a 100% increase in withholding taxes under the Tenth Schedule of the Income Tax Ordinance. You pay double the tax on dividends, profits, and commercial transactions.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <AlertTriangle className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Real Estate Penalties
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Purchasing or transferring property as an inactive taxpayer triggers massive advance tax rates, which can amount to millions of rupees on high-value properties.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Real Estate Penalties
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Purchasing or transferring property as an inactive taxpayer triggers massive advance tax rates, which can amount to millions of rupees on high-value properties.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <Activity className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Corporate Rejection
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Corporate clients and government tenders outright reject vendors who are not on the Active Taxpayer List, costing you major business opportunities.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Corporate Rejection
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Corporate clients and government tenders outright reject vendors who are not on the Active Taxpayer List, costing you major business opportunities.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

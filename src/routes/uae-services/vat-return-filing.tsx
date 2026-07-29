@@ -6,11 +6,11 @@ import {
   CheckCircle,
   ChevronDown,
   Shield,
-  BadgeAlert,
   FileText,
   Calculator,
   Receipt,
   Clock,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -199,15 +199,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Penalty Prevention:** Never miss a deadline or incur a late filing fee.</span>
+                    <span><strong className="font-semibold">Penalty Prevention:</strong> Never miss a deadline or incur a late filing fee.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Technical Accuracy:** Correct application of complex tax rules (e.g. reverse charge).</span>
+                    <span><strong className="font-semibold">Technical Accuracy:</strong> Correct application of complex tax rules (e.g. reverse charge).</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Audit Readiness:** Professionally maintained tax records and working papers.</span>
+                    <span><strong className="font-semibold">Audit Readiness:</strong> Professionally maintained tax records and working papers.</span>
                   </li>
                 </ul>
               </div>
@@ -235,38 +235,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Late Filing Penalties
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Missing the filing deadline results in an immediate AED 1,000 fine for the first offense, escalating to AED 2,000 for repeated failures within 24 months.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Late Filing Penalties
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Missing the filing deadline results in an immediate AED 1,000 fine for the first offense, escalating to AED 2,000 for repeated failures within 24 months.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Data Error Fines
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Submitting an incorrect tax return triggers penalties based on the unpaid tax amount, plus fixed fines for submitting a Voluntary Disclosure later.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Data Error Fines
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Submitting an incorrect tax return triggers penalties based on the unpaid tax amount, plus fixed fines for submitting a Voluntary Disclosure later.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Late Payment Fees
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Failing to pay the exact tax due on time incurs a 2% penalty immediately, followed by a 4% penalty after one month, and a daily 1% penalty thereafter.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Late Payment Fees
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Failing to pay the exact tax due on time incurs a 2% penalty immediately, followed by a 4% penalty after one month, and a daily 1% penalty thereafter.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

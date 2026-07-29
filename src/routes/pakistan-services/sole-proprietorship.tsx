@@ -6,11 +6,11 @@ import {
   CheckCircle,
   ChevronDown,
   Shield,
-  BadgeAlert,
   User,
   Briefcase,
   FileText,
   Building,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -211,15 +211,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Low Cost:** Minimal registration fees compared to SECP incorporation.</span>
+                    <span><strong className="font-semibold">Low Cost:</strong> Minimal registration fees compared to SECP incorporation.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Less Compliance:** Simpler tax filing and no SECP annual returns.</span>
+                    <span><strong className="font-semibold">Less Compliance:</strong> Simpler tax filing and no SECP annual returns.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Full Control:** You make all decisions and keep 100% of the profits.</span>
+                    <span><strong className="font-semibold">Full Control:</strong> You make all decisions and keep 100% of the profits.</span>
                   </li>
                 </ul>
               </div>
@@ -248,38 +248,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                No Corporate Identity
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Clients may hesitate to issue large payments to personal bank accounts. Without a business name, you appear less professional and lack commercial credibility.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  No Corporate Identity
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Clients may hesitate to issue large payments to personal bank accounts. Without a business name, you appear less professional and lack commercial credibility.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Bank Account Limitations
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Banks will not allow you to open an account in a business name without an FBR NTN certificate showing that business name. Personal accounts have transaction limits.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Bank Account Limitations
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Banks will not allow you to open an account in a business name without an FBR NTN certificate showing that business name. Personal accounts have transaction limits.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Higher Withholding Taxes
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Unregistered businesses are classified as "non-filers", facing up to 100% higher withholding taxes on banking transactions, property, and vehicle purchases.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Higher Withholding Taxes
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Unregistered businesses are classified as "non-filers", facing up to 100% higher withholding taxes on banking transactions, property, and vehicle purchases.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

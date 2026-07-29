@@ -7,10 +7,10 @@ import {
   ChevronDown,
   Shield,
   FileText,
-  BadgeAlert,
   Landmark,
   CreditCard,
   BookOpen,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -200,15 +200,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Tax Treaties:** Claiming 0% withholding on royalties (Amazon/Upwork).</span>
+                    <span><strong className="font-semibold">Tax Treaties:</strong> Claiming 0% withholding on royalties (Amazon/Upwork).</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Personal Banking:** Opening personal accounts or building US credit.</span>
+                    <span><strong className="font-semibold">Personal Banking:</strong> Opening personal accounts or building US credit.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Tax Filing:** Filing Form 1040-NR to report US-sourced income.</span>
+                    <span><strong className="font-semibold">Tax Filing:</strong> Filing Form 1040-NR to report US-sourced income.</span>
                   </li>
                 </ul>
               </div>
@@ -237,38 +237,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Mailing Your Passport
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If you apply directly, the IRS legally requires you to mail your original, physical passport to Texas. It will be held for months, and occasionally, passports are lost in the mail.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Mailing Your Passport
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If you apply directly, the IRS legally requires you to mail your original, physical passport to Texas. It will be held for months, and occasionally, passports are lost in the mail.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                High Rejection Rates
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Form W-7 requires you to cite specific exceptions, tax treaty articles, and attach supporting documentation. A single checked box error leads to an automatic 10-week rejection.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  High Rejection Rates
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Form W-7 requires you to cite specific exceptions, tax treaty articles, and attach supporting documentation. A single checked box error leads to an automatic 10-week rejection.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                30% Withholding Loss
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Without an ITIN, US platforms like Amazon will automatically withhold 30% of your earnings for taxes. Getting an ITIN is the only way to claim treaty benefits to reduce this to 0%.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  30% Withholding Loss
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Without an ITIN, US platforms like Amazon will automatically withhold 30% of your earnings for taxes. Getting an ITIN is the only way to claim treaty benefits to reduce this to 0%.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

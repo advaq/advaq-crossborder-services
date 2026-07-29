@@ -196,7 +196,7 @@ function ServiceOverview() {
                 By UK law, every limited company must have a Registered Office Address located within the United Kingdom. This is the official destination for all statutory communications from government bodies like Companies House and HMRC.
               </p>
               <p className="mt-4 text-gray-700 text-[16px] leading-[1.8]">
-                Crucially, this address is placed on the **public record**, meaning anyone can look it up. Using our premium London address not only fulfills your legal obligation but also provides a professional corporate image for your business while keeping your residential details completely private.
+                Crucially, this address is placed on the <strong className="font-semibold">public record</strong>, meaning anyone can look it up. Using our premium London address not only fulfills your legal obligation but also provides a professional corporate image for your business while keeping your residential details completely private.
               </p>
             </Reveal>
           </div>

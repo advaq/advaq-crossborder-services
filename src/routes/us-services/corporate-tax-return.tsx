@@ -205,15 +205,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Entity Level Tax:** The corporation itself owes tax on net profits.</span>
+                    <span><strong className="font-semibold">Entity Level Tax:</strong> The corporation itself owes tax on net profits.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Foreign Ownership:** 25%+ foreign-owned C-Corps MUST attach Form 5472.</span>
+                    <span><strong className="font-semibold">Foreign Ownership:</strong> 25%+ foreign-owned C-Corps MUST attach Form 5472.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Deadline:** April 15th (for standard calendar year entities).</span>
+                    <span><strong className="font-semibold">Deadline:</strong> April 15th (for standard calendar year entities).</span>
                   </li>
                 </ul>
               </div>
@@ -242,38 +242,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Late Filing Penalties
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Failing to file Form 1120 triggers a penalty of 5% of the unpaid tax for each month the return is late, up to 25%. Minimum penalties apply even if no tax is owed if filed 60+ days late.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Late Filing Penalties
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Failing to file Form 1120 triggers a penalty of 5% of the unpaid tax for each month the return is late, up to 25%. Minimum penalties apply even if no tax is owed if filed 60+ days late.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <AlertTriangle className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Form 5472 Violations
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If your C-Corp has foreign ownership and you fail to accurately report related-party transactions, the IRS imposes an immediate, non-negotiable $25,000 penalty per violation.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Form 5472 Violations
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If your C-Corp has foreign ownership and you fail to accurately report related-party transactions, the IRS imposes an immediate, non-negotiable $25,000 penalty per violation.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <Briefcase className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Underpayment Interest
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Corporations must pay estimated taxes. Improper tax calculations or failure to submit quarterly payments results in severe underpayment penalties and compounding interest.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Underpayment Interest
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Corporations must pay estimated taxes. Improper tax calculations or failure to submit quarterly payments results in severe underpayment penalties and compounding interest.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

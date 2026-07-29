@@ -204,15 +204,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Early Deadline:** Due March 15th (not April 15th) to give partners time for personal filing.</span>
+                    <span><strong className="font-semibold">Early Deadline:</strong> Due March 15th (not April 15th) to give partners time for personal filing.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Partner Equity:** Tracks partner capital contributions and withdrawals.</span>
+                    <span><strong className="font-semibold">Partner Equity:</strong> Tracks partner capital contributions and withdrawals.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Foreign Withholding:** May require Forms 8804/8805 if foreign partners have US income.</span>
+                    <span><strong className="font-semibold">Foreign Withholding:</strong> May require Forms 8804/8805 if foreign partners have US income.</span>
                   </li>
                 </ul>
               </div>
@@ -241,38 +241,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Per-Partner Late Fees
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                The late filing penalty is $235 per month (for up to 12 months) MULTIPLIED by the number of partners. A 4-partner LLC late by 3 months faces a $2,820 fine.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Per-Partner Late Fees
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  The late filing penalty is $235 per month (for up to 12 months) MULTIPLIED by the number of partners. A 4-partner LLC late by 3 months faces a $2,820 fine.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <AlertTriangle className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                K-1 Delivery Failure
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Failing to provide partners with their Schedule K-1s on time incurs an additional penalty of $310 per partner. Accuracy is just as legally binding.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  K-1 Delivery Failure
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Failing to provide partners with their Schedule K-1s on time incurs an additional penalty of $310 per partner. Accuracy is just as legally binding.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <Briefcase className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Improper Allocations
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Allocating profits incorrectly that do not match the Operating Agreement can trigger IRS audits and internal legal disputes among business partners.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Improper Allocations
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Allocating profits incorrectly that do not match the Operating Agreement can trigger IRS audits and internal legal disputes among business partners.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

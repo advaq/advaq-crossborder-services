@@ -210,15 +210,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Zero Revenue Rule:** Even LLCs with no activity MUST file.</span>
+                    <span><strong className="font-semibold">Zero Revenue Rule:</strong> Even LLCs with no activity MUST file.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Strict Deadlines:** Returns are due by April 15th every year.</span>
+                    <span><strong className="font-semibold">Strict Deadlines:</strong> Returns are due by April 15th every year.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**No Online E-File:** Must be specially prepared and faxed/mailed to the IRS.</span>
+                    <span><strong className="font-semibold">No Online E-File:</strong> Must be specially prepared and faxed/mailed to the IRS.</span>
                   </li>
                 </ul>
               </div>
@@ -247,38 +247,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                $25,000 Minimum Penalty
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                The IRS imposes a mandatory $25,000 penalty for failing to file Form 5472 or for filing a substantially incomplete return. This penalty applies to EACH year missed.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  $25,000 Minimum Penalty
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  The IRS imposes a mandatory $25,000 penalty for failing to file Form 5472 or for filing a substantially incomplete return. This penalty applies to EACH year missed.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <AlertTriangle className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Continuous Monthly Fines
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If the IRS notifies you of a failure to file and you don't correct it within 90 days, an additional $25,000 penalty applies for each 30-day period the failure continues.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Continuous Monthly Fines
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If the IRS notifies you of a failure to file and you don't correct it within 90 days, an additional $25,000 penalty applies for each 30-day period the failure continues.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <Briefcase className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Audit & Account Closures
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Non-compliance flags your LLC in the IRS database, leading to potential audits, closure of your US bank accounts, and bans from services like Stripe and PayPal.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Audit & Account Closures
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Non-compliance flags your LLC in the IRS database, leading to potential audits, closure of your US bank accounts, and bans from services like Stripe and PayPal.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

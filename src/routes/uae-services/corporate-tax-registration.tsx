@@ -6,11 +6,11 @@ import {
   CheckCircle,
   ChevronDown,
   Shield,
-  BadgeAlert,
   Building2,
   FileText,
   Calculator,
-  Landmark
+  Landmark,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -202,15 +202,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**0% Rate:** On taxable income up to AED 375,000, or for qualifying Freezone companies.</span>
+                    <span><strong className="font-semibold">0% Rate:</strong> On taxable income up to AED 375,000, or for qualifying Freezone companies.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**9% Rate:** On taxable net profits exceeding AED 375,000.</span>
+                    <span><strong className="font-semibold">9% Rate:</strong> On taxable net profits exceeding AED 375,000.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Small Business Relief:** Available for revenues under AED 3 Million.</span>
+                    <span><strong className="font-semibold">Small Business Relief:</strong> Available for revenues under AED 3 Million.</span>
                   </li>
                 </ul>
               </div>
@@ -239,38 +239,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                AED 10,000 Instant Fine
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Missing your specific registration deadline results in an automatic administrative penalty of AED 10,000 applied directly to your FTA portal account.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  AED 10,000 Instant Fine
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Missing your specific registration deadline results in an automatic administrative penalty of AED 10,000 applied directly to your FTA portal account.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Loss of 0% Status
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Freezone companies that fail to register and comply with FTA regulations risk losing their Qualifying Free Zone Person status, subjecting all profits to 9% tax.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Loss of 0% Status
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Freezone companies that fail to register and comply with FTA regulations risk losing their Qualifying Free Zone Person status, subjecting all profits to 9% tax.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Bank Account Freezes
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                UAE banks require proof of corporate tax registration during KYC updates. Non-compliance can lead to restricted banking facilities or account closure.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Bank Account Freezes
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  UAE banks require proof of corporate tax registration during KYC updates. Non-compliance can lead to restricted banking facilities or account closure.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

@@ -6,12 +6,12 @@ import {
   CheckCircle,
   ChevronDown,
   Shield,
-  BadgeAlert,
   FileText,
   Lock,
   Globe,
   PenTool,
-  Scale
+  Scale,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -201,15 +201,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Equity Changes:** Adjusting ownership percentages between partners.</span>
+                    <span><strong className="font-semibold">Equity Changes:</strong> Adjusting ownership percentages between partners.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Partner Entry/Exit:** Officially adding or removing an LLC member.</span>
+                    <span><strong className="font-semibold">Partner Entry/Exit:</strong> Officially adding or removing an LLC member.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Address Updates:** Changing the principal place of business.</span>
+                    <span><strong className="font-semibold">Address Updates:</strong> Changing the principal place of business.</span>
                   </li>
                 </ul>
               </div>
@@ -238,38 +238,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Partnership Disputes
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Without a signed amendment, exiting partners could still claim equity and profits. Clear documentation prevents messy legal battles.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Partnership Disputes
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Without a signed amendment, exiting partners could still claim equity and profits. Clear documentation prevents messy legal battles.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <Lock className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Bank Compliance Freezes
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If a new partner tries to access Mercury Bank or Stripe, but their name is not on a formally executed Operating Agreement, accounts will be locked for fraud suspicion.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Bank Compliance Freezes
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If a new partner tries to access Mercury Bank or Stripe, but their name is not on a formally executed Operating Agreement, accounts will be locked for fraud suspicion.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <Scale className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Piercing the Corporate Veil
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Failure to maintain accurate internal records signals to courts that you aren't treating the LLC as a separate entity, putting personal assets at risk.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Piercing the Corporate Veil
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Failure to maintain accurate internal records signals to courts that you aren't treating the LLC as a separate entity, putting personal assets at risk.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

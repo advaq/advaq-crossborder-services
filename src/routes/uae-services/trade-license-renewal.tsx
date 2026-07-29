@@ -6,13 +6,13 @@ import {
   CheckCircle,
   ChevronDown,
   Shield,
-  BadgeAlert,
   Clock,
   FileText,
   RefreshCw,
   Building2,
   Calendar,
   Wallet,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -211,15 +211,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**30 Days Prior:** Ideal time to initiate the renewal to allow for compliance checks.</span>
+                    <span><strong className="font-semibold">30 Days Prior:</strong> Ideal time to initiate the renewal to allow for compliance checks.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Expiry Date:** The exact date your legal right to trade pauses and fines begin.</span>
+                    <span><strong className="font-semibold">Expiry Date:</strong> The exact date your legal right to trade pauses and fines begin.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Bank Updates:** Submit the new license to your bank immediately upon issuance.</span>
+                    <span><strong className="font-semibold">Bank Updates:</strong> Submit the new license to your bank immediately upon issuance.</span>
                   </li>
                 </ul>
               </div>
@@ -248,38 +248,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Escalating Monthly Fines
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                The moment your license expires, authorities levy late penalties. These fines compound every month and must be cleared in full before a renewal or visa process can proceed.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Escalating Monthly Fines
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  The moment your license expires, authorities levy late penalties. These fines compound every month and must be cleared in full before a renewal or visa process can proceed.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Frozen Bank Accounts
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                UAE banks run automated compliance checks. If an updated license is not provided upon expiration, corporate accounts are immediately restricted, freezing your funds and blocking transactions.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Frozen Bank Accounts
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  UAE banks run automated compliance checks. If an updated license is not provided upon expiration, corporate accounts are immediately restricted, freezing your funds and blocking transactions.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Visa Cancellations
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Your company's Establishment Card and all connected residency visas are dependent on an active trade license. Prolonged expiration can lead to forced visa cancellations and deportation risks.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Visa Cancellations
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Your company's Establishment Card and all connected residency visas are dependent on an active trade license. Prolonged expiration can lead to forced visa cancellations and deportation risks.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

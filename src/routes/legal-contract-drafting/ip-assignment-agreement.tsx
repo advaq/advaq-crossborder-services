@@ -11,7 +11,6 @@ import {
   Clock,
   Briefcase,
   FileText,
-  BadgeAlert,
   Building2,
   Lock,
   Globe,
@@ -20,6 +19,7 @@ import {
   Coins,
   Scale,
   Code,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -199,7 +199,7 @@ function ServiceOverview() {
                 What is an IP Assignment?
               </h2>
               <p className="mt-6 text-gray-700 text-[16px] leading-[1.8]">
-                An **Intellectual Property (IP) Assignment Agreement** is a legal document that transfers the ownership rights of an original work from the creator to another entity. In the digital world, this typically involves transferring the copyright of software code, graphics, or written content.
+                An <strong className="font-semibold">Intellectual Property (IP) Assignment Agreement</strong> is a legal document that transfers the ownership rights of an original work from the creator to another entity. In the digital world, this typically involves transferring the copyright of software code, graphics, or written content.
               </p>
               <p className="mt-4 text-gray-700 text-[16px] leading-[1.8]">
                 Many business owners mistakenly believe that paying a freelancer means they automatically own the final product. By default copyright law, the creator retains ownership unless it is explicitly assigned in writing. This contract fixes that vulnerability, granting you full control over your assets.
@@ -216,15 +216,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Freelance Developers:** Securing ownership of custom software code.</span>
+                    <span><strong className="font-semibold">Freelance Developers:</strong> Securing ownership of custom software code.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Startup Founders:** Transferring personal IP to the newly formed company.</span>
+                    <span><strong className="font-semibold">Startup Founders:</strong> Transferring personal IP to the newly formed company.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Agency Deliverables:** Guaranteeing you can legally transfer rights to your end clients.</span>
+                    <span><strong className="font-semibold">Agency Deliverables:</strong> Guaranteeing you can legally transfer rights to your end clients.</span>
                   </li>
                 </ul>
               </div>
@@ -253,38 +253,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Ransom by Developers
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If relations sour, a freelancer who technically owns the copyright can demand excessive licensing fees or force you to stop using the code they built.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Ransom by Developers
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If relations sour, a freelancer who technically owns the copyright can demand excessive licensing fees or force you to stop using the code they built.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Failed Due Diligence
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Investors and acquirers require strict proof that your company owns its core technology. Missing IP assignments will instantly kill funding rounds or acquisitions.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Failed Due Diligence
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Investors and acquirers require strict proof that your company owns its core technology. Missing IP assignments will instantly kill funding rounds or acquisitions.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Client Legal Liability
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If an agency sells a website to a client but doesn't have an IP assignment from the subcontractor, the agency is committing copyright infringement.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Client Legal Liability
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If an agency sells a website to a client but doesn't have an IP assignment from the subcontractor, the agency is committing copyright infringement.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

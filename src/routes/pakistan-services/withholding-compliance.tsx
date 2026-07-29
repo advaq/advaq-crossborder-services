@@ -204,15 +204,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Expense Disallowance:** FBR can reject your corporate expenses if no tax was withheld, inflating your final tax bill.</span>
+                    <span><strong className="font-semibold">Expense Disallowance:</strong> FBR can reject your corporate expenses if no tax was withheld, inflating your final tax bill.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Double Liability:** You become personally liable to pay the tax you forgot to deduct from your vendor.</span>
+                    <span><strong className="font-semibold">Double Liability:</strong> You become personally liable to pay the tax you forgot to deduct from your vendor.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Default Surcharges:** Late deposits accumulate default surcharges and harsh penalties.</span>
+                    <span><strong className="font-semibold">Default Surcharges:</strong> Late deposits accumulate default surcharges and harsh penalties.</span>
                   </li>
                 </ul>
               </div>
@@ -241,38 +241,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                FBR Audits
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Discrepancies in withholding statements automatically trigger FBR system audits under Section 161/205. The tax authorities can scrutinize years of your payment records.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  FBR Audits
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Discrepancies in withholding statements automatically trigger FBR system audits under Section 161/205. The tax authorities can scrutinize years of your payment records.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <AlertTriangle className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Vendor Disputes
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Deducting the wrong rates or failing to issue CPR certificates angers vendors who need those certificates to claim credit for their own tax returns.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Vendor Disputes
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Deducting the wrong rates or failing to issue CPR certificates angers vendors who need those certificates to claim credit for their own tax returns.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <Shield className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Hefty Penalties
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Under-withholding leads to massive default surcharges. FBR treats uncollected withholding taxes strictly and levies fines that compound daily.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Hefty Penalties
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Under-withholding leads to massive default surcharges. FBR treats uncollected withholding taxes strictly and levies fines that compound daily.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

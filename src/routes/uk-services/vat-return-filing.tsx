@@ -216,15 +216,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Strict Deadlines:** Quarterly filings must be precise and on-time.</span>
+                    <span><strong className="font-semibold">Strict Deadlines:</strong> Quarterly filings must be precise and on-time.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Software Mandate:** MTD requires specific, compliant bridging software.</span>
+                    <span><strong className="font-semibold">Software Mandate:</strong> MTD requires specific, compliant bridging software.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Complex Rules:** Differentiating between standard, zero-rated, and exempt items is tricky.</span>
+                    <span><strong className="font-semibold">Complex Rules:</strong> Differentiating between standard, zero-rated, and exempt items is tricky.</span>
                   </li>
                 </ul>
               </div>
@@ -253,38 +253,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                MTD Non-Compliance
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Failing to keep digital records or attempting to submit outside of MTD-approved software results in automatic rejections and immediate penalties from HMRC.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  MTD Non-Compliance
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Failing to keep digital records or attempting to submit outside of MTD-approved software results in automatic rejections and immediate penalties from HMRC.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Points-Based Penalties
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                HMRC issues penalty points for every late submission. Reaching the threshold triggers a strict £200 fine for every subsequent late filing, plus compounding interest on unpaid tax.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Points-Based Penalties
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  HMRC issues penalty points for every late submission. Reaching the threshold triggers a strict £200 fine for every subsequent late filing, plus compounding interest on unpaid tax.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                VAT Inspections
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Claiming back VAT without proper receipts, or incorrectly applying zero-rates to standard goods, triggers deep-dive audits where HMRC can demand years of back taxes.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  VAT Inspections
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Claiming back VAT without proper receipts, or incorrectly applying zero-rates to standard goods, triggers deep-dive audits where HMRC can demand years of back taxes.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

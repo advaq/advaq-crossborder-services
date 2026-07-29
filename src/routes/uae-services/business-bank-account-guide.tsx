@@ -6,12 +6,12 @@ import {
   CheckCircle,
   ChevronDown,
   Shield,
-  BadgeAlert,
   Building,
   Landmark,
   CreditCard,
   FileCheck,
   Smartphone,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -202,15 +202,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Clear Business Model:** They need to understand exactly how you make money and who your clients are.</span>
+                    <span><strong className="font-semibold">Clear Business Model:</strong> They need to understand exactly how you make money and who your clients are.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Matching Activities:** Your transactions must match the exact business activities listed on your Trade License.</span>
+                    <span><strong className="font-semibold">Matching Activities:</strong> Your transactions must match the exact business activities listed on your Trade License.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Source of Funds:** Proof of the shareholder's ability to fund the company.</span>
+                    <span><strong className="font-semibold">Source of Funds:</strong> Proof of the shareholder's ability to fund the company.</span>
                   </li>
                 </ul>
               </div>
@@ -239,38 +239,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Internal Blacklisting
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If a UAE bank rejects your application for compliance reasons, you cannot reapply with that same bank for at least 6 months, locking you out of their ecosystem.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Internal Blacklisting
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If a UAE bank rejects your application for compliance reasons, you cannot reapply with that same bank for at least 6 months, locking you out of their ecosystem.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Using Personal Accounts
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Without a corporate account, founders often mistakenly use their personal UAE accounts to receive business payments. This triggers immediate AML freezes by the central bank.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Using Personal Accounts
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Without a corporate account, founders often mistakenly use their personal UAE accounts to receive business payments. This triggers immediate AML freezes by the central bank.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Operational Paralysis
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                A registered company without a bank account cannot open a Stripe or PayPal payment gateway, cannot pay suppliers, and cannot legally distribute dividends.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Operational Paralysis
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  A registered company without a bank account cannot open a Stripe or PayPal payment gateway, cannot pay suppliers, and cannot legally distribute dividends.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

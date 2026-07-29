@@ -7,12 +7,12 @@ import {
   ChevronDown,
   Shield,
   FileText,
-  BadgeAlert,
   Building2,
   Lock,
   Globe,
   Briefcase,
   Users,
+  AlertTriangle,
 } from "lucide-react";
 import { Reveal } from "@/lib/reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -192,7 +192,7 @@ function ServiceOverview() {
                 If your US LLC hires US-based freelancers, agencies, consultants, or independent contractors and pays them $600 or more via bank transfer (ACH/Wire) during the calendar year, you are legally required to report these payments to the IRS.
               </p>
               <p className="mt-4 text-gray-700 text-[16px] leading-[1.8]">
-                This is done using **Form 1099-NEC** (Nonemployee Compensation). The purpose of this form is to inform the IRS about the contractor's income so the IRS can ensure they pay their taxes. As the business owner, the burden is on you to file this form on time, every year.
+                This is done using <strong className="font-semibold">Form 1099-NEC</strong> (Nonemployee Compensation). The purpose of this form is to inform the IRS about the contractor's income so the IRS can ensure they pay their taxes. As the business owner, the burden is on you to file this form on time, every year.
               </p>
             </Reveal>
           </div>
@@ -206,15 +206,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Deadline:** Must be filed by January 31st each year.</span>
+                    <span><strong className="font-semibold">Deadline:</strong> Must be filed by January 31st each year.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**W-9 Needed:** You must collect a W-9 from contractors to get their SSN/EIN.</span>
+                    <span><strong className="font-semibold">W-9 Needed:</strong> You must collect a W-9 from contractors to get their SSN/EIN.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Foreign Contractors:** You do NOT file 1099s for non-US contractors.</span>
+                    <span><strong className="font-semibold">Foreign Contractors:</strong> You do NOT file 1099s for non-US contractors.</span>
                   </li>
                 </ul>
               </div>
@@ -243,38 +243,50 @@ function TheDanger() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Hefty IRS Penalties
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Penalties range from $60 to $310 per unfiled 1099 form depending on how late you file. If the IRS determines "intentional disregard," the penalty jumps to a minimum of $630 per form with no maximum cap.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Hefty IRS Penalties
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Penalties range from $60 to $310 per unfiled 1099 form depending on how late you file. If the IRS determines "intentional disregard," the penalty jumps to a minimum of $630 per form with no maximum cap.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Audit Flags
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                When you file your annual tax returns and claim contractor expenses, the IRS expects to see matching 1099s. Discrepancies are a major red flag that can trigger a business audit.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Audit Flags
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  When you file your annual tax returns and claim contractor expenses, the IRS expects to see matching 1099s. Discrepancies are a major red flag that can trigger a business audit.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Upset Contractors
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Your US contractors need the 1099 form from you to file their own personal tax returns on time. Failing to provide it creates friction and unprofessionalism with your US partners.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Upset Contractors
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Your US contractors need the 1099 form from you to file their own personal tax returns on time. Failing to provide it creates friction and unprofessionalism with your US partners.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
