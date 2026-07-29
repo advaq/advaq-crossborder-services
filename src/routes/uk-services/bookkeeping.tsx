@@ -7,6 +7,7 @@ import {
   ChevronDown,
   Shield,
   BadgeAlert,
+  AlertTriangle,
   FileSpreadsheet,
   Calculator,
   LineChart,

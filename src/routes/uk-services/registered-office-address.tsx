@@ -7,6 +7,7 @@ import {
   ChevronDown,
   Shield,
   BadgeAlert,
+  AlertTriangle,
   Building2,
   Mail,
   MapPin,
