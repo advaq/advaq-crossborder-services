@@ -562,9 +562,27 @@ function PakistanSection() {
 
 function Testimonials() {
   const items = [
-    { q: "Got my Wyoming LLC, EIN, and Stripe account set up within a week. Never thought it would be this easy from Pakistan.", n: "Ahmed K.", c: "🇵🇰 Pakistan", r: "Upwork Freelancer", i: "AK" },
-    { q: "Annual accounts, self-assessment, and confirmation statement all filed on time. Completely stress-free. Highly recommend.", n: "Zara M.", c: "🇦🇪 UAE", r: "UK LTD Director", i: "ZM" },
-    { q: "They handled our SECP registration, PSEB filing, and NTN in one go. Professional, fast, and exactly what our agency needed.", n: "Bilal A.", c: "🇸🇦 Saudi Arabia", r: "IT Agency Owner", i: "BA" },
+    {
+      q: "Got my Wyoming LLC, EIN, and Stripe account activated within 7 days. As a Pakistani freelancer, I never thought this was possible remotely.",
+      n: "Ahmed K.",
+      c: "🇵🇰 Lahore, Pakistan",
+      r: "Upwork Top Rated",
+      i: "AK",
+    },
+    {
+      q: "Annual accounts, self-assessment, and confirmation statement filed on time every year. Muhammad Abdullah handles everything — I just focus on my business.",
+      n: "Zara M.",
+      c: "🇦🇪 Dubai, UAE",
+      r: "UK LTD Director",
+      i: "ZM",
+    },
+    {
+      q: "SECP, PSEB, and NTN all done in one week. Our IT agency is now fully registered and claiming 100% tax exemption on export income.",
+      n: "Bilal A.",
+      c: "🇸🇦 Saudi Arabia",
+      r: "IT Agency Owner",
+      i: "BA",
+    },
   ];
   return (
     <section className="bg-gray-100 py-24">
@@ -586,12 +604,12 @@ function Testimonials() {
                   “{t.q}”
                 </p>
                 <div className="mt-7 flex items-center gap-3 pt-5 border-t border-border">
-                  <div className="w-11 h-11 rounded-full bg-navy-900 text-gold-500 grid place-items-center font-semibold text-sm">
+                  <div className="w-11 h-11 rounded-full bg-navy-900 text-gold-500 grid place-items-center font-semibold text-sm shrink-0">
                     {t.i}
                   </div>
                   <div>
                     <p className="font-semibold text-dark-text text-sm">{t.n}</p>
-                    <p className="text-xs text-gray-500">{t.c} · {t.r}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{t.c} · {t.r}</p>
                   </div>
                 </div>
               </div>
