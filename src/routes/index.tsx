@@ -385,12 +385,12 @@ function ServicesOverview() {
 
 function WhoWeServe() {
   const items = [
-    { Icon: Laptop, t: "Upwork & Fiverr Freelancers", d: "Earn in dollars and pounds legally. Get Stripe, PayPal Business, and Wise set up through a proper UK or US company." },
-    { Icon: Building2, t: "IT Agencies & Software Houses", d: "Register your company in the UK or US to win international contracts and receive payments without restrictions." },
-    { Icon: ShoppingBag, t: "Amazon & E-Commerce Sellers", d: "Open your UK LTD or US LLC, get your VAT number, and start selling on Amazon UK, Etsy, and Shopify as a registered business." },
-    { Icon: Code, t: "SaaS & App Developers", d: "Form your company, get Stripe connected, handle your US or UK taxes, and stay compliant as your product grows globally." },
-    { Icon: Users, t: "Business Partners & Co-Founders", d: "Shareholder agreements, partnership deeds, and company structures that protect every founder's rights from day one." },
-    { Icon: Scale, t: "Businesses Needing Legal Cover", d: "NDAs, service agreements, IP assignments, and outsourcing contracts — drafted by a licensed advocate, not a template generator." },
+    { Icon: Laptop, t: "Upwork & Fiverr Freelancers", d: "Earn in dollars and pounds legally. Get Stripe, PayPal Business, and Wise activated through a properly registered UK LTD or US LLC — from Pakistan." },
+    { Icon: Building2, t: "IT Agencies & Software Houses", d: "Win international contracts and receive global payments without restrictions. UK or US company registration handled end-to-end by a licensed advocate." },
+    { Icon: ShoppingBag, t: "Amazon & E-Commerce Sellers", d: "Open your UK LTD or US LLC, get your VAT number, and start selling on Amazon UK, Etsy, and Shopify as a fully registered, compliant business." },
+    { Icon: Code, t: "SaaS & App Developers", d: "Form your company, connect Stripe, handle US or UK taxes, and scale your product globally — fully compliant from day one." },
+    { Icon: Users, t: "Business Partners & Co-Founders", d: "Shareholder agreements, partnership deeds, and IP assignment contracts — drafted by a licensed advocate to protect every founder from day one." },
+    { Icon: Scale, t: "Businesses Needing Legal Cover", d: "NDAs, service agreements, IT outsourcing contracts, and privacy policies — professionally drafted, not copy-pasted from a free template." },
   ];
   return (
     <section className="bg-navy-900 py-24 relative overflow-hidden">
@@ -399,7 +399,7 @@ function WhoWeServe() {
         <Reveal className="text-center">
           <SectionLabel center>Who We Serve</SectionLabel>
           <h2 className="font-serif text-4xl md:text-5xl text-white mt-5">
-            Built for Pakistani Entrepreneurs Going Global
+            Built for Pakistani Entrepreneurs Ready to Go Global
           </h2>
         </Reveal>
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -422,10 +422,10 @@ function WhoWeServe() {
 
 function WhyUs() {
   const items = [
-    { Icon: Shield, t: "Expert Professionals", d: "Qualified accountants & company formation specialists." },
-    { Icon: Globe2, t: "100% Remote Process", d: "Everything handled online from anywhere in the world." },
-    { Icon: Tag, t: "Transparent Pricing", d: "No hidden fees. What you see is what you pay — guaranteed." },
-    { Icon: Headphones, t: "Lifetime Support", d: "We're here long after formation — for compliance and growth." },
+    { Icon: Scale, t: "Licensed Advocate — Not Just an Agent", d: "Muhammad Abdullah is a Punjab Bar Council licensed advocate and IRS PTIN registered tax preparer. Legal accountability on every service — not just form submission." },
+    { Icon: Globe2, t: "100% Remote — Worldwide", d: "Everything handled online. Documents delivered to your inbox. No office visits, no travel required — from anywhere in the world." },
+    { Icon: Tag, t: "Transparent, Fixed Pricing", d: "No hidden fees. No surprise invoices. Full price breakdown before any work begins — guaranteed." },
+    { Icon: Headphones, t: "Long-Term Partnership", d: "We stay with you after formation — annual compliance, tax returns, contract updates, and legal consultation whenever you need it." },
   ];
   return (
     <section className="bg-navy-900 py-24 relative overflow-hidden">
