@@ -56,7 +56,7 @@ function Hero() {
 
           <Reveal delay={200}>
             <p className="text-navy-200 text-base md:text-lg max-w-xl leading-[1.7]">
-              Company formation, tax compliance, and legal contracts — managed directly by a licensed advocate &amp; IRS PTIN tax preparer. 100% remote. Full legal accountability.
+              Company formation, tax compliance, and legal contracts; managed directly by a Punjab Bar Council licensed advocate &amp; IRS PTIN registered tax preparer. 100% remote.
             </p>
           </Reveal>
 
@@ -274,8 +274,8 @@ function ServicesOverview() {
   const cards = [
     {
       label: "🇬🇧 UNITED KINGDOM",
-      title: "UK Limited Company Services",
-      sub: "From incorporation to annual compliance",
+      title: "UK LTD & Tax Services",
+      sub: "Register your UK LTD remotely. HMRC tax setup, VAT registration, and full annual compliance included.",
       items: ["UK LTD Incorporation", "Self Assessment Tax Return", "Company Annual Accounts", "Confirmation Statement", "Payroll Services", "VAT Registration"],
       link: "/uk-services" as const,
       cta: "View All UK Services",
@@ -283,7 +283,7 @@ function ServicesOverview() {
     {
       label: "🇺🇸 UNITED STATES",
       title: "US LLC & Tax Services",
-      sub: "Form your LLC and stay IRS-compliant",
+      sub: "Wyoming LLC formation with EIN, BOI report, Stripe setup, and full IRS compliance — no SSN required.",
       items: ["Wyoming LLC Incorporation", "EIN Number Registration", "BOI Report (FinCEN)", "ITIN Application", "US Tax Returns (1040/1065/1120)", "Registered Agent Service"],
       link: "/us-services" as const,
       cta: "View All US Services",
@@ -291,7 +291,7 @@ function ServicesOverview() {
     {
       label: "🇦🇪 UNITED ARAB EMIRATES",
       title: "UAE Company & Tax Services",
-      sub: "Freezone setup, VAT & Corporate Tax compliance",
+      sub: "Dubai Freezone or Mainland setup, VAT registration, Corporate Tax compliance — complete UAE coverage.",
       items: ["Freezone Company Formation", "Mainland Company Formation", "VAT Registration (TRN)", "Corporate Tax Registration", "Quarterly VAT Return Filing", "Small Business Relief (SBR)"],
       link: "/uae-services" as const,
       cta: "View All UAE Services",
@@ -299,7 +299,7 @@ function ServicesOverview() {
     {
       label: "🇵🇰 PAKISTAN",
       title: "Pakistan Legal & Tax Services",
-      sub: "SECP, FBR & legal compliance for IT businesses",
+      sub: "SECP registration, FBR NTN, PSEB IT export exemption, and income tax returns — all in one place.",
       items: ["SECP Company Registration", "NTN & FBR Registration", "PSEB Registration", "Income Tax Return Filing", "FBR Notice Response", "Legal Consultation (Advocate)"],
       link: "/pakistan-services" as const,
       cta: "View All Pakistan Services",
@@ -307,7 +307,7 @@ function ServicesOverview() {
     {
       label: "⚖️ LEGAL CONTRACT DRAFTING",
       title: "Professional Contract Drafting",
-      sub: "Protect your work, payment & intellectual property",
+      sub: "Freelance Agreements, NDA, MSA, IP Assignment — drafted by a licensed advocate, not a template generator.",
       items: ["NDA / Non-Disclosure Agreement", "Freelance Service Agreement", "IP Assignment Agreement", "Master Service Agreement (MSA)", "IT Outsourcing Agreement", "Privacy Policy & Terms of Service"],
       link: "/legal-contract-drafting" as const,
       cta: "View All Contracts",
@@ -319,11 +319,11 @@ function ServicesOverview() {
         <Reveal className="text-center">
           <SectionLabel center>Our Services</SectionLabel>
           <h2 className="font-serif text-4xl md:text-5xl text-dark-text mt-5 max-w-3xl mx-auto leading-tight">
-            Everything You Need to Build & Run Your Business
+            Everything You Need to Build, Run &amp; Protect Your Business
           </h2>
           <p className="mt-5 text-gray-500 max-w-2xl mx-auto">
             From company formation to annual compliance, tax filing to legal contracts —
-            one trusted partner for UK, US, and Pakistan.
+            one trusted partner for UK, USA, UAE &amp; Pakistan.
           </p>
         </Reveal>
 

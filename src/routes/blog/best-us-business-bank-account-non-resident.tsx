@@ -22,6 +22,7 @@ import {
   Briefcase,
   Layers,
   IdCard,
+  Globe2,
 } from "lucide-react";
 
 const faqs = [
