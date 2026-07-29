@@ -437,7 +437,7 @@ function WhyUs() {
     { Icon: Scale, t: "Licensed Advocate — Not Just an Agent", d: "Muhammad Abdullah is a Punjab Bar Council licensed advocate and IRS PTIN registered tax preparer. Legal accountability on every service — not just form submission." },
     { Icon: Globe2, t: "100% Remote — Worldwide", d: "Everything handled online. Documents delivered to your inbox. No office visits, no travel required — from anywhere in the world." },
     { Icon: Tag, t: "Transparent, Fixed Pricing", d: "No hidden fees. No surprise invoices. Full price breakdown before any work begins — guaranteed." },
-    { Icon: Headphones, t: "Long-Term Partnership", d: "We stay with you after formation — annual compliance, tax returns, contract updates, and legal consultation whenever you need it." },
+    { Icon: Headphones, t: "Long-Term Partnership", d: "We stay with you after formation i.e. annual compliance, tax returns, contract updates, and legal consultation, you need." },
   ];
   return (
     <section className="bg-navy-900 py-24 relative overflow-hidden">
