@@ -502,8 +502,8 @@ function PakistanSection() {
   ];
   return (
     <section className="bg-off-white py-24">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-start">
-        <Reveal>
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <Reveal className="lg:col-span-8">
           <SectionLabel>For Pakistani Businesses</SectionLabel>
           <h2 className="font-serif text-3xl md:text-[40px] text-dark-text mt-5 leading-tight">
             IT Export Income is taxed at 0.25% in Pakistan. Are You Claiming It?
@@ -512,7 +512,7 @@ function PakistanSection() {
             Under Section 154A of the Income Tax Ordinance 2001, Pakistani IT exporters and freelancers
             are eligible for a reduced 0.25% concessionary tax rate on foreign earnings — provided you
             are registered with FBR, PSEB, and maintain Active Taxpayer Status (ATL). Without proper registration,
-            your remittance income can be taxed at up to 35%.
+            your remittance income can be taxed at up to 45%.
           </p>
           <ul className="mt-7 space-y-3">
             {points.map((p) => (
@@ -529,37 +529,32 @@ function PakistanSection() {
             </p>
             <p className="text-navy-200 text-[13px] mt-3">— Muhammad Abdullah, Advocate, Punjab Bar Council</p>
           </div>
-          <div className="mt-7">
+        </Reveal>
+
+        <div className="space-y-6 lg:col-span-4">
+          <Reveal delay={100} className="bg-white border border-border rounded-2xl p-7 shadow-sm">
+            <div className="font-serif text-5xl font-bold text-gold-500 leading-none">0.25%</div>
+            <p className="mt-3 text-dark-text font-semibold text-base">Reduced IT Export Tax Rate</p>
+            <p className="text-gray-500 text-xs mt-1 leading-relaxed">Under Sec 154A of Income Tax Ordinance with PSEB Registration &amp; FBR ATL Status</p>
+          </Reveal>
+
+          <Reveal delay={200} className="bg-white border border-border rounded-2xl p-7 shadow-sm">
+            <div className="font-serif text-4xl font-bold text-gold-500 leading-none">0.25% vs 45%</div>
+            <p className="mt-3 text-dark-text font-semibold text-base">Concessionary vs Non-Filer Tax Rate</p>
+            <p className="text-gray-500 text-xs mt-1 leading-relaxed">Save significant tax legally by maintaining your PSEB &amp; FBR compliance instead of paying up to 45% standard tax</p>
+          </Reveal>
+
+          <Reveal delay={300}>
             <a
               href="https://abdullahqadeer.com/tax-calculators/freelancer-tax-calculator"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-gold inline-flex items-center gap-2"
+              className="btn-gold w-full justify-center inline-flex items-center gap-2 py-4 text-sm font-semibold shadow-md"
             >
               Calculate Your Freelancer Tax <ArrowRight size={16} />
             </a>
-          </div>
-        </Reveal>
-
-        <Reveal delay={150} className="space-y-5">
-          <div className="bg-white border border-border rounded-2xl p-6">
-            <div className="font-serif text-5xl text-gold-500 leading-none">0.25%</div>
-            <p className="mt-3 text-dark-text font-semibold">Reduced IT Export Tax Rate</p>
-            <p className="text-gray-500 text-[13px] mt-1">Under Sec 154A with PSEB Registration &amp; FBR ATL Status</p>
-          </div>
-          <div className="bg-white border border-border rounded-2xl p-6">
-            <div className="font-serif text-4xl font-bold text-gold-500 leading-none">0.25% vs 35%</div>
-            <p className="mt-3 text-dark-text font-semibold">Concessionary vs Standard Tax Rate</p>
-            <p className="text-gray-500 text-[13px] mt-1">Save significant tax legally by maintaining your PSEB &amp; FBR compliance</p>
-          </div>
-          <div className="bg-navy-900 rounded-2xl p-6">
-            <Scale size={28} className="text-gold-500" />
-            <p className="mt-3 text-white font-semibold">Punjab Bar Council Licensed Advocate</p>
-            <p className="text-navy-200 text-[13px] mt-1">
-              Your legal and tax matters handled directly by a qualified advocate — not just an unverified agent.
-            </p>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </div>
     </section>
   );
