@@ -457,10 +457,10 @@ function WhyUs() {
 
 function HowItWorks() {
   const steps = [
-    { Icon: ListChecks, t: "Choose Service", d: "Pick the formation or tax service you need." },
-    { Icon: FileText, t: "Fill Our Form", d: "Submit your details through our secure form." },
-    { Icon: Settings, t: "We Handle It", d: "Our experts file everything on your behalf." },
-    { Icon: CheckCircle, t: "Receive Documents", d: "Get certified documents delivered to your inbox." },
+    { Icon: ListChecks, t: "Choose Your Service", d: "Browse UK, USA, UAE, Pakistan, or Legal Contract services and select what fits your business." },
+    { Icon: FileText, t: "Share Your Details", d: "Fill our simple secure form or WhatsApp us directly. We respond within 4 hours." },
+    { Icon: Settings, t: "We Handle Everything", d: "Muhammad Abdullah personally manages your filing, formation, or contract drafting end-to-end." },
+    { Icon: CheckCircle, t: "Receive Your Documents", d: "Certified documents delivered to your inbox — ready to use immediately." },
   ];
   return (
     <section className="bg-white py-24">
@@ -482,7 +482,7 @@ function HowItWorks() {
                 <s.Icon size={28} strokeWidth={1.5} />
               </div>
               <h3 className="text-lg font-semibold text-dark-text mt-2">{s.t}</h3>
-              <p className="mt-2 text-sm text-gray-500 max-w-[220px] mx-auto">{s.d}</p>
+              <p className="mt-2 text-sm text-gray-500 max-w-[240px] mx-auto">{s.d}</p>
               {i < steps.length - 1 && (
                 <div className="hidden md:block absolute top-8 left-[calc(50%+40px)] w-[calc(100%-80px)] border-t-2 border-dashed border-gold-500/40 -z-0" />
               )}
