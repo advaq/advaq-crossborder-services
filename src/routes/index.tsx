@@ -497,8 +497,8 @@ function HowItWorks() {
 function PakistanSection() {
   const points = [
     "SECP Private Limited Company Registration",
-    "PSEB Registration & IT Export Exemption",
-    "FBR NTN, ATL Status & Annual Returns",
+    "PSEB Registration & 0.25% IT Export Tax Concession",
+    "FBR NTN, Active Taxpayer List (ATL) Status & Annual Returns",
   ];
   return (
     <section className="bg-off-white py-24">
@@ -506,13 +506,13 @@ function PakistanSection() {
         <Reveal>
           <SectionLabel>For Pakistani Businesses</SectionLabel>
           <h2 className="font-serif text-3xl md:text-[40px] text-dark-text mt-5 leading-tight">
-            IT Export Income is 100% Tax Exempt in Pakistan. Are You Claiming It?
+            IT Export Income is taxed at 0.25% in Pakistan. Are You Claiming It?
           </h2>
           <p className="mt-5 text-gray-700 text-base leading-[1.8]">
-            Under the Income Tax Ordinance 2001, Pakistani IT companies and freelancers are
-            entitled to a complete income tax exemption on export earnings — but only if
-            properly registered with FBR, PSEB, and maintaining Active Taxpayer status.
-            Most Pakistani IT businesses are missing this benefit entirely.
+            Under Section 154A of the Income Tax Ordinance 2001, Pakistani IT exporters and freelancers
+            are eligible for a reduced 0.25% concessionary tax rate on foreign earnings — provided you
+            are registered with FBR, PSEB, and maintain Active Taxpayer Status (ATL). Without proper registration,
+            your remittance income can be taxed at up to 35%.
           </p>
           <ul className="mt-7 space-y-3">
             {points.map((p) => (
@@ -524,34 +524,39 @@ function PakistanSection() {
           <div className="mt-8 bg-navy-900 border-l-4 border-gold-500 rounded-2xl p-6">
             <p className="font-serif italic text-white text-lg leading-snug">
               "As a Punjab Bar Council licensed advocate, I ensure your Pakistani IT
-              business is legally registered, FBR compliant, and claiming every tax
-              exemption you are entitled to."
+              business is legally registered, PSEB &amp; FBR compliant, and claiming the 0.25%
+              concessionary tax rate you are entitled to."
             </p>
-            <p className="text-navy-200 text-[13px] mt-3">— [Your Name], Advocate, Punjab Bar Council</p>
+            <p className="text-navy-200 text-[13px] mt-3">— Muhammad Abdullah, Advocate, Punjab Bar Council</p>
           </div>
           <div className="mt-7">
-            <Link to="/pakistan-services" className="btn-gold">
-              View Pakistan Services <ArrowRight size={16} />
-            </Link>
+            <a
+              href="https://abdullahqadeer.com/tax-calculators/freelancer-tax-calculator"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold inline-flex items-center gap-2"
+            >
+              Calculate Your Freelancer Tax <ArrowRight size={16} />
+            </a>
           </div>
         </Reveal>
 
         <Reveal delay={150} className="space-y-5">
           <div className="bg-white border border-border rounded-2xl p-6">
-            <div className="font-serif text-5xl text-gold-500 leading-none">100%</div>
-            <p className="mt-3 text-dark-text font-semibold">IT Export Tax Exemption</p>
-            <p className="text-gray-500 text-[13px] mt-1">Available to all registered Pakistani IT companies</p>
+            <div className="font-serif text-5xl text-gold-500 leading-none">0.25%</div>
+            <p className="mt-3 text-dark-text font-semibold">Reduced IT Export Tax Rate</p>
+            <p className="text-gray-500 text-[13px] mt-1">Under Sec 154A with PSEB Registration &amp; FBR ATL Status</p>
           </div>
           <div className="bg-white border border-border rounded-2xl p-6">
-            <div className="font-serif text-5xl text-gold-500 leading-none">Rs.0</div>
-            <p className="mt-3 text-dark-text font-semibold">Tax on Foreign Freelance Income</p>
-            <p className="text-gray-500 text-[13px] mt-1">When properly registered with FBR & PSEB</p>
+            <div className="font-serif text-4xl font-bold text-gold-500 leading-none">0.25% vs 35%</div>
+            <p className="mt-3 text-dark-text font-semibold">Concessionary vs Standard Tax Rate</p>
+            <p className="text-gray-500 text-[13px] mt-1">Save significant tax legally by maintaining your PSEB &amp; FBR compliance</p>
           </div>
           <div className="bg-navy-900 rounded-2xl p-6">
             <Scale size={28} className="text-gold-500" />
-            <p className="mt-3 text-white font-semibold">Punjab Bar Council Licensed</p>
+            <p className="mt-3 text-white font-semibold">Punjab Bar Council Licensed Advocate</p>
             <p className="text-navy-200 text-[13px] mt-1">
-              Your legal and tax matters handled by a qualified advocate — not just an accountant.
+              Your legal and tax matters handled directly by a qualified advocate — not just an unverified agent.
             </p>
           </div>
         </Reveal>
