@@ -403,29 +403,90 @@ function FAQSection() {
   );
 }
 
-/* ---------- SECTION 7: CTA ---------- */
-function CTASection() {
+/* ---------- SECTION 7: RELATED SERVICES ---------- */
+function RelatedServices() {
+  const services = [
+    {
+      title: "Corporation Tax Return",
+      path: "/uk-services/corporation-tax-return",
+      desc: "Annual CT600 filing to calculate and report your UK company tax liability accurately.",
+    },
+    {
+      title: "Self Assessment",
+      path: "/uk-services/self-assessment",
+      desc: "Annual personal tax return required for all directors to declare salary and dividends legally.",
+    },
+    {
+      title: "UK LTD Formation",
+      path: "/uk-services/ltd-formation",
+      desc: "Official registration of your UK Limited Company with Companies House.",
+    },
+  ];
+
   return (
-    <section className="bg-gold-500 py-20">
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <Reveal>
-          <h2 className="font-serif text-[32px] md:text-[48px] text-navy-950 leading-tight">
-            Register Your UK Company for HMRC Tax Today
+    <section className="bg-white py-24 border-t border-border">
+      <div className="max-w-6xl mx-auto px-6">
+        <Reveal className="text-center mb-14">
+          <SectionLabel center>INTERNAL RESOURCES</SectionLabel>
+          <h2 className="font-serif text-[32px] md:text-[44px] text-dark-text mt-4">
+            Related UK Compliance Services
           </h2>
-          <p className="mt-4 text-navy-900 text-lg max-w-xl mx-auto">
+        </Reveal>
+        <div className="grid md:grid-cols-3 gap-8">
+          {services.map((s) => (
+            <Reveal key={s.title}>
+              <div className="border border-border p-6 rounded-xl bg-white flex flex-col justify-between h-full">
+                <div>
+                  <h3 className="font-sans font-semibold text-lg text-dark-text">{s.title}</h3>
+                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">{s.desc}</p>
+                </div>
+                <Link
+                  to={s.path}
+                  className="mt-6 inline-flex items-center gap-1.5 text-gold-500 font-semibold text-xs uppercase tracking-widest hover:gap-2.5 transition-all"
+                >
+                  View Service Details <ArrowRight size={12} />
+                </Link>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- SECTION 8: CTA BANNER ---------- */
+function CTABannerCustom() {
+  return (
+    <section className="relative bg-navy-950 py-28 overflow-hidden text-center">
+      <div className="absolute inset-0 diagonal-pattern opacity-100" />
+      <div className="relative max-w-4xl mx-auto px-6 flex flex-col items-center">
+        <Reveal>
+          <p className="text-gold-500 uppercase text-xs font-semibold tracking-[0.15em]">
+            HMRC TAX REGISTRATION
+          </p>
+          <h2 className="font-serif text-white text-[36px] md:text-[52px] mt-4 leading-[1.1]">
+            Register Your UK Company
+            <br />
+            for HMRC Tax Today.
+          </h2>
+          <p className="mt-6 text-navy-200 text-base md:text-[18px] max-w-xl mx-auto leading-relaxed">
             Stay 100% compliant with UK tax authorities. Get your Corporation Tax registration done by licensed advocates.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4 justify-center">
-            <Link to="/contact" className="btn-navy rounded-none uppercase tracking-widest">
-              Get Started — £149
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <Link
+              to="/contact"
+              className="btn-gold rounded-none uppercase tracking-widest px-8 py-4 font-semibold text-sm"
+            >
+              Get Started — £149 →
             </Link>
             <a
               href="https://wa.me/923000925335"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-outline-navy rounded-none uppercase tracking-widest"
+              className="btn-outline-light rounded-none uppercase tracking-widest px-8 py-4 font-semibold text-sm"
             >
-              Chat on WhatsApp
+              WhatsApp Us Directly
             </a>
           </div>
         </Reveal>
@@ -443,7 +504,8 @@ export default function CorporationTaxRegistration() {
       <WhatIsIncluded />
       <HowItWorks />
       <FAQSection />
-      <CTASection />
+      <RelatedServices />
+      <CTABannerCustom />
     </div>
   );
 }
