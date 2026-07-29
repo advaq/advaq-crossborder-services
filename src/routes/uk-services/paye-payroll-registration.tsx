@@ -202,15 +202,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Director Salaries:** To legally extract money as a salary rather than purely dividends.</span>
+                    <span><strong className="text-white font-semibold">Director Salaries:</strong> To legally extract money as a salary rather than purely dividends.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Hiring Staff:** If you employ staff earning over £123/week.</span>
+                    <span><strong className="text-white font-semibold">Hiring Staff:</strong> If you employ staff earning over £123/week.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Pensioners/Second Jobs:** If any employee has another job or receives a pension.</span>
+                    <span><strong className="text-white font-semibold">Pensioners/Second Jobs:</strong> If any employee has another job or receives a pension.</span>
                   </li>
                 </ul>
               </div>
@@ -237,40 +237,52 @@ function TheDanger() {
           </p>
         </Reveal>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-16">
+        <div className="grid md:grid-cols-3 gap-6 mt-12">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Illegal Payments
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Transferring money from your company to individuals as a "salary" without running it through an RTI-compliant PAYE scheme is tax evasion in the eyes of HMRC.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Illegal Payments
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Transferring money from your company to individuals as a "salary" without running it through an RTI-compliant PAYE scheme is tax evasion in the eyes of HMRC.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Severe Penalties
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                HMRC issues strict monthly penalties for failing to report payroll data on time. If you haven't registered, you literally cannot file the required data, triggering automatic fines.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Severe Penalties
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  HMRC issues strict monthly penalties for failing to report payroll data on time. If you haven't registered, you literally cannot file the required data, triggering automatic fines.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Lost Tax Efficiency
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                A properly structured director's salary run through PAYE is an allowable business expense that reduces your Corporation Tax. Without PAYE, you lose this benefit.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Lost Tax Efficiency
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  A properly structured director's salary run through PAYE is an allowable business expense that reduces your Corporation Tax. Without PAYE, you lose this benefit.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

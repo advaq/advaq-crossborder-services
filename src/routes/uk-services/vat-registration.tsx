@@ -202,15 +202,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Mandatory Threshold:** Your sales exceed £90k in a rolling 12 months.</span>
+                    <span><strong className="text-white font-semibold">Mandatory Threshold:</strong> Your sales exceed £90k in a rolling 12 months.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Voluntary Reclaim:** Register to recover VAT paid on software, ads, and expenses.</span>
+                    <span><strong className="text-white font-semibold">Voluntary Reclaim:</strong> Register to recover VAT paid on software, ads, and expenses.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**NETP Status:** Non-Established Taxable Persons selling locally have no threshold.</span>
+                    <span><strong className="text-white font-semibold">NETP Status:</strong> Non-Established Taxable Persons selling locally have no threshold.</span>
                   </li>
                 </ul>
               </div>
@@ -237,40 +237,52 @@ function TheDanger() {
           </p>
         </Reveal>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-16">
+        <div className="grid md:grid-cols-3 gap-6 mt-12">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Late Registration Penalties
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If you miss the mandatory 30-day window after hitting the £90k threshold, HMRC will charge a penalty based on the VAT due, plus you must pay the VAT out of your own pocket.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Late Registration Penalties
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If you miss the mandatory 30-day window after hitting the £90k threshold, HMRC will charge a penalty based on the VAT due, plus you must pay the VAT out of your own pocket.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Application Rejection
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                HMRC actively flags applications from non-UK residents for fraud checks. Incomplete or contradictory answers in your application will result in swift rejection.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Application Rejection
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  HMRC actively flags applications from non-UK residents for fraud checks. Incomplete or contradictory answers in your application will result in swift rejection.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Lost Revenue
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Without a VAT number, you cannot reclaim the 20% tax you pay on business services, SaaS tools, and local advertising, eating directly into your profit margins.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Lost Revenue
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Without a VAT number, you cannot reclaim the 20% tax you pay on business services, SaaS tools, and local advertising, eating directly into your profit margins.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

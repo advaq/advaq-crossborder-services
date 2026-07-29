@@ -201,15 +201,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**File Tax Returns:** Mandatory for submitting your CT600 Corporation Tax return.</span>
+                    <span><strong className="text-white font-semibold">File Tax Returns:</strong> Mandatory for submitting your CT600 Corporation Tax return.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Bank Accounts:** Often requested by digital banks for KYC/KYB compliance.</span>
+                    <span><strong className="text-white font-semibold">Bank Accounts:</strong> Often requested by digital banks for KYC/KYB compliance.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**HMRC Communication:** Required for any correspondence with the tax authority.</span>
+                    <span><strong className="text-white font-semibold">HMRC Communication:</strong> Required for any correspondence with the tax authority.</span>
                   </li>
                 </ul>
               </div>
@@ -236,40 +236,52 @@ function TheDanger() {
           </p>
         </Reveal>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-16">
+        <div className="grid md:grid-cols-3 gap-6 mt-12">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Statutory Penalties
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                By law, you must register within 3 months of doing business. Missing this deadline results in automatic financial penalties applied by HMRC directly to your company.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Statutory Penalties
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  By law, you must register within 3 months of doing business. Missing this deadline results in automatic financial penalties applied by HMRC directly to your company.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Filing Blocks
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                You cannot file your year-end accounts without a UTR. This creates a domino effect where you miss your tax filing deadline, incurring even more substantial late filing penalties.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Filing Blocks
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  You cannot file your year-end accounts without a UTR. This creates a domino effect where you miss your tax filing deadline, incurring even more substantial late filing penalties.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Bank Account Freezes
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If your business bank requests your UTR to verify your tax status and you cannot provide it, they may freeze or close your corporate accounts to comply with anti-money laundering laws.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Bank Account Freezes
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If your business bank requests your UTR to verify your tax status and you cannot provide it, they may freeze or close your corporate accounts to comply with anti-money laundering laws.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

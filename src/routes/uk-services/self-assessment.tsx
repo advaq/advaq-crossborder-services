@@ -216,15 +216,15 @@ function ServiceOverview() {
                 <ul className="space-y-4 text-sm text-navy-200">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Company Directors:** Anyone taking dividends or untaxed salary from a UK LTD.</span>
+                    <span><strong className="text-white font-semibold">Company Directors:</strong> Anyone taking dividends or untaxed salary from a UK LTD.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**High Earners:** Individuals with income over £100,000 annually.</span>
+                    <span><strong className="text-white font-semibold">High Earners:</strong> Individuals with income over £100,000 annually.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                    <span>**Foreign Income:** Residents receiving income from overseas sources.</span>
+                    <span><strong className="text-white font-semibold">Foreign Income:</strong> Residents receiving income from overseas sources.</span>
                   </li>
                 </ul>
               </div>
@@ -251,40 +251,52 @@ function TheDanger() {
           </p>
         </Reveal>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-16">
+        <div className="grid md:grid-cols-3 gap-6 mt-12">
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Automatic £100 Penalty
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                If your return is just one day late past the January 31st deadline, HMRC issues an automatic £100 fine. This applies even if you owe no tax or have a dormant company.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Automatic £100 Penalty
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  If your return is just one day late past the January 31st deadline, HMRC issues an automatic £100 fine. This applies even if you owe no tax or have a dormant company.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                Escalating Daily Fines
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                After 3 months, penalties increase by £10 per day, up to £900. After 6 and 12 months, penalties jump by an additional £300 or 5% of the tax due, whichever is higher.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  Escalating Daily Fines
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  After 3 months, penalties increase by £10 per day, up to £900. After 6 and 12 months, penalties jump by an additional £300 or 5% of the tax due, whichever is higher.
+                </p>
+              </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="bg-white border-l-4 border-l-red-600 rounded-2xl p-8 shadow-sm h-full">
-              <BadgeAlert className="text-red-600 mb-5" size={28} />
-              <h3 className="font-sans text-xl font-semibold text-dark-text">
-                HMRC Investigations
-              </h3>
-              <p className="text-gray-700 text-[15px] leading-[1.7] mt-3">
-                Submitting incorrect figures, failing to declare dividends, or applying wrong tax codes can trigger a formal HMRC audit into your personal and corporate finances.
-              </p>
+            <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-red-400 transition-all duration-300 flex flex-col justify-between h-full group">
+              <div>
+                <div className="w-11 h-11 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <AlertTriangle size={22} />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-navy-950">
+                  HMRC Investigations
+                </h3>
+                <p className="text-gray-600 text-[13.5px] leading-relaxed mt-2">
+                  Submitting incorrect figures, failing to declare dividends, or applying wrong tax codes can trigger a formal HMRC audit into your personal and corporate finances.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
