@@ -19,6 +19,8 @@ const calculatorCategories = [
     id: "uk",
     flag: "🇬🇧",
     title: "UK Business & Tax Calculators",
+    shortName: "UK",
+    exploreLink: "/calculators/uk",
     description:
       "Tax efficiency, VAT threshold, and dividend planning calculators for UK Limited Companies & overseas directors.",
     tools: [
@@ -40,18 +42,14 @@ const calculatorCategories = [
         desc: "Calculate optimal director salary (£12,570), dividend tax rates (8.75%), and SIPP pension tax relief.",
         badge: "High Conversion",
       },
-      {
-        name: "UK vs Pakistan Tax Comparison Tool",
-        slug: "/calculators/uk-vs-pakistan-tax-comparison",
-        desc: "Compare UK LTD dividends side-by-side with Pakistan FBR IT Export 0.25% tax exemption under DTT Article 22.",
-        badge: "Dual Resident",
-      },
     ],
   },
   {
     id: "usa",
     flag: "🇺🇸",
     title: "US Business & Tax Calculators",
+    shortName: "US",
+    exploreLink: "/calculators/usa",
     description:
       "Interactive tax, state cost, and compliance calculators for non-resident US LLC owners and founders.",
     tools: [
@@ -73,18 +71,14 @@ const calculatorCategories = [
         desc: "Test ETBUS and ECI rules to verify if your foreign single-member LLC pays 0% US income tax.",
         badge: "0% Tax Exemption",
       },
-      {
-        name: "FinCEN BOI Report Deadline & Penalty Calculator",
-        slug: "/calculators/us-boi-deadline",
-        desc: "Determine your mandatory FinCEN Corporate Transparency Act deadline and estimate $590/day non-filing fines.",
-        badge: "FinCEN BOI",
-      },
     ],
   },
   {
     id: "uae",
     flag: "🇦🇪",
     title: "UAE Freezone & Corporate Tax Calculators",
+    shortName: "UAE",
+    exploreLink: "/calculators/uae",
     description:
       "Dubai Freezone visa package costs, 9% Corporate Tax, and Small Business Relief estimators.",
     tools: [
@@ -106,26 +100,34 @@ const calculatorCategories = [
         desc: "Calculate FTA Excise Tax for tobacco (100%), energy drinks (100%), and carbonated/sweetened beverages (50%).",
         badge: "FTA Excise Tax",
       },
-      {
-        name: "Dubai Real Estate ROI & Tax Calculator",
-        slug: "/calculators/uae-real-estate-roi",
-        desc: "Calculate 4% DLD transfer fee, 2% agency fee, net rental yield, and 0% capital gains tax savings in Dubai.",
-        badge: "Property ROI",
-      },
     ],
   },
   {
     id: "pakistan",
     flag: "🇵🇰",
     title: "Pakistan SECP & FBR Services Calculators",
+    shortName: "Pakistan",
+    exploreLink: "/calculators/pakistan",
     description:
-      "ATL Filer savings, IT Exporter 100% Tax Credit, and SECP company formation estimators.",
+      "ATL Filer savings, IT Exporter 0.25% Tax Rate, and SECP company formation estimators.",
     tools: [
       {
         name: "Pakistan Filer Tax Savings Calculator",
         slug: "/calculators/pakistan-tax",
         desc: "Calculate exact money saved on property purchases, car registration, bank transfers & FBR returns by becoming an ATL Filer.",
         badge: "FBR Savings",
+      },
+      {
+        name: "Pakistan IT Export 0.25% Tax Exemption Calculator",
+        slug: "/calculators/pakistan-it-export",
+        desc: "Calculate 0.25% reduced withholding tax under Section 154A for IT & ITES export revenue with PSEB registration.",
+        badge: "PSEB IT Export",
+      },
+      {
+        name: "Pakistan SECP Company Incorporation Cost Calculator",
+        slug: "/calculators/pakistan-secp-cost",
+        desc: "Estimate official SECP registration fees, digital signatures, name availability, and legal drafting costs.",
+        badge: "SECP Setup",
       },
     ],
   },
@@ -257,6 +259,16 @@ function CalculatorsHubPage() {
                     </div>
                   </div>
                 ))}
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-border/60 flex justify-center">
+                <Link
+                  to={cat.exploreLink}
+                  className="inline-flex items-center gap-2 bg-navy-950 text-white hover:bg-gold-500 hover:text-navy-950 font-semibold px-6 py-3 rounded-lg text-xs uppercase tracking-wider transition-all duration-200 group shadow-sm"
+                >
+                  <span>Explore All {cat.shortName} Calculators</span>
+                  <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </div>
           ))}
