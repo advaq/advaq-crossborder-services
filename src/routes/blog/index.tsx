@@ -1109,10 +1109,10 @@ const articles = [
 
 const categories = [
   "All",
-  "UK Business Setup",
-  "USA Setup",
-  "UAE Freezone",
-  "Pakistan SECP & FBR",
+  "UK Blog",
+  "USA Blog",
+  "UAE Blog",
+  "Pakistan Blog",
   "Legal Contracts",
 ];
 
@@ -1138,20 +1138,37 @@ export const Route = createFileRoute("/blog/")({
 function BlogIndexPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const ARTICLES_PER_PAGE = 15;
 
   const filteredArticles = articles.filter((art) => {
     const matchesCategory =
       selectedCategory === "All" ||
       art.category === selectedCategory ||
-      (selectedCategory === "UAE Freezone" && (art.category === "UAE Setup" || art.category === "UAE Freezone")) ||
-      (selectedCategory === "Pakistan SECP & FBR" && (art.category === "Pakistan Setup" || art.category === "Pakistan SECP & FBR")) ||
-      (selectedCategory === "UK Business Setup" && (art.category === "UK Business Setup" || art.category === "UK Setup")) ||
-      (selectedCategory === "USA Setup" && (art.category === "USA Setup" || art.category === "US Setup"));
+      (selectedCategory === "UK Blog" && (art.category === "UK Blog" || art.category === "UK Business Setup" || art.category === "UK Setup")) ||
+      (selectedCategory === "USA Blog" && (art.category === "USA Blog" || art.category === "USA Setup" || art.category === "US Setup")) ||
+      (selectedCategory === "UAE Blog" && (art.category === "UAE Blog" || art.category === "UAE Setup" || art.category === "UAE Freezone")) ||
+      (selectedCategory === "Pakistan Blog" && (art.category === "Pakistan Blog" || art.category === "Pakistan Setup" || art.category === "Pakistan SECP & FBR")) ||
+      (selectedCategory === "Legal Contracts" && (art.category === "Legal Contracts" || art.category === "Legal Contract Drafting"));
     const matchesSearch =
       art.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       art.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
+  const totalPages = Math.ceil(filteredArticles.length / ARTICLES_PER_PAGE);
+  const startIndex = (currentPage - 1) * ARTICLES_PER_PAGE;
+  const paginatedArticles = filteredArticles.slice(startIndex, startIndex + ARTICLES_PER_PAGE);
+
+  const handleCategoryChange = (cat: string) => {
+    setSelectedCategory(cat);
+    setCurrentPage(1);
+  };
+
+  const handleSearchChange = (query: string) => {
+    setSearchQuery(query);
+    setCurrentPage(1);
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -1164,7 +1181,7 @@ function BlogIndexPage() {
               <BookOpen size={14} /> ADVAQ KNOWLEDGE HUB
             </p>
             <h1 className="font-serif text-white text-[38px] md:text-[56px] mt-4 leading-[1.15]">
-              Global Business, Tax & Legal Insights
+              Global Business, Tax &amp; Legal Insights
             </h1>
             <p className="mt-5 text-navy-200 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
               In-depth legal blueprints, tax compliance guides, and international company setup tutorials for founders, freelancers, and digital agencies worldwide.
@@ -1176,7 +1193,7 @@ function BlogIndexPage() {
                 type="text"
                 placeholder="Search articles (e.g. UK company non resident, IRS 5472, UAE tax)..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => handleSearchChange(e.target.value)}
                 className="w-full bg-navy-900/90 border border-white/20 rounded-full px-6 py-4 pl-12 text-sm text-white placeholder-navy-300 focus:outline-none focus:border-gold-500 transition-all shadow-xl"
               />
               <Search
@@ -1200,7 +1217,7 @@ function BlogIndexPage() {
             {categories.map((cat) => (
               <button
                 key={cat}
-                onClick={() => setSelectedCategory(cat)}
+                onClick={() => handleCategoryChange(cat)}
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
                   selectedCategory === cat
                     ? "bg-navy-950 text-gold-500 shadow-md"
@@ -1218,49 +1235,100 @@ function BlogIndexPage() {
           <div className="text-center py-16 bg-off-white rounded-2xl border border-border">
             <p className="text-gray-500 text-base">No articles found matching your query.</p>
             <button
-              onClick={() => { setSelectedCategory("All"); setSearchQuery(""); }}
+              onClick={() => { handleCategoryChange("All"); setSearchQuery(""); }}
               className="mt-4 text-xs font-semibold text-gold-600 uppercase tracking-widest hover:underline"
             >
               Reset Filters
             </button>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredArticles.map((art) => (
-              <Reveal key={art.slug}>
-                <div className="border border-border rounded-xl p-6 bg-white hover:shadow-xl hover:border-gold-500/40 transition-all flex flex-col justify-between h-full group">
-                  <div>
-                    <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
-                      <span className="text-gold-600 font-semibold uppercase tracking-wider text-[11px]">
-                        {art.category}
-                      </span>
-                      <span>{art.readTime}</span>
-                    </div>
+          <>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {paginatedArticles.map((art) => (
+                <Reveal key={art.slug}>
+                  <div className="border border-border rounded-xl p-6 bg-white hover:shadow-xl hover:border-gold-500/40 transition-all flex flex-col justify-between h-full group">
+                    <div>
+                      <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
+                          <span className="font-semibold uppercase tracking-wider text-gold-600">
+                            {art.category === "UK Business Setup" || art.category === "UK Setup" ? "UK BLOG" :
+                             art.category === "USA Setup" || art.category === "US Setup" ? "USA BLOG" :
+                             art.category === "UAE Freezone" || art.category === "UAE Setup" ? "UAE BLOG" :
+                             art.category === "Pakistan SECP & FBR" || art.category === "Pakistan Setup" ? "PAKISTAN BLOG" :
+                             art.category}
+                          </span>
+                          <span>{art.readTime}</span>
+                        </div>
 
-                    <Link to={art.slug}>
-                      <h3 className="font-sans font-bold text-lg text-dark-text group-hover:text-navy-900 transition-colors leading-snug">
-                        {art.title}
-                      </h3>
-                    </Link>
+                        <Link to={art.slug}>
+                          <h3 className="font-sans font-bold text-lg text-dark-text group-hover:text-navy-900 transition-colors leading-snug">
+                            {art.title}
+                          </h3>
+                        </Link>
 
-                    <p className="mt-3 text-xs text-gray-600 leading-relaxed line-clamp-3">
-                      {art.excerpt}
-                    </p>
+                        <p className="mt-3 text-xs text-gray-600 leading-relaxed line-clamp-3">
+                          {art.excerpt}
+                        </p>
+                      </div>
+
+                      <div className="mt-6 pt-4 border-t border-border/60 flex items-center justify-between gap-3">
+                        <span className="text-[11px] font-medium text-gray-400">{art.date}</span>
+                        <Link
+                          to={art.slug}
+                          className="px-4 py-2 rounded-xl bg-navy-950 hover:bg-gold-500 text-white hover:text-navy-950 font-bold text-[11px] uppercase tracking-wider inline-flex items-center gap-1.5 transition-all shadow-sm hover:scale-[1.02]"
+                        >
+                          <span>READ GUIDE</span>
+                          <ArrowRight size={12} className="shrink-0" />
+                        </Link>
+                      </div>
                   </div>
+                </Reveal>
+              ))}
+            </div>
 
-                  <div className="mt-6 pt-4 border-t border-border/60 flex items-center justify-between">
-                    <span className="text-[11px] text-gray-400">{art.date}</span>
-                    <Link
-                      to={art.slug}
-                      className="text-xs font-semibold text-gold-600 group-hover:text-navy-950 uppercase tracking-widest inline-flex items-center gap-1 transition-all"
-                    >
-                      Read Guide <ArrowRight size={12} />
-                    </Link>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+            {/* PAGINATION CONTROLS */}
+            {totalPages > 1 && (
+              <div className="mt-14 flex items-center justify-center gap-2">
+                <button
+                  onClick={() => {
+                    setCurrentPage((p) => Math.max(p - 1, 1));
+                    window.scrollTo({ top: 400, behavior: "smooth" });
+                  }}
+                  disabled={currentPage === 1}
+                  className="px-4 py-2.5 rounded-xl border border-navy-900/20 text-navy-950 font-bold text-xs uppercase tracking-wider disabled:opacity-30 disabled:cursor-not-allowed hover:bg-navy-950 hover:text-white transition-all"
+                >
+                  ← Previous
+                </button>
+
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+                  <button
+                    key={pageNum}
+                    onClick={() => {
+                      setCurrentPage(pageNum);
+                      window.scrollTo({ top: 400, behavior: "smooth" });
+                    }}
+                    className={`w-10 h-10 rounded-xl font-bold text-xs transition-all ${
+                      currentPage === pageNum
+                        ? "bg-navy-950 text-gold-500 shadow-md scale-105"
+                        : "bg-off-white text-gray-700 hover:bg-gray-200"
+                    }`}
+                  >
+                    {pageNum}
+                  </button>
+                ))}
+
+                <button
+                  onClick={() => {
+                    setCurrentPage((p) => Math.min(p + 1, totalPages));
+                    window.scrollTo({ top: 400, behavior: "smooth" });
+                  }}
+                  disabled={currentPage === totalPages}
+                  className="px-4 py-2.5 rounded-xl border border-navy-900/20 text-navy-950 font-bold text-xs uppercase tracking-wider disabled:opacity-30 disabled:cursor-not-allowed hover:bg-navy-950 hover:text-white transition-all"
+                >
+                  Next →
+                </button>
+              </div>
+            )}
+          </>
         )}
       </section>
 

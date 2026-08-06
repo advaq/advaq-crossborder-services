@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B1F" />
+      <stop offset="50%" stop-color="#0A0F2C" />
+      <stop offset="100%" stop-color="#0F1A3E" />
+    </linearGradient>
+
+    <radialGradient id="goldGlow" cx="75%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.25" />
+      <stop offset="60%" stop-color="#D4AF37" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#050B1F" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Metallic Gold Gradients -->
+    <linearGradient id="goldMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF3DC" />
+      <stop offset="35%" stop-color="#E5C358" />
+      <stop offset="70%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#B38E36" />
+    </linearGradient>
+
+    <linearGradient id="goldAccent" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B38E36" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#FAF3DC" />
+    </linearGradient>
+
+    <!-- Dark Card Overlay -->
+    <linearGradient id="cardOverlay" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0F2C" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#050B1F" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(212, 175, 55, 0.07)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)" />
+  <rect width="1200" height="675" fill="url(#grid)" />
+  <rect width="1200" height="675" fill="url(#goldGlow)" />
+
+  <!-- Abstract Geometric Line Art -->
+  <g opacity="0.15">
+    <circle cx="950" cy="337" r="300" stroke="url(#goldMetal)" stroke-width="1.5" fill="none" stroke-dasharray="8 6" />
+    <circle cx="950" cy="337" r="220" stroke="url(#goldMetal)" stroke-width="1" fill="none" />
+    <circle cx="950" cy="337" r="140" stroke="url(#goldMetal)" stroke-width="2" fill="none" />
+  </g>
+
+  <!-- Left Content Showcase Box -->
+  <g transform="translate(80, 95)">
+    <!-- Glassmorphic Container -->
+    <rect width="580" height="485" rx="24" fill="url(#cardOverlay)" stroke="url(#goldMetal)" stroke-width="1.5" filter="drop-shadow(0 20px 40px rgba(0,0,0,0.5))" />
+    
+    <!-- Top Gold Accent Line -->
+    <rect x="0" y="0" width="580" height="6" rx="3" fill="url(#goldMetal)" />
+
+    <!-- Badges & Labels -->
+    <rect x="45" y="45" width="160" height="32" rx="16" fill="rgba(212, 175, 55, 0.12)" stroke="rgba(212, 175, 55, 0.4)" stroke-width="1" />
+    <text x="62" y="66" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="11" fill="#D4AF37" letter-spacing="2">UK LEGAL GUIDE</text>
+    
+    <text x="535" y="66" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="12" fill="#B8C5E8">2026 OFFICIAL RULES</text>
+
+    <!-- Main Headline Text Visual -->
+    <text x="45" y="130" font-family="Georgia, serif" font-weight="700" font-size="30" fill="#FFFFFF" width="490">
+      <tspan x="45" dy="0">Can a Non-UK Resident</tspan>
+      <tspan x="45" dy="42">Register a Limited Company</tspan>
+      <tspan x="45" dy="42" fill="url(#goldMetal)">in the UK remotely?</tspan>
+    </text>
+
+    <!-- Divider -->
+    <line x1="45" y1="245" x2="535" y2="245" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+
+    <!-- Bullet Highlights -->
+    <g transform="translate(45, 275)">
+      <!-- Item 1 -->
+      <circle cx="12" cy="12" r="12" fill="rgba(5, 150, 105, 0.2)" stroke="#10B981" stroke-width="1.5" />
+      <path d="M8 12 l3 3 l6 -6" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="36" y="16" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="14" fill="#E2E8F0">100% Online Companies House Formation</text>
+
+      <!-- Item 2 -->
+      <g transform="translate(0, 45)">
+        <circle cx="12" cy="12" r="12" fill="rgba(5, 150, 105, 0.2)" stroke="#10B981" stroke-width="1.5" />
+        <path d="M8 12 l3 3 l6 -6" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="36" y="16" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="14" fill="#E2E8F0">No UK Travel or Physical Presence Needed</text>
+      </g>
+
+      <!-- Item 3 -->
+      <g transform="translate(0, 90)">
+        <circle cx="12" cy="12" r="12" fill="rgba(5, 150, 105, 0.2)" stroke="#10B981" stroke-width="1.5" />
+        <path d="M8 12 l3 3 l6 -6" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="36" y="16" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="14" fill="#E2E8F0">Foreign Directors &amp; Shareholders Allowed</text>
+      </g>
+    </g>
+
+    <!-- Footer Stamp -->
+    <g transform="translate(45, 415)">
+      <rect width="490" height="42" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" />
+      <text x="20" y="26" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="11" fill="#D4AF37" letter-spacing="1">ADVAQ CORPORATE LEGAL BLUEPRINT</text>
+      <text x="470" y="26" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="11" fill="#10B981">✓ VERIFIED FOR 2026</text>
+    </g>
+  </g>
+
+  <!-- Right Side Emblem Illustration -->
+  <g transform="translate(930, 337)">
+    <!-- Outer Shield / Emblem Base -->
+    <polygon points="0,-160 130,-110 130,50 0,160 -130,50 -130,-110" fill="url(#cardOverlay)" stroke="url(#goldMetal)" stroke-width="4" filter="drop-shadow(0 25px 35px rgba(0,0,0,0.6))" />
+    <polygon points="0,-145 118,-100 118,42 0,145 -118,42 -118,-100" fill="none" stroke="rgba(212, 175, 55, 0.3)" stroke-width="1.5" stroke-dasharray="6 4" />
+
+    <!-- Stylized Union Jack Crown Geometry in Gold -->
+    <g transform="translate(0, -35)">
+      <path d="M-60,-50 L0,-90 L60,-50 L35,10 L-35,10 Z" fill="none" stroke="url(#goldMetal)" stroke-width="3" />
+      <!-- Central Pillar -->
+      <line x1="0" y1="-90" x2="0" y2="40" stroke="url(#goldMetal)" stroke-width="3" />
+      <line x1="-50" y1="-20" x2="50" y2="-20" stroke="url(#goldMetal)" stroke-width="3" />
+      <!-- Diagonals -->
+      <line x1="-45" y1="-65" x2="45" y2="25" stroke="url(#goldMetal)" stroke-width="1.5" />
+      <line x1="45" y1="-65" x2="-45" y2="25" stroke="url(#goldMetal)" stroke-width="1.5" />
+    </g>
+
+    <!-- Scales of Justice Icon Below -->
+    <g transform="translate(0, 60)">
+      <line x1="-35" y1="0" x2="35" y2="0" stroke="url(#goldMetal)" stroke-width="2.5" />
+      <line x1="0" y1="-15" x2="0" y2="25" stroke="url(#goldMetal)" stroke-width="2.5" />
+      <line x1="-20" y1="25" x2="20" y2="25" stroke="url(#goldMetal)" stroke-width="2.5" />
+      <!-- Left Pan -->
+      <path d="M-35,0 L-45,20 L-25,20 Z" fill="url(#goldMetal)" opacity="0.8" />
+      <!-- Right Pan -->
+      <path d="M35,0 L25,20 L45,20 Z" fill="url(#goldMetal)" opacity="0.8" />
+    </g>
+  </g>
+</svg>

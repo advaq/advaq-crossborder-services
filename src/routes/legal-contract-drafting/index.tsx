@@ -472,19 +472,27 @@ function ServiceCard({ icon: Icon, title, price, desc, items, guideUrl }: Servic
           ))}
         </ul>
       </div>
-      <div className="mt-5 flex items-center justify-between gap-3 border-t border-gray-100 pt-3">
+      <div className="mt-5 pt-3 border-t border-gray-100 flex items-center gap-2.5">
         <Link
           to="/contact"
-          className="inline-flex items-center gap-1.5 text-gold-600 font-semibold text-[11px] uppercase tracking-widest hover:text-gold-500 transition-all"
+          className="flex-1 py-2.5 px-3 rounded-xl border-1.5 border-gold-500 text-navy-950 bg-transparent hover:bg-gold-500 hover:text-navy-950 font-bold text-[11px] uppercase tracking-wider inline-flex items-center justify-center gap-1.5 transition-all hover:scale-[1.02] shadow-sm"
         >
-          ORDER NOW <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform duration-200" />
+          <span>ORDER NOW</span>
+          <ArrowRight size={13} className="shrink-0" />
         </Link>
-        {guideUrl && (
+        {guideUrl ? (
           <Link
             to={guideUrl}
-            className="inline-flex items-center gap-1 text-navy-900 hover:text-gold-600 font-semibold text-[11px] uppercase tracking-widest transition-all"
+            className="flex-1 py-2.5 px-3 rounded-xl bg-navy-950 hover:bg-navy-900 text-white font-bold text-[11px] uppercase tracking-wider inline-flex items-center justify-center gap-1 transition-all shadow-sm hover:scale-[1.02]"
           >
-            LEARN MORE →
+            <span>LEARN MORE</span>
+          </Link>
+        ) : (
+          <Link
+            to="/contact"
+            className="flex-1 py-2.5 px-3 rounded-xl bg-navy-950 hover:bg-navy-900 text-white font-bold text-[11px] uppercase tracking-wider inline-flex items-center justify-center gap-1 transition-all shadow-sm hover:scale-[1.02]"
+          >
+            <span>GET STARTED</span>
           </Link>
         )}
       </div>
@@ -1031,9 +1039,10 @@ function AddOns() {
                   <p className="mt-2 text-sm text-gray-600 leading-relaxed">{a.desc}</p>
                   <Link
                     to="/contact"
-                    className="mt-4 inline-flex items-center gap-1.5 text-gold-600 font-semibold text-[11px] uppercase tracking-widest hover:text-gold-500 transition-all"
+                    className="mt-4 inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold text-[11px] uppercase tracking-wider transition-all shadow-sm hover:scale-[1.02]"
                   >
-                    ADD TO ORDER <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
+                    <span>ADD TO ORDER</span>
+                    <ArrowRight size={12} className="shrink-0" />
                   </Link>
                 </div>
               </div>

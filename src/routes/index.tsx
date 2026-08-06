@@ -73,9 +73,9 @@ function Hero() {
                 href="https://wa.me/923000925335"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-outline-light px-8 py-3.5 uppercase text-xs tracking-widest font-semibold inline-flex items-center gap-2"
+                className="btn-outline-emerald px-8 py-3.5 uppercase text-xs tracking-widest font-semibold inline-flex items-center gap-2"
               >
-                <MessageCircle size={16} /> TALK ON WHATSAPP
+                <MessageCircle size={16} /> WHATSAPP US
               </a>
             </div>
           </Reveal>
@@ -188,24 +188,24 @@ function Hero() {
             </div>
           </div>
 
-          {/* FLOATING BADGE 1 — IRS PTIN */}
-          <div className="absolute top-[36%] -left-3 w-[210px] bg-navy-800/95 backdrop-blur-lg border border-gold-500/40 rounded-xl p-3.5 animate-float-delayed shadow-2xl">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 grid place-items-center bg-gold-500/15 border border-gold-500/30 rounded-lg text-gold-500 shrink-0">
-                <ClipboardCheck size={18} />
+          {/* FLOATING BADGE 1 — IRS PTIN (Right Next to Punjab Bar Council) */}
+          <div className="absolute -bottom-6 right-[225px] w-[210px] bg-navy-800/95 backdrop-blur-lg border border-gold-500/40 rounded-xl p-3 animate-float-delayed shadow-2xl z-20">
+            <div className="flex items-center gap-2.5">
+              <div className="w-8 h-8 grid place-items-center bg-gold-500/15 border border-gold-500/30 rounded-lg text-gold-500 shrink-0">
+                <ClipboardCheck size={16} />
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-wider text-gold-500 font-bold">
+                <p className="text-[9px] uppercase tracking-wider text-gold-500 font-bold">
                   IRS PTIN AUTHORIZED
                 </p>
-                <p className="text-white text-xs font-medium mt-0.5">US Tax Preparer</p>
+                <p className="text-white text-[11px] font-medium mt-0.5">US Tax Preparer</p>
               </div>
             </div>
           </div>
 
-          {/* FLOATING BADGE 2 — PUNJAB BAR COUNCIL */}
-          <div className="absolute -bottom-2 right-6 w-[230px] bg-gold-500 text-navy-950 rounded-xl p-3.5 animate-float shadow-2xl rotate-[-2deg]">
-            <div className="flex items-center gap-3">
+          {/* FLOATING BADGE 2 — PUNJAB BAR COUNCIL (Right Side) */}
+          <div className="absolute -bottom-6 right-0 w-[215px] bg-gold-500 text-navy-950 rounded-xl p-3 animate-float shadow-2xl z-20">
+            <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 grid place-items-center bg-navy-950 text-gold-500 rounded-lg shrink-0">
                 <Scale size={16} />
               </div>
@@ -213,7 +213,7 @@ function Hero() {
                 <p className="text-[9px] uppercase tracking-wider font-bold opacity-80">
                   PUNJAB BAR COUNCIL
                 </p>
-                <p className="text-navy-950 font-serif font-bold text-xs">Licensed Advocate</p>
+                <p className="text-navy-950 font-serif font-bold text-[11px]">Licensed Advocate</p>
               </div>
             </div>
           </div>
@@ -318,7 +318,7 @@ function ServicesOverview() {
     },
     {
       label: "⚖️ LEGAL CONTRACT DRAFTING",
-      title: "Professional Contract Drafting",
+      title: "Professional Legal Contract Drafting",
       sub: "Freelance Agreements, NDA, MSA, IP Assignment — drafted by a licensed advocate, not a template generator.",
       items: ["NDA / Non-Disclosure Agreement", "Freelance Service Agreement", "IP Assignment Agreement", "Master Service Agreement (MSA)", "IT Outsourcing Agreement", "Privacy Policy & Terms of Service"],
       link: "/legal-contract-drafting" as const,
@@ -342,10 +342,10 @@ function ServicesOverview() {
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cards.slice(0, 3).map((c, i) => (
             <Reveal key={i} delay={i * 120}>
-              <article className="group relative bg-white border border-border rounded-2xl p-9 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(10,15,44,0.18)] overflow-hidden h-full flex flex-col justify-between">
+              <article className="group relative bg-white border-2 border-gold-500/60 rounded-2xl p-9 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500 hover:shadow-[0_20px_60px_-20px_rgba(201,168,76,0.25)] overflow-hidden h-full flex flex-col justify-between">
                 <div>
-                  <div className="absolute top-0 inset-x-0 h-[3px] bg-gold-500" />
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-gold-500">{c.label}</p>
+                  <div className="absolute top-0 inset-x-0 h-[4px] bg-gold-500" />
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-gold-600">{c.label}</p>
                   <h3 className="font-serif text-2xl text-dark-text mt-3">{c.title}</h3>
                   <p className="text-gray-500 text-sm mt-1.5">{c.sub}</p>
                   <ul className="mt-7 space-y-3">
@@ -357,8 +357,9 @@ function ServicesOverview() {
                     ))}
                   </ul>
                 </div>
-                <Link to={c.link} className="mt-8 inline-flex items-center gap-2 text-gold-500 font-semibold text-sm uppercase tracking-widest border-b border-transparent hover:border-gold-500 transition-colors pb-1">
-                  {c.cta} <ArrowRight size={14} />
+                <Link to={c.link} className="mt-8 w-full inline-flex items-center justify-between px-5 py-3.5 rounded-xl border border-gold-500/50 text-navy-950 font-bold text-xs uppercase tracking-wider bg-gold-500/10 hover:bg-gold-500 hover:text-navy-950 transition-all duration-200 group/btn shadow-sm">
+                  <span>{c.cta}</span>
+                  <ArrowRight size={16} className="text-gold-600 group-hover/btn:text-navy-950 transition-transform group-hover/btn:translate-x-1" />
                 </Link>
               </article>
             </Reveal>
@@ -368,10 +369,10 @@ function ServicesOverview() {
         <div className="mt-8 grid md:grid-cols-2 gap-8">
           {cards.slice(3, 5).map((c, i) => (
             <Reveal key={i} delay={(i + 3) * 120}>
-              <article className="group relative bg-white border border-border rounded-2xl p-9 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(10,15,44,0.18)] overflow-hidden h-full flex flex-col justify-between">
+              <article className="group relative bg-white border-2 border-gold-500/60 rounded-2xl p-9 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500 hover:shadow-[0_20px_60px_-20px_rgba(201,168,76,0.25)] overflow-hidden h-full flex flex-col justify-between">
                 <div>
-                  <div className="absolute top-0 inset-x-0 h-[3px] bg-gold-500" />
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-gold-500">{c.label}</p>
+                  <div className="absolute top-0 inset-x-0 h-[4px] bg-gold-500" />
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-gold-600">{c.label}</p>
                   <h3 className="font-serif text-2xl text-dark-text mt-3">{c.title}</h3>
                   <p className="text-gray-500 text-sm mt-1.5">{c.sub}</p>
                   <ul className="mt-7 space-y-3">
@@ -383,8 +384,9 @@ function ServicesOverview() {
                     ))}
                   </ul>
                 </div>
-                <Link to={c.link} className="mt-8 inline-flex items-center gap-2 text-gold-500 font-semibold text-sm uppercase tracking-widest border-b border-transparent hover:border-gold-500 transition-colors pb-1">
-                  {c.cta} <ArrowRight size={14} />
+                <Link to={c.link} className="mt-8 w-full inline-flex items-center justify-between px-5 py-3.5 rounded-xl border border-gold-500/50 text-navy-950 font-bold text-xs uppercase tracking-wider bg-gold-500/10 hover:bg-gold-500 hover:text-navy-950 transition-all duration-200 group/btn shadow-sm">
+                  <span>{c.cta}</span>
+                  <ArrowRight size={16} className="text-gold-600 group-hover/btn:text-navy-950 transition-transform group-hover/btn:translate-x-1" />
                 </Link>
               </article>
             </Reveal>
@@ -777,13 +779,13 @@ function HomeCTA() {
               href="https://wa.me/923000925335"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm uppercase tracking-wider px-8 py-4 rounded-lg inline-flex items-center gap-2 transition-all shadow-md"
+              className="btn-outline-emerald py-4 px-8 text-sm font-semibold uppercase tracking-wider inline-flex items-center gap-2"
             >
               <MessageCircle size={18} /> WHATSAPP US
             </a>
             <Link
               to="/uk-services"
-              className="border border-gold-500/80 text-gold-400 hover:bg-gold-500 hover:text-navy-950 px-8 py-4 text-sm font-semibold uppercase tracking-wider rounded-lg transition-all"
+              className="btn-outline-light py-4 px-8 text-sm font-semibold uppercase tracking-wider inline-flex items-center gap-2"
             >
               VIEW ALL SERVICES
             </Link>
