@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const services = [
   { to: "/uk-services", label: "UK Services" },
-  { to: "/us-services", label: "US Services" },
+  { to: "/us-services", label: "USA Services" },
   { to: "/uae-services", label: "UAE Services" },
   { to: "/pakistan-services", label: "Pakistan Services" },
   { to: "/legal-contract-drafting", label: "Legal Contract Drafting" },

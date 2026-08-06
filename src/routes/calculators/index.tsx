@@ -26,20 +26,20 @@ const calculatorCategories = [
     tools: [
       {
         name: "UK Self Assessment Tax Calculator",
-        slug: "/calculators/uk-self-assessment",
+        slug: "/calculators/uk-self-assessment-tax-calculator",
         desc: "Calculate complete UK tax liability combining salary, freelance profit, rental income, and dividend earnings.",
         badge: "Most Searched",
       },
       {
         name: "UK Corporation Tax & Marginal Relief Calculator",
-        slug: "/calculators/uk-corporation-tax",
+        slug: "/calculators/uk-corporation-tax-calculator",
         desc: "Calculate 19% Small Profits Rate, 25% Main Rate, and exact Marginal Relief discount for £50k–£250k profits.",
         badge: "Director Tax",
       },
       {
         name: "UK Tax & Dividend Optimizer Calculator",
-        slug: "/calculators/uk-tax",
-        desc: "Calculate optimal director salary (£12,570), dividend tax rates (8.75%), and SIPP pension tax relief.",
+        slug: "/calculators/uk-tax-dividend-optimizer-calculator",
+        desc: "Calculate optimal director salary (£12,570), dividend tax rates (10.75%), and SIPP pension tax relief.",
         badge: "High Conversion",
       },
     ],
@@ -55,19 +55,19 @@ const calculatorCategories = [
     tools: [
       {
         name: "US Federal Income Tax Calculator (Non-Resident)",
-        slug: "/calculators/us-federal-income-tax",
+        slug: "/calculators/us-federal-income-tax-calculator",
         desc: "Calculate Form 1040-NR progressive tax brackets on Effectively Connected Income (ECI) for foreign LLC owners.",
         badge: "Most Searched",
       },
       {
         name: "US LLC Total State & Setup Cost Calculator",
-        slug: "/calculators/us-cost",
+        slug: "/calculators/us-cost-calculator",
         desc: "Compare Wyoming, Delaware, New Mexico & Florida state filing fees, registered agent, EIN & BOI report total costs.",
         badge: "LLC Setup Cost",
       },
       {
         name: "US Foreign Owner 0% Tax Eligibility Checker",
-        slug: "/calculators/us-tax-eligibility",
+        slug: "/calculators/us-tax-eligibility-calculator",
         desc: "Test ETBUS and ECI rules to verify if your foreign single-member LLC pays 0% US income tax.",
         badge: "0% Tax Exemption",
       },
@@ -84,19 +84,19 @@ const calculatorCategories = [
     tools: [
       {
         name: "Dubai Freezone Setup Cost Calculator",
-        slug: "/calculators/uae-freezone",
+        slug: "/calculators/uae-freezone-setup-calculator",
         desc: "Compare IFZA, Meydan, SHAMS & RAKEZ visa package license costs (0 to 4+ visas) vs Dubai Mainland.",
         badge: "Freezone Setup",
       },
       {
         name: "UAE Corporate Tax Registration Deadline Checker",
-        slug: "/calculators/uae-corporate-tax-deadline",
+        slug: "/calculators/uae-corporate-tax-deadline-calculator",
         desc: "Check mandatory FTA registration deadlines under Decision No. 3 of 2024 to avoid statutory AED 10,000 late fines.",
         badge: "AED 10k Fine Risk",
       },
       {
         name: "UAE Excise Tax Calculator (50% / 100%)",
-        slug: "/calculators/uae-excise-tax",
+        slug: "/calculators/uae-excise-tax-calculator",
         desc: "Calculate FTA Excise Tax for tobacco (100%), energy drinks (100%), and carbonated/sweetened beverages (50%).",
         badge: "FTA Excise Tax",
       },
@@ -113,19 +113,19 @@ const calculatorCategories = [
     tools: [
       {
         name: "Pakistan Filer Tax Savings Calculator",
-        slug: "/calculators/pakistan-tax",
+        slug: "/calculators/pakistan-filer-vs-non-filer-tax-calculator",
         desc: "Calculate exact money saved on property purchases, car registration, bank transfers & FBR returns by becoming an ATL Filer.",
         badge: "FBR Savings",
       },
       {
         name: "Pakistan IT Export 0.25% Tax Exemption Calculator",
-        slug: "/calculators/pakistan-it-export",
+        slug: "/calculators/pakistan-it-export-calculator",
         desc: "Calculate 0.25% reduced withholding tax under Section 154A for IT & ITES export revenue with PSEB registration.",
         badge: "PSEB IT Export",
       },
       {
         name: "Pakistan SECP Company Incorporation Cost Calculator",
-        slug: "/calculators/pakistan-secp-cost",
+        slug: "/calculators/pakistan-secp-cost-calculator",
         desc: "Estimate official SECP registration fees, digital signatures, name availability, and legal drafting costs.",
         badge: "SECP Setup",
       },

@@ -10,12 +10,12 @@
 - [Pakistan SECP & FBR Tax Services](https://advaq.com/pakistan-services): SECP Private Limited & SMC company registration, FBR Iris NTN filing, Active Taxpayer List (ATL) restoration, PSEB IT exporter 100% tax credit, Section 154A 0.25% reduced WHT, and SBP FCVA USD accounts.
 - [Legal Contract Drafting](https://advaq.com/legal-contract-drafting): Custom legal drafting for tech companies, software agencies, and freelancers including Non-Disclosure Agreements (NDA), Master Service Agreements (MSA), Service Level Agreements (SLA), IP Assignment Agreements, Software Development Contracts, Independent Contractor Contracts, Terms of Service, GDPR Privacy Policies, and Data Processing Agreements (DPA).
 
-## Free Interactive Tax & Legal Calculators (57 Tools)
+## Free Interactive Tax & Legal Calculators (60 Tools)
 
-- [UK Calculators Suite](https://advaq.com/calculators/uk): 14 interactive tools including UK Tax & Dividend Optimizer, Sole Trader vs LTD Breakeven, VAT Flat Rate Scheme, Capital Gains Tax, and Pension Contribution Impact.
+- [UK Calculators Suite](https://advaq.com/calculators/uk): 15 interactive tools including UK Tax & Dividend Optimizer, Sole Trader vs LTD Breakeven, VAT Flat Rate Scheme, Capital Gains Tax, and Pension Contribution Impact.
 - [USA Calculators Suite](https://advaq.com/calculators/usa): 15 interactive tools including Form 1040-NR Non-Resident Tax, EIN Timeline Tool, 15.3% Self-Employment Tax Exemption, FinCEN BOI $590/day Penalty Estimator, and Wyoming vs Delaware Matrix.
-- [UAE Calculators Suite](https://advaq.com/calculators/uae): 14 interactive tools including FTA Excise Tax (50%/100%), Freelance Permit vs Freezone License, AED 10,000 Corporate Tax Registration Deadline Checker, and Dubai Real Estate ROI & 0% Capital Gains.
-- [Pakistan Calculators Suite](https://advaq.com/calculators/pakistan): 14 interactive tools including Section 153 Withholding Tax (Services 9%/18%, Goods 5%/10%, Contracts 7.5%/15%), Section 236K/236C Property WHT, All-in-One Freelancer Tax & SBP FCVA retention, and SECP Penalty Risk.
+- [UAE Calculators Suite](https://advaq.com/calculators/uae): 15 interactive tools including FTA Excise Tax (50%/100%), Freelance Permit vs Freezone License, AED 10,000 Corporate Tax Registration Deadline Checker, and Dubai Real Estate ROI & 0% Capital Gains.
+- [Pakistan Calculators Suite](https://advaq.com/calculators/pakistan): 15 interactive tools including Section 153 Withholding Tax (Services 9%/18%, Goods 5%/10%, Contracts 7.5%/15%), Section 236K/236C Property WHT, All-in-One Freelancer Tax & SBP FCVA retention, and SECP Penalty Risk.
 
 ## Authority & Contact
 

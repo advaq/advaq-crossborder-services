@@ -1,29 +1,29 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Calculator, ArrowRight, CheckCircle2, Sparkles, PoundSterling, HelpCircle, ShieldCheck, TrendingUp, FileText, ChevronDown } from "lucide-react";
+import { Calculator, ArrowRight, Sparkles, HelpCircle, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 export const Route = createFileRoute("/calculators/uk")({
   head: () => ({
     meta: [
-      { title: "UK Tax & Business Calculators Suite (2026) | HMRC & LTD Tools" },
+      { title: "UK Tax & Business Calculators Suite (2026) | 15 Free HMRC & LTD Tools" },
       {
         name: "description",
         content:
-          "14 free interactive UK tax calculators for LTD directors, overseas non-residents & freelancers. Calculate Corporation Tax (19-25%), Self Assessment, VAT (£90k threshold), SDLT, R&D credits, and PAYE.",
+          "15 free interactive UK tax calculators for LTD directors, overseas non-residents & freelancers. Calculate Corporation Tax (19-25%), Self Assessment, VAT (£90k threshold), SDLT, R&D credits, and PAYE.",
       },
       {
         name: "keywords",
         content:
-          "uk business calculators 2026, uk tax calculator for non residents, uk self assessment calculator, uk corporation tax marginal relief calculator, uk stamp duty calculator, uk vs pakistan tax calculator, uk vat calculator 90k",
+          "uk business calculators 2026, 15 uk tax calculators, uk tax calculator for non residents, uk self assessment tax calculator, uk corporation tax calculator, uk stamp duty land tax calculator, uk vs pakistan tax comparison calculator, uk vat calculator",
       },
       {
         property: "og:title",
-        content: "UK Tax & Business Calculators Suite (2026) | ADVAQ",
+        content: "UK Tax & Business Calculators Suite (2026) | 15 Interactive Tools | ADVAQ",
       },
       {
         property: "og:description",
         content:
-          "14 free interactive UK business tax, VAT, dividend, payroll, and compliance calculators. Updated for HMRC 2025/2026 rates.",
+          "15 free interactive UK business tax, VAT, dividend, payroll, non-resident landlord, and compliance calculators. Updated for HMRC 2025/2026 rates.",
       },
       { property: "og:url", content: "https://advaq.com/calculators/uk" },
       { property: "og:type", content: "website" },
@@ -45,102 +45,120 @@ function UKCalculatorsHubPage() {
 
   const categories = [
     {
-      title: "🔴 High Priority Corporate & Personal Tax Calculators",
+      title: "🔴 High Priority Corporate & Personal Tax",
       subtitle: "Essential tax estimators for UK LTD directors, sole traders, and non-resident shareholders.",
       tools: [
         {
           name: "UK Self Assessment Tax Calculator",
-          slug: "/calculators/uk-self-assessment",
+          slug: "/calculators/uk-self-assessment-tax-calculator",
           desc: "Calculate total UK Income Tax & National Insurance liability combining director salary, freelance profit, UK rental income, and dividend earnings.",
           badge: "Most Searched",
         },
         {
           name: "UK Corporation Tax & Marginal Relief Calculator",
-          slug: "/calculators/uk-corporation-tax",
+          slug: "/calculators/uk-corporation-tax-calculator",
           desc: "Calculate exact Corporation Tax liability using 19% Small Profits Rate, 25% Main Rate, and Marginal Relief for profits between £50,000 and £250,000.",
           badge: "Director Must-Have",
         },
         {
-          name: "UK Capital Gains Tax (CGT) Calculator",
-          slug: "/calculators/uk-capital-gains-tax",
-          desc: "Calculate CGT on UK residential property sales (18%/24%) and stocks/crypto (10%/20%) incorporating the annual £3,000 CGT allowance.",
-          badge: "Property & Shares",
-        },
-        {
           name: "UK Tax & Dividend Optimizer Calculator",
-          slug: "/calculators/uk-tax",
-          desc: "Find optimal director salary (£12,570), dividend tax tiers (8.75%/33.75%/39.35%), Class 1 vs 2/4 NI, and SIPP pension tax relief.",
+          slug: "/calculators/uk-tax-dividend-optimizer-calculator",
+          desc: "Find optimal director salary (£12,570), dividend tax tiers (10.75%/35.75%/39.35%), Class 1 vs 2/4 NI, and SIPP pension tax relief.",
           badge: "Tax Efficiency",
-        },
-        {
-          name: "UK Sole Trader vs LTD Tax Savings Calculator",
-          slug: "/calculators/uk-sole-trader-vs-ltd",
-          desc: "Compare side-by-side tax liabilities to find your exact profit breakeven threshold (~£28,000) for forming a UK Limited Company.",
-          badge: "Breakeven Tool",
         },
       ],
     },
     {
-      title: "🟡 Property, Payroll & R&D Tax Relief Calculators",
-      subtitle: "Property buyer stamp duty, payroll PAYE deductions, and software development tax credits.",
+      title: "🟠 Capital Gains, Property & Landlord Taxes",
+      subtitle: "Property sale CGT, non-resident landlord NRLS tax, and stamp duty land tax estimators.",
       tools: [
         {
+          name: "UK Capital Gains Tax (CGT) Calculator",
+          slug: "/calculators/uk-capital-gains-tax-calculator",
+          desc: "Calculate CGT on UK residential property sales (18%/24%) and stocks/crypto (10%/20%) incorporating the annual £3,000 CGT allowance.",
+          badge: "Property & Shares",
+        },
+        {
+          name: "UK Non-Resident Landlord (NRL) Property Tax Estimator",
+          slug: "/calculators/uk-nrl-property-tax-calculator",
+          desc: "Estimate UK rental income tax liability for overseas property owners under HMRC Non-Resident Landlords Scheme (NRLS) and NRL1 approval rules.",
+          badge: "Overseas Owners",
+        },
+        {
           name: "UK Stamp Duty Land Tax (SDLT) Calculator",
-          slug: "/calculators/uk-stamp-duty",
+          slug: "/calculators/uk-stamp-duty-land-tax-calculator",
           desc: "Calculate UK property purchase tax including +5% Buy-to-Let / Second Home surcharge and +2% Non-Resident Overseas Buyer surcharge.",
           badge: "Property Buyers",
         },
+      ],
+    },
+    {
+      title: "🟡 Payroll, R&D Tax Relief & Entity Selection",
+      subtitle: "PAYE payroll deductions, tech RDEC credits, and Sole Trader vs LTD breakeven tools.",
+      tools: [
+        {
+          name: "UK Sole Trader vs LTD Tax Savings Calculator",
+          slug: "/calculators/uk-sole-trader-vs-ltd-calculator",
+          desc: "Compare side-by-side tax liabilities to find your exact profit breakeven threshold (~£28,000) for forming a UK Limited Company.",
+          badge: "Breakeven Tool",
+        },
         {
           name: "UK Payroll & PAYE Tax Calculator",
-          slug: "/calculators/uk-payroll-paye",
+          slug: "/calculators/uk-payroll-paye-calculator",
           desc: "Calculate Employer NI (13.8%), Employee NI (8%), PAYE Income Tax deductions, and Workplace Pension auto-enrolment contributions.",
           badge: "Hiring & Payroll",
         },
         {
           name: "UK R&D Tax Credit Estimator (Tech & IT)",
-          slug: "/calculators/uk-rd-tax-credit",
+          slug: "/calculators/uk-rd-tax-credit-calculator",
           desc: "Estimate tax reductions and cash refunds under the Merged RDEC 20% scheme for software engineering and IT contractor payroll.",
           badge: "IT & Software",
         },
       ],
     },
     {
-      title: "🟢 HMRC Compliance, VAT & Banking Decision Tools",
-      subtitle: "VAT thresholds, late filing penalties, overseas bank matching, and cross-border tax comparison.",
+      title: "🔵 VAT Compliance & Cross-Border Tax",
+      subtitle: "£90,000 VAT registration limit, voluntary VAT decision tools, and DTT comparison.",
       tools: [
         {
+          name: "UK VAT £90,000 Threshold & Scheme Calculator",
+          slug: "/calculators/uk-vat-calculator",
+          desc: "Track rolling 12-month UK turnover against the £90,000 VAT registration threshold and compare Flat Rate Scheme vs Standard 20% VAT.",
+          badge: "VAT Compliance",
+        },
+        {
           name: "Should I Register for UK VAT? Quiz Tool",
-          slug: "/calculators/uk-vat-register-decision",
+          slug: "/calculators/uk-vat-register-decision-calculator",
           desc: "Interactive decision tool evaluating Voluntary vs Mandatory registration, overseas reverse charge, and Flat Rate vs Standard VAT.",
           badge: "Decision Tool",
         },
         {
           name: "UK vs Pakistan Tax Comparison Tool",
-          slug: "/calculators/uk-vs-pakistan-tax-comparison",
+          slug: "/calculators/uk-vs-pakistan-tax-comparison-calculator",
           desc: "Compare UK LTD dividend taxation against Pakistan FBR IT Export 0.25% tax exemption under UK-Pakistan Double Tax Treaty Article 22.",
           badge: "Dual Resident Special",
         },
-        {
-          name: "UK VAT £90,000 Threshold & Scheme Calculator",
-          slug: "/calculators/uk-vat",
-          desc: "Track rolling 12-month UK turnover against the £90,000 VAT registration threshold and compare Flat Rate Scheme vs Standard 20% VAT.",
-          badge: "VAT Compliance",
-        },
+      ],
+    },
+    {
+      title: "🟢 Company Setup, Late Penalty & Banking Tools",
+      subtitle: "Companies House incorporation costs, HMRC late filing penalty estimators, and bank approval odds.",
+      tools: [
         {
           name: "UK LTD Overseas Formation & Compliance Cost",
-          slug: "/calculators/uk-setup-cost",
+          slug: "/calculators/uk-setup-cost-calculator",
           desc: "Calculate Companies House incorporation fees, London registered address, Wise business bank setup, CS01 & CT600 accounting costs.",
           badge: "Setup & Annual",
         },
         {
           name: "HMRC & Companies House Late Filing Penalty Estimator",
-          slug: "/calculators/uk-penalty-risk",
+          slug: "/calculators/uk-penalty-risk-calculator",
           desc: "Calculate statutory penalties for late Confirmation Statements (CS01) & CT600 accounts, HMRC late interest (7.5%), and appeal odds.",
           badge: "Penalty Risk",
         },
         {
           name: "UK Business Bank Account Approval Probability Checker",
-          slug: "/calculators/uk-bank-approval",
+          slug: "/calculators/uk-bank-approval-calculator",
           desc: "Check non-resident approval odds for Wise Business, Revolut, Tide, and WorldFirst and receive custom bank setup recommendations.",
           badge: "Bank Matching",
         },
@@ -164,6 +182,10 @@ function UKCalculatorsHubPage() {
     {
       q: "At what profit level is it better to form a UK Limited Company instead of operating as a Sole Trader?",
       a: "Generally, when net profits exceed approximately £28,000 to £30,000 annually, operating through a UK Limited Company becomes more tax-efficient than a Sole Trader structure due to director salary (£12,570 tax-free) and lower dividend tax rates compared to combined Income Tax (20%-40%) and Class 4 National Insurance.",
+    },
+    {
+      q: "What are the rules and deadlines for UK Non-Resident Landlords (NRLS) owning UK residential property?",
+      a: "Non-resident property owners receiving UK rental income must register under HMRC's Non-Resident Landlords Scheme (NRLS). Letting agents or tenants withhold 20% basic tax at source unless HMRC issues an NRL1 approval allowing gross rental collection with annual Self-Assessment filing.",
     },
   ];
 
@@ -196,7 +218,7 @@ function UKCalculatorsHubPage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "UK Business & Tax Calculators Suite",
-    description: "Interactive UK tax, VAT, payroll, and compliance calculators for UK LTD directors, freelancers, and non-resident founders.",
+    description: "15 interactive UK tax, VAT, payroll, non-resident landlord, and compliance calculators for UK LTD directors, freelancers, and non-resident founders.",
     itemListElement: categories.flatMap((cat) => cat.tools).map((t, idx) => ({
       "@type": "ListItem",
       position: idx + 1,
@@ -253,8 +275,9 @@ function UKCalculatorsHubPage() {
             🇬🇧 UK Business & Tax Calculators Suite (2026)
           </h1>
 
-          <p className="mt-5 text-navy-200 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
-            14 interactive tax, compliance, and financial estimators for UK Limited Company directors, property investors, freelancers, and non-resident founders.
+          <p className="mt-5 text-navy-200 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed space-y-1">
+            <span className="block">15 free interactive tax, compliance, and financial estimators for UK Limited Company directors, property investors, freelancers, and non-resident founders.</span>
+            <span className="block text-gold-400/90 text-xs sm:text-sm font-medium pt-1">Updated for HMRC 2025/2026 tax bands, DTT relief rules, and Companies House annual filing requirements.</span>
           </p>
 
           {/* KEY TAX METRICS STAT BAR (AEO / AIO Snippet Friendly) */}
@@ -319,7 +342,7 @@ function UKCalculatorsHubPage() {
               Frequently Asked Questions (UK Business & Tax)
             </h2>
             <p className="text-sm text-gray-600 mt-2 max-w-xl mx-auto">
-              Quick authoritative guidance on UK tax thresholds, Corporation Tax rates, VAT limits, and non-resident LTD rules.
+              Quick authoritative guidance on UK tax thresholds, Corporation Tax rates, VAT limits, non-resident LTD rules, and property NRLS tax.
             </p>
           </div>
 
@@ -375,4 +398,3 @@ function UKCalculatorsHubPage() {
     </div>
   );
 }
-

@@ -88,7 +88,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="label-eyebrow !text-white/90 mb-5">US Services</h4>
+          <h4 className="label-eyebrow !text-white/90 mb-5">USA Services</h4>
           <ul className="space-y-3 text-sm">
             {[
               "USA LLC Incorporation",
@@ -107,7 +107,7 @@ export function Footer() {
             ))}
             <li>
               <Link to="/us-services" className="text-gold-500 hover:text-gold-400 transition-colors">
-                View All US Services →
+                View All USA Services →
               </Link>
             </li>
           </ul>

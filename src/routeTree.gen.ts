@@ -94,65 +94,68 @@ import { Route as LegalContractDraftingEmploymentContractRouteImport } from './r
 import { Route as LegalContractDraftingEmployeeConfidentialityAgreementRouteImport } from './routes/legal-contract-drafting/employee-confidentiality-agreement'
 import { Route as LegalContractDraftingDataProcessingAgreementRouteImport } from './routes/legal-contract-drafting/data-processing-agreement'
 import { Route as CalculatorsUsaRouteImport } from './routes/calculators/usa'
-import { Route as CalculatorsUsWyomingVsDelawareRouteImport } from './routes/calculators/us-wyoming-vs-delaware'
-import { Route as CalculatorsUsTrademarkCostRouteImport } from './routes/calculators/us-trademark-cost'
-import { Route as CalculatorsUsTaxEligibilityRouteImport } from './routes/calculators/us-tax-eligibility'
-import { Route as CalculatorsUsSelfEmploymentTaxRouteImport } from './routes/calculators/us-self-employment-tax'
-import { Route as CalculatorsUsSalesTaxRouteImport } from './routes/calculators/us-sales-tax'
-import { Route as CalculatorsUsPenaltyRiskRouteImport } from './routes/calculators/us-penalty-risk'
-import { Route as CalculatorsUsLlcVsCCorpRouteImport } from './routes/calculators/us-llc-vs-c-corp'
-import { Route as CalculatorsUsLlcRecommendationQuizRouteImport } from './routes/calculators/us-llc-recommendation-quiz'
-import { Route as CalculatorsUsLlcAnnualComplianceRouteImport } from './routes/calculators/us-llc-annual-compliance'
-import { Route as CalculatorsUsFederalIncomeTaxRouteImport } from './routes/calculators/us-federal-income-tax'
-import { Route as CalculatorsUsFbarFatcaCheckerRouteImport } from './routes/calculators/us-fbar-fatca-checker'
-import { Route as CalculatorsUsEinEligibilityRouteImport } from './routes/calculators/us-ein-eligibility'
-import { Route as CalculatorsUsCostRouteImport } from './routes/calculators/us-cost'
-import { Route as CalculatorsUsBoiDeadlineRouteImport } from './routes/calculators/us-boi-deadline'
-import { Route as CalculatorsUsBankApprovalRouteImport } from './routes/calculators/us-bank-approval'
-import { Route as CalculatorsUkVsPakistanTaxComparisonRouteImport } from './routes/calculators/uk-vs-pakistan-tax-comparison'
-import { Route as CalculatorsUkVatRegisterDecisionRouteImport } from './routes/calculators/uk-vat-register-decision'
-import { Route as CalculatorsUkVatRouteImport } from './routes/calculators/uk-vat'
-import { Route as CalculatorsUkTaxRouteImport } from './routes/calculators/uk-tax'
-import { Route as CalculatorsUkStampDutyRouteImport } from './routes/calculators/uk-stamp-duty'
-import { Route as CalculatorsUkSoleTraderVsLtdRouteImport } from './routes/calculators/uk-sole-trader-vs-ltd'
-import { Route as CalculatorsUkSetupCostRouteImport } from './routes/calculators/uk-setup-cost'
-import { Route as CalculatorsUkSelfAssessmentRouteImport } from './routes/calculators/uk-self-assessment'
-import { Route as CalculatorsUkRdTaxCreditRouteImport } from './routes/calculators/uk-rd-tax-credit'
-import { Route as CalculatorsUkPenaltyRiskRouteImport } from './routes/calculators/uk-penalty-risk'
-import { Route as CalculatorsUkPayrollPayeRouteImport } from './routes/calculators/uk-payroll-paye'
-import { Route as CalculatorsUkCorporationTaxRouteImport } from './routes/calculators/uk-corporation-tax'
-import { Route as CalculatorsUkCapitalGainsTaxRouteImport } from './routes/calculators/uk-capital-gains-tax'
-import { Route as CalculatorsUkBankApprovalRouteImport } from './routes/calculators/uk-bank-approval'
+import { Route as CalculatorsUsWyomingVsDelawareCalculatorRouteImport } from './routes/calculators/us-wyoming-vs-delaware-calculator'
+import { Route as CalculatorsUsTrademarkCostCalculatorRouteImport } from './routes/calculators/us-trademark-cost-calculator'
+import { Route as CalculatorsUsTaxEligibilityCalculatorRouteImport } from './routes/calculators/us-tax-eligibility-calculator'
+import { Route as CalculatorsUsSelfEmploymentTaxCalculatorRouteImport } from './routes/calculators/us-self-employment-tax-calculator'
+import { Route as CalculatorsUsSalesTaxCalculatorRouteImport } from './routes/calculators/us-sales-tax-calculator'
+import { Route as CalculatorsUsPenaltyRiskCalculatorRouteImport } from './routes/calculators/us-penalty-risk-calculator'
+import { Route as CalculatorsUsLlcVsCCorpCalculatorRouteImport } from './routes/calculators/us-llc-vs-c-corp-calculator'
+import { Route as CalculatorsUsLlcRecommendationQuizCalculatorRouteImport } from './routes/calculators/us-llc-recommendation-quiz-calculator'
+import { Route as CalculatorsUsLlcAnnualComplianceCalculatorRouteImport } from './routes/calculators/us-llc-annual-compliance-calculator'
+import { Route as CalculatorsUsFederalIncomeTaxCalculatorRouteImport } from './routes/calculators/us-federal-income-tax-calculator'
+import { Route as CalculatorsUsFbarFatcaCheckerCalculatorRouteImport } from './routes/calculators/us-fbar-fatca-checker-calculator'
+import { Route as CalculatorsUsEinEligibilityCalculatorRouteImport } from './routes/calculators/us-ein-eligibility-calculator'
+import { Route as CalculatorsUsCostCalculatorRouteImport } from './routes/calculators/us-cost-calculator'
+import { Route as CalculatorsUsBoiDeadlineCalculatorRouteImport } from './routes/calculators/us-boi-deadline-calculator'
+import { Route as CalculatorsUsBankApprovalCalculatorRouteImport } from './routes/calculators/us-bank-approval-calculator'
+import { Route as CalculatorsUkVsPakistanTaxComparisonCalculatorRouteImport } from './routes/calculators/uk-vs-pakistan-tax-comparison-calculator'
+import { Route as CalculatorsUkVatRegisterDecisionCalculatorRouteImport } from './routes/calculators/uk-vat-register-decision-calculator'
+import { Route as CalculatorsUkVatCalculatorRouteImport } from './routes/calculators/uk-vat-calculator'
+import { Route as CalculatorsUkTaxDividendOptimizerCalculatorRouteImport } from './routes/calculators/uk-tax-dividend-optimizer-calculator'
+import { Route as CalculatorsUkStampDutyLandTaxCalculatorRouteImport } from './routes/calculators/uk-stamp-duty-land-tax-calculator'
+import { Route as CalculatorsUkSoleTraderVsLtdCalculatorRouteImport } from './routes/calculators/uk-sole-trader-vs-ltd-calculator'
+import { Route as CalculatorsUkSetupCostCalculatorRouteImport } from './routes/calculators/uk-setup-cost-calculator'
+import { Route as CalculatorsUkSelfAssessmentTaxCalculatorRouteImport } from './routes/calculators/uk-self-assessment-tax-calculator'
+import { Route as CalculatorsUkRdTaxCreditCalculatorRouteImport } from './routes/calculators/uk-rd-tax-credit-calculator'
+import { Route as CalculatorsUkPenaltyRiskCalculatorRouteImport } from './routes/calculators/uk-penalty-risk-calculator'
+import { Route as CalculatorsUkPayrollPayeCalculatorRouteImport } from './routes/calculators/uk-payroll-paye-calculator'
+import { Route as CalculatorsUkNrlPropertyTaxCalculatorRouteImport } from './routes/calculators/uk-nrl-property-tax-calculator'
+import { Route as CalculatorsUkCorporationTaxCalculatorRouteImport } from './routes/calculators/uk-corporation-tax-calculator'
+import { Route as CalculatorsUkCapitalGainsTaxCalculatorRouteImport } from './routes/calculators/uk-capital-gains-tax-calculator'
+import { Route as CalculatorsUkBankApprovalCalculatorRouteImport } from './routes/calculators/uk-bank-approval-calculator'
 import { Route as CalculatorsUkRouteImport } from './routes/calculators/uk'
-import { Route as CalculatorsUaeVisaCostRouteImport } from './routes/calculators/uae-visa-cost'
-import { Route as CalculatorsUaeVatRouteImport } from './routes/calculators/uae-vat'
-import { Route as CalculatorsUaeTaxResidencyRouteImport } from './routes/calculators/uae-tax-residency'
-import { Route as CalculatorsUaeTaxRouteImport } from './routes/calculators/uae-tax'
-import { Route as CalculatorsUaeRealEstateRoiRouteImport } from './routes/calculators/uae-real-estate-roi'
+import { Route as CalculatorsUaeVisaCostCalculatorRouteImport } from './routes/calculators/uae-visa-cost-calculator'
+import { Route as CalculatorsUaeVatCalculatorRouteImport } from './routes/calculators/uae-vat-calculator'
+import { Route as CalculatorsUaeTaxResidencyCalculatorRouteImport } from './routes/calculators/uae-tax-residency-calculator'
+import { Route as CalculatorsUaeRealEstateRoiCalculatorRouteImport } from './routes/calculators/uae-real-estate-roi-calculator'
+import { Route as CalculatorsUaeQfzpEligibilityCalculatorRouteImport } from './routes/calculators/uae-qfzp-eligibility-calculator'
 import { Route as CalculatorsUaeGratuityCalculatorRouteImport } from './routes/calculators/uae-gratuity-calculator'
-import { Route as CalculatorsUaeFreezoneVsMainlandQuizRouteImport } from './routes/calculators/uae-freezone-vs-mainland-quiz'
-import { Route as CalculatorsUaeFreezoneRouteImport } from './routes/calculators/uae-freezone'
-import { Route as CalculatorsUaeFreelanceVsFreezoneRouteImport } from './routes/calculators/uae-freelance-vs-freezone'
-import { Route as CalculatorsUaeExciseTaxRouteImport } from './routes/calculators/uae-excise-tax'
-import { Route as CalculatorsUaeEsrUboRouteImport } from './routes/calculators/uae-esr-ubo'
-import { Route as CalculatorsUaeDoubleTaxTreatyRouteImport } from './routes/calculators/uae-double-tax-treaty'
-import { Route as CalculatorsUaeCorporateTaxDeadlineRouteImport } from './routes/calculators/uae-corporate-tax-deadline'
-import { Route as CalculatorsUaeBankApprovalRouteImport } from './routes/calculators/uae-bank-approval'
+import { Route as CalculatorsUaeFreezoneVsMainlandQuizCalculatorRouteImport } from './routes/calculators/uae-freezone-vs-mainland-quiz-calculator'
+import { Route as CalculatorsUaeFreezoneSetupCalculatorRouteImport } from './routes/calculators/uae-freezone-setup-calculator'
+import { Route as CalculatorsUaeFreelanceVsFreezoneCalculatorRouteImport } from './routes/calculators/uae-freelance-vs-freezone-calculator'
+import { Route as CalculatorsUaeExciseTaxCalculatorRouteImport } from './routes/calculators/uae-excise-tax-calculator'
+import { Route as CalculatorsUaeEsrUboCalculatorRouteImport } from './routes/calculators/uae-esr-ubo-calculator'
+import { Route as CalculatorsUaeDoubleTaxTreatyCalculatorRouteImport } from './routes/calculators/uae-double-tax-treaty-calculator'
+import { Route as CalculatorsUaeCorporateTaxDeadlineCalculatorRouteImport } from './routes/calculators/uae-corporate-tax-deadline-calculator'
+import { Route as CalculatorsUaeCorporateTaxCalculatorRouteImport } from './routes/calculators/uae-corporate-tax-calculator'
+import { Route as CalculatorsUaeBankApprovalCalculatorRouteImport } from './routes/calculators/uae-bank-approval-calculator'
 import { Route as CalculatorsUaeRouteImport } from './routes/calculators/uae'
 import { Route as CalculatorsPakistanWhtCalculatorRouteImport } from './routes/calculators/pakistan-wht-calculator'
-import { Route as CalculatorsPakistanTaxCalendarRouteImport } from './routes/calculators/pakistan-tax-calendar'
-import { Route as CalculatorsPakistanTaxRouteImport } from './routes/calculators/pakistan-tax'
-import { Route as CalculatorsPakistanSecpPenaltyRouteImport } from './routes/calculators/pakistan-secp-penalty'
-import { Route as CalculatorsPakistanSecpCostRouteImport } from './routes/calculators/pakistan-secp-cost'
-import { Route as CalculatorsPakistanSalesTaxRouteImport } from './routes/calculators/pakistan-sales-tax'
-import { Route as CalculatorsPakistanRentalIncomeTaxRouteImport } from './routes/calculators/pakistan-rental-income-tax'
-import { Route as CalculatorsPakistanPropertyTaxRouteImport } from './routes/calculators/pakistan-property-tax'
-import { Route as CalculatorsPakistanNtnEligibilityRouteImport } from './routes/calculators/pakistan-ntn-eligibility'
-import { Route as CalculatorsPakistanItExportRouteImport } from './routes/calculators/pakistan-it-export'
-import { Route as CalculatorsPakistanFreelancerTaxRouteImport } from './routes/calculators/pakistan-freelancer-tax'
-import { Route as CalculatorsPakistanFilerStatusCheckerRouteImport } from './routes/calculators/pakistan-filer-status-checker'
-import { Route as CalculatorsPakistanFbrSalaryTaxRouteImport } from './routes/calculators/pakistan-fbr-salary-tax'
-import { Route as CalculatorsPakistanFbrNoticeTimelineRouteImport } from './routes/calculators/pakistan-fbr-notice-timeline'
+import { Route as CalculatorsPakistanTaxCalendarCalculatorRouteImport } from './routes/calculators/pakistan-tax-calendar-calculator'
+import { Route as CalculatorsPakistanSecpPenaltyCalculatorRouteImport } from './routes/calculators/pakistan-secp-penalty-calculator'
+import { Route as CalculatorsPakistanSecpCostCalculatorRouteImport } from './routes/calculators/pakistan-secp-cost-calculator'
+import { Route as CalculatorsPakistanSalesTaxCalculatorRouteImport } from './routes/calculators/pakistan-sales-tax-calculator'
+import { Route as CalculatorsPakistanRentalIncomeTaxCalculatorRouteImport } from './routes/calculators/pakistan-rental-income-tax-calculator'
+import { Route as CalculatorsPakistanPropertyTaxCalculatorRouteImport } from './routes/calculators/pakistan-property-tax-calculator'
+import { Route as CalculatorsPakistanNtnEligibilityCalculatorRouteImport } from './routes/calculators/pakistan-ntn-eligibility-calculator'
+import { Route as CalculatorsPakistanItExportCalculatorRouteImport } from './routes/calculators/pakistan-it-export-calculator'
+import { Route as CalculatorsPakistanFreelancerTaxCalculatorRouteImport } from './routes/calculators/pakistan-freelancer-tax-calculator'
+import { Route as CalculatorsPakistanFilerVsNonFilerTaxCalculatorRouteImport } from './routes/calculators/pakistan-filer-vs-non-filer-tax-calculator'
+import { Route as CalculatorsPakistanFilerStatusCheckerCalculatorRouteImport } from './routes/calculators/pakistan-filer-status-checker-calculator'
+import { Route as CalculatorsPakistanFbrSalaryTaxCalculatorRouteImport } from './routes/calculators/pakistan-fbr-salary-tax-calculator'
+import { Route as CalculatorsPakistanFbrNoticeTimelineCalculatorRouteImport } from './routes/calculators/pakistan-fbr-notice-timeline-calculator'
+import { Route as CalculatorsPakistanCapitalGainsTaxCalculatorRouteImport } from './routes/calculators/pakistan-capital-gains-tax-calculator'
 import { Route as CalculatorsPakistanRouteImport } from './routes/calculators/pakistan'
 import { Route as BlogWyomingVsDelawareLlcNonResidentRouteImport } from './routes/blog/wyoming-vs-delaware-llc-non-resident'
 import { Route as BlogWorkRemotelyUaeFreezoneVisaRulesRouteImport } from './routes/blog/work-remotely-uae-freezone-visa-rules'
@@ -747,171 +750,184 @@ const CalculatorsUsaRoute = CalculatorsUsaRouteImport.update({
   path: '/calculators/usa',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CalculatorsUsWyomingVsDelawareRoute =
-  CalculatorsUsWyomingVsDelawareRouteImport.update({
-    id: '/calculators/us-wyoming-vs-delaware',
-    path: '/calculators/us-wyoming-vs-delaware',
+const CalculatorsUsWyomingVsDelawareCalculatorRoute =
+  CalculatorsUsWyomingVsDelawareCalculatorRouteImport.update({
+    id: '/calculators/us-wyoming-vs-delaware-calculator',
+    path: '/calculators/us-wyoming-vs-delaware-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUsTrademarkCostRoute =
-  CalculatorsUsTrademarkCostRouteImport.update({
-    id: '/calculators/us-trademark-cost',
-    path: '/calculators/us-trademark-cost',
+const CalculatorsUsTrademarkCostCalculatorRoute =
+  CalculatorsUsTrademarkCostCalculatorRouteImport.update({
+    id: '/calculators/us-trademark-cost-calculator',
+    path: '/calculators/us-trademark-cost-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUsTaxEligibilityRoute =
-  CalculatorsUsTaxEligibilityRouteImport.update({
-    id: '/calculators/us-tax-eligibility',
-    path: '/calculators/us-tax-eligibility',
+const CalculatorsUsTaxEligibilityCalculatorRoute =
+  CalculatorsUsTaxEligibilityCalculatorRouteImport.update({
+    id: '/calculators/us-tax-eligibility-calculator',
+    path: '/calculators/us-tax-eligibility-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUsSelfEmploymentTaxRoute =
-  CalculatorsUsSelfEmploymentTaxRouteImport.update({
-    id: '/calculators/us-self-employment-tax',
-    path: '/calculators/us-self-employment-tax',
+const CalculatorsUsSelfEmploymentTaxCalculatorRoute =
+  CalculatorsUsSelfEmploymentTaxCalculatorRouteImport.update({
+    id: '/calculators/us-self-employment-tax-calculator',
+    path: '/calculators/us-self-employment-tax-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUsSalesTaxRoute = CalculatorsUsSalesTaxRouteImport.update({
-  id: '/calculators/us-sales-tax',
-  path: '/calculators/us-sales-tax',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CalculatorsUsPenaltyRiskRoute =
-  CalculatorsUsPenaltyRiskRouteImport.update({
-    id: '/calculators/us-penalty-risk',
-    path: '/calculators/us-penalty-risk',
+const CalculatorsUsSalesTaxCalculatorRoute =
+  CalculatorsUsSalesTaxCalculatorRouteImport.update({
+    id: '/calculators/us-sales-tax-calculator',
+    path: '/calculators/us-sales-tax-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUsLlcVsCCorpRoute = CalculatorsUsLlcVsCCorpRouteImport.update({
-  id: '/calculators/us-llc-vs-c-corp',
-  path: '/calculators/us-llc-vs-c-corp',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CalculatorsUsLlcRecommendationQuizRoute =
-  CalculatorsUsLlcRecommendationQuizRouteImport.update({
-    id: '/calculators/us-llc-recommendation-quiz',
-    path: '/calculators/us-llc-recommendation-quiz',
+const CalculatorsUsPenaltyRiskCalculatorRoute =
+  CalculatorsUsPenaltyRiskCalculatorRouteImport.update({
+    id: '/calculators/us-penalty-risk-calculator',
+    path: '/calculators/us-penalty-risk-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUsLlcAnnualComplianceRoute =
-  CalculatorsUsLlcAnnualComplianceRouteImport.update({
-    id: '/calculators/us-llc-annual-compliance',
-    path: '/calculators/us-llc-annual-compliance',
+const CalculatorsUsLlcVsCCorpCalculatorRoute =
+  CalculatorsUsLlcVsCCorpCalculatorRouteImport.update({
+    id: '/calculators/us-llc-vs-c-corp-calculator',
+    path: '/calculators/us-llc-vs-c-corp-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUsFederalIncomeTaxRoute =
-  CalculatorsUsFederalIncomeTaxRouteImport.update({
-    id: '/calculators/us-federal-income-tax',
-    path: '/calculators/us-federal-income-tax',
+const CalculatorsUsLlcRecommendationQuizCalculatorRoute =
+  CalculatorsUsLlcRecommendationQuizCalculatorRouteImport.update({
+    id: '/calculators/us-llc-recommendation-quiz-calculator',
+    path: '/calculators/us-llc-recommendation-quiz-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUsFbarFatcaCheckerRoute =
-  CalculatorsUsFbarFatcaCheckerRouteImport.update({
-    id: '/calculators/us-fbar-fatca-checker',
-    path: '/calculators/us-fbar-fatca-checker',
+const CalculatorsUsLlcAnnualComplianceCalculatorRoute =
+  CalculatorsUsLlcAnnualComplianceCalculatorRouteImport.update({
+    id: '/calculators/us-llc-annual-compliance-calculator',
+    path: '/calculators/us-llc-annual-compliance-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUsEinEligibilityRoute =
-  CalculatorsUsEinEligibilityRouteImport.update({
-    id: '/calculators/us-ein-eligibility',
-    path: '/calculators/us-ein-eligibility',
+const CalculatorsUsFederalIncomeTaxCalculatorRoute =
+  CalculatorsUsFederalIncomeTaxCalculatorRouteImport.update({
+    id: '/calculators/us-federal-income-tax-calculator',
+    path: '/calculators/us-federal-income-tax-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUsCostRoute = CalculatorsUsCostRouteImport.update({
-  id: '/calculators/us-cost',
-  path: '/calculators/us-cost',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CalculatorsUsBoiDeadlineRoute =
-  CalculatorsUsBoiDeadlineRouteImport.update({
-    id: '/calculators/us-boi-deadline',
-    path: '/calculators/us-boi-deadline',
+const CalculatorsUsFbarFatcaCheckerCalculatorRoute =
+  CalculatorsUsFbarFatcaCheckerCalculatorRouteImport.update({
+    id: '/calculators/us-fbar-fatca-checker-calculator',
+    path: '/calculators/us-fbar-fatca-checker-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUsBankApprovalRoute =
-  CalculatorsUsBankApprovalRouteImport.update({
-    id: '/calculators/us-bank-approval',
-    path: '/calculators/us-bank-approval',
+const CalculatorsUsEinEligibilityCalculatorRoute =
+  CalculatorsUsEinEligibilityCalculatorRouteImport.update({
+    id: '/calculators/us-ein-eligibility-calculator',
+    path: '/calculators/us-ein-eligibility-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUkVsPakistanTaxComparisonRoute =
-  CalculatorsUkVsPakistanTaxComparisonRouteImport.update({
-    id: '/calculators/uk-vs-pakistan-tax-comparison',
-    path: '/calculators/uk-vs-pakistan-tax-comparison',
+const CalculatorsUsCostCalculatorRoute =
+  CalculatorsUsCostCalculatorRouteImport.update({
+    id: '/calculators/us-cost-calculator',
+    path: '/calculators/us-cost-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUkVatRegisterDecisionRoute =
-  CalculatorsUkVatRegisterDecisionRouteImport.update({
-    id: '/calculators/uk-vat-register-decision',
-    path: '/calculators/uk-vat-register-decision',
+const CalculatorsUsBoiDeadlineCalculatorRoute =
+  CalculatorsUsBoiDeadlineCalculatorRouteImport.update({
+    id: '/calculators/us-boi-deadline-calculator',
+    path: '/calculators/us-boi-deadline-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUkVatRoute = CalculatorsUkVatRouteImport.update({
-  id: '/calculators/uk-vat',
-  path: '/calculators/uk-vat',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CalculatorsUkTaxRoute = CalculatorsUkTaxRouteImport.update({
-  id: '/calculators/uk-tax',
-  path: '/calculators/uk-tax',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CalculatorsUkStampDutyRoute = CalculatorsUkStampDutyRouteImport.update({
-  id: '/calculators/uk-stamp-duty',
-  path: '/calculators/uk-stamp-duty',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CalculatorsUkSoleTraderVsLtdRoute =
-  CalculatorsUkSoleTraderVsLtdRouteImport.update({
-    id: '/calculators/uk-sole-trader-vs-ltd',
-    path: '/calculators/uk-sole-trader-vs-ltd',
+const CalculatorsUsBankApprovalCalculatorRoute =
+  CalculatorsUsBankApprovalCalculatorRouteImport.update({
+    id: '/calculators/us-bank-approval-calculator',
+    path: '/calculators/us-bank-approval-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUkSetupCostRoute = CalculatorsUkSetupCostRouteImport.update({
-  id: '/calculators/uk-setup-cost',
-  path: '/calculators/uk-setup-cost',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CalculatorsUkSelfAssessmentRoute =
-  CalculatorsUkSelfAssessmentRouteImport.update({
-    id: '/calculators/uk-self-assessment',
-    path: '/calculators/uk-self-assessment',
+const CalculatorsUkVsPakistanTaxComparisonCalculatorRoute =
+  CalculatorsUkVsPakistanTaxComparisonCalculatorRouteImport.update({
+    id: '/calculators/uk-vs-pakistan-tax-comparison-calculator',
+    path: '/calculators/uk-vs-pakistan-tax-comparison-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUkRdTaxCreditRoute =
-  CalculatorsUkRdTaxCreditRouteImport.update({
-    id: '/calculators/uk-rd-tax-credit',
-    path: '/calculators/uk-rd-tax-credit',
+const CalculatorsUkVatRegisterDecisionCalculatorRoute =
+  CalculatorsUkVatRegisterDecisionCalculatorRouteImport.update({
+    id: '/calculators/uk-vat-register-decision-calculator',
+    path: '/calculators/uk-vat-register-decision-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUkPenaltyRiskRoute =
-  CalculatorsUkPenaltyRiskRouteImport.update({
-    id: '/calculators/uk-penalty-risk',
-    path: '/calculators/uk-penalty-risk',
+const CalculatorsUkVatCalculatorRoute =
+  CalculatorsUkVatCalculatorRouteImport.update({
+    id: '/calculators/uk-vat-calculator',
+    path: '/calculators/uk-vat-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUkPayrollPayeRoute =
-  CalculatorsUkPayrollPayeRouteImport.update({
-    id: '/calculators/uk-payroll-paye',
-    path: '/calculators/uk-payroll-paye',
+const CalculatorsUkTaxDividendOptimizerCalculatorRoute =
+  CalculatorsUkTaxDividendOptimizerCalculatorRouteImport.update({
+    id: '/calculators/uk-tax-dividend-optimizer-calculator',
+    path: '/calculators/uk-tax-dividend-optimizer-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUkCorporationTaxRoute =
-  CalculatorsUkCorporationTaxRouteImport.update({
-    id: '/calculators/uk-corporation-tax',
-    path: '/calculators/uk-corporation-tax',
+const CalculatorsUkStampDutyLandTaxCalculatorRoute =
+  CalculatorsUkStampDutyLandTaxCalculatorRouteImport.update({
+    id: '/calculators/uk-stamp-duty-land-tax-calculator',
+    path: '/calculators/uk-stamp-duty-land-tax-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUkCapitalGainsTaxRoute =
-  CalculatorsUkCapitalGainsTaxRouteImport.update({
-    id: '/calculators/uk-capital-gains-tax',
-    path: '/calculators/uk-capital-gains-tax',
+const CalculatorsUkSoleTraderVsLtdCalculatorRoute =
+  CalculatorsUkSoleTraderVsLtdCalculatorRouteImport.update({
+    id: '/calculators/uk-sole-trader-vs-ltd-calculator',
+    path: '/calculators/uk-sole-trader-vs-ltd-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUkBankApprovalRoute =
-  CalculatorsUkBankApprovalRouteImport.update({
-    id: '/calculators/uk-bank-approval',
-    path: '/calculators/uk-bank-approval',
+const CalculatorsUkSetupCostCalculatorRoute =
+  CalculatorsUkSetupCostCalculatorRouteImport.update({
+    id: '/calculators/uk-setup-cost-calculator',
+    path: '/calculators/uk-setup-cost-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CalculatorsUkSelfAssessmentTaxCalculatorRoute =
+  CalculatorsUkSelfAssessmentTaxCalculatorRouteImport.update({
+    id: '/calculators/uk-self-assessment-tax-calculator',
+    path: '/calculators/uk-self-assessment-tax-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CalculatorsUkRdTaxCreditCalculatorRoute =
+  CalculatorsUkRdTaxCreditCalculatorRouteImport.update({
+    id: '/calculators/uk-rd-tax-credit-calculator',
+    path: '/calculators/uk-rd-tax-credit-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CalculatorsUkPenaltyRiskCalculatorRoute =
+  CalculatorsUkPenaltyRiskCalculatorRouteImport.update({
+    id: '/calculators/uk-penalty-risk-calculator',
+    path: '/calculators/uk-penalty-risk-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CalculatorsUkPayrollPayeCalculatorRoute =
+  CalculatorsUkPayrollPayeCalculatorRouteImport.update({
+    id: '/calculators/uk-payroll-paye-calculator',
+    path: '/calculators/uk-payroll-paye-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CalculatorsUkNrlPropertyTaxCalculatorRoute =
+  CalculatorsUkNrlPropertyTaxCalculatorRouteImport.update({
+    id: '/calculators/uk-nrl-property-tax-calculator',
+    path: '/calculators/uk-nrl-property-tax-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CalculatorsUkCorporationTaxCalculatorRoute =
+  CalculatorsUkCorporationTaxCalculatorRouteImport.update({
+    id: '/calculators/uk-corporation-tax-calculator',
+    path: '/calculators/uk-corporation-tax-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CalculatorsUkCapitalGainsTaxCalculatorRoute =
+  CalculatorsUkCapitalGainsTaxCalculatorRouteImport.update({
+    id: '/calculators/uk-capital-gains-tax-calculator',
+    path: '/calculators/uk-capital-gains-tax-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CalculatorsUkBankApprovalCalculatorRoute =
+  CalculatorsUkBankApprovalCalculatorRouteImport.update({
+    id: '/calculators/uk-bank-approval-calculator',
+    path: '/calculators/uk-bank-approval-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
 const CalculatorsUkRoute = CalculatorsUkRouteImport.update({
@@ -919,31 +935,34 @@ const CalculatorsUkRoute = CalculatorsUkRouteImport.update({
   path: '/calculators/uk',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CalculatorsUaeVisaCostRoute = CalculatorsUaeVisaCostRouteImport.update({
-  id: '/calculators/uae-visa-cost',
-  path: '/calculators/uae-visa-cost',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CalculatorsUaeVatRoute = CalculatorsUaeVatRouteImport.update({
-  id: '/calculators/uae-vat',
-  path: '/calculators/uae-vat',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CalculatorsUaeTaxResidencyRoute =
-  CalculatorsUaeTaxResidencyRouteImport.update({
-    id: '/calculators/uae-tax-residency',
-    path: '/calculators/uae-tax-residency',
+const CalculatorsUaeVisaCostCalculatorRoute =
+  CalculatorsUaeVisaCostCalculatorRouteImport.update({
+    id: '/calculators/uae-visa-cost-calculator',
+    path: '/calculators/uae-visa-cost-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUaeTaxRoute = CalculatorsUaeTaxRouteImport.update({
-  id: '/calculators/uae-tax',
-  path: '/calculators/uae-tax',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CalculatorsUaeRealEstateRoiRoute =
-  CalculatorsUaeRealEstateRoiRouteImport.update({
-    id: '/calculators/uae-real-estate-roi',
-    path: '/calculators/uae-real-estate-roi',
+const CalculatorsUaeVatCalculatorRoute =
+  CalculatorsUaeVatCalculatorRouteImport.update({
+    id: '/calculators/uae-vat-calculator',
+    path: '/calculators/uae-vat-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CalculatorsUaeTaxResidencyCalculatorRoute =
+  CalculatorsUaeTaxResidencyCalculatorRouteImport.update({
+    id: '/calculators/uae-tax-residency-calculator',
+    path: '/calculators/uae-tax-residency-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CalculatorsUaeRealEstateRoiCalculatorRoute =
+  CalculatorsUaeRealEstateRoiCalculatorRouteImport.update({
+    id: '/calculators/uae-real-estate-roi-calculator',
+    path: '/calculators/uae-real-estate-roi-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CalculatorsUaeQfzpEligibilityCalculatorRoute =
+  CalculatorsUaeQfzpEligibilityCalculatorRouteImport.update({
+    id: '/calculators/uae-qfzp-eligibility-calculator',
+    path: '/calculators/uae-qfzp-eligibility-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
 const CalculatorsUaeGratuityCalculatorRoute =
@@ -952,49 +971,58 @@ const CalculatorsUaeGratuityCalculatorRoute =
     path: '/calculators/uae-gratuity-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUaeFreezoneVsMainlandQuizRoute =
-  CalculatorsUaeFreezoneVsMainlandQuizRouteImport.update({
-    id: '/calculators/uae-freezone-vs-mainland-quiz',
-    path: '/calculators/uae-freezone-vs-mainland-quiz',
+const CalculatorsUaeFreezoneVsMainlandQuizCalculatorRoute =
+  CalculatorsUaeFreezoneVsMainlandQuizCalculatorRouteImport.update({
+    id: '/calculators/uae-freezone-vs-mainland-quiz-calculator',
+    path: '/calculators/uae-freezone-vs-mainland-quiz-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUaeFreezoneRoute = CalculatorsUaeFreezoneRouteImport.update({
-  id: '/calculators/uae-freezone',
-  path: '/calculators/uae-freezone',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CalculatorsUaeFreelanceVsFreezoneRoute =
-  CalculatorsUaeFreelanceVsFreezoneRouteImport.update({
-    id: '/calculators/uae-freelance-vs-freezone',
-    path: '/calculators/uae-freelance-vs-freezone',
+const CalculatorsUaeFreezoneSetupCalculatorRoute =
+  CalculatorsUaeFreezoneSetupCalculatorRouteImport.update({
+    id: '/calculators/uae-freezone-setup-calculator',
+    path: '/calculators/uae-freezone-setup-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUaeExciseTaxRoute = CalculatorsUaeExciseTaxRouteImport.update({
-  id: '/calculators/uae-excise-tax',
-  path: '/calculators/uae-excise-tax',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CalculatorsUaeEsrUboRoute = CalculatorsUaeEsrUboRouteImport.update({
-  id: '/calculators/uae-esr-ubo',
-  path: '/calculators/uae-esr-ubo',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CalculatorsUaeDoubleTaxTreatyRoute =
-  CalculatorsUaeDoubleTaxTreatyRouteImport.update({
-    id: '/calculators/uae-double-tax-treaty',
-    path: '/calculators/uae-double-tax-treaty',
+const CalculatorsUaeFreelanceVsFreezoneCalculatorRoute =
+  CalculatorsUaeFreelanceVsFreezoneCalculatorRouteImport.update({
+    id: '/calculators/uae-freelance-vs-freezone-calculator',
+    path: '/calculators/uae-freelance-vs-freezone-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUaeCorporateTaxDeadlineRoute =
-  CalculatorsUaeCorporateTaxDeadlineRouteImport.update({
-    id: '/calculators/uae-corporate-tax-deadline',
-    path: '/calculators/uae-corporate-tax-deadline',
+const CalculatorsUaeExciseTaxCalculatorRoute =
+  CalculatorsUaeExciseTaxCalculatorRouteImport.update({
+    id: '/calculators/uae-excise-tax-calculator',
+    path: '/calculators/uae-excise-tax-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsUaeBankApprovalRoute =
-  CalculatorsUaeBankApprovalRouteImport.update({
-    id: '/calculators/uae-bank-approval',
-    path: '/calculators/uae-bank-approval',
+const CalculatorsUaeEsrUboCalculatorRoute =
+  CalculatorsUaeEsrUboCalculatorRouteImport.update({
+    id: '/calculators/uae-esr-ubo-calculator',
+    path: '/calculators/uae-esr-ubo-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CalculatorsUaeDoubleTaxTreatyCalculatorRoute =
+  CalculatorsUaeDoubleTaxTreatyCalculatorRouteImport.update({
+    id: '/calculators/uae-double-tax-treaty-calculator',
+    path: '/calculators/uae-double-tax-treaty-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CalculatorsUaeCorporateTaxDeadlineCalculatorRoute =
+  CalculatorsUaeCorporateTaxDeadlineCalculatorRouteImport.update({
+    id: '/calculators/uae-corporate-tax-deadline-calculator',
+    path: '/calculators/uae-corporate-tax-deadline-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CalculatorsUaeCorporateTaxCalculatorRoute =
+  CalculatorsUaeCorporateTaxCalculatorRouteImport.update({
+    id: '/calculators/uae-corporate-tax-calculator',
+    path: '/calculators/uae-corporate-tax-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CalculatorsUaeBankApprovalCalculatorRoute =
+  CalculatorsUaeBankApprovalCalculatorRouteImport.update({
+    id: '/calculators/uae-bank-approval-calculator',
+    path: '/calculators/uae-bank-approval-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
 const CalculatorsUaeRoute = CalculatorsUaeRouteImport.update({
@@ -1008,81 +1036,88 @@ const CalculatorsPakistanWhtCalculatorRoute =
     path: '/calculators/pakistan-wht-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsPakistanTaxCalendarRoute =
-  CalculatorsPakistanTaxCalendarRouteImport.update({
-    id: '/calculators/pakistan-tax-calendar',
-    path: '/calculators/pakistan-tax-calendar',
+const CalculatorsPakistanTaxCalendarCalculatorRoute =
+  CalculatorsPakistanTaxCalendarCalculatorRouteImport.update({
+    id: '/calculators/pakistan-tax-calendar-calculator',
+    path: '/calculators/pakistan-tax-calendar-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsPakistanTaxRoute = CalculatorsPakistanTaxRouteImport.update({
-  id: '/calculators/pakistan-tax',
-  path: '/calculators/pakistan-tax',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CalculatorsPakistanSecpPenaltyRoute =
-  CalculatorsPakistanSecpPenaltyRouteImport.update({
-    id: '/calculators/pakistan-secp-penalty',
-    path: '/calculators/pakistan-secp-penalty',
+const CalculatorsPakistanSecpPenaltyCalculatorRoute =
+  CalculatorsPakistanSecpPenaltyCalculatorRouteImport.update({
+    id: '/calculators/pakistan-secp-penalty-calculator',
+    path: '/calculators/pakistan-secp-penalty-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsPakistanSecpCostRoute =
-  CalculatorsPakistanSecpCostRouteImport.update({
-    id: '/calculators/pakistan-secp-cost',
-    path: '/calculators/pakistan-secp-cost',
+const CalculatorsPakistanSecpCostCalculatorRoute =
+  CalculatorsPakistanSecpCostCalculatorRouteImport.update({
+    id: '/calculators/pakistan-secp-cost-calculator',
+    path: '/calculators/pakistan-secp-cost-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsPakistanSalesTaxRoute =
-  CalculatorsPakistanSalesTaxRouteImport.update({
-    id: '/calculators/pakistan-sales-tax',
-    path: '/calculators/pakistan-sales-tax',
+const CalculatorsPakistanSalesTaxCalculatorRoute =
+  CalculatorsPakistanSalesTaxCalculatorRouteImport.update({
+    id: '/calculators/pakistan-sales-tax-calculator',
+    path: '/calculators/pakistan-sales-tax-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsPakistanRentalIncomeTaxRoute =
-  CalculatorsPakistanRentalIncomeTaxRouteImport.update({
-    id: '/calculators/pakistan-rental-income-tax',
-    path: '/calculators/pakistan-rental-income-tax',
+const CalculatorsPakistanRentalIncomeTaxCalculatorRoute =
+  CalculatorsPakistanRentalIncomeTaxCalculatorRouteImport.update({
+    id: '/calculators/pakistan-rental-income-tax-calculator',
+    path: '/calculators/pakistan-rental-income-tax-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsPakistanPropertyTaxRoute =
-  CalculatorsPakistanPropertyTaxRouteImport.update({
-    id: '/calculators/pakistan-property-tax',
-    path: '/calculators/pakistan-property-tax',
+const CalculatorsPakistanPropertyTaxCalculatorRoute =
+  CalculatorsPakistanPropertyTaxCalculatorRouteImport.update({
+    id: '/calculators/pakistan-property-tax-calculator',
+    path: '/calculators/pakistan-property-tax-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsPakistanNtnEligibilityRoute =
-  CalculatorsPakistanNtnEligibilityRouteImport.update({
-    id: '/calculators/pakistan-ntn-eligibility',
-    path: '/calculators/pakistan-ntn-eligibility',
+const CalculatorsPakistanNtnEligibilityCalculatorRoute =
+  CalculatorsPakistanNtnEligibilityCalculatorRouteImport.update({
+    id: '/calculators/pakistan-ntn-eligibility-calculator',
+    path: '/calculators/pakistan-ntn-eligibility-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsPakistanItExportRoute =
-  CalculatorsPakistanItExportRouteImport.update({
-    id: '/calculators/pakistan-it-export',
-    path: '/calculators/pakistan-it-export',
+const CalculatorsPakistanItExportCalculatorRoute =
+  CalculatorsPakistanItExportCalculatorRouteImport.update({
+    id: '/calculators/pakistan-it-export-calculator',
+    path: '/calculators/pakistan-it-export-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsPakistanFreelancerTaxRoute =
-  CalculatorsPakistanFreelancerTaxRouteImport.update({
-    id: '/calculators/pakistan-freelancer-tax',
-    path: '/calculators/pakistan-freelancer-tax',
+const CalculatorsPakistanFreelancerTaxCalculatorRoute =
+  CalculatorsPakistanFreelancerTaxCalculatorRouteImport.update({
+    id: '/calculators/pakistan-freelancer-tax-calculator',
+    path: '/calculators/pakistan-freelancer-tax-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsPakistanFilerStatusCheckerRoute =
-  CalculatorsPakistanFilerStatusCheckerRouteImport.update({
-    id: '/calculators/pakistan-filer-status-checker',
-    path: '/calculators/pakistan-filer-status-checker',
+const CalculatorsPakistanFilerVsNonFilerTaxCalculatorRoute =
+  CalculatorsPakistanFilerVsNonFilerTaxCalculatorRouteImport.update({
+    id: '/calculators/pakistan-filer-vs-non-filer-tax-calculator',
+    path: '/calculators/pakistan-filer-vs-non-filer-tax-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsPakistanFbrSalaryTaxRoute =
-  CalculatorsPakistanFbrSalaryTaxRouteImport.update({
-    id: '/calculators/pakistan-fbr-salary-tax',
-    path: '/calculators/pakistan-fbr-salary-tax',
+const CalculatorsPakistanFilerStatusCheckerCalculatorRoute =
+  CalculatorsPakistanFilerStatusCheckerCalculatorRouteImport.update({
+    id: '/calculators/pakistan-filer-status-checker-calculator',
+    path: '/calculators/pakistan-filer-status-checker-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CalculatorsPakistanFbrNoticeTimelineRoute =
-  CalculatorsPakistanFbrNoticeTimelineRouteImport.update({
-    id: '/calculators/pakistan-fbr-notice-timeline',
-    path: '/calculators/pakistan-fbr-notice-timeline',
+const CalculatorsPakistanFbrSalaryTaxCalculatorRoute =
+  CalculatorsPakistanFbrSalaryTaxCalculatorRouteImport.update({
+    id: '/calculators/pakistan-fbr-salary-tax-calculator',
+    path: '/calculators/pakistan-fbr-salary-tax-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CalculatorsPakistanFbrNoticeTimelineCalculatorRoute =
+  CalculatorsPakistanFbrNoticeTimelineCalculatorRouteImport.update({
+    id: '/calculators/pakistan-fbr-notice-timeline-calculator',
+    path: '/calculators/pakistan-fbr-notice-timeline-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CalculatorsPakistanCapitalGainsTaxCalculatorRoute =
+  CalculatorsPakistanCapitalGainsTaxCalculatorRouteImport.update({
+    id: '/calculators/pakistan-capital-gains-tax-calculator',
+    path: '/calculators/pakistan-capital-gains-tax-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
 const CalculatorsPakistanRoute = CalculatorsPakistanRouteImport.update({
@@ -1799,65 +1834,68 @@ export interface FileRoutesByFullPath {
   '/blog/work-remotely-uae-freezone-visa-rules': typeof BlogWorkRemotelyUaeFreezoneVisaRulesRoute
   '/blog/wyoming-vs-delaware-llc-non-resident': typeof BlogWyomingVsDelawareLlcNonResidentRoute
   '/calculators/pakistan': typeof CalculatorsPakistanRoute
-  '/calculators/pakistan-fbr-notice-timeline': typeof CalculatorsPakistanFbrNoticeTimelineRoute
-  '/calculators/pakistan-fbr-salary-tax': typeof CalculatorsPakistanFbrSalaryTaxRoute
-  '/calculators/pakistan-filer-status-checker': typeof CalculatorsPakistanFilerStatusCheckerRoute
-  '/calculators/pakistan-freelancer-tax': typeof CalculatorsPakistanFreelancerTaxRoute
-  '/calculators/pakistan-it-export': typeof CalculatorsPakistanItExportRoute
-  '/calculators/pakistan-ntn-eligibility': typeof CalculatorsPakistanNtnEligibilityRoute
-  '/calculators/pakistan-property-tax': typeof CalculatorsPakistanPropertyTaxRoute
-  '/calculators/pakistan-rental-income-tax': typeof CalculatorsPakistanRentalIncomeTaxRoute
-  '/calculators/pakistan-sales-tax': typeof CalculatorsPakistanSalesTaxRoute
-  '/calculators/pakistan-secp-cost': typeof CalculatorsPakistanSecpCostRoute
-  '/calculators/pakistan-secp-penalty': typeof CalculatorsPakistanSecpPenaltyRoute
-  '/calculators/pakistan-tax': typeof CalculatorsPakistanTaxRoute
-  '/calculators/pakistan-tax-calendar': typeof CalculatorsPakistanTaxCalendarRoute
+  '/calculators/pakistan-capital-gains-tax-calculator': typeof CalculatorsPakistanCapitalGainsTaxCalculatorRoute
+  '/calculators/pakistan-fbr-notice-timeline-calculator': typeof CalculatorsPakistanFbrNoticeTimelineCalculatorRoute
+  '/calculators/pakistan-fbr-salary-tax-calculator': typeof CalculatorsPakistanFbrSalaryTaxCalculatorRoute
+  '/calculators/pakistan-filer-status-checker-calculator': typeof CalculatorsPakistanFilerStatusCheckerCalculatorRoute
+  '/calculators/pakistan-filer-vs-non-filer-tax-calculator': typeof CalculatorsPakistanFilerVsNonFilerTaxCalculatorRoute
+  '/calculators/pakistan-freelancer-tax-calculator': typeof CalculatorsPakistanFreelancerTaxCalculatorRoute
+  '/calculators/pakistan-it-export-calculator': typeof CalculatorsPakistanItExportCalculatorRoute
+  '/calculators/pakistan-ntn-eligibility-calculator': typeof CalculatorsPakistanNtnEligibilityCalculatorRoute
+  '/calculators/pakistan-property-tax-calculator': typeof CalculatorsPakistanPropertyTaxCalculatorRoute
+  '/calculators/pakistan-rental-income-tax-calculator': typeof CalculatorsPakistanRentalIncomeTaxCalculatorRoute
+  '/calculators/pakistan-sales-tax-calculator': typeof CalculatorsPakistanSalesTaxCalculatorRoute
+  '/calculators/pakistan-secp-cost-calculator': typeof CalculatorsPakistanSecpCostCalculatorRoute
+  '/calculators/pakistan-secp-penalty-calculator': typeof CalculatorsPakistanSecpPenaltyCalculatorRoute
+  '/calculators/pakistan-tax-calendar-calculator': typeof CalculatorsPakistanTaxCalendarCalculatorRoute
   '/calculators/pakistan-wht-calculator': typeof CalculatorsPakistanWhtCalculatorRoute
   '/calculators/uae': typeof CalculatorsUaeRoute
-  '/calculators/uae-bank-approval': typeof CalculatorsUaeBankApprovalRoute
-  '/calculators/uae-corporate-tax-deadline': typeof CalculatorsUaeCorporateTaxDeadlineRoute
-  '/calculators/uae-double-tax-treaty': typeof CalculatorsUaeDoubleTaxTreatyRoute
-  '/calculators/uae-esr-ubo': typeof CalculatorsUaeEsrUboRoute
-  '/calculators/uae-excise-tax': typeof CalculatorsUaeExciseTaxRoute
-  '/calculators/uae-freelance-vs-freezone': typeof CalculatorsUaeFreelanceVsFreezoneRoute
-  '/calculators/uae-freezone': typeof CalculatorsUaeFreezoneRoute
-  '/calculators/uae-freezone-vs-mainland-quiz': typeof CalculatorsUaeFreezoneVsMainlandQuizRoute
+  '/calculators/uae-bank-approval-calculator': typeof CalculatorsUaeBankApprovalCalculatorRoute
+  '/calculators/uae-corporate-tax-calculator': typeof CalculatorsUaeCorporateTaxCalculatorRoute
+  '/calculators/uae-corporate-tax-deadline-calculator': typeof CalculatorsUaeCorporateTaxDeadlineCalculatorRoute
+  '/calculators/uae-double-tax-treaty-calculator': typeof CalculatorsUaeDoubleTaxTreatyCalculatorRoute
+  '/calculators/uae-esr-ubo-calculator': typeof CalculatorsUaeEsrUboCalculatorRoute
+  '/calculators/uae-excise-tax-calculator': typeof CalculatorsUaeExciseTaxCalculatorRoute
+  '/calculators/uae-freelance-vs-freezone-calculator': typeof CalculatorsUaeFreelanceVsFreezoneCalculatorRoute
+  '/calculators/uae-freezone-setup-calculator': typeof CalculatorsUaeFreezoneSetupCalculatorRoute
+  '/calculators/uae-freezone-vs-mainland-quiz-calculator': typeof CalculatorsUaeFreezoneVsMainlandQuizCalculatorRoute
   '/calculators/uae-gratuity-calculator': typeof CalculatorsUaeGratuityCalculatorRoute
-  '/calculators/uae-real-estate-roi': typeof CalculatorsUaeRealEstateRoiRoute
-  '/calculators/uae-tax': typeof CalculatorsUaeTaxRoute
-  '/calculators/uae-tax-residency': typeof CalculatorsUaeTaxResidencyRoute
-  '/calculators/uae-vat': typeof CalculatorsUaeVatRoute
-  '/calculators/uae-visa-cost': typeof CalculatorsUaeVisaCostRoute
+  '/calculators/uae-qfzp-eligibility-calculator': typeof CalculatorsUaeQfzpEligibilityCalculatorRoute
+  '/calculators/uae-real-estate-roi-calculator': typeof CalculatorsUaeRealEstateRoiCalculatorRoute
+  '/calculators/uae-tax-residency-calculator': typeof CalculatorsUaeTaxResidencyCalculatorRoute
+  '/calculators/uae-vat-calculator': typeof CalculatorsUaeVatCalculatorRoute
+  '/calculators/uae-visa-cost-calculator': typeof CalculatorsUaeVisaCostCalculatorRoute
   '/calculators/uk': typeof CalculatorsUkRoute
-  '/calculators/uk-bank-approval': typeof CalculatorsUkBankApprovalRoute
-  '/calculators/uk-capital-gains-tax': typeof CalculatorsUkCapitalGainsTaxRoute
-  '/calculators/uk-corporation-tax': typeof CalculatorsUkCorporationTaxRoute
-  '/calculators/uk-payroll-paye': typeof CalculatorsUkPayrollPayeRoute
-  '/calculators/uk-penalty-risk': typeof CalculatorsUkPenaltyRiskRoute
-  '/calculators/uk-rd-tax-credit': typeof CalculatorsUkRdTaxCreditRoute
-  '/calculators/uk-self-assessment': typeof CalculatorsUkSelfAssessmentRoute
-  '/calculators/uk-setup-cost': typeof CalculatorsUkSetupCostRoute
-  '/calculators/uk-sole-trader-vs-ltd': typeof CalculatorsUkSoleTraderVsLtdRoute
-  '/calculators/uk-stamp-duty': typeof CalculatorsUkStampDutyRoute
-  '/calculators/uk-tax': typeof CalculatorsUkTaxRoute
-  '/calculators/uk-vat': typeof CalculatorsUkVatRoute
-  '/calculators/uk-vat-register-decision': typeof CalculatorsUkVatRegisterDecisionRoute
-  '/calculators/uk-vs-pakistan-tax-comparison': typeof CalculatorsUkVsPakistanTaxComparisonRoute
-  '/calculators/us-bank-approval': typeof CalculatorsUsBankApprovalRoute
-  '/calculators/us-boi-deadline': typeof CalculatorsUsBoiDeadlineRoute
-  '/calculators/us-cost': typeof CalculatorsUsCostRoute
-  '/calculators/us-ein-eligibility': typeof CalculatorsUsEinEligibilityRoute
-  '/calculators/us-fbar-fatca-checker': typeof CalculatorsUsFbarFatcaCheckerRoute
-  '/calculators/us-federal-income-tax': typeof CalculatorsUsFederalIncomeTaxRoute
-  '/calculators/us-llc-annual-compliance': typeof CalculatorsUsLlcAnnualComplianceRoute
-  '/calculators/us-llc-recommendation-quiz': typeof CalculatorsUsLlcRecommendationQuizRoute
-  '/calculators/us-llc-vs-c-corp': typeof CalculatorsUsLlcVsCCorpRoute
-  '/calculators/us-penalty-risk': typeof CalculatorsUsPenaltyRiskRoute
-  '/calculators/us-sales-tax': typeof CalculatorsUsSalesTaxRoute
-  '/calculators/us-self-employment-tax': typeof CalculatorsUsSelfEmploymentTaxRoute
-  '/calculators/us-tax-eligibility': typeof CalculatorsUsTaxEligibilityRoute
-  '/calculators/us-trademark-cost': typeof CalculatorsUsTrademarkCostRoute
-  '/calculators/us-wyoming-vs-delaware': typeof CalculatorsUsWyomingVsDelawareRoute
+  '/calculators/uk-bank-approval-calculator': typeof CalculatorsUkBankApprovalCalculatorRoute
+  '/calculators/uk-capital-gains-tax-calculator': typeof CalculatorsUkCapitalGainsTaxCalculatorRoute
+  '/calculators/uk-corporation-tax-calculator': typeof CalculatorsUkCorporationTaxCalculatorRoute
+  '/calculators/uk-nrl-property-tax-calculator': typeof CalculatorsUkNrlPropertyTaxCalculatorRoute
+  '/calculators/uk-payroll-paye-calculator': typeof CalculatorsUkPayrollPayeCalculatorRoute
+  '/calculators/uk-penalty-risk-calculator': typeof CalculatorsUkPenaltyRiskCalculatorRoute
+  '/calculators/uk-rd-tax-credit-calculator': typeof CalculatorsUkRdTaxCreditCalculatorRoute
+  '/calculators/uk-self-assessment-tax-calculator': typeof CalculatorsUkSelfAssessmentTaxCalculatorRoute
+  '/calculators/uk-setup-cost-calculator': typeof CalculatorsUkSetupCostCalculatorRoute
+  '/calculators/uk-sole-trader-vs-ltd-calculator': typeof CalculatorsUkSoleTraderVsLtdCalculatorRoute
+  '/calculators/uk-stamp-duty-land-tax-calculator': typeof CalculatorsUkStampDutyLandTaxCalculatorRoute
+  '/calculators/uk-tax-dividend-optimizer-calculator': typeof CalculatorsUkTaxDividendOptimizerCalculatorRoute
+  '/calculators/uk-vat-calculator': typeof CalculatorsUkVatCalculatorRoute
+  '/calculators/uk-vat-register-decision-calculator': typeof CalculatorsUkVatRegisterDecisionCalculatorRoute
+  '/calculators/uk-vs-pakistan-tax-comparison-calculator': typeof CalculatorsUkVsPakistanTaxComparisonCalculatorRoute
+  '/calculators/us-bank-approval-calculator': typeof CalculatorsUsBankApprovalCalculatorRoute
+  '/calculators/us-boi-deadline-calculator': typeof CalculatorsUsBoiDeadlineCalculatorRoute
+  '/calculators/us-cost-calculator': typeof CalculatorsUsCostCalculatorRoute
+  '/calculators/us-ein-eligibility-calculator': typeof CalculatorsUsEinEligibilityCalculatorRoute
+  '/calculators/us-fbar-fatca-checker-calculator': typeof CalculatorsUsFbarFatcaCheckerCalculatorRoute
+  '/calculators/us-federal-income-tax-calculator': typeof CalculatorsUsFederalIncomeTaxCalculatorRoute
+  '/calculators/us-llc-annual-compliance-calculator': typeof CalculatorsUsLlcAnnualComplianceCalculatorRoute
+  '/calculators/us-llc-recommendation-quiz-calculator': typeof CalculatorsUsLlcRecommendationQuizCalculatorRoute
+  '/calculators/us-llc-vs-c-corp-calculator': typeof CalculatorsUsLlcVsCCorpCalculatorRoute
+  '/calculators/us-penalty-risk-calculator': typeof CalculatorsUsPenaltyRiskCalculatorRoute
+  '/calculators/us-sales-tax-calculator': typeof CalculatorsUsSalesTaxCalculatorRoute
+  '/calculators/us-self-employment-tax-calculator': typeof CalculatorsUsSelfEmploymentTaxCalculatorRoute
+  '/calculators/us-tax-eligibility-calculator': typeof CalculatorsUsTaxEligibilityCalculatorRoute
+  '/calculators/us-trademark-cost-calculator': typeof CalculatorsUsTrademarkCostCalculatorRoute
+  '/calculators/us-wyoming-vs-delaware-calculator': typeof CalculatorsUsWyomingVsDelawareCalculatorRoute
   '/calculators/usa': typeof CalculatorsUsaRoute
   '/legal-contract-drafting/data-processing-agreement': typeof LegalContractDraftingDataProcessingAgreementRoute
   '/legal-contract-drafting/employee-confidentiality-agreement': typeof LegalContractDraftingEmployeeConfidentialityAgreementRoute
@@ -2046,65 +2084,68 @@ export interface FileRoutesByTo {
   '/blog/work-remotely-uae-freezone-visa-rules': typeof BlogWorkRemotelyUaeFreezoneVisaRulesRoute
   '/blog/wyoming-vs-delaware-llc-non-resident': typeof BlogWyomingVsDelawareLlcNonResidentRoute
   '/calculators/pakistan': typeof CalculatorsPakistanRoute
-  '/calculators/pakistan-fbr-notice-timeline': typeof CalculatorsPakistanFbrNoticeTimelineRoute
-  '/calculators/pakistan-fbr-salary-tax': typeof CalculatorsPakistanFbrSalaryTaxRoute
-  '/calculators/pakistan-filer-status-checker': typeof CalculatorsPakistanFilerStatusCheckerRoute
-  '/calculators/pakistan-freelancer-tax': typeof CalculatorsPakistanFreelancerTaxRoute
-  '/calculators/pakistan-it-export': typeof CalculatorsPakistanItExportRoute
-  '/calculators/pakistan-ntn-eligibility': typeof CalculatorsPakistanNtnEligibilityRoute
-  '/calculators/pakistan-property-tax': typeof CalculatorsPakistanPropertyTaxRoute
-  '/calculators/pakistan-rental-income-tax': typeof CalculatorsPakistanRentalIncomeTaxRoute
-  '/calculators/pakistan-sales-tax': typeof CalculatorsPakistanSalesTaxRoute
-  '/calculators/pakistan-secp-cost': typeof CalculatorsPakistanSecpCostRoute
-  '/calculators/pakistan-secp-penalty': typeof CalculatorsPakistanSecpPenaltyRoute
-  '/calculators/pakistan-tax': typeof CalculatorsPakistanTaxRoute
-  '/calculators/pakistan-tax-calendar': typeof CalculatorsPakistanTaxCalendarRoute
+  '/calculators/pakistan-capital-gains-tax-calculator': typeof CalculatorsPakistanCapitalGainsTaxCalculatorRoute
+  '/calculators/pakistan-fbr-notice-timeline-calculator': typeof CalculatorsPakistanFbrNoticeTimelineCalculatorRoute
+  '/calculators/pakistan-fbr-salary-tax-calculator': typeof CalculatorsPakistanFbrSalaryTaxCalculatorRoute
+  '/calculators/pakistan-filer-status-checker-calculator': typeof CalculatorsPakistanFilerStatusCheckerCalculatorRoute
+  '/calculators/pakistan-filer-vs-non-filer-tax-calculator': typeof CalculatorsPakistanFilerVsNonFilerTaxCalculatorRoute
+  '/calculators/pakistan-freelancer-tax-calculator': typeof CalculatorsPakistanFreelancerTaxCalculatorRoute
+  '/calculators/pakistan-it-export-calculator': typeof CalculatorsPakistanItExportCalculatorRoute
+  '/calculators/pakistan-ntn-eligibility-calculator': typeof CalculatorsPakistanNtnEligibilityCalculatorRoute
+  '/calculators/pakistan-property-tax-calculator': typeof CalculatorsPakistanPropertyTaxCalculatorRoute
+  '/calculators/pakistan-rental-income-tax-calculator': typeof CalculatorsPakistanRentalIncomeTaxCalculatorRoute
+  '/calculators/pakistan-sales-tax-calculator': typeof CalculatorsPakistanSalesTaxCalculatorRoute
+  '/calculators/pakistan-secp-cost-calculator': typeof CalculatorsPakistanSecpCostCalculatorRoute
+  '/calculators/pakistan-secp-penalty-calculator': typeof CalculatorsPakistanSecpPenaltyCalculatorRoute
+  '/calculators/pakistan-tax-calendar-calculator': typeof CalculatorsPakistanTaxCalendarCalculatorRoute
   '/calculators/pakistan-wht-calculator': typeof CalculatorsPakistanWhtCalculatorRoute
   '/calculators/uae': typeof CalculatorsUaeRoute
-  '/calculators/uae-bank-approval': typeof CalculatorsUaeBankApprovalRoute
-  '/calculators/uae-corporate-tax-deadline': typeof CalculatorsUaeCorporateTaxDeadlineRoute
-  '/calculators/uae-double-tax-treaty': typeof CalculatorsUaeDoubleTaxTreatyRoute
-  '/calculators/uae-esr-ubo': typeof CalculatorsUaeEsrUboRoute
-  '/calculators/uae-excise-tax': typeof CalculatorsUaeExciseTaxRoute
-  '/calculators/uae-freelance-vs-freezone': typeof CalculatorsUaeFreelanceVsFreezoneRoute
-  '/calculators/uae-freezone': typeof CalculatorsUaeFreezoneRoute
-  '/calculators/uae-freezone-vs-mainland-quiz': typeof CalculatorsUaeFreezoneVsMainlandQuizRoute
+  '/calculators/uae-bank-approval-calculator': typeof CalculatorsUaeBankApprovalCalculatorRoute
+  '/calculators/uae-corporate-tax-calculator': typeof CalculatorsUaeCorporateTaxCalculatorRoute
+  '/calculators/uae-corporate-tax-deadline-calculator': typeof CalculatorsUaeCorporateTaxDeadlineCalculatorRoute
+  '/calculators/uae-double-tax-treaty-calculator': typeof CalculatorsUaeDoubleTaxTreatyCalculatorRoute
+  '/calculators/uae-esr-ubo-calculator': typeof CalculatorsUaeEsrUboCalculatorRoute
+  '/calculators/uae-excise-tax-calculator': typeof CalculatorsUaeExciseTaxCalculatorRoute
+  '/calculators/uae-freelance-vs-freezone-calculator': typeof CalculatorsUaeFreelanceVsFreezoneCalculatorRoute
+  '/calculators/uae-freezone-setup-calculator': typeof CalculatorsUaeFreezoneSetupCalculatorRoute
+  '/calculators/uae-freezone-vs-mainland-quiz-calculator': typeof CalculatorsUaeFreezoneVsMainlandQuizCalculatorRoute
   '/calculators/uae-gratuity-calculator': typeof CalculatorsUaeGratuityCalculatorRoute
-  '/calculators/uae-real-estate-roi': typeof CalculatorsUaeRealEstateRoiRoute
-  '/calculators/uae-tax': typeof CalculatorsUaeTaxRoute
-  '/calculators/uae-tax-residency': typeof CalculatorsUaeTaxResidencyRoute
-  '/calculators/uae-vat': typeof CalculatorsUaeVatRoute
-  '/calculators/uae-visa-cost': typeof CalculatorsUaeVisaCostRoute
+  '/calculators/uae-qfzp-eligibility-calculator': typeof CalculatorsUaeQfzpEligibilityCalculatorRoute
+  '/calculators/uae-real-estate-roi-calculator': typeof CalculatorsUaeRealEstateRoiCalculatorRoute
+  '/calculators/uae-tax-residency-calculator': typeof CalculatorsUaeTaxResidencyCalculatorRoute
+  '/calculators/uae-vat-calculator': typeof CalculatorsUaeVatCalculatorRoute
+  '/calculators/uae-visa-cost-calculator': typeof CalculatorsUaeVisaCostCalculatorRoute
   '/calculators/uk': typeof CalculatorsUkRoute
-  '/calculators/uk-bank-approval': typeof CalculatorsUkBankApprovalRoute
-  '/calculators/uk-capital-gains-tax': typeof CalculatorsUkCapitalGainsTaxRoute
-  '/calculators/uk-corporation-tax': typeof CalculatorsUkCorporationTaxRoute
-  '/calculators/uk-payroll-paye': typeof CalculatorsUkPayrollPayeRoute
-  '/calculators/uk-penalty-risk': typeof CalculatorsUkPenaltyRiskRoute
-  '/calculators/uk-rd-tax-credit': typeof CalculatorsUkRdTaxCreditRoute
-  '/calculators/uk-self-assessment': typeof CalculatorsUkSelfAssessmentRoute
-  '/calculators/uk-setup-cost': typeof CalculatorsUkSetupCostRoute
-  '/calculators/uk-sole-trader-vs-ltd': typeof CalculatorsUkSoleTraderVsLtdRoute
-  '/calculators/uk-stamp-duty': typeof CalculatorsUkStampDutyRoute
-  '/calculators/uk-tax': typeof CalculatorsUkTaxRoute
-  '/calculators/uk-vat': typeof CalculatorsUkVatRoute
-  '/calculators/uk-vat-register-decision': typeof CalculatorsUkVatRegisterDecisionRoute
-  '/calculators/uk-vs-pakistan-tax-comparison': typeof CalculatorsUkVsPakistanTaxComparisonRoute
-  '/calculators/us-bank-approval': typeof CalculatorsUsBankApprovalRoute
-  '/calculators/us-boi-deadline': typeof CalculatorsUsBoiDeadlineRoute
-  '/calculators/us-cost': typeof CalculatorsUsCostRoute
-  '/calculators/us-ein-eligibility': typeof CalculatorsUsEinEligibilityRoute
-  '/calculators/us-fbar-fatca-checker': typeof CalculatorsUsFbarFatcaCheckerRoute
-  '/calculators/us-federal-income-tax': typeof CalculatorsUsFederalIncomeTaxRoute
-  '/calculators/us-llc-annual-compliance': typeof CalculatorsUsLlcAnnualComplianceRoute
-  '/calculators/us-llc-recommendation-quiz': typeof CalculatorsUsLlcRecommendationQuizRoute
-  '/calculators/us-llc-vs-c-corp': typeof CalculatorsUsLlcVsCCorpRoute
-  '/calculators/us-penalty-risk': typeof CalculatorsUsPenaltyRiskRoute
-  '/calculators/us-sales-tax': typeof CalculatorsUsSalesTaxRoute
-  '/calculators/us-self-employment-tax': typeof CalculatorsUsSelfEmploymentTaxRoute
-  '/calculators/us-tax-eligibility': typeof CalculatorsUsTaxEligibilityRoute
-  '/calculators/us-trademark-cost': typeof CalculatorsUsTrademarkCostRoute
-  '/calculators/us-wyoming-vs-delaware': typeof CalculatorsUsWyomingVsDelawareRoute
+  '/calculators/uk-bank-approval-calculator': typeof CalculatorsUkBankApprovalCalculatorRoute
+  '/calculators/uk-capital-gains-tax-calculator': typeof CalculatorsUkCapitalGainsTaxCalculatorRoute
+  '/calculators/uk-corporation-tax-calculator': typeof CalculatorsUkCorporationTaxCalculatorRoute
+  '/calculators/uk-nrl-property-tax-calculator': typeof CalculatorsUkNrlPropertyTaxCalculatorRoute
+  '/calculators/uk-payroll-paye-calculator': typeof CalculatorsUkPayrollPayeCalculatorRoute
+  '/calculators/uk-penalty-risk-calculator': typeof CalculatorsUkPenaltyRiskCalculatorRoute
+  '/calculators/uk-rd-tax-credit-calculator': typeof CalculatorsUkRdTaxCreditCalculatorRoute
+  '/calculators/uk-self-assessment-tax-calculator': typeof CalculatorsUkSelfAssessmentTaxCalculatorRoute
+  '/calculators/uk-setup-cost-calculator': typeof CalculatorsUkSetupCostCalculatorRoute
+  '/calculators/uk-sole-trader-vs-ltd-calculator': typeof CalculatorsUkSoleTraderVsLtdCalculatorRoute
+  '/calculators/uk-stamp-duty-land-tax-calculator': typeof CalculatorsUkStampDutyLandTaxCalculatorRoute
+  '/calculators/uk-tax-dividend-optimizer-calculator': typeof CalculatorsUkTaxDividendOptimizerCalculatorRoute
+  '/calculators/uk-vat-calculator': typeof CalculatorsUkVatCalculatorRoute
+  '/calculators/uk-vat-register-decision-calculator': typeof CalculatorsUkVatRegisterDecisionCalculatorRoute
+  '/calculators/uk-vs-pakistan-tax-comparison-calculator': typeof CalculatorsUkVsPakistanTaxComparisonCalculatorRoute
+  '/calculators/us-bank-approval-calculator': typeof CalculatorsUsBankApprovalCalculatorRoute
+  '/calculators/us-boi-deadline-calculator': typeof CalculatorsUsBoiDeadlineCalculatorRoute
+  '/calculators/us-cost-calculator': typeof CalculatorsUsCostCalculatorRoute
+  '/calculators/us-ein-eligibility-calculator': typeof CalculatorsUsEinEligibilityCalculatorRoute
+  '/calculators/us-fbar-fatca-checker-calculator': typeof CalculatorsUsFbarFatcaCheckerCalculatorRoute
+  '/calculators/us-federal-income-tax-calculator': typeof CalculatorsUsFederalIncomeTaxCalculatorRoute
+  '/calculators/us-llc-annual-compliance-calculator': typeof CalculatorsUsLlcAnnualComplianceCalculatorRoute
+  '/calculators/us-llc-recommendation-quiz-calculator': typeof CalculatorsUsLlcRecommendationQuizCalculatorRoute
+  '/calculators/us-llc-vs-c-corp-calculator': typeof CalculatorsUsLlcVsCCorpCalculatorRoute
+  '/calculators/us-penalty-risk-calculator': typeof CalculatorsUsPenaltyRiskCalculatorRoute
+  '/calculators/us-sales-tax-calculator': typeof CalculatorsUsSalesTaxCalculatorRoute
+  '/calculators/us-self-employment-tax-calculator': typeof CalculatorsUsSelfEmploymentTaxCalculatorRoute
+  '/calculators/us-tax-eligibility-calculator': typeof CalculatorsUsTaxEligibilityCalculatorRoute
+  '/calculators/us-trademark-cost-calculator': typeof CalculatorsUsTrademarkCostCalculatorRoute
+  '/calculators/us-wyoming-vs-delaware-calculator': typeof CalculatorsUsWyomingVsDelawareCalculatorRoute
   '/calculators/usa': typeof CalculatorsUsaRoute
   '/legal-contract-drafting/data-processing-agreement': typeof LegalContractDraftingDataProcessingAgreementRoute
   '/legal-contract-drafting/employee-confidentiality-agreement': typeof LegalContractDraftingEmployeeConfidentialityAgreementRoute
@@ -2294,65 +2335,68 @@ export interface FileRoutesById {
   '/blog/work-remotely-uae-freezone-visa-rules': typeof BlogWorkRemotelyUaeFreezoneVisaRulesRoute
   '/blog/wyoming-vs-delaware-llc-non-resident': typeof BlogWyomingVsDelawareLlcNonResidentRoute
   '/calculators/pakistan': typeof CalculatorsPakistanRoute
-  '/calculators/pakistan-fbr-notice-timeline': typeof CalculatorsPakistanFbrNoticeTimelineRoute
-  '/calculators/pakistan-fbr-salary-tax': typeof CalculatorsPakistanFbrSalaryTaxRoute
-  '/calculators/pakistan-filer-status-checker': typeof CalculatorsPakistanFilerStatusCheckerRoute
-  '/calculators/pakistan-freelancer-tax': typeof CalculatorsPakistanFreelancerTaxRoute
-  '/calculators/pakistan-it-export': typeof CalculatorsPakistanItExportRoute
-  '/calculators/pakistan-ntn-eligibility': typeof CalculatorsPakistanNtnEligibilityRoute
-  '/calculators/pakistan-property-tax': typeof CalculatorsPakistanPropertyTaxRoute
-  '/calculators/pakistan-rental-income-tax': typeof CalculatorsPakistanRentalIncomeTaxRoute
-  '/calculators/pakistan-sales-tax': typeof CalculatorsPakistanSalesTaxRoute
-  '/calculators/pakistan-secp-cost': typeof CalculatorsPakistanSecpCostRoute
-  '/calculators/pakistan-secp-penalty': typeof CalculatorsPakistanSecpPenaltyRoute
-  '/calculators/pakistan-tax': typeof CalculatorsPakistanTaxRoute
-  '/calculators/pakistan-tax-calendar': typeof CalculatorsPakistanTaxCalendarRoute
+  '/calculators/pakistan-capital-gains-tax-calculator': typeof CalculatorsPakistanCapitalGainsTaxCalculatorRoute
+  '/calculators/pakistan-fbr-notice-timeline-calculator': typeof CalculatorsPakistanFbrNoticeTimelineCalculatorRoute
+  '/calculators/pakistan-fbr-salary-tax-calculator': typeof CalculatorsPakistanFbrSalaryTaxCalculatorRoute
+  '/calculators/pakistan-filer-status-checker-calculator': typeof CalculatorsPakistanFilerStatusCheckerCalculatorRoute
+  '/calculators/pakistan-filer-vs-non-filer-tax-calculator': typeof CalculatorsPakistanFilerVsNonFilerTaxCalculatorRoute
+  '/calculators/pakistan-freelancer-tax-calculator': typeof CalculatorsPakistanFreelancerTaxCalculatorRoute
+  '/calculators/pakistan-it-export-calculator': typeof CalculatorsPakistanItExportCalculatorRoute
+  '/calculators/pakistan-ntn-eligibility-calculator': typeof CalculatorsPakistanNtnEligibilityCalculatorRoute
+  '/calculators/pakistan-property-tax-calculator': typeof CalculatorsPakistanPropertyTaxCalculatorRoute
+  '/calculators/pakistan-rental-income-tax-calculator': typeof CalculatorsPakistanRentalIncomeTaxCalculatorRoute
+  '/calculators/pakistan-sales-tax-calculator': typeof CalculatorsPakistanSalesTaxCalculatorRoute
+  '/calculators/pakistan-secp-cost-calculator': typeof CalculatorsPakistanSecpCostCalculatorRoute
+  '/calculators/pakistan-secp-penalty-calculator': typeof CalculatorsPakistanSecpPenaltyCalculatorRoute
+  '/calculators/pakistan-tax-calendar-calculator': typeof CalculatorsPakistanTaxCalendarCalculatorRoute
   '/calculators/pakistan-wht-calculator': typeof CalculatorsPakistanWhtCalculatorRoute
   '/calculators/uae': typeof CalculatorsUaeRoute
-  '/calculators/uae-bank-approval': typeof CalculatorsUaeBankApprovalRoute
-  '/calculators/uae-corporate-tax-deadline': typeof CalculatorsUaeCorporateTaxDeadlineRoute
-  '/calculators/uae-double-tax-treaty': typeof CalculatorsUaeDoubleTaxTreatyRoute
-  '/calculators/uae-esr-ubo': typeof CalculatorsUaeEsrUboRoute
-  '/calculators/uae-excise-tax': typeof CalculatorsUaeExciseTaxRoute
-  '/calculators/uae-freelance-vs-freezone': typeof CalculatorsUaeFreelanceVsFreezoneRoute
-  '/calculators/uae-freezone': typeof CalculatorsUaeFreezoneRoute
-  '/calculators/uae-freezone-vs-mainland-quiz': typeof CalculatorsUaeFreezoneVsMainlandQuizRoute
+  '/calculators/uae-bank-approval-calculator': typeof CalculatorsUaeBankApprovalCalculatorRoute
+  '/calculators/uae-corporate-tax-calculator': typeof CalculatorsUaeCorporateTaxCalculatorRoute
+  '/calculators/uae-corporate-tax-deadline-calculator': typeof CalculatorsUaeCorporateTaxDeadlineCalculatorRoute
+  '/calculators/uae-double-tax-treaty-calculator': typeof CalculatorsUaeDoubleTaxTreatyCalculatorRoute
+  '/calculators/uae-esr-ubo-calculator': typeof CalculatorsUaeEsrUboCalculatorRoute
+  '/calculators/uae-excise-tax-calculator': typeof CalculatorsUaeExciseTaxCalculatorRoute
+  '/calculators/uae-freelance-vs-freezone-calculator': typeof CalculatorsUaeFreelanceVsFreezoneCalculatorRoute
+  '/calculators/uae-freezone-setup-calculator': typeof CalculatorsUaeFreezoneSetupCalculatorRoute
+  '/calculators/uae-freezone-vs-mainland-quiz-calculator': typeof CalculatorsUaeFreezoneVsMainlandQuizCalculatorRoute
   '/calculators/uae-gratuity-calculator': typeof CalculatorsUaeGratuityCalculatorRoute
-  '/calculators/uae-real-estate-roi': typeof CalculatorsUaeRealEstateRoiRoute
-  '/calculators/uae-tax': typeof CalculatorsUaeTaxRoute
-  '/calculators/uae-tax-residency': typeof CalculatorsUaeTaxResidencyRoute
-  '/calculators/uae-vat': typeof CalculatorsUaeVatRoute
-  '/calculators/uae-visa-cost': typeof CalculatorsUaeVisaCostRoute
+  '/calculators/uae-qfzp-eligibility-calculator': typeof CalculatorsUaeQfzpEligibilityCalculatorRoute
+  '/calculators/uae-real-estate-roi-calculator': typeof CalculatorsUaeRealEstateRoiCalculatorRoute
+  '/calculators/uae-tax-residency-calculator': typeof CalculatorsUaeTaxResidencyCalculatorRoute
+  '/calculators/uae-vat-calculator': typeof CalculatorsUaeVatCalculatorRoute
+  '/calculators/uae-visa-cost-calculator': typeof CalculatorsUaeVisaCostCalculatorRoute
   '/calculators/uk': typeof CalculatorsUkRoute
-  '/calculators/uk-bank-approval': typeof CalculatorsUkBankApprovalRoute
-  '/calculators/uk-capital-gains-tax': typeof CalculatorsUkCapitalGainsTaxRoute
-  '/calculators/uk-corporation-tax': typeof CalculatorsUkCorporationTaxRoute
-  '/calculators/uk-payroll-paye': typeof CalculatorsUkPayrollPayeRoute
-  '/calculators/uk-penalty-risk': typeof CalculatorsUkPenaltyRiskRoute
-  '/calculators/uk-rd-tax-credit': typeof CalculatorsUkRdTaxCreditRoute
-  '/calculators/uk-self-assessment': typeof CalculatorsUkSelfAssessmentRoute
-  '/calculators/uk-setup-cost': typeof CalculatorsUkSetupCostRoute
-  '/calculators/uk-sole-trader-vs-ltd': typeof CalculatorsUkSoleTraderVsLtdRoute
-  '/calculators/uk-stamp-duty': typeof CalculatorsUkStampDutyRoute
-  '/calculators/uk-tax': typeof CalculatorsUkTaxRoute
-  '/calculators/uk-vat': typeof CalculatorsUkVatRoute
-  '/calculators/uk-vat-register-decision': typeof CalculatorsUkVatRegisterDecisionRoute
-  '/calculators/uk-vs-pakistan-tax-comparison': typeof CalculatorsUkVsPakistanTaxComparisonRoute
-  '/calculators/us-bank-approval': typeof CalculatorsUsBankApprovalRoute
-  '/calculators/us-boi-deadline': typeof CalculatorsUsBoiDeadlineRoute
-  '/calculators/us-cost': typeof CalculatorsUsCostRoute
-  '/calculators/us-ein-eligibility': typeof CalculatorsUsEinEligibilityRoute
-  '/calculators/us-fbar-fatca-checker': typeof CalculatorsUsFbarFatcaCheckerRoute
-  '/calculators/us-federal-income-tax': typeof CalculatorsUsFederalIncomeTaxRoute
-  '/calculators/us-llc-annual-compliance': typeof CalculatorsUsLlcAnnualComplianceRoute
-  '/calculators/us-llc-recommendation-quiz': typeof CalculatorsUsLlcRecommendationQuizRoute
-  '/calculators/us-llc-vs-c-corp': typeof CalculatorsUsLlcVsCCorpRoute
-  '/calculators/us-penalty-risk': typeof CalculatorsUsPenaltyRiskRoute
-  '/calculators/us-sales-tax': typeof CalculatorsUsSalesTaxRoute
-  '/calculators/us-self-employment-tax': typeof CalculatorsUsSelfEmploymentTaxRoute
-  '/calculators/us-tax-eligibility': typeof CalculatorsUsTaxEligibilityRoute
-  '/calculators/us-trademark-cost': typeof CalculatorsUsTrademarkCostRoute
-  '/calculators/us-wyoming-vs-delaware': typeof CalculatorsUsWyomingVsDelawareRoute
+  '/calculators/uk-bank-approval-calculator': typeof CalculatorsUkBankApprovalCalculatorRoute
+  '/calculators/uk-capital-gains-tax-calculator': typeof CalculatorsUkCapitalGainsTaxCalculatorRoute
+  '/calculators/uk-corporation-tax-calculator': typeof CalculatorsUkCorporationTaxCalculatorRoute
+  '/calculators/uk-nrl-property-tax-calculator': typeof CalculatorsUkNrlPropertyTaxCalculatorRoute
+  '/calculators/uk-payroll-paye-calculator': typeof CalculatorsUkPayrollPayeCalculatorRoute
+  '/calculators/uk-penalty-risk-calculator': typeof CalculatorsUkPenaltyRiskCalculatorRoute
+  '/calculators/uk-rd-tax-credit-calculator': typeof CalculatorsUkRdTaxCreditCalculatorRoute
+  '/calculators/uk-self-assessment-tax-calculator': typeof CalculatorsUkSelfAssessmentTaxCalculatorRoute
+  '/calculators/uk-setup-cost-calculator': typeof CalculatorsUkSetupCostCalculatorRoute
+  '/calculators/uk-sole-trader-vs-ltd-calculator': typeof CalculatorsUkSoleTraderVsLtdCalculatorRoute
+  '/calculators/uk-stamp-duty-land-tax-calculator': typeof CalculatorsUkStampDutyLandTaxCalculatorRoute
+  '/calculators/uk-tax-dividend-optimizer-calculator': typeof CalculatorsUkTaxDividendOptimizerCalculatorRoute
+  '/calculators/uk-vat-calculator': typeof CalculatorsUkVatCalculatorRoute
+  '/calculators/uk-vat-register-decision-calculator': typeof CalculatorsUkVatRegisterDecisionCalculatorRoute
+  '/calculators/uk-vs-pakistan-tax-comparison-calculator': typeof CalculatorsUkVsPakistanTaxComparisonCalculatorRoute
+  '/calculators/us-bank-approval-calculator': typeof CalculatorsUsBankApprovalCalculatorRoute
+  '/calculators/us-boi-deadline-calculator': typeof CalculatorsUsBoiDeadlineCalculatorRoute
+  '/calculators/us-cost-calculator': typeof CalculatorsUsCostCalculatorRoute
+  '/calculators/us-ein-eligibility-calculator': typeof CalculatorsUsEinEligibilityCalculatorRoute
+  '/calculators/us-fbar-fatca-checker-calculator': typeof CalculatorsUsFbarFatcaCheckerCalculatorRoute
+  '/calculators/us-federal-income-tax-calculator': typeof CalculatorsUsFederalIncomeTaxCalculatorRoute
+  '/calculators/us-llc-annual-compliance-calculator': typeof CalculatorsUsLlcAnnualComplianceCalculatorRoute
+  '/calculators/us-llc-recommendation-quiz-calculator': typeof CalculatorsUsLlcRecommendationQuizCalculatorRoute
+  '/calculators/us-llc-vs-c-corp-calculator': typeof CalculatorsUsLlcVsCCorpCalculatorRoute
+  '/calculators/us-penalty-risk-calculator': typeof CalculatorsUsPenaltyRiskCalculatorRoute
+  '/calculators/us-sales-tax-calculator': typeof CalculatorsUsSalesTaxCalculatorRoute
+  '/calculators/us-self-employment-tax-calculator': typeof CalculatorsUsSelfEmploymentTaxCalculatorRoute
+  '/calculators/us-tax-eligibility-calculator': typeof CalculatorsUsTaxEligibilityCalculatorRoute
+  '/calculators/us-trademark-cost-calculator': typeof CalculatorsUsTrademarkCostCalculatorRoute
+  '/calculators/us-wyoming-vs-delaware-calculator': typeof CalculatorsUsWyomingVsDelawareCalculatorRoute
   '/calculators/usa': typeof CalculatorsUsaRoute
   '/legal-contract-drafting/data-processing-agreement': typeof LegalContractDraftingDataProcessingAgreementRoute
   '/legal-contract-drafting/employee-confidentiality-agreement': typeof LegalContractDraftingEmployeeConfidentialityAgreementRoute
@@ -2543,65 +2587,68 @@ export interface FileRouteTypes {
     | '/blog/work-remotely-uae-freezone-visa-rules'
     | '/blog/wyoming-vs-delaware-llc-non-resident'
     | '/calculators/pakistan'
-    | '/calculators/pakistan-fbr-notice-timeline'
-    | '/calculators/pakistan-fbr-salary-tax'
-    | '/calculators/pakistan-filer-status-checker'
-    | '/calculators/pakistan-freelancer-tax'
-    | '/calculators/pakistan-it-export'
-    | '/calculators/pakistan-ntn-eligibility'
-    | '/calculators/pakistan-property-tax'
-    | '/calculators/pakistan-rental-income-tax'
-    | '/calculators/pakistan-sales-tax'
-    | '/calculators/pakistan-secp-cost'
-    | '/calculators/pakistan-secp-penalty'
-    | '/calculators/pakistan-tax'
-    | '/calculators/pakistan-tax-calendar'
+    | '/calculators/pakistan-capital-gains-tax-calculator'
+    | '/calculators/pakistan-fbr-notice-timeline-calculator'
+    | '/calculators/pakistan-fbr-salary-tax-calculator'
+    | '/calculators/pakistan-filer-status-checker-calculator'
+    | '/calculators/pakistan-filer-vs-non-filer-tax-calculator'
+    | '/calculators/pakistan-freelancer-tax-calculator'
+    | '/calculators/pakistan-it-export-calculator'
+    | '/calculators/pakistan-ntn-eligibility-calculator'
+    | '/calculators/pakistan-property-tax-calculator'
+    | '/calculators/pakistan-rental-income-tax-calculator'
+    | '/calculators/pakistan-sales-tax-calculator'
+    | '/calculators/pakistan-secp-cost-calculator'
+    | '/calculators/pakistan-secp-penalty-calculator'
+    | '/calculators/pakistan-tax-calendar-calculator'
     | '/calculators/pakistan-wht-calculator'
     | '/calculators/uae'
-    | '/calculators/uae-bank-approval'
-    | '/calculators/uae-corporate-tax-deadline'
-    | '/calculators/uae-double-tax-treaty'
-    | '/calculators/uae-esr-ubo'
-    | '/calculators/uae-excise-tax'
-    | '/calculators/uae-freelance-vs-freezone'
-    | '/calculators/uae-freezone'
-    | '/calculators/uae-freezone-vs-mainland-quiz'
+    | '/calculators/uae-bank-approval-calculator'
+    | '/calculators/uae-corporate-tax-calculator'
+    | '/calculators/uae-corporate-tax-deadline-calculator'
+    | '/calculators/uae-double-tax-treaty-calculator'
+    | '/calculators/uae-esr-ubo-calculator'
+    | '/calculators/uae-excise-tax-calculator'
+    | '/calculators/uae-freelance-vs-freezone-calculator'
+    | '/calculators/uae-freezone-setup-calculator'
+    | '/calculators/uae-freezone-vs-mainland-quiz-calculator'
     | '/calculators/uae-gratuity-calculator'
-    | '/calculators/uae-real-estate-roi'
-    | '/calculators/uae-tax'
-    | '/calculators/uae-tax-residency'
-    | '/calculators/uae-vat'
-    | '/calculators/uae-visa-cost'
+    | '/calculators/uae-qfzp-eligibility-calculator'
+    | '/calculators/uae-real-estate-roi-calculator'
+    | '/calculators/uae-tax-residency-calculator'
+    | '/calculators/uae-vat-calculator'
+    | '/calculators/uae-visa-cost-calculator'
     | '/calculators/uk'
-    | '/calculators/uk-bank-approval'
-    | '/calculators/uk-capital-gains-tax'
-    | '/calculators/uk-corporation-tax'
-    | '/calculators/uk-payroll-paye'
-    | '/calculators/uk-penalty-risk'
-    | '/calculators/uk-rd-tax-credit'
-    | '/calculators/uk-self-assessment'
-    | '/calculators/uk-setup-cost'
-    | '/calculators/uk-sole-trader-vs-ltd'
-    | '/calculators/uk-stamp-duty'
-    | '/calculators/uk-tax'
-    | '/calculators/uk-vat'
-    | '/calculators/uk-vat-register-decision'
-    | '/calculators/uk-vs-pakistan-tax-comparison'
-    | '/calculators/us-bank-approval'
-    | '/calculators/us-boi-deadline'
-    | '/calculators/us-cost'
-    | '/calculators/us-ein-eligibility'
-    | '/calculators/us-fbar-fatca-checker'
-    | '/calculators/us-federal-income-tax'
-    | '/calculators/us-llc-annual-compliance'
-    | '/calculators/us-llc-recommendation-quiz'
-    | '/calculators/us-llc-vs-c-corp'
-    | '/calculators/us-penalty-risk'
-    | '/calculators/us-sales-tax'
-    | '/calculators/us-self-employment-tax'
-    | '/calculators/us-tax-eligibility'
-    | '/calculators/us-trademark-cost'
-    | '/calculators/us-wyoming-vs-delaware'
+    | '/calculators/uk-bank-approval-calculator'
+    | '/calculators/uk-capital-gains-tax-calculator'
+    | '/calculators/uk-corporation-tax-calculator'
+    | '/calculators/uk-nrl-property-tax-calculator'
+    | '/calculators/uk-payroll-paye-calculator'
+    | '/calculators/uk-penalty-risk-calculator'
+    | '/calculators/uk-rd-tax-credit-calculator'
+    | '/calculators/uk-self-assessment-tax-calculator'
+    | '/calculators/uk-setup-cost-calculator'
+    | '/calculators/uk-sole-trader-vs-ltd-calculator'
+    | '/calculators/uk-stamp-duty-land-tax-calculator'
+    | '/calculators/uk-tax-dividend-optimizer-calculator'
+    | '/calculators/uk-vat-calculator'
+    | '/calculators/uk-vat-register-decision-calculator'
+    | '/calculators/uk-vs-pakistan-tax-comparison-calculator'
+    | '/calculators/us-bank-approval-calculator'
+    | '/calculators/us-boi-deadline-calculator'
+    | '/calculators/us-cost-calculator'
+    | '/calculators/us-ein-eligibility-calculator'
+    | '/calculators/us-fbar-fatca-checker-calculator'
+    | '/calculators/us-federal-income-tax-calculator'
+    | '/calculators/us-llc-annual-compliance-calculator'
+    | '/calculators/us-llc-recommendation-quiz-calculator'
+    | '/calculators/us-llc-vs-c-corp-calculator'
+    | '/calculators/us-penalty-risk-calculator'
+    | '/calculators/us-sales-tax-calculator'
+    | '/calculators/us-self-employment-tax-calculator'
+    | '/calculators/us-tax-eligibility-calculator'
+    | '/calculators/us-trademark-cost-calculator'
+    | '/calculators/us-wyoming-vs-delaware-calculator'
     | '/calculators/usa'
     | '/legal-contract-drafting/data-processing-agreement'
     | '/legal-contract-drafting/employee-confidentiality-agreement'
@@ -2790,65 +2837,68 @@ export interface FileRouteTypes {
     | '/blog/work-remotely-uae-freezone-visa-rules'
     | '/blog/wyoming-vs-delaware-llc-non-resident'
     | '/calculators/pakistan'
-    | '/calculators/pakistan-fbr-notice-timeline'
-    | '/calculators/pakistan-fbr-salary-tax'
-    | '/calculators/pakistan-filer-status-checker'
-    | '/calculators/pakistan-freelancer-tax'
-    | '/calculators/pakistan-it-export'
-    | '/calculators/pakistan-ntn-eligibility'
-    | '/calculators/pakistan-property-tax'
-    | '/calculators/pakistan-rental-income-tax'
-    | '/calculators/pakistan-sales-tax'
-    | '/calculators/pakistan-secp-cost'
-    | '/calculators/pakistan-secp-penalty'
-    | '/calculators/pakistan-tax'
-    | '/calculators/pakistan-tax-calendar'
+    | '/calculators/pakistan-capital-gains-tax-calculator'
+    | '/calculators/pakistan-fbr-notice-timeline-calculator'
+    | '/calculators/pakistan-fbr-salary-tax-calculator'
+    | '/calculators/pakistan-filer-status-checker-calculator'
+    | '/calculators/pakistan-filer-vs-non-filer-tax-calculator'
+    | '/calculators/pakistan-freelancer-tax-calculator'
+    | '/calculators/pakistan-it-export-calculator'
+    | '/calculators/pakistan-ntn-eligibility-calculator'
+    | '/calculators/pakistan-property-tax-calculator'
+    | '/calculators/pakistan-rental-income-tax-calculator'
+    | '/calculators/pakistan-sales-tax-calculator'
+    | '/calculators/pakistan-secp-cost-calculator'
+    | '/calculators/pakistan-secp-penalty-calculator'
+    | '/calculators/pakistan-tax-calendar-calculator'
     | '/calculators/pakistan-wht-calculator'
     | '/calculators/uae'
-    | '/calculators/uae-bank-approval'
-    | '/calculators/uae-corporate-tax-deadline'
-    | '/calculators/uae-double-tax-treaty'
-    | '/calculators/uae-esr-ubo'
-    | '/calculators/uae-excise-tax'
-    | '/calculators/uae-freelance-vs-freezone'
-    | '/calculators/uae-freezone'
-    | '/calculators/uae-freezone-vs-mainland-quiz'
+    | '/calculators/uae-bank-approval-calculator'
+    | '/calculators/uae-corporate-tax-calculator'
+    | '/calculators/uae-corporate-tax-deadline-calculator'
+    | '/calculators/uae-double-tax-treaty-calculator'
+    | '/calculators/uae-esr-ubo-calculator'
+    | '/calculators/uae-excise-tax-calculator'
+    | '/calculators/uae-freelance-vs-freezone-calculator'
+    | '/calculators/uae-freezone-setup-calculator'
+    | '/calculators/uae-freezone-vs-mainland-quiz-calculator'
     | '/calculators/uae-gratuity-calculator'
-    | '/calculators/uae-real-estate-roi'
-    | '/calculators/uae-tax'
-    | '/calculators/uae-tax-residency'
-    | '/calculators/uae-vat'
-    | '/calculators/uae-visa-cost'
+    | '/calculators/uae-qfzp-eligibility-calculator'
+    | '/calculators/uae-real-estate-roi-calculator'
+    | '/calculators/uae-tax-residency-calculator'
+    | '/calculators/uae-vat-calculator'
+    | '/calculators/uae-visa-cost-calculator'
     | '/calculators/uk'
-    | '/calculators/uk-bank-approval'
-    | '/calculators/uk-capital-gains-tax'
-    | '/calculators/uk-corporation-tax'
-    | '/calculators/uk-payroll-paye'
-    | '/calculators/uk-penalty-risk'
-    | '/calculators/uk-rd-tax-credit'
-    | '/calculators/uk-self-assessment'
-    | '/calculators/uk-setup-cost'
-    | '/calculators/uk-sole-trader-vs-ltd'
-    | '/calculators/uk-stamp-duty'
-    | '/calculators/uk-tax'
-    | '/calculators/uk-vat'
-    | '/calculators/uk-vat-register-decision'
-    | '/calculators/uk-vs-pakistan-tax-comparison'
-    | '/calculators/us-bank-approval'
-    | '/calculators/us-boi-deadline'
-    | '/calculators/us-cost'
-    | '/calculators/us-ein-eligibility'
-    | '/calculators/us-fbar-fatca-checker'
-    | '/calculators/us-federal-income-tax'
-    | '/calculators/us-llc-annual-compliance'
-    | '/calculators/us-llc-recommendation-quiz'
-    | '/calculators/us-llc-vs-c-corp'
-    | '/calculators/us-penalty-risk'
-    | '/calculators/us-sales-tax'
-    | '/calculators/us-self-employment-tax'
-    | '/calculators/us-tax-eligibility'
-    | '/calculators/us-trademark-cost'
-    | '/calculators/us-wyoming-vs-delaware'
+    | '/calculators/uk-bank-approval-calculator'
+    | '/calculators/uk-capital-gains-tax-calculator'
+    | '/calculators/uk-corporation-tax-calculator'
+    | '/calculators/uk-nrl-property-tax-calculator'
+    | '/calculators/uk-payroll-paye-calculator'
+    | '/calculators/uk-penalty-risk-calculator'
+    | '/calculators/uk-rd-tax-credit-calculator'
+    | '/calculators/uk-self-assessment-tax-calculator'
+    | '/calculators/uk-setup-cost-calculator'
+    | '/calculators/uk-sole-trader-vs-ltd-calculator'
+    | '/calculators/uk-stamp-duty-land-tax-calculator'
+    | '/calculators/uk-tax-dividend-optimizer-calculator'
+    | '/calculators/uk-vat-calculator'
+    | '/calculators/uk-vat-register-decision-calculator'
+    | '/calculators/uk-vs-pakistan-tax-comparison-calculator'
+    | '/calculators/us-bank-approval-calculator'
+    | '/calculators/us-boi-deadline-calculator'
+    | '/calculators/us-cost-calculator'
+    | '/calculators/us-ein-eligibility-calculator'
+    | '/calculators/us-fbar-fatca-checker-calculator'
+    | '/calculators/us-federal-income-tax-calculator'
+    | '/calculators/us-llc-annual-compliance-calculator'
+    | '/calculators/us-llc-recommendation-quiz-calculator'
+    | '/calculators/us-llc-vs-c-corp-calculator'
+    | '/calculators/us-penalty-risk-calculator'
+    | '/calculators/us-sales-tax-calculator'
+    | '/calculators/us-self-employment-tax-calculator'
+    | '/calculators/us-tax-eligibility-calculator'
+    | '/calculators/us-trademark-cost-calculator'
+    | '/calculators/us-wyoming-vs-delaware-calculator'
     | '/calculators/usa'
     | '/legal-contract-drafting/data-processing-agreement'
     | '/legal-contract-drafting/employee-confidentiality-agreement'
@@ -3037,65 +3087,68 @@ export interface FileRouteTypes {
     | '/blog/work-remotely-uae-freezone-visa-rules'
     | '/blog/wyoming-vs-delaware-llc-non-resident'
     | '/calculators/pakistan'
-    | '/calculators/pakistan-fbr-notice-timeline'
-    | '/calculators/pakistan-fbr-salary-tax'
-    | '/calculators/pakistan-filer-status-checker'
-    | '/calculators/pakistan-freelancer-tax'
-    | '/calculators/pakistan-it-export'
-    | '/calculators/pakistan-ntn-eligibility'
-    | '/calculators/pakistan-property-tax'
-    | '/calculators/pakistan-rental-income-tax'
-    | '/calculators/pakistan-sales-tax'
-    | '/calculators/pakistan-secp-cost'
-    | '/calculators/pakistan-secp-penalty'
-    | '/calculators/pakistan-tax'
-    | '/calculators/pakistan-tax-calendar'
+    | '/calculators/pakistan-capital-gains-tax-calculator'
+    | '/calculators/pakistan-fbr-notice-timeline-calculator'
+    | '/calculators/pakistan-fbr-salary-tax-calculator'
+    | '/calculators/pakistan-filer-status-checker-calculator'
+    | '/calculators/pakistan-filer-vs-non-filer-tax-calculator'
+    | '/calculators/pakistan-freelancer-tax-calculator'
+    | '/calculators/pakistan-it-export-calculator'
+    | '/calculators/pakistan-ntn-eligibility-calculator'
+    | '/calculators/pakistan-property-tax-calculator'
+    | '/calculators/pakistan-rental-income-tax-calculator'
+    | '/calculators/pakistan-sales-tax-calculator'
+    | '/calculators/pakistan-secp-cost-calculator'
+    | '/calculators/pakistan-secp-penalty-calculator'
+    | '/calculators/pakistan-tax-calendar-calculator'
     | '/calculators/pakistan-wht-calculator'
     | '/calculators/uae'
-    | '/calculators/uae-bank-approval'
-    | '/calculators/uae-corporate-tax-deadline'
-    | '/calculators/uae-double-tax-treaty'
-    | '/calculators/uae-esr-ubo'
-    | '/calculators/uae-excise-tax'
-    | '/calculators/uae-freelance-vs-freezone'
-    | '/calculators/uae-freezone'
-    | '/calculators/uae-freezone-vs-mainland-quiz'
+    | '/calculators/uae-bank-approval-calculator'
+    | '/calculators/uae-corporate-tax-calculator'
+    | '/calculators/uae-corporate-tax-deadline-calculator'
+    | '/calculators/uae-double-tax-treaty-calculator'
+    | '/calculators/uae-esr-ubo-calculator'
+    | '/calculators/uae-excise-tax-calculator'
+    | '/calculators/uae-freelance-vs-freezone-calculator'
+    | '/calculators/uae-freezone-setup-calculator'
+    | '/calculators/uae-freezone-vs-mainland-quiz-calculator'
     | '/calculators/uae-gratuity-calculator'
-    | '/calculators/uae-real-estate-roi'
-    | '/calculators/uae-tax'
-    | '/calculators/uae-tax-residency'
-    | '/calculators/uae-vat'
-    | '/calculators/uae-visa-cost'
+    | '/calculators/uae-qfzp-eligibility-calculator'
+    | '/calculators/uae-real-estate-roi-calculator'
+    | '/calculators/uae-tax-residency-calculator'
+    | '/calculators/uae-vat-calculator'
+    | '/calculators/uae-visa-cost-calculator'
     | '/calculators/uk'
-    | '/calculators/uk-bank-approval'
-    | '/calculators/uk-capital-gains-tax'
-    | '/calculators/uk-corporation-tax'
-    | '/calculators/uk-payroll-paye'
-    | '/calculators/uk-penalty-risk'
-    | '/calculators/uk-rd-tax-credit'
-    | '/calculators/uk-self-assessment'
-    | '/calculators/uk-setup-cost'
-    | '/calculators/uk-sole-trader-vs-ltd'
-    | '/calculators/uk-stamp-duty'
-    | '/calculators/uk-tax'
-    | '/calculators/uk-vat'
-    | '/calculators/uk-vat-register-decision'
-    | '/calculators/uk-vs-pakistan-tax-comparison'
-    | '/calculators/us-bank-approval'
-    | '/calculators/us-boi-deadline'
-    | '/calculators/us-cost'
-    | '/calculators/us-ein-eligibility'
-    | '/calculators/us-fbar-fatca-checker'
-    | '/calculators/us-federal-income-tax'
-    | '/calculators/us-llc-annual-compliance'
-    | '/calculators/us-llc-recommendation-quiz'
-    | '/calculators/us-llc-vs-c-corp'
-    | '/calculators/us-penalty-risk'
-    | '/calculators/us-sales-tax'
-    | '/calculators/us-self-employment-tax'
-    | '/calculators/us-tax-eligibility'
-    | '/calculators/us-trademark-cost'
-    | '/calculators/us-wyoming-vs-delaware'
+    | '/calculators/uk-bank-approval-calculator'
+    | '/calculators/uk-capital-gains-tax-calculator'
+    | '/calculators/uk-corporation-tax-calculator'
+    | '/calculators/uk-nrl-property-tax-calculator'
+    | '/calculators/uk-payroll-paye-calculator'
+    | '/calculators/uk-penalty-risk-calculator'
+    | '/calculators/uk-rd-tax-credit-calculator'
+    | '/calculators/uk-self-assessment-tax-calculator'
+    | '/calculators/uk-setup-cost-calculator'
+    | '/calculators/uk-sole-trader-vs-ltd-calculator'
+    | '/calculators/uk-stamp-duty-land-tax-calculator'
+    | '/calculators/uk-tax-dividend-optimizer-calculator'
+    | '/calculators/uk-vat-calculator'
+    | '/calculators/uk-vat-register-decision-calculator'
+    | '/calculators/uk-vs-pakistan-tax-comparison-calculator'
+    | '/calculators/us-bank-approval-calculator'
+    | '/calculators/us-boi-deadline-calculator'
+    | '/calculators/us-cost-calculator'
+    | '/calculators/us-ein-eligibility-calculator'
+    | '/calculators/us-fbar-fatca-checker-calculator'
+    | '/calculators/us-federal-income-tax-calculator'
+    | '/calculators/us-llc-annual-compliance-calculator'
+    | '/calculators/us-llc-recommendation-quiz-calculator'
+    | '/calculators/us-llc-vs-c-corp-calculator'
+    | '/calculators/us-penalty-risk-calculator'
+    | '/calculators/us-sales-tax-calculator'
+    | '/calculators/us-self-employment-tax-calculator'
+    | '/calculators/us-tax-eligibility-calculator'
+    | '/calculators/us-trademark-cost-calculator'
+    | '/calculators/us-wyoming-vs-delaware-calculator'
     | '/calculators/usa'
     | '/legal-contract-drafting/data-processing-agreement'
     | '/legal-contract-drafting/employee-confidentiality-agreement'
@@ -3285,65 +3338,68 @@ export interface RootRouteChildren {
   BlogWorkRemotelyUaeFreezoneVisaRulesRoute: typeof BlogWorkRemotelyUaeFreezoneVisaRulesRoute
   BlogWyomingVsDelawareLlcNonResidentRoute: typeof BlogWyomingVsDelawareLlcNonResidentRoute
   CalculatorsPakistanRoute: typeof CalculatorsPakistanRoute
-  CalculatorsPakistanFbrNoticeTimelineRoute: typeof CalculatorsPakistanFbrNoticeTimelineRoute
-  CalculatorsPakistanFbrSalaryTaxRoute: typeof CalculatorsPakistanFbrSalaryTaxRoute
-  CalculatorsPakistanFilerStatusCheckerRoute: typeof CalculatorsPakistanFilerStatusCheckerRoute
-  CalculatorsPakistanFreelancerTaxRoute: typeof CalculatorsPakistanFreelancerTaxRoute
-  CalculatorsPakistanItExportRoute: typeof CalculatorsPakistanItExportRoute
-  CalculatorsPakistanNtnEligibilityRoute: typeof CalculatorsPakistanNtnEligibilityRoute
-  CalculatorsPakistanPropertyTaxRoute: typeof CalculatorsPakistanPropertyTaxRoute
-  CalculatorsPakistanRentalIncomeTaxRoute: typeof CalculatorsPakistanRentalIncomeTaxRoute
-  CalculatorsPakistanSalesTaxRoute: typeof CalculatorsPakistanSalesTaxRoute
-  CalculatorsPakistanSecpCostRoute: typeof CalculatorsPakistanSecpCostRoute
-  CalculatorsPakistanSecpPenaltyRoute: typeof CalculatorsPakistanSecpPenaltyRoute
-  CalculatorsPakistanTaxRoute: typeof CalculatorsPakistanTaxRoute
-  CalculatorsPakistanTaxCalendarRoute: typeof CalculatorsPakistanTaxCalendarRoute
+  CalculatorsPakistanCapitalGainsTaxCalculatorRoute: typeof CalculatorsPakistanCapitalGainsTaxCalculatorRoute
+  CalculatorsPakistanFbrNoticeTimelineCalculatorRoute: typeof CalculatorsPakistanFbrNoticeTimelineCalculatorRoute
+  CalculatorsPakistanFbrSalaryTaxCalculatorRoute: typeof CalculatorsPakistanFbrSalaryTaxCalculatorRoute
+  CalculatorsPakistanFilerStatusCheckerCalculatorRoute: typeof CalculatorsPakistanFilerStatusCheckerCalculatorRoute
+  CalculatorsPakistanFilerVsNonFilerTaxCalculatorRoute: typeof CalculatorsPakistanFilerVsNonFilerTaxCalculatorRoute
+  CalculatorsPakistanFreelancerTaxCalculatorRoute: typeof CalculatorsPakistanFreelancerTaxCalculatorRoute
+  CalculatorsPakistanItExportCalculatorRoute: typeof CalculatorsPakistanItExportCalculatorRoute
+  CalculatorsPakistanNtnEligibilityCalculatorRoute: typeof CalculatorsPakistanNtnEligibilityCalculatorRoute
+  CalculatorsPakistanPropertyTaxCalculatorRoute: typeof CalculatorsPakistanPropertyTaxCalculatorRoute
+  CalculatorsPakistanRentalIncomeTaxCalculatorRoute: typeof CalculatorsPakistanRentalIncomeTaxCalculatorRoute
+  CalculatorsPakistanSalesTaxCalculatorRoute: typeof CalculatorsPakistanSalesTaxCalculatorRoute
+  CalculatorsPakistanSecpCostCalculatorRoute: typeof CalculatorsPakistanSecpCostCalculatorRoute
+  CalculatorsPakistanSecpPenaltyCalculatorRoute: typeof CalculatorsPakistanSecpPenaltyCalculatorRoute
+  CalculatorsPakistanTaxCalendarCalculatorRoute: typeof CalculatorsPakistanTaxCalendarCalculatorRoute
   CalculatorsPakistanWhtCalculatorRoute: typeof CalculatorsPakistanWhtCalculatorRoute
   CalculatorsUaeRoute: typeof CalculatorsUaeRoute
-  CalculatorsUaeBankApprovalRoute: typeof CalculatorsUaeBankApprovalRoute
-  CalculatorsUaeCorporateTaxDeadlineRoute: typeof CalculatorsUaeCorporateTaxDeadlineRoute
-  CalculatorsUaeDoubleTaxTreatyRoute: typeof CalculatorsUaeDoubleTaxTreatyRoute
-  CalculatorsUaeEsrUboRoute: typeof CalculatorsUaeEsrUboRoute
-  CalculatorsUaeExciseTaxRoute: typeof CalculatorsUaeExciseTaxRoute
-  CalculatorsUaeFreelanceVsFreezoneRoute: typeof CalculatorsUaeFreelanceVsFreezoneRoute
-  CalculatorsUaeFreezoneRoute: typeof CalculatorsUaeFreezoneRoute
-  CalculatorsUaeFreezoneVsMainlandQuizRoute: typeof CalculatorsUaeFreezoneVsMainlandQuizRoute
+  CalculatorsUaeBankApprovalCalculatorRoute: typeof CalculatorsUaeBankApprovalCalculatorRoute
+  CalculatorsUaeCorporateTaxCalculatorRoute: typeof CalculatorsUaeCorporateTaxCalculatorRoute
+  CalculatorsUaeCorporateTaxDeadlineCalculatorRoute: typeof CalculatorsUaeCorporateTaxDeadlineCalculatorRoute
+  CalculatorsUaeDoubleTaxTreatyCalculatorRoute: typeof CalculatorsUaeDoubleTaxTreatyCalculatorRoute
+  CalculatorsUaeEsrUboCalculatorRoute: typeof CalculatorsUaeEsrUboCalculatorRoute
+  CalculatorsUaeExciseTaxCalculatorRoute: typeof CalculatorsUaeExciseTaxCalculatorRoute
+  CalculatorsUaeFreelanceVsFreezoneCalculatorRoute: typeof CalculatorsUaeFreelanceVsFreezoneCalculatorRoute
+  CalculatorsUaeFreezoneSetupCalculatorRoute: typeof CalculatorsUaeFreezoneSetupCalculatorRoute
+  CalculatorsUaeFreezoneVsMainlandQuizCalculatorRoute: typeof CalculatorsUaeFreezoneVsMainlandQuizCalculatorRoute
   CalculatorsUaeGratuityCalculatorRoute: typeof CalculatorsUaeGratuityCalculatorRoute
-  CalculatorsUaeRealEstateRoiRoute: typeof CalculatorsUaeRealEstateRoiRoute
-  CalculatorsUaeTaxRoute: typeof CalculatorsUaeTaxRoute
-  CalculatorsUaeTaxResidencyRoute: typeof CalculatorsUaeTaxResidencyRoute
-  CalculatorsUaeVatRoute: typeof CalculatorsUaeVatRoute
-  CalculatorsUaeVisaCostRoute: typeof CalculatorsUaeVisaCostRoute
+  CalculatorsUaeQfzpEligibilityCalculatorRoute: typeof CalculatorsUaeQfzpEligibilityCalculatorRoute
+  CalculatorsUaeRealEstateRoiCalculatorRoute: typeof CalculatorsUaeRealEstateRoiCalculatorRoute
+  CalculatorsUaeTaxResidencyCalculatorRoute: typeof CalculatorsUaeTaxResidencyCalculatorRoute
+  CalculatorsUaeVatCalculatorRoute: typeof CalculatorsUaeVatCalculatorRoute
+  CalculatorsUaeVisaCostCalculatorRoute: typeof CalculatorsUaeVisaCostCalculatorRoute
   CalculatorsUkRoute: typeof CalculatorsUkRoute
-  CalculatorsUkBankApprovalRoute: typeof CalculatorsUkBankApprovalRoute
-  CalculatorsUkCapitalGainsTaxRoute: typeof CalculatorsUkCapitalGainsTaxRoute
-  CalculatorsUkCorporationTaxRoute: typeof CalculatorsUkCorporationTaxRoute
-  CalculatorsUkPayrollPayeRoute: typeof CalculatorsUkPayrollPayeRoute
-  CalculatorsUkPenaltyRiskRoute: typeof CalculatorsUkPenaltyRiskRoute
-  CalculatorsUkRdTaxCreditRoute: typeof CalculatorsUkRdTaxCreditRoute
-  CalculatorsUkSelfAssessmentRoute: typeof CalculatorsUkSelfAssessmentRoute
-  CalculatorsUkSetupCostRoute: typeof CalculatorsUkSetupCostRoute
-  CalculatorsUkSoleTraderVsLtdRoute: typeof CalculatorsUkSoleTraderVsLtdRoute
-  CalculatorsUkStampDutyRoute: typeof CalculatorsUkStampDutyRoute
-  CalculatorsUkTaxRoute: typeof CalculatorsUkTaxRoute
-  CalculatorsUkVatRoute: typeof CalculatorsUkVatRoute
-  CalculatorsUkVatRegisterDecisionRoute: typeof CalculatorsUkVatRegisterDecisionRoute
-  CalculatorsUkVsPakistanTaxComparisonRoute: typeof CalculatorsUkVsPakistanTaxComparisonRoute
-  CalculatorsUsBankApprovalRoute: typeof CalculatorsUsBankApprovalRoute
-  CalculatorsUsBoiDeadlineRoute: typeof CalculatorsUsBoiDeadlineRoute
-  CalculatorsUsCostRoute: typeof CalculatorsUsCostRoute
-  CalculatorsUsEinEligibilityRoute: typeof CalculatorsUsEinEligibilityRoute
-  CalculatorsUsFbarFatcaCheckerRoute: typeof CalculatorsUsFbarFatcaCheckerRoute
-  CalculatorsUsFederalIncomeTaxRoute: typeof CalculatorsUsFederalIncomeTaxRoute
-  CalculatorsUsLlcAnnualComplianceRoute: typeof CalculatorsUsLlcAnnualComplianceRoute
-  CalculatorsUsLlcRecommendationQuizRoute: typeof CalculatorsUsLlcRecommendationQuizRoute
-  CalculatorsUsLlcVsCCorpRoute: typeof CalculatorsUsLlcVsCCorpRoute
-  CalculatorsUsPenaltyRiskRoute: typeof CalculatorsUsPenaltyRiskRoute
-  CalculatorsUsSalesTaxRoute: typeof CalculatorsUsSalesTaxRoute
-  CalculatorsUsSelfEmploymentTaxRoute: typeof CalculatorsUsSelfEmploymentTaxRoute
-  CalculatorsUsTaxEligibilityRoute: typeof CalculatorsUsTaxEligibilityRoute
-  CalculatorsUsTrademarkCostRoute: typeof CalculatorsUsTrademarkCostRoute
-  CalculatorsUsWyomingVsDelawareRoute: typeof CalculatorsUsWyomingVsDelawareRoute
+  CalculatorsUkBankApprovalCalculatorRoute: typeof CalculatorsUkBankApprovalCalculatorRoute
+  CalculatorsUkCapitalGainsTaxCalculatorRoute: typeof CalculatorsUkCapitalGainsTaxCalculatorRoute
+  CalculatorsUkCorporationTaxCalculatorRoute: typeof CalculatorsUkCorporationTaxCalculatorRoute
+  CalculatorsUkNrlPropertyTaxCalculatorRoute: typeof CalculatorsUkNrlPropertyTaxCalculatorRoute
+  CalculatorsUkPayrollPayeCalculatorRoute: typeof CalculatorsUkPayrollPayeCalculatorRoute
+  CalculatorsUkPenaltyRiskCalculatorRoute: typeof CalculatorsUkPenaltyRiskCalculatorRoute
+  CalculatorsUkRdTaxCreditCalculatorRoute: typeof CalculatorsUkRdTaxCreditCalculatorRoute
+  CalculatorsUkSelfAssessmentTaxCalculatorRoute: typeof CalculatorsUkSelfAssessmentTaxCalculatorRoute
+  CalculatorsUkSetupCostCalculatorRoute: typeof CalculatorsUkSetupCostCalculatorRoute
+  CalculatorsUkSoleTraderVsLtdCalculatorRoute: typeof CalculatorsUkSoleTraderVsLtdCalculatorRoute
+  CalculatorsUkStampDutyLandTaxCalculatorRoute: typeof CalculatorsUkStampDutyLandTaxCalculatorRoute
+  CalculatorsUkTaxDividendOptimizerCalculatorRoute: typeof CalculatorsUkTaxDividendOptimizerCalculatorRoute
+  CalculatorsUkVatCalculatorRoute: typeof CalculatorsUkVatCalculatorRoute
+  CalculatorsUkVatRegisterDecisionCalculatorRoute: typeof CalculatorsUkVatRegisterDecisionCalculatorRoute
+  CalculatorsUkVsPakistanTaxComparisonCalculatorRoute: typeof CalculatorsUkVsPakistanTaxComparisonCalculatorRoute
+  CalculatorsUsBankApprovalCalculatorRoute: typeof CalculatorsUsBankApprovalCalculatorRoute
+  CalculatorsUsBoiDeadlineCalculatorRoute: typeof CalculatorsUsBoiDeadlineCalculatorRoute
+  CalculatorsUsCostCalculatorRoute: typeof CalculatorsUsCostCalculatorRoute
+  CalculatorsUsEinEligibilityCalculatorRoute: typeof CalculatorsUsEinEligibilityCalculatorRoute
+  CalculatorsUsFbarFatcaCheckerCalculatorRoute: typeof CalculatorsUsFbarFatcaCheckerCalculatorRoute
+  CalculatorsUsFederalIncomeTaxCalculatorRoute: typeof CalculatorsUsFederalIncomeTaxCalculatorRoute
+  CalculatorsUsLlcAnnualComplianceCalculatorRoute: typeof CalculatorsUsLlcAnnualComplianceCalculatorRoute
+  CalculatorsUsLlcRecommendationQuizCalculatorRoute: typeof CalculatorsUsLlcRecommendationQuizCalculatorRoute
+  CalculatorsUsLlcVsCCorpCalculatorRoute: typeof CalculatorsUsLlcVsCCorpCalculatorRoute
+  CalculatorsUsPenaltyRiskCalculatorRoute: typeof CalculatorsUsPenaltyRiskCalculatorRoute
+  CalculatorsUsSalesTaxCalculatorRoute: typeof CalculatorsUsSalesTaxCalculatorRoute
+  CalculatorsUsSelfEmploymentTaxCalculatorRoute: typeof CalculatorsUsSelfEmploymentTaxCalculatorRoute
+  CalculatorsUsTaxEligibilityCalculatorRoute: typeof CalculatorsUsTaxEligibilityCalculatorRoute
+  CalculatorsUsTrademarkCostCalculatorRoute: typeof CalculatorsUsTrademarkCostCalculatorRoute
+  CalculatorsUsWyomingVsDelawareCalculatorRoute: typeof CalculatorsUsWyomingVsDelawareCalculatorRoute
   CalculatorsUsaRoute: typeof CalculatorsUsaRoute
   LegalContractDraftingDataProcessingAgreementRoute: typeof LegalContractDraftingDataProcessingAgreementRoute
   LegalContractDraftingEmployeeConfidentialityAgreementRoute: typeof LegalContractDraftingEmployeeConfidentialityAgreementRoute
@@ -4022,207 +4078,214 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CalculatorsUsaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/us-wyoming-vs-delaware': {
-      id: '/calculators/us-wyoming-vs-delaware'
-      path: '/calculators/us-wyoming-vs-delaware'
-      fullPath: '/calculators/us-wyoming-vs-delaware'
-      preLoaderRoute: typeof CalculatorsUsWyomingVsDelawareRouteImport
+    '/calculators/us-wyoming-vs-delaware-calculator': {
+      id: '/calculators/us-wyoming-vs-delaware-calculator'
+      path: '/calculators/us-wyoming-vs-delaware-calculator'
+      fullPath: '/calculators/us-wyoming-vs-delaware-calculator'
+      preLoaderRoute: typeof CalculatorsUsWyomingVsDelawareCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/us-trademark-cost': {
-      id: '/calculators/us-trademark-cost'
-      path: '/calculators/us-trademark-cost'
-      fullPath: '/calculators/us-trademark-cost'
-      preLoaderRoute: typeof CalculatorsUsTrademarkCostRouteImport
+    '/calculators/us-trademark-cost-calculator': {
+      id: '/calculators/us-trademark-cost-calculator'
+      path: '/calculators/us-trademark-cost-calculator'
+      fullPath: '/calculators/us-trademark-cost-calculator'
+      preLoaderRoute: typeof CalculatorsUsTrademarkCostCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/us-tax-eligibility': {
-      id: '/calculators/us-tax-eligibility'
-      path: '/calculators/us-tax-eligibility'
-      fullPath: '/calculators/us-tax-eligibility'
-      preLoaderRoute: typeof CalculatorsUsTaxEligibilityRouteImport
+    '/calculators/us-tax-eligibility-calculator': {
+      id: '/calculators/us-tax-eligibility-calculator'
+      path: '/calculators/us-tax-eligibility-calculator'
+      fullPath: '/calculators/us-tax-eligibility-calculator'
+      preLoaderRoute: typeof CalculatorsUsTaxEligibilityCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/us-self-employment-tax': {
-      id: '/calculators/us-self-employment-tax'
-      path: '/calculators/us-self-employment-tax'
-      fullPath: '/calculators/us-self-employment-tax'
-      preLoaderRoute: typeof CalculatorsUsSelfEmploymentTaxRouteImport
+    '/calculators/us-self-employment-tax-calculator': {
+      id: '/calculators/us-self-employment-tax-calculator'
+      path: '/calculators/us-self-employment-tax-calculator'
+      fullPath: '/calculators/us-self-employment-tax-calculator'
+      preLoaderRoute: typeof CalculatorsUsSelfEmploymentTaxCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/us-sales-tax': {
-      id: '/calculators/us-sales-tax'
-      path: '/calculators/us-sales-tax'
-      fullPath: '/calculators/us-sales-tax'
-      preLoaderRoute: typeof CalculatorsUsSalesTaxRouteImport
+    '/calculators/us-sales-tax-calculator': {
+      id: '/calculators/us-sales-tax-calculator'
+      path: '/calculators/us-sales-tax-calculator'
+      fullPath: '/calculators/us-sales-tax-calculator'
+      preLoaderRoute: typeof CalculatorsUsSalesTaxCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/us-penalty-risk': {
-      id: '/calculators/us-penalty-risk'
-      path: '/calculators/us-penalty-risk'
-      fullPath: '/calculators/us-penalty-risk'
-      preLoaderRoute: typeof CalculatorsUsPenaltyRiskRouteImport
+    '/calculators/us-penalty-risk-calculator': {
+      id: '/calculators/us-penalty-risk-calculator'
+      path: '/calculators/us-penalty-risk-calculator'
+      fullPath: '/calculators/us-penalty-risk-calculator'
+      preLoaderRoute: typeof CalculatorsUsPenaltyRiskCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/us-llc-vs-c-corp': {
-      id: '/calculators/us-llc-vs-c-corp'
-      path: '/calculators/us-llc-vs-c-corp'
-      fullPath: '/calculators/us-llc-vs-c-corp'
-      preLoaderRoute: typeof CalculatorsUsLlcVsCCorpRouteImport
+    '/calculators/us-llc-vs-c-corp-calculator': {
+      id: '/calculators/us-llc-vs-c-corp-calculator'
+      path: '/calculators/us-llc-vs-c-corp-calculator'
+      fullPath: '/calculators/us-llc-vs-c-corp-calculator'
+      preLoaderRoute: typeof CalculatorsUsLlcVsCCorpCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/us-llc-recommendation-quiz': {
-      id: '/calculators/us-llc-recommendation-quiz'
-      path: '/calculators/us-llc-recommendation-quiz'
-      fullPath: '/calculators/us-llc-recommendation-quiz'
-      preLoaderRoute: typeof CalculatorsUsLlcRecommendationQuizRouteImport
+    '/calculators/us-llc-recommendation-quiz-calculator': {
+      id: '/calculators/us-llc-recommendation-quiz-calculator'
+      path: '/calculators/us-llc-recommendation-quiz-calculator'
+      fullPath: '/calculators/us-llc-recommendation-quiz-calculator'
+      preLoaderRoute: typeof CalculatorsUsLlcRecommendationQuizCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/us-llc-annual-compliance': {
-      id: '/calculators/us-llc-annual-compliance'
-      path: '/calculators/us-llc-annual-compliance'
-      fullPath: '/calculators/us-llc-annual-compliance'
-      preLoaderRoute: typeof CalculatorsUsLlcAnnualComplianceRouteImport
+    '/calculators/us-llc-annual-compliance-calculator': {
+      id: '/calculators/us-llc-annual-compliance-calculator'
+      path: '/calculators/us-llc-annual-compliance-calculator'
+      fullPath: '/calculators/us-llc-annual-compliance-calculator'
+      preLoaderRoute: typeof CalculatorsUsLlcAnnualComplianceCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/us-federal-income-tax': {
-      id: '/calculators/us-federal-income-tax'
-      path: '/calculators/us-federal-income-tax'
-      fullPath: '/calculators/us-federal-income-tax'
-      preLoaderRoute: typeof CalculatorsUsFederalIncomeTaxRouteImport
+    '/calculators/us-federal-income-tax-calculator': {
+      id: '/calculators/us-federal-income-tax-calculator'
+      path: '/calculators/us-federal-income-tax-calculator'
+      fullPath: '/calculators/us-federal-income-tax-calculator'
+      preLoaderRoute: typeof CalculatorsUsFederalIncomeTaxCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/us-fbar-fatca-checker': {
-      id: '/calculators/us-fbar-fatca-checker'
-      path: '/calculators/us-fbar-fatca-checker'
-      fullPath: '/calculators/us-fbar-fatca-checker'
-      preLoaderRoute: typeof CalculatorsUsFbarFatcaCheckerRouteImport
+    '/calculators/us-fbar-fatca-checker-calculator': {
+      id: '/calculators/us-fbar-fatca-checker-calculator'
+      path: '/calculators/us-fbar-fatca-checker-calculator'
+      fullPath: '/calculators/us-fbar-fatca-checker-calculator'
+      preLoaderRoute: typeof CalculatorsUsFbarFatcaCheckerCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/us-ein-eligibility': {
-      id: '/calculators/us-ein-eligibility'
-      path: '/calculators/us-ein-eligibility'
-      fullPath: '/calculators/us-ein-eligibility'
-      preLoaderRoute: typeof CalculatorsUsEinEligibilityRouteImport
+    '/calculators/us-ein-eligibility-calculator': {
+      id: '/calculators/us-ein-eligibility-calculator'
+      path: '/calculators/us-ein-eligibility-calculator'
+      fullPath: '/calculators/us-ein-eligibility-calculator'
+      preLoaderRoute: typeof CalculatorsUsEinEligibilityCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/us-cost': {
-      id: '/calculators/us-cost'
-      path: '/calculators/us-cost'
-      fullPath: '/calculators/us-cost'
-      preLoaderRoute: typeof CalculatorsUsCostRouteImport
+    '/calculators/us-cost-calculator': {
+      id: '/calculators/us-cost-calculator'
+      path: '/calculators/us-cost-calculator'
+      fullPath: '/calculators/us-cost-calculator'
+      preLoaderRoute: typeof CalculatorsUsCostCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/us-boi-deadline': {
-      id: '/calculators/us-boi-deadline'
-      path: '/calculators/us-boi-deadline'
-      fullPath: '/calculators/us-boi-deadline'
-      preLoaderRoute: typeof CalculatorsUsBoiDeadlineRouteImport
+    '/calculators/us-boi-deadline-calculator': {
+      id: '/calculators/us-boi-deadline-calculator'
+      path: '/calculators/us-boi-deadline-calculator'
+      fullPath: '/calculators/us-boi-deadline-calculator'
+      preLoaderRoute: typeof CalculatorsUsBoiDeadlineCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/us-bank-approval': {
-      id: '/calculators/us-bank-approval'
-      path: '/calculators/us-bank-approval'
-      fullPath: '/calculators/us-bank-approval'
-      preLoaderRoute: typeof CalculatorsUsBankApprovalRouteImport
+    '/calculators/us-bank-approval-calculator': {
+      id: '/calculators/us-bank-approval-calculator'
+      path: '/calculators/us-bank-approval-calculator'
+      fullPath: '/calculators/us-bank-approval-calculator'
+      preLoaderRoute: typeof CalculatorsUsBankApprovalCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uk-vs-pakistan-tax-comparison': {
-      id: '/calculators/uk-vs-pakistan-tax-comparison'
-      path: '/calculators/uk-vs-pakistan-tax-comparison'
-      fullPath: '/calculators/uk-vs-pakistan-tax-comparison'
-      preLoaderRoute: typeof CalculatorsUkVsPakistanTaxComparisonRouteImport
+    '/calculators/uk-vs-pakistan-tax-comparison-calculator': {
+      id: '/calculators/uk-vs-pakistan-tax-comparison-calculator'
+      path: '/calculators/uk-vs-pakistan-tax-comparison-calculator'
+      fullPath: '/calculators/uk-vs-pakistan-tax-comparison-calculator'
+      preLoaderRoute: typeof CalculatorsUkVsPakistanTaxComparisonCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uk-vat-register-decision': {
-      id: '/calculators/uk-vat-register-decision'
-      path: '/calculators/uk-vat-register-decision'
-      fullPath: '/calculators/uk-vat-register-decision'
-      preLoaderRoute: typeof CalculatorsUkVatRegisterDecisionRouteImport
+    '/calculators/uk-vat-register-decision-calculator': {
+      id: '/calculators/uk-vat-register-decision-calculator'
+      path: '/calculators/uk-vat-register-decision-calculator'
+      fullPath: '/calculators/uk-vat-register-decision-calculator'
+      preLoaderRoute: typeof CalculatorsUkVatRegisterDecisionCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uk-vat': {
-      id: '/calculators/uk-vat'
-      path: '/calculators/uk-vat'
-      fullPath: '/calculators/uk-vat'
-      preLoaderRoute: typeof CalculatorsUkVatRouteImport
+    '/calculators/uk-vat-calculator': {
+      id: '/calculators/uk-vat-calculator'
+      path: '/calculators/uk-vat-calculator'
+      fullPath: '/calculators/uk-vat-calculator'
+      preLoaderRoute: typeof CalculatorsUkVatCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uk-tax': {
-      id: '/calculators/uk-tax'
-      path: '/calculators/uk-tax'
-      fullPath: '/calculators/uk-tax'
-      preLoaderRoute: typeof CalculatorsUkTaxRouteImport
+    '/calculators/uk-tax-dividend-optimizer-calculator': {
+      id: '/calculators/uk-tax-dividend-optimizer-calculator'
+      path: '/calculators/uk-tax-dividend-optimizer-calculator'
+      fullPath: '/calculators/uk-tax-dividend-optimizer-calculator'
+      preLoaderRoute: typeof CalculatorsUkTaxDividendOptimizerCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uk-stamp-duty': {
-      id: '/calculators/uk-stamp-duty'
-      path: '/calculators/uk-stamp-duty'
-      fullPath: '/calculators/uk-stamp-duty'
-      preLoaderRoute: typeof CalculatorsUkStampDutyRouteImport
+    '/calculators/uk-stamp-duty-land-tax-calculator': {
+      id: '/calculators/uk-stamp-duty-land-tax-calculator'
+      path: '/calculators/uk-stamp-duty-land-tax-calculator'
+      fullPath: '/calculators/uk-stamp-duty-land-tax-calculator'
+      preLoaderRoute: typeof CalculatorsUkStampDutyLandTaxCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uk-sole-trader-vs-ltd': {
-      id: '/calculators/uk-sole-trader-vs-ltd'
-      path: '/calculators/uk-sole-trader-vs-ltd'
-      fullPath: '/calculators/uk-sole-trader-vs-ltd'
-      preLoaderRoute: typeof CalculatorsUkSoleTraderVsLtdRouteImport
+    '/calculators/uk-sole-trader-vs-ltd-calculator': {
+      id: '/calculators/uk-sole-trader-vs-ltd-calculator'
+      path: '/calculators/uk-sole-trader-vs-ltd-calculator'
+      fullPath: '/calculators/uk-sole-trader-vs-ltd-calculator'
+      preLoaderRoute: typeof CalculatorsUkSoleTraderVsLtdCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uk-setup-cost': {
-      id: '/calculators/uk-setup-cost'
-      path: '/calculators/uk-setup-cost'
-      fullPath: '/calculators/uk-setup-cost'
-      preLoaderRoute: typeof CalculatorsUkSetupCostRouteImport
+    '/calculators/uk-setup-cost-calculator': {
+      id: '/calculators/uk-setup-cost-calculator'
+      path: '/calculators/uk-setup-cost-calculator'
+      fullPath: '/calculators/uk-setup-cost-calculator'
+      preLoaderRoute: typeof CalculatorsUkSetupCostCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uk-self-assessment': {
-      id: '/calculators/uk-self-assessment'
-      path: '/calculators/uk-self-assessment'
-      fullPath: '/calculators/uk-self-assessment'
-      preLoaderRoute: typeof CalculatorsUkSelfAssessmentRouteImport
+    '/calculators/uk-self-assessment-tax-calculator': {
+      id: '/calculators/uk-self-assessment-tax-calculator'
+      path: '/calculators/uk-self-assessment-tax-calculator'
+      fullPath: '/calculators/uk-self-assessment-tax-calculator'
+      preLoaderRoute: typeof CalculatorsUkSelfAssessmentTaxCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uk-rd-tax-credit': {
-      id: '/calculators/uk-rd-tax-credit'
-      path: '/calculators/uk-rd-tax-credit'
-      fullPath: '/calculators/uk-rd-tax-credit'
-      preLoaderRoute: typeof CalculatorsUkRdTaxCreditRouteImport
+    '/calculators/uk-rd-tax-credit-calculator': {
+      id: '/calculators/uk-rd-tax-credit-calculator'
+      path: '/calculators/uk-rd-tax-credit-calculator'
+      fullPath: '/calculators/uk-rd-tax-credit-calculator'
+      preLoaderRoute: typeof CalculatorsUkRdTaxCreditCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uk-penalty-risk': {
-      id: '/calculators/uk-penalty-risk'
-      path: '/calculators/uk-penalty-risk'
-      fullPath: '/calculators/uk-penalty-risk'
-      preLoaderRoute: typeof CalculatorsUkPenaltyRiskRouteImport
+    '/calculators/uk-penalty-risk-calculator': {
+      id: '/calculators/uk-penalty-risk-calculator'
+      path: '/calculators/uk-penalty-risk-calculator'
+      fullPath: '/calculators/uk-penalty-risk-calculator'
+      preLoaderRoute: typeof CalculatorsUkPenaltyRiskCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uk-payroll-paye': {
-      id: '/calculators/uk-payroll-paye'
-      path: '/calculators/uk-payroll-paye'
-      fullPath: '/calculators/uk-payroll-paye'
-      preLoaderRoute: typeof CalculatorsUkPayrollPayeRouteImport
+    '/calculators/uk-payroll-paye-calculator': {
+      id: '/calculators/uk-payroll-paye-calculator'
+      path: '/calculators/uk-payroll-paye-calculator'
+      fullPath: '/calculators/uk-payroll-paye-calculator'
+      preLoaderRoute: typeof CalculatorsUkPayrollPayeCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uk-corporation-tax': {
-      id: '/calculators/uk-corporation-tax'
-      path: '/calculators/uk-corporation-tax'
-      fullPath: '/calculators/uk-corporation-tax'
-      preLoaderRoute: typeof CalculatorsUkCorporationTaxRouteImport
+    '/calculators/uk-nrl-property-tax-calculator': {
+      id: '/calculators/uk-nrl-property-tax-calculator'
+      path: '/calculators/uk-nrl-property-tax-calculator'
+      fullPath: '/calculators/uk-nrl-property-tax-calculator'
+      preLoaderRoute: typeof CalculatorsUkNrlPropertyTaxCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uk-capital-gains-tax': {
-      id: '/calculators/uk-capital-gains-tax'
-      path: '/calculators/uk-capital-gains-tax'
-      fullPath: '/calculators/uk-capital-gains-tax'
-      preLoaderRoute: typeof CalculatorsUkCapitalGainsTaxRouteImport
+    '/calculators/uk-corporation-tax-calculator': {
+      id: '/calculators/uk-corporation-tax-calculator'
+      path: '/calculators/uk-corporation-tax-calculator'
+      fullPath: '/calculators/uk-corporation-tax-calculator'
+      preLoaderRoute: typeof CalculatorsUkCorporationTaxCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uk-bank-approval': {
-      id: '/calculators/uk-bank-approval'
-      path: '/calculators/uk-bank-approval'
-      fullPath: '/calculators/uk-bank-approval'
-      preLoaderRoute: typeof CalculatorsUkBankApprovalRouteImport
+    '/calculators/uk-capital-gains-tax-calculator': {
+      id: '/calculators/uk-capital-gains-tax-calculator'
+      path: '/calculators/uk-capital-gains-tax-calculator'
+      fullPath: '/calculators/uk-capital-gains-tax-calculator'
+      preLoaderRoute: typeof CalculatorsUkCapitalGainsTaxCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/calculators/uk-bank-approval-calculator': {
+      id: '/calculators/uk-bank-approval-calculator'
+      path: '/calculators/uk-bank-approval-calculator'
+      fullPath: '/calculators/uk-bank-approval-calculator'
+      preLoaderRoute: typeof CalculatorsUkBankApprovalCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/calculators/uk': {
@@ -4232,39 +4295,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CalculatorsUkRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uae-visa-cost': {
-      id: '/calculators/uae-visa-cost'
-      path: '/calculators/uae-visa-cost'
-      fullPath: '/calculators/uae-visa-cost'
-      preLoaderRoute: typeof CalculatorsUaeVisaCostRouteImport
+    '/calculators/uae-visa-cost-calculator': {
+      id: '/calculators/uae-visa-cost-calculator'
+      path: '/calculators/uae-visa-cost-calculator'
+      fullPath: '/calculators/uae-visa-cost-calculator'
+      preLoaderRoute: typeof CalculatorsUaeVisaCostCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uae-vat': {
-      id: '/calculators/uae-vat'
-      path: '/calculators/uae-vat'
-      fullPath: '/calculators/uae-vat'
-      preLoaderRoute: typeof CalculatorsUaeVatRouteImport
+    '/calculators/uae-vat-calculator': {
+      id: '/calculators/uae-vat-calculator'
+      path: '/calculators/uae-vat-calculator'
+      fullPath: '/calculators/uae-vat-calculator'
+      preLoaderRoute: typeof CalculatorsUaeVatCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uae-tax-residency': {
-      id: '/calculators/uae-tax-residency'
-      path: '/calculators/uae-tax-residency'
-      fullPath: '/calculators/uae-tax-residency'
-      preLoaderRoute: typeof CalculatorsUaeTaxResidencyRouteImport
+    '/calculators/uae-tax-residency-calculator': {
+      id: '/calculators/uae-tax-residency-calculator'
+      path: '/calculators/uae-tax-residency-calculator'
+      fullPath: '/calculators/uae-tax-residency-calculator'
+      preLoaderRoute: typeof CalculatorsUaeTaxResidencyCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uae-tax': {
-      id: '/calculators/uae-tax'
-      path: '/calculators/uae-tax'
-      fullPath: '/calculators/uae-tax'
-      preLoaderRoute: typeof CalculatorsUaeTaxRouteImport
+    '/calculators/uae-real-estate-roi-calculator': {
+      id: '/calculators/uae-real-estate-roi-calculator'
+      path: '/calculators/uae-real-estate-roi-calculator'
+      fullPath: '/calculators/uae-real-estate-roi-calculator'
+      preLoaderRoute: typeof CalculatorsUaeRealEstateRoiCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uae-real-estate-roi': {
-      id: '/calculators/uae-real-estate-roi'
-      path: '/calculators/uae-real-estate-roi'
-      fullPath: '/calculators/uae-real-estate-roi'
-      preLoaderRoute: typeof CalculatorsUaeRealEstateRoiRouteImport
+    '/calculators/uae-qfzp-eligibility-calculator': {
+      id: '/calculators/uae-qfzp-eligibility-calculator'
+      path: '/calculators/uae-qfzp-eligibility-calculator'
+      fullPath: '/calculators/uae-qfzp-eligibility-calculator'
+      preLoaderRoute: typeof CalculatorsUaeQfzpEligibilityCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/calculators/uae-gratuity-calculator': {
@@ -4274,60 +4337,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CalculatorsUaeGratuityCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uae-freezone-vs-mainland-quiz': {
-      id: '/calculators/uae-freezone-vs-mainland-quiz'
-      path: '/calculators/uae-freezone-vs-mainland-quiz'
-      fullPath: '/calculators/uae-freezone-vs-mainland-quiz'
-      preLoaderRoute: typeof CalculatorsUaeFreezoneVsMainlandQuizRouteImport
+    '/calculators/uae-freezone-vs-mainland-quiz-calculator': {
+      id: '/calculators/uae-freezone-vs-mainland-quiz-calculator'
+      path: '/calculators/uae-freezone-vs-mainland-quiz-calculator'
+      fullPath: '/calculators/uae-freezone-vs-mainland-quiz-calculator'
+      preLoaderRoute: typeof CalculatorsUaeFreezoneVsMainlandQuizCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uae-freezone': {
-      id: '/calculators/uae-freezone'
-      path: '/calculators/uae-freezone'
-      fullPath: '/calculators/uae-freezone'
-      preLoaderRoute: typeof CalculatorsUaeFreezoneRouteImport
+    '/calculators/uae-freezone-setup-calculator': {
+      id: '/calculators/uae-freezone-setup-calculator'
+      path: '/calculators/uae-freezone-setup-calculator'
+      fullPath: '/calculators/uae-freezone-setup-calculator'
+      preLoaderRoute: typeof CalculatorsUaeFreezoneSetupCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uae-freelance-vs-freezone': {
-      id: '/calculators/uae-freelance-vs-freezone'
-      path: '/calculators/uae-freelance-vs-freezone'
-      fullPath: '/calculators/uae-freelance-vs-freezone'
-      preLoaderRoute: typeof CalculatorsUaeFreelanceVsFreezoneRouteImport
+    '/calculators/uae-freelance-vs-freezone-calculator': {
+      id: '/calculators/uae-freelance-vs-freezone-calculator'
+      path: '/calculators/uae-freelance-vs-freezone-calculator'
+      fullPath: '/calculators/uae-freelance-vs-freezone-calculator'
+      preLoaderRoute: typeof CalculatorsUaeFreelanceVsFreezoneCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uae-excise-tax': {
-      id: '/calculators/uae-excise-tax'
-      path: '/calculators/uae-excise-tax'
-      fullPath: '/calculators/uae-excise-tax'
-      preLoaderRoute: typeof CalculatorsUaeExciseTaxRouteImport
+    '/calculators/uae-excise-tax-calculator': {
+      id: '/calculators/uae-excise-tax-calculator'
+      path: '/calculators/uae-excise-tax-calculator'
+      fullPath: '/calculators/uae-excise-tax-calculator'
+      preLoaderRoute: typeof CalculatorsUaeExciseTaxCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uae-esr-ubo': {
-      id: '/calculators/uae-esr-ubo'
-      path: '/calculators/uae-esr-ubo'
-      fullPath: '/calculators/uae-esr-ubo'
-      preLoaderRoute: typeof CalculatorsUaeEsrUboRouteImport
+    '/calculators/uae-esr-ubo-calculator': {
+      id: '/calculators/uae-esr-ubo-calculator'
+      path: '/calculators/uae-esr-ubo-calculator'
+      fullPath: '/calculators/uae-esr-ubo-calculator'
+      preLoaderRoute: typeof CalculatorsUaeEsrUboCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uae-double-tax-treaty': {
-      id: '/calculators/uae-double-tax-treaty'
-      path: '/calculators/uae-double-tax-treaty'
-      fullPath: '/calculators/uae-double-tax-treaty'
-      preLoaderRoute: typeof CalculatorsUaeDoubleTaxTreatyRouteImport
+    '/calculators/uae-double-tax-treaty-calculator': {
+      id: '/calculators/uae-double-tax-treaty-calculator'
+      path: '/calculators/uae-double-tax-treaty-calculator'
+      fullPath: '/calculators/uae-double-tax-treaty-calculator'
+      preLoaderRoute: typeof CalculatorsUaeDoubleTaxTreatyCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uae-corporate-tax-deadline': {
-      id: '/calculators/uae-corporate-tax-deadline'
-      path: '/calculators/uae-corporate-tax-deadline'
-      fullPath: '/calculators/uae-corporate-tax-deadline'
-      preLoaderRoute: typeof CalculatorsUaeCorporateTaxDeadlineRouteImport
+    '/calculators/uae-corporate-tax-deadline-calculator': {
+      id: '/calculators/uae-corporate-tax-deadline-calculator'
+      path: '/calculators/uae-corporate-tax-deadline-calculator'
+      fullPath: '/calculators/uae-corporate-tax-deadline-calculator'
+      preLoaderRoute: typeof CalculatorsUaeCorporateTaxDeadlineCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/uae-bank-approval': {
-      id: '/calculators/uae-bank-approval'
-      path: '/calculators/uae-bank-approval'
-      fullPath: '/calculators/uae-bank-approval'
-      preLoaderRoute: typeof CalculatorsUaeBankApprovalRouteImport
+    '/calculators/uae-corporate-tax-calculator': {
+      id: '/calculators/uae-corporate-tax-calculator'
+      path: '/calculators/uae-corporate-tax-calculator'
+      fullPath: '/calculators/uae-corporate-tax-calculator'
+      preLoaderRoute: typeof CalculatorsUaeCorporateTaxCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/calculators/uae-bank-approval-calculator': {
+      id: '/calculators/uae-bank-approval-calculator'
+      path: '/calculators/uae-bank-approval-calculator'
+      fullPath: '/calculators/uae-bank-approval-calculator'
+      preLoaderRoute: typeof CalculatorsUaeBankApprovalCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/calculators/uae': {
@@ -4344,95 +4414,102 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CalculatorsPakistanWhtCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/pakistan-tax-calendar': {
-      id: '/calculators/pakistan-tax-calendar'
-      path: '/calculators/pakistan-tax-calendar'
-      fullPath: '/calculators/pakistan-tax-calendar'
-      preLoaderRoute: typeof CalculatorsPakistanTaxCalendarRouteImport
+    '/calculators/pakistan-tax-calendar-calculator': {
+      id: '/calculators/pakistan-tax-calendar-calculator'
+      path: '/calculators/pakistan-tax-calendar-calculator'
+      fullPath: '/calculators/pakistan-tax-calendar-calculator'
+      preLoaderRoute: typeof CalculatorsPakistanTaxCalendarCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/pakistan-tax': {
-      id: '/calculators/pakistan-tax'
-      path: '/calculators/pakistan-tax'
-      fullPath: '/calculators/pakistan-tax'
-      preLoaderRoute: typeof CalculatorsPakistanTaxRouteImport
+    '/calculators/pakistan-secp-penalty-calculator': {
+      id: '/calculators/pakistan-secp-penalty-calculator'
+      path: '/calculators/pakistan-secp-penalty-calculator'
+      fullPath: '/calculators/pakistan-secp-penalty-calculator'
+      preLoaderRoute: typeof CalculatorsPakistanSecpPenaltyCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/pakistan-secp-penalty': {
-      id: '/calculators/pakistan-secp-penalty'
-      path: '/calculators/pakistan-secp-penalty'
-      fullPath: '/calculators/pakistan-secp-penalty'
-      preLoaderRoute: typeof CalculatorsPakistanSecpPenaltyRouteImport
+    '/calculators/pakistan-secp-cost-calculator': {
+      id: '/calculators/pakistan-secp-cost-calculator'
+      path: '/calculators/pakistan-secp-cost-calculator'
+      fullPath: '/calculators/pakistan-secp-cost-calculator'
+      preLoaderRoute: typeof CalculatorsPakistanSecpCostCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/pakistan-secp-cost': {
-      id: '/calculators/pakistan-secp-cost'
-      path: '/calculators/pakistan-secp-cost'
-      fullPath: '/calculators/pakistan-secp-cost'
-      preLoaderRoute: typeof CalculatorsPakistanSecpCostRouteImport
+    '/calculators/pakistan-sales-tax-calculator': {
+      id: '/calculators/pakistan-sales-tax-calculator'
+      path: '/calculators/pakistan-sales-tax-calculator'
+      fullPath: '/calculators/pakistan-sales-tax-calculator'
+      preLoaderRoute: typeof CalculatorsPakistanSalesTaxCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/pakistan-sales-tax': {
-      id: '/calculators/pakistan-sales-tax'
-      path: '/calculators/pakistan-sales-tax'
-      fullPath: '/calculators/pakistan-sales-tax'
-      preLoaderRoute: typeof CalculatorsPakistanSalesTaxRouteImport
+    '/calculators/pakistan-rental-income-tax-calculator': {
+      id: '/calculators/pakistan-rental-income-tax-calculator'
+      path: '/calculators/pakistan-rental-income-tax-calculator'
+      fullPath: '/calculators/pakistan-rental-income-tax-calculator'
+      preLoaderRoute: typeof CalculatorsPakistanRentalIncomeTaxCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/pakistan-rental-income-tax': {
-      id: '/calculators/pakistan-rental-income-tax'
-      path: '/calculators/pakistan-rental-income-tax'
-      fullPath: '/calculators/pakistan-rental-income-tax'
-      preLoaderRoute: typeof CalculatorsPakistanRentalIncomeTaxRouteImport
+    '/calculators/pakistan-property-tax-calculator': {
+      id: '/calculators/pakistan-property-tax-calculator'
+      path: '/calculators/pakistan-property-tax-calculator'
+      fullPath: '/calculators/pakistan-property-tax-calculator'
+      preLoaderRoute: typeof CalculatorsPakistanPropertyTaxCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/pakistan-property-tax': {
-      id: '/calculators/pakistan-property-tax'
-      path: '/calculators/pakistan-property-tax'
-      fullPath: '/calculators/pakistan-property-tax'
-      preLoaderRoute: typeof CalculatorsPakistanPropertyTaxRouteImport
+    '/calculators/pakistan-ntn-eligibility-calculator': {
+      id: '/calculators/pakistan-ntn-eligibility-calculator'
+      path: '/calculators/pakistan-ntn-eligibility-calculator'
+      fullPath: '/calculators/pakistan-ntn-eligibility-calculator'
+      preLoaderRoute: typeof CalculatorsPakistanNtnEligibilityCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/pakistan-ntn-eligibility': {
-      id: '/calculators/pakistan-ntn-eligibility'
-      path: '/calculators/pakistan-ntn-eligibility'
-      fullPath: '/calculators/pakistan-ntn-eligibility'
-      preLoaderRoute: typeof CalculatorsPakistanNtnEligibilityRouteImport
+    '/calculators/pakistan-it-export-calculator': {
+      id: '/calculators/pakistan-it-export-calculator'
+      path: '/calculators/pakistan-it-export-calculator'
+      fullPath: '/calculators/pakistan-it-export-calculator'
+      preLoaderRoute: typeof CalculatorsPakistanItExportCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/pakistan-it-export': {
-      id: '/calculators/pakistan-it-export'
-      path: '/calculators/pakistan-it-export'
-      fullPath: '/calculators/pakistan-it-export'
-      preLoaderRoute: typeof CalculatorsPakistanItExportRouteImport
+    '/calculators/pakistan-freelancer-tax-calculator': {
+      id: '/calculators/pakistan-freelancer-tax-calculator'
+      path: '/calculators/pakistan-freelancer-tax-calculator'
+      fullPath: '/calculators/pakistan-freelancer-tax-calculator'
+      preLoaderRoute: typeof CalculatorsPakistanFreelancerTaxCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/pakistan-freelancer-tax': {
-      id: '/calculators/pakistan-freelancer-tax'
-      path: '/calculators/pakistan-freelancer-tax'
-      fullPath: '/calculators/pakistan-freelancer-tax'
-      preLoaderRoute: typeof CalculatorsPakistanFreelancerTaxRouteImport
+    '/calculators/pakistan-filer-vs-non-filer-tax-calculator': {
+      id: '/calculators/pakistan-filer-vs-non-filer-tax-calculator'
+      path: '/calculators/pakistan-filer-vs-non-filer-tax-calculator'
+      fullPath: '/calculators/pakistan-filer-vs-non-filer-tax-calculator'
+      preLoaderRoute: typeof CalculatorsPakistanFilerVsNonFilerTaxCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/pakistan-filer-status-checker': {
-      id: '/calculators/pakistan-filer-status-checker'
-      path: '/calculators/pakistan-filer-status-checker'
-      fullPath: '/calculators/pakistan-filer-status-checker'
-      preLoaderRoute: typeof CalculatorsPakistanFilerStatusCheckerRouteImport
+    '/calculators/pakistan-filer-status-checker-calculator': {
+      id: '/calculators/pakistan-filer-status-checker-calculator'
+      path: '/calculators/pakistan-filer-status-checker-calculator'
+      fullPath: '/calculators/pakistan-filer-status-checker-calculator'
+      preLoaderRoute: typeof CalculatorsPakistanFilerStatusCheckerCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/pakistan-fbr-salary-tax': {
-      id: '/calculators/pakistan-fbr-salary-tax'
-      path: '/calculators/pakistan-fbr-salary-tax'
-      fullPath: '/calculators/pakistan-fbr-salary-tax'
-      preLoaderRoute: typeof CalculatorsPakistanFbrSalaryTaxRouteImport
+    '/calculators/pakistan-fbr-salary-tax-calculator': {
+      id: '/calculators/pakistan-fbr-salary-tax-calculator'
+      path: '/calculators/pakistan-fbr-salary-tax-calculator'
+      fullPath: '/calculators/pakistan-fbr-salary-tax-calculator'
+      preLoaderRoute: typeof CalculatorsPakistanFbrSalaryTaxCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/calculators/pakistan-fbr-notice-timeline': {
-      id: '/calculators/pakistan-fbr-notice-timeline'
-      path: '/calculators/pakistan-fbr-notice-timeline'
-      fullPath: '/calculators/pakistan-fbr-notice-timeline'
-      preLoaderRoute: typeof CalculatorsPakistanFbrNoticeTimelineRouteImport
+    '/calculators/pakistan-fbr-notice-timeline-calculator': {
+      id: '/calculators/pakistan-fbr-notice-timeline-calculator'
+      path: '/calculators/pakistan-fbr-notice-timeline-calculator'
+      fullPath: '/calculators/pakistan-fbr-notice-timeline-calculator'
+      preLoaderRoute: typeof CalculatorsPakistanFbrNoticeTimelineCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/calculators/pakistan-capital-gains-tax-calculator': {
+      id: '/calculators/pakistan-capital-gains-tax-calculator'
+      path: '/calculators/pakistan-capital-gains-tax-calculator'
+      fullPath: '/calculators/pakistan-capital-gains-tax-calculator'
+      preLoaderRoute: typeof CalculatorsPakistanCapitalGainsTaxCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/calculators/pakistan': {
@@ -5347,74 +5424,119 @@ const rootRouteChildren: RootRouteChildren = {
   BlogWyomingVsDelawareLlcNonResidentRoute:
     BlogWyomingVsDelawareLlcNonResidentRoute,
   CalculatorsPakistanRoute: CalculatorsPakistanRoute,
-  CalculatorsPakistanFbrNoticeTimelineRoute:
-    CalculatorsPakistanFbrNoticeTimelineRoute,
-  CalculatorsPakistanFbrSalaryTaxRoute: CalculatorsPakistanFbrSalaryTaxRoute,
-  CalculatorsPakistanFilerStatusCheckerRoute:
-    CalculatorsPakistanFilerStatusCheckerRoute,
-  CalculatorsPakistanFreelancerTaxRoute: CalculatorsPakistanFreelancerTaxRoute,
-  CalculatorsPakistanItExportRoute: CalculatorsPakistanItExportRoute,
-  CalculatorsPakistanNtnEligibilityRoute:
-    CalculatorsPakistanNtnEligibilityRoute,
-  CalculatorsPakistanPropertyTaxRoute: CalculatorsPakistanPropertyTaxRoute,
-  CalculatorsPakistanRentalIncomeTaxRoute:
-    CalculatorsPakistanRentalIncomeTaxRoute,
-  CalculatorsPakistanSalesTaxRoute: CalculatorsPakistanSalesTaxRoute,
-  CalculatorsPakistanSecpCostRoute: CalculatorsPakistanSecpCostRoute,
-  CalculatorsPakistanSecpPenaltyRoute: CalculatorsPakistanSecpPenaltyRoute,
-  CalculatorsPakistanTaxRoute: CalculatorsPakistanTaxRoute,
-  CalculatorsPakistanTaxCalendarRoute: CalculatorsPakistanTaxCalendarRoute,
+  CalculatorsPakistanCapitalGainsTaxCalculatorRoute:
+    CalculatorsPakistanCapitalGainsTaxCalculatorRoute,
+  CalculatorsPakistanFbrNoticeTimelineCalculatorRoute:
+    CalculatorsPakistanFbrNoticeTimelineCalculatorRoute,
+  CalculatorsPakistanFbrSalaryTaxCalculatorRoute:
+    CalculatorsPakistanFbrSalaryTaxCalculatorRoute,
+  CalculatorsPakistanFilerStatusCheckerCalculatorRoute:
+    CalculatorsPakistanFilerStatusCheckerCalculatorRoute,
+  CalculatorsPakistanFilerVsNonFilerTaxCalculatorRoute:
+    CalculatorsPakistanFilerVsNonFilerTaxCalculatorRoute,
+  CalculatorsPakistanFreelancerTaxCalculatorRoute:
+    CalculatorsPakistanFreelancerTaxCalculatorRoute,
+  CalculatorsPakistanItExportCalculatorRoute:
+    CalculatorsPakistanItExportCalculatorRoute,
+  CalculatorsPakistanNtnEligibilityCalculatorRoute:
+    CalculatorsPakistanNtnEligibilityCalculatorRoute,
+  CalculatorsPakistanPropertyTaxCalculatorRoute:
+    CalculatorsPakistanPropertyTaxCalculatorRoute,
+  CalculatorsPakistanRentalIncomeTaxCalculatorRoute:
+    CalculatorsPakistanRentalIncomeTaxCalculatorRoute,
+  CalculatorsPakistanSalesTaxCalculatorRoute:
+    CalculatorsPakistanSalesTaxCalculatorRoute,
+  CalculatorsPakistanSecpCostCalculatorRoute:
+    CalculatorsPakistanSecpCostCalculatorRoute,
+  CalculatorsPakistanSecpPenaltyCalculatorRoute:
+    CalculatorsPakistanSecpPenaltyCalculatorRoute,
+  CalculatorsPakistanTaxCalendarCalculatorRoute:
+    CalculatorsPakistanTaxCalendarCalculatorRoute,
   CalculatorsPakistanWhtCalculatorRoute: CalculatorsPakistanWhtCalculatorRoute,
   CalculatorsUaeRoute: CalculatorsUaeRoute,
-  CalculatorsUaeBankApprovalRoute: CalculatorsUaeBankApprovalRoute,
-  CalculatorsUaeCorporateTaxDeadlineRoute:
-    CalculatorsUaeCorporateTaxDeadlineRoute,
-  CalculatorsUaeDoubleTaxTreatyRoute: CalculatorsUaeDoubleTaxTreatyRoute,
-  CalculatorsUaeEsrUboRoute: CalculatorsUaeEsrUboRoute,
-  CalculatorsUaeExciseTaxRoute: CalculatorsUaeExciseTaxRoute,
-  CalculatorsUaeFreelanceVsFreezoneRoute:
-    CalculatorsUaeFreelanceVsFreezoneRoute,
-  CalculatorsUaeFreezoneRoute: CalculatorsUaeFreezoneRoute,
-  CalculatorsUaeFreezoneVsMainlandQuizRoute:
-    CalculatorsUaeFreezoneVsMainlandQuizRoute,
+  CalculatorsUaeBankApprovalCalculatorRoute:
+    CalculatorsUaeBankApprovalCalculatorRoute,
+  CalculatorsUaeCorporateTaxCalculatorRoute:
+    CalculatorsUaeCorporateTaxCalculatorRoute,
+  CalculatorsUaeCorporateTaxDeadlineCalculatorRoute:
+    CalculatorsUaeCorporateTaxDeadlineCalculatorRoute,
+  CalculatorsUaeDoubleTaxTreatyCalculatorRoute:
+    CalculatorsUaeDoubleTaxTreatyCalculatorRoute,
+  CalculatorsUaeEsrUboCalculatorRoute: CalculatorsUaeEsrUboCalculatorRoute,
+  CalculatorsUaeExciseTaxCalculatorRoute:
+    CalculatorsUaeExciseTaxCalculatorRoute,
+  CalculatorsUaeFreelanceVsFreezoneCalculatorRoute:
+    CalculatorsUaeFreelanceVsFreezoneCalculatorRoute,
+  CalculatorsUaeFreezoneSetupCalculatorRoute:
+    CalculatorsUaeFreezoneSetupCalculatorRoute,
+  CalculatorsUaeFreezoneVsMainlandQuizCalculatorRoute:
+    CalculatorsUaeFreezoneVsMainlandQuizCalculatorRoute,
   CalculatorsUaeGratuityCalculatorRoute: CalculatorsUaeGratuityCalculatorRoute,
-  CalculatorsUaeRealEstateRoiRoute: CalculatorsUaeRealEstateRoiRoute,
-  CalculatorsUaeTaxRoute: CalculatorsUaeTaxRoute,
-  CalculatorsUaeTaxResidencyRoute: CalculatorsUaeTaxResidencyRoute,
-  CalculatorsUaeVatRoute: CalculatorsUaeVatRoute,
-  CalculatorsUaeVisaCostRoute: CalculatorsUaeVisaCostRoute,
+  CalculatorsUaeQfzpEligibilityCalculatorRoute:
+    CalculatorsUaeQfzpEligibilityCalculatorRoute,
+  CalculatorsUaeRealEstateRoiCalculatorRoute:
+    CalculatorsUaeRealEstateRoiCalculatorRoute,
+  CalculatorsUaeTaxResidencyCalculatorRoute:
+    CalculatorsUaeTaxResidencyCalculatorRoute,
+  CalculatorsUaeVatCalculatorRoute: CalculatorsUaeVatCalculatorRoute,
+  CalculatorsUaeVisaCostCalculatorRoute: CalculatorsUaeVisaCostCalculatorRoute,
   CalculatorsUkRoute: CalculatorsUkRoute,
-  CalculatorsUkBankApprovalRoute: CalculatorsUkBankApprovalRoute,
-  CalculatorsUkCapitalGainsTaxRoute: CalculatorsUkCapitalGainsTaxRoute,
-  CalculatorsUkCorporationTaxRoute: CalculatorsUkCorporationTaxRoute,
-  CalculatorsUkPayrollPayeRoute: CalculatorsUkPayrollPayeRoute,
-  CalculatorsUkPenaltyRiskRoute: CalculatorsUkPenaltyRiskRoute,
-  CalculatorsUkRdTaxCreditRoute: CalculatorsUkRdTaxCreditRoute,
-  CalculatorsUkSelfAssessmentRoute: CalculatorsUkSelfAssessmentRoute,
-  CalculatorsUkSetupCostRoute: CalculatorsUkSetupCostRoute,
-  CalculatorsUkSoleTraderVsLtdRoute: CalculatorsUkSoleTraderVsLtdRoute,
-  CalculatorsUkStampDutyRoute: CalculatorsUkStampDutyRoute,
-  CalculatorsUkTaxRoute: CalculatorsUkTaxRoute,
-  CalculatorsUkVatRoute: CalculatorsUkVatRoute,
-  CalculatorsUkVatRegisterDecisionRoute: CalculatorsUkVatRegisterDecisionRoute,
-  CalculatorsUkVsPakistanTaxComparisonRoute:
-    CalculatorsUkVsPakistanTaxComparisonRoute,
-  CalculatorsUsBankApprovalRoute: CalculatorsUsBankApprovalRoute,
-  CalculatorsUsBoiDeadlineRoute: CalculatorsUsBoiDeadlineRoute,
-  CalculatorsUsCostRoute: CalculatorsUsCostRoute,
-  CalculatorsUsEinEligibilityRoute: CalculatorsUsEinEligibilityRoute,
-  CalculatorsUsFbarFatcaCheckerRoute: CalculatorsUsFbarFatcaCheckerRoute,
-  CalculatorsUsFederalIncomeTaxRoute: CalculatorsUsFederalIncomeTaxRoute,
-  CalculatorsUsLlcAnnualComplianceRoute: CalculatorsUsLlcAnnualComplianceRoute,
-  CalculatorsUsLlcRecommendationQuizRoute:
-    CalculatorsUsLlcRecommendationQuizRoute,
-  CalculatorsUsLlcVsCCorpRoute: CalculatorsUsLlcVsCCorpRoute,
-  CalculatorsUsPenaltyRiskRoute: CalculatorsUsPenaltyRiskRoute,
-  CalculatorsUsSalesTaxRoute: CalculatorsUsSalesTaxRoute,
-  CalculatorsUsSelfEmploymentTaxRoute: CalculatorsUsSelfEmploymentTaxRoute,
-  CalculatorsUsTaxEligibilityRoute: CalculatorsUsTaxEligibilityRoute,
-  CalculatorsUsTrademarkCostRoute: CalculatorsUsTrademarkCostRoute,
-  CalculatorsUsWyomingVsDelawareRoute: CalculatorsUsWyomingVsDelawareRoute,
+  CalculatorsUkBankApprovalCalculatorRoute:
+    CalculatorsUkBankApprovalCalculatorRoute,
+  CalculatorsUkCapitalGainsTaxCalculatorRoute:
+    CalculatorsUkCapitalGainsTaxCalculatorRoute,
+  CalculatorsUkCorporationTaxCalculatorRoute:
+    CalculatorsUkCorporationTaxCalculatorRoute,
+  CalculatorsUkNrlPropertyTaxCalculatorRoute:
+    CalculatorsUkNrlPropertyTaxCalculatorRoute,
+  CalculatorsUkPayrollPayeCalculatorRoute:
+    CalculatorsUkPayrollPayeCalculatorRoute,
+  CalculatorsUkPenaltyRiskCalculatorRoute:
+    CalculatorsUkPenaltyRiskCalculatorRoute,
+  CalculatorsUkRdTaxCreditCalculatorRoute:
+    CalculatorsUkRdTaxCreditCalculatorRoute,
+  CalculatorsUkSelfAssessmentTaxCalculatorRoute:
+    CalculatorsUkSelfAssessmentTaxCalculatorRoute,
+  CalculatorsUkSetupCostCalculatorRoute: CalculatorsUkSetupCostCalculatorRoute,
+  CalculatorsUkSoleTraderVsLtdCalculatorRoute:
+    CalculatorsUkSoleTraderVsLtdCalculatorRoute,
+  CalculatorsUkStampDutyLandTaxCalculatorRoute:
+    CalculatorsUkStampDutyLandTaxCalculatorRoute,
+  CalculatorsUkTaxDividendOptimizerCalculatorRoute:
+    CalculatorsUkTaxDividendOptimizerCalculatorRoute,
+  CalculatorsUkVatCalculatorRoute: CalculatorsUkVatCalculatorRoute,
+  CalculatorsUkVatRegisterDecisionCalculatorRoute:
+    CalculatorsUkVatRegisterDecisionCalculatorRoute,
+  CalculatorsUkVsPakistanTaxComparisonCalculatorRoute:
+    CalculatorsUkVsPakistanTaxComparisonCalculatorRoute,
+  CalculatorsUsBankApprovalCalculatorRoute:
+    CalculatorsUsBankApprovalCalculatorRoute,
+  CalculatorsUsBoiDeadlineCalculatorRoute:
+    CalculatorsUsBoiDeadlineCalculatorRoute,
+  CalculatorsUsCostCalculatorRoute: CalculatorsUsCostCalculatorRoute,
+  CalculatorsUsEinEligibilityCalculatorRoute:
+    CalculatorsUsEinEligibilityCalculatorRoute,
+  CalculatorsUsFbarFatcaCheckerCalculatorRoute:
+    CalculatorsUsFbarFatcaCheckerCalculatorRoute,
+  CalculatorsUsFederalIncomeTaxCalculatorRoute:
+    CalculatorsUsFederalIncomeTaxCalculatorRoute,
+  CalculatorsUsLlcAnnualComplianceCalculatorRoute:
+    CalculatorsUsLlcAnnualComplianceCalculatorRoute,
+  CalculatorsUsLlcRecommendationQuizCalculatorRoute:
+    CalculatorsUsLlcRecommendationQuizCalculatorRoute,
+  CalculatorsUsLlcVsCCorpCalculatorRoute:
+    CalculatorsUsLlcVsCCorpCalculatorRoute,
+  CalculatorsUsPenaltyRiskCalculatorRoute:
+    CalculatorsUsPenaltyRiskCalculatorRoute,
+  CalculatorsUsSalesTaxCalculatorRoute: CalculatorsUsSalesTaxCalculatorRoute,
+  CalculatorsUsSelfEmploymentTaxCalculatorRoute:
+    CalculatorsUsSelfEmploymentTaxCalculatorRoute,
+  CalculatorsUsTaxEligibilityCalculatorRoute:
+    CalculatorsUsTaxEligibilityCalculatorRoute,
+  CalculatorsUsTrademarkCostCalculatorRoute:
+    CalculatorsUsTrademarkCostCalculatorRoute,
+  CalculatorsUsWyomingVsDelawareCalculatorRoute:
+    CalculatorsUsWyomingVsDelawareCalculatorRoute,
   CalculatorsUsaRoute: CalculatorsUsaRoute,
   LegalContractDraftingDataProcessingAgreementRoute:
     LegalContractDraftingDataProcessingAgreementRoute,

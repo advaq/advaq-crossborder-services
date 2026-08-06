@@ -103,70 +103,74 @@ const routes = [
   { path: '/legal-contract-drafting/privacy-policy', priority: '0.8', changefreq: 'monthly' },
   { path: '/legal-contract-drafting/data-processing-agreement', priority: '0.8', changefreq: 'monthly' },
 
-  // UK Calculators (14)
-  { path: '/calculators/uk-tax', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uk-sole-trader-vs-ltd', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uk-vat', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uk-setup-cost', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uk-penalty-risk', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uk-bank-approval', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uk-self-assessment', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uk-corporation-tax', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uk-capital-gains-tax', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uk-stamp-duty', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uk-payroll-paye', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uk-rd-tax-credit', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uk-vat-register-decision', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uk-vs-pakistan-tax-comparison', priority: '0.8', changefreq: 'weekly' },
+  // UK Calculators (15)
+  { path: '/calculators/uk-tax-dividend-optimizer-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uk-sole-trader-vs-ltd-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uk-vat-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uk-setup-cost-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uk-penalty-risk-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uk-bank-approval-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uk-self-assessment-tax-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uk-corporation-tax-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uk-capital-gains-tax-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uk-stamp-duty-land-tax-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uk-payroll-paye-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uk-rd-tax-credit-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uk-vat-register-decision-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uk-vs-pakistan-tax-comparison-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uk-nrl-property-tax-calculator', priority: '0.8', changefreq: 'weekly' },
 
   // US Calculators (15)
-  { path: '/calculators/us-cost', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/us-tax-eligibility', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/us-penalty-risk', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/us-sales-tax', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/us-bank-approval', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/us-llc-vs-c-corp', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/us-trademark-cost', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/us-federal-income-tax', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/us-ein-eligibility', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/us-self-employment-tax', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/us-boi-deadline', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/us-wyoming-vs-delaware', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/us-llc-annual-compliance', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/us-llc-recommendation-quiz', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/us-fbar-fatca-checker', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/us-cost-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/us-tax-eligibility-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/us-penalty-risk-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/us-sales-tax-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/us-bank-approval-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/us-llc-vs-c-corp-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/us-trademark-cost-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/us-federal-income-tax-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/us-ein-eligibility-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/us-self-employment-tax-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/us-boi-deadline-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/us-wyoming-vs-delaware-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/us-llc-annual-compliance-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/us-llc-recommendation-quiz-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/us-fbar-fatca-checker-calculator', priority: '0.8', changefreq: 'weekly' },
 
-  // UAE Calculators (14)
-  { path: '/calculators/uae-freezone', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uae-tax', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uae-vat', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uae-visa-cost', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uae-bank-approval', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uae-esr-ubo', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uae-excise-tax', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uae-freelance-vs-freezone', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uae-corporate-tax-deadline', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uae-real-estate-roi', priority: '0.8', changefreq: 'weekly' },
+  // UAE Calculators (15)
+  { path: '/calculators/uae-freezone-setup-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uae-corporate-tax-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uae-vat-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uae-visa-cost-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uae-bank-approval-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uae-esr-ubo-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uae-excise-tax-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uae-freelance-vs-freezone-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uae-corporate-tax-deadline-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uae-real-estate-roi-calculator', priority: '0.8', changefreq: 'weekly' },
   { path: '/calculators/uae-gratuity-calculator', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uae-double-tax-treaty', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uae-freezone-vs-mainland-quiz', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/uae-tax-residency', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uae-double-tax-treaty-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uae-freezone-vs-mainland-quiz-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uae-tax-residency-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/uae-qfzp-eligibility-calculator', priority: '0.8', changefreq: 'weekly' },
 
-  // Pakistan Calculators (14)
-  { path: '/calculators/pakistan-tax', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/pakistan-it-export', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/pakistan-secp-cost', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/pakistan-fbr-salary-tax', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/pakistan-sales-tax', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/pakistan-secp-penalty', priority: '0.8', changefreq: 'weekly' },
+  // Pakistan Calculators (15)
+  { path: '/calculators/pakistan-tax-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/pakistan-it-export-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/pakistan-secp-cost-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/pakistan-fbr-salary-tax-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/pakistan-sales-tax-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/pakistan-secp-penalty-calculator', priority: '0.8', changefreq: 'weekly' },
   { path: '/calculators/pakistan-wht-calculator', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/pakistan-property-tax', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/pakistan-ntn-eligibility', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/pakistan-freelancer-tax', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/pakistan-fbr-notice-timeline', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/pakistan-rental-income-tax', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/pakistan-filer-status-checker', priority: '0.8', changefreq: 'weekly' },
-  { path: '/calculators/pakistan-tax-calendar', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/pakistan-property-tax-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/pakistan-ntn-eligibility-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/pakistan-freelancer-tax-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/pakistan-fbr-notice-timeline-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/pakistan-rental-income-tax-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/pakistan-filer-status-checker-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/pakistan-filer-vs-non-filer-tax-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/pakistan-tax-calendar-calculator', priority: '0.8', changefreq: 'weekly' },
+  { path: '/calculators/pakistan-capital-gains-tax-calculator', priority: '0.8', changefreq: 'weekly' },
 
   // Blog Posts (60+)
   { path: '/blog/can-non-uk-resident-register-company-uk', priority: '0.8', changefreq: 'monthly' },
@@ -318,12 +322,12 @@ const llmsTxt = `# ADVAQ - Cross-Border Tax & Legal Services | UK, USA, UAE & Pa
 - [Pakistan SECP & FBR Tax Services](https://advaq.com/pakistan-services): SECP Private Limited & SMC company registration, FBR Iris NTN filing, Active Taxpayer List (ATL) restoration, PSEB IT exporter 100% tax credit, Section 154A 0.25% reduced WHT, and SBP FCVA USD accounts.
 - [Legal Contract Drafting](https://advaq.com/legal-contract-drafting): Custom legal drafting for tech companies, software agencies, and freelancers including Non-Disclosure Agreements (NDA), Master Service Agreements (MSA), Service Level Agreements (SLA), IP Assignment Agreements, Software Development Contracts, Independent Contractor Contracts, Terms of Service, GDPR Privacy Policies, and Data Processing Agreements (DPA).
 
-## Free Interactive Tax & Legal Calculators (57 Tools)
+## Free Interactive Tax & Legal Calculators (60 Tools)
 
-- [UK Calculators Suite](https://advaq.com/calculators/uk): 14 interactive tools including UK Tax & Dividend Optimizer, Sole Trader vs LTD Breakeven, VAT Flat Rate Scheme, Capital Gains Tax, and Pension Contribution Impact.
+- [UK Calculators Suite](https://advaq.com/calculators/uk): 15 interactive tools including UK Tax & Dividend Optimizer, Sole Trader vs LTD Breakeven, VAT Flat Rate Scheme, Capital Gains Tax, and Pension Contribution Impact.
 - [USA Calculators Suite](https://advaq.com/calculators/usa): 15 interactive tools including Form 1040-NR Non-Resident Tax, EIN Timeline Tool, 15.3% Self-Employment Tax Exemption, FinCEN BOI $590/day Penalty Estimator, and Wyoming vs Delaware Matrix.
-- [UAE Calculators Suite](https://advaq.com/calculators/uae): 14 interactive tools including FTA Excise Tax (50%/100%), Freelance Permit vs Freezone License, AED 10,000 Corporate Tax Registration Deadline Checker, and Dubai Real Estate ROI & 0% Capital Gains.
-- [Pakistan Calculators Suite](https://advaq.com/calculators/pakistan): 14 interactive tools including Section 153 Withholding Tax (Services 9%/18%, Goods 5%/10%, Contracts 7.5%/15%), Section 236K/236C Property WHT, All-in-One Freelancer Tax & SBP FCVA retention, and SECP Penalty Risk.
+- [UAE Calculators Suite](https://advaq.com/calculators/uae): 15 interactive tools including FTA Excise Tax (50%/100%), Freelance Permit vs Freezone License, AED 10,000 Corporate Tax Registration Deadline Checker, and Dubai Real Estate ROI & 0% Capital Gains.
+- [Pakistan Calculators Suite](https://advaq.com/calculators/pakistan): 15 interactive tools including Section 153 Withholding Tax (Services 9%/18%, Goods 5%/10%, Contracts 7.5%/15%), Section 236K/236C Property WHT, All-in-One Freelancer Tax & SBP FCVA retention, and SECP Penalty Risk.
 
 ## Authority & Contact
 
@@ -376,7 +380,7 @@ ADVAQ is a specialized corporate tax and legal advisory firm headquartered in Pa
 - SBP FCVA (Exporters' Special Foreign Currency Account): SBP regulations allow IT exporters and freelancers to retain 50% of foreign remittance receipts in USD/FCVA accounts for overseas marketing, software licensing, and cloud service payments.
 - Active Taxpayer List (ATL Filer Status): Filers pay 3% WHT on property purchase (Sec 236K) vs 10.5% - 12% for Non-Filers. Filers pay 0% cash withdrawal tax under Sec 231AB vs 0.6% - 0.9% for Non-Filers.
 - FBR Withholding Tax (Section 153): Services WHT rate is 9% for Filers vs 18% for Non-Filers; Goods WHT is 5% vs 10%; Execution of Contracts is 7.5% vs 15%.
-- SECP Corporate Compliance: Companies incorporated under Companies Act 2017 must file Form A (annual return) within 30 days of AGM and Form 29 (directors/officers changes) within 15 days of change to avoid late filing penalties.
+- SECP Corporate Compliance: Companies incorporated under Companies Act 2017 must file Form A (annual return) within 30 days of AGM and Form 9 (directors/officers changes) within 14 days of change to avoid late filing penalties.
 
 ---
 
@@ -405,4 +409,4 @@ fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsTxt);
 fs.writeFileSync(path.join(process.cwd(), 'public', 'llms.txt'), llmsTxt);
 fs.writeFileSync(path.join(process.cwd(), 'public', 'llms-full.txt'), llmsFullTxt);
 
-console.log('Successfully regenerated clean ASCII sitemaps, robots.txt, llms.txt, and llms-full.txt with complete Legal Contract Drafting sections.');
+console.log('Successfully regenerated clean ASCII sitemaps with all 60 exact -calculator URLs.');

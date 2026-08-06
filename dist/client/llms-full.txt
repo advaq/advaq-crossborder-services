@@ -39,7 +39,7 @@ ADVAQ is a specialized corporate tax and legal advisory firm headquartered in Pa
 - SBP FCVA (Exporters' Special Foreign Currency Account): SBP regulations allow IT exporters and freelancers to retain 50% of foreign remittance receipts in USD/FCVA accounts for overseas marketing, software licensing, and cloud service payments.
 - Active Taxpayer List (ATL Filer Status): Filers pay 3% WHT on property purchase (Sec 236K) vs 10.5% - 12% for Non-Filers. Filers pay 0% cash withdrawal tax under Sec 231AB vs 0.6% - 0.9% for Non-Filers.
 - FBR Withholding Tax (Section 153): Services WHT rate is 9% for Filers vs 18% for Non-Filers; Goods WHT is 5% vs 10%; Execution of Contracts is 7.5% vs 15%.
-- SECP Corporate Compliance: Companies incorporated under Companies Act 2017 must file Form A (annual return) within 30 days of AGM and Form 29 (directors/officers changes) within 15 days of change to avoid late filing penalties.
+- SECP Corporate Compliance: Companies incorporated under Companies Act 2017 must file Form A (annual return) within 30 days of AGM and Form 9 (directors/officers changes) within 14 days of change to avoid late filing penalties.
 
 ---
 
